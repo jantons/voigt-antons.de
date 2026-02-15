@@ -9,26 +9,30 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Computer Science, Technische Universität Berlin, 2014
+## Current Position
 
+* **Professor (Prof. Dr.-Ing.)**, Immersive Reality Lab
+* Hamm-Lippstadt University of Applied Sciences, Germany
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+## Research Areas
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Immersive technologies (AR/VR/MR)
+* Human-computer interaction and interaction design
+* Quality of experience (QoE) and user-centered evaluation
+* Physiological and behavioral methods for media experience research
+* Digital health and assistive interaction systems
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+## Academic Profiles
+
+* [Google Scholar](https://scholar.google.de/citations?user=IFIaOZsAAAAJ)
+* [ORCID](https://orcid.org/0000-0002-2786-9262)
+* [LinkedIn](https://www.linkedin.com/in/jnvoigtantons/)
+* [GitHub](https://github.com/jantons)
+
+## Selected Recent Contributions (2024)
+
+* Co-editor of the book *The digitalization of healthcare for older adults* (Berlin Universities Publishing).
+* Contributions at international XR/HCI venues including ACM VRST, IEEE ISMAR, and ACM CHI.
+* Ongoing work on XR social acceptability, cloud gaming quality of experience, and immersive interview training.
+
+For a complete and continuously updated list of publications, please visit the [Publications](/publications/) page.

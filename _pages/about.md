@@ -7,8 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am **Prof. Dr.-Ing. Jan-Niklas Voigt-Antons**, leading research in human-centered immersive technologies at the **Immersive Reality Lab**.
-
-My work focuses on how people experience and interact with digital systems across **extended reality (XR)**, **quality of experience (QoE)**, and **physiological and behavioral measurement**. Current projects in our lab cover topics such as socially acceptable XR interfaces, immersive learning and training, AI-supported interaction, and digital health applications.
-
-I collaborate across academia and industry to turn research into practical, inclusive, and evidence-based solutions. If you are interested in collaborating, supervising student projects, or discussing research transfer, feel free to get in touch.
+About
+I am Prof. Dr.-Ing. Jan-Niklas Voigt-Antons, a professor and research group leader in human-centered Extended Reality (XR: VR/AR/MR), Spatial Computing, and Digital Experience (UX/UI). I lead the Immersive Reality Lab, where we design, implement, and rigorously evaluate immersive 3D systems—ranging from real-time simulations and game-engine prototypes to spatial interfaces and interactive 3D worlds—for learning, training, and health- and safety-relevant applications.
+My research sits at the intersection of computer science, interaction design, and human factors/engineering psychology. I study how people perceive, trust, and effectively use interactive systems, combining Quality of Experience (QoE) methods with behavioral and physiological measurement to produce evidence-based design guidance. Current work includes socially acceptable XR interaction, immersive learning and serious games, AI-supported interaction, and human-in-the-loop evaluation in simulator-like environments.
+In teaching, I cover both foundations and advanced practice: technical and mathematical XR basics, computer graphics and real-time rendering, game development with modern engines, and UX for complex spatial interfaces—delivered in project-based formats with strong transfer orientation. I actively collaborate with academia, industry, and public-sector partners, acquire and run third-party funded projects, and supervise student research from early prototypes to publication-ready results. If you are interested in collaboration, research transfer, or supervising theses and student projects, please get in touch.

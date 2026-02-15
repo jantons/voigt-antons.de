@@ -7,8 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-I am Prof. Dr.-Ing. Jan-Niklas Voigt-Antons and I are dedicated to shaping the future of human-machine interaction. I aim to develop and refine immersive technologies that bring the digital and physical worlds closer together. I aim to enhance the way people experience, learn, and communicate through innovative solutions in augmented reality (AR), virtual reality (VR), and mixed reality (MR).
+I am **Prof. Dr.-Ing. Jan-Niklas Voigt-Antons**, leading research in human-centered immersive technologies at the **Immersive Reality Lab**.
 
-At the Immersive Reality Lab, I believe technology should seamlessly integrate into people's lives, offering intuitive and meaningful experiences. Whether it's redefining how industries train their workforce, expanding the possibilities of entertainment, or creating accessible tools for education, my team and I are dedicated to pushing the boundaries of immersive tech.
+My work focuses on how people experience and interact with digital systems across **extended reality (XR)**, **quality of experience (QoE)**, and **physiological and behavioral measurement**. Current projects in our lab cover topics such as socially acceptable XR interfaces, immersive learning and training, AI-supported interaction, and digital health applications.
 
-My interdisciplinary approach brings creative designers, engineers, and researchers together to explore new possibilities. I collaborate with industry partners, academic institutions, and diverse communities to ensure that the technology we create is impactful, inclusive, and transformative.
+I collaborate across academia and industry to turn research into practical, inclusive, and evidence-based solutions. If you are interested in collaborating, supervising student projects, or discussing research transfer, feel free to get in touch.

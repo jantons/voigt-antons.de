@@ -7,19 +7,14 @@ $(document).ready(function(){
   var bumpIt = function() {
       $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
     },
-    didResize = false;
+    debounceTimeout;
 
   bumpIt();
 
-  $(window).resize(function() {
-    didResize = true;
+  $(window).on("resize", function() {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(bumpIt, 150);
   });
-  setInterval(function() {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }
-  }, 250);
   
   // FitVids init
   fitvids();

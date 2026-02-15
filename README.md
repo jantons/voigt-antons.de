@@ -35,6 +35,12 @@ When you are initially working your website, it is very useful to be able to pre
 
 If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
 
+### Troubleshooting local setup
+
+- If `bundle install` fails due to network restrictions or firewall rules, verify access to `https://rubygems.org` and any configured proxy settings.
+- If `jekyll` is not found after install, run commands through Bundler (`bundle exec jekyll serve -l -H localhost`) so the project gem versions are used.
+- For JavaScript assets, install Node dependencies with `npm install` and rebuild bundled JS with `npm run build:js`.
+
 ## Using Docker
 
 Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.

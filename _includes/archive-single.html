@@ -15,7 +15,8 @@
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item{% if post.collection == 'publications' and post.url %} archive__item--linked{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
     {% if post.collection == 'publications' and post.url %}
-      <a class="archive__item-link" href="{{ base_path }}{{ post.url }}" aria-label="Open publication details"></a>
+      {% assign publication_link_label = post.title | default: post.citation | strip_html | strip %}
+      <a class="archive__item-link" href="{{ base_path }}{{ post.url }}" aria-label="Open publication details for {{ publication_link_label | escape }}"></a>
     {% endif %}
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">

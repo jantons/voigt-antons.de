@@ -74,6 +74,26 @@
   }
 }
 
+
+.archive__item {
+  position: relative;
+}
+
+.archive__item--linked {
+  cursor: pointer;
+}
+
+.archive__item-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.archive__item--linked a:not(.archive__item-link) {
+  position: relative;
+  z-index: 2;
+}
+
 .archive__item:hover {
   .archive__item-teaser {
     box-shadow: 0 0 10px rgba(#000, 0.25);

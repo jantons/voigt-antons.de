@@ -14,7 +14,7 @@ name                     : &name "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons"
 description              : &description "Research in media experience (QoE, physiology) and interaction design"
 url                      : https://voigt-antons.de # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "jantons/voigt-antons.de"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -53,7 +53,6 @@ author:
   flickr           : # Username
   foursquare       : # Username
   goodreads        : # Username
-  google_plus      : # Username
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
@@ -84,7 +83,7 @@ publication_category:
   conferences:
     title: 'Conference Papers'
   standardizations:
-    title: 'Stradization Contributions'
+    title: 'Standardization Contributions'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -149,7 +148,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               : false # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
 

@@ -3,14 +3,16 @@ layout: archive
 title: "Talks and presentations"
 permalink: /talks/
 author_profile: true
+description: "Talks, conference presentations, invited appearances, and media links."
 ---
 
-{% if site.talkmap_link == true %}
-
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
-
-{% endif %}
+## Recent talks
 
 {% for post in site.talks reversed %}
   {% include archive-single-talk.html %}
 {% endfor %}
+
+## Media appearances
+
+- Industrie 4.0 – Expertentalk featuring Prof. Dr.-Ing. Jan-Niklas Voigt-Antons
+- YouTube: [Immersive Technologien mit Prof. Dr.-Ing. Voigt-Antons | #84](https://www.youtube.com/watch?v=qVZMa-JDTvs)

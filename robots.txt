@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /markdown/
+Disallow: /assets/js/vendor/
+
+Sitemap: https://voigt-antons.de/sitemap.xml

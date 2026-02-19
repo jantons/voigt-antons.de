@@ -1,0 +1,49 @@
+- id: ariadne
+  name: "ARiadne"
+  period: "ongoing"
+  funding: "Public third-party funding"
+  role: "Principal Investigator / project lead"
+  outcomes:
+    - "XR prototypes for immersive training and guidance"
+    - "Transfer activities with regional partners"
+  topics: ["XR", "Spatial interaction", "Learning"]
+
+- id: didymos-xr
+  name: "Didymos-XR"
+  period: "ongoing"
+  funding: "EU/public collaborative research"
+  role: "Project partner and work package lead"
+  outcomes:
+    - "Publications on responsible digital twins for XR"
+    - "Large-scale XR demonstrators"
+  topics: ["Digital twins", "XR", "Urban/industrial applications"]
+
+- id: mia-prom
+  name: "MIA-PROM"
+  period: "ongoing"
+  funding: "Public third-party funding"
+  role: "Research lead"
+  outcomes:
+    - "Human-centered interaction and evaluation pipelines"
+    - "Prototype development for digital experience measurement"
+  topics: ["QoE", "Psychophysiology", "Digital health"]
+
+- id: digiontrack
+  name: "DigiOnTrack"
+  period: "ongoing"
+  funding: "Public transfer funding"
+  role: "Co-PI / transfer lead"
+  outcomes:
+    - "Digitalization and training concepts"
+    - "Practice-oriented demonstrators"
+  topics: ["Learning", "Transfer", "XR"]
+
+- id: virtuelles-institut-ar-vr
+  name: "Virtuelles Institut AR/VR"
+  period: "ongoing"
+  funding: "State-level collaborative initiative"
+  role: "Scientific partner"
+  outcomes:
+    - "Cross-institutional AR/VR collaboration"
+    - "Joint dissemination and student involvement"
+  topics: ["AR/VR", "Network building", "Education"]

@@ -1,0 +1,23 @@
+- name: "Virtual Reality"
+  level: "Bachelor/Master"
+  institution: "Hamm-Lippstadt University of Applied Sciences"
+  years: "since 2024"
+  language: "EN/DE"
+
+- name: "Augmented Reality"
+  level: "Bachelor/Master"
+  institution: "Hamm-Lippstadt University of Applied Sciences"
+  years: "since 2024"
+  language: "EN/DE"
+
+- name: "Immersive Systems Design"
+  level: "Master"
+  institution: "Hamm-Lippstadt University of Applied Sciences"
+  years: "2024–present"
+  language: "EN"
+
+- name: "Seminar: Human-Centered XR and Quality of Experience"
+  level: "Master seminar"
+  institution: "Hamm-Lippstadt University of Applied Sciences"
+  years: "2024–present"
+  language: "EN"

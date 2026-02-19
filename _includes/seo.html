@@ -124,6 +124,30 @@
   </script>
 {% endif %}
 
+
+{% if page.url and page.url != "/" %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "About",
+          "item": "{{ site.url }}/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ page.title | default: site.title }}",
+          "item": "{{ page.url | prepend: seo_url | replace: '/index.html', '/' }}"
+        }
+      ]
+    }
+  </script>
+{% endif %}
+
 {% if site.google_site_verification %}
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
 {% endif %}

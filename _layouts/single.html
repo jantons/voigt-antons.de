@@ -60,6 +60,24 @@ layout: default
           <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
         {% endif %}
 
+
+        {% if page.collection == 'publications' %}
+          <h3 id="bibtex">BibTeX</h3>
+          <pre>@article{ {{ page.slug | replace: '-', '_' }},
+  title={ {{ page.title }} },
+  author={ {{ page.authors | default: site.author.name }} },
+  year={ {{ page.date | date: "%Y" }} },
+  journal={ {{ page.venue | default: "n/a" }} },
+  url={ {{ page.paperurl | default: page.url | prepend: site.url }} }
+}</pre>
+          <p><strong>Tags:</strong>
+            {% if page.tags %}
+              {{ page.tags | join: ", " }}
+            {% else %}
+              {% if page.category == 'conferences' %}XR, HCI{% elsif page.category == 'manuscripts' %}QoE, Human-centered evaluation{% elsif page.category == 'standardizations' %}Standardization{% else %}Research output{% endif %}
+            {% endif %}
+          </p>
+        {% endif %}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 

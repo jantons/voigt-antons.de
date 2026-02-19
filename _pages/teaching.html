@@ -3,9 +3,33 @@ layout: archive
 title: "Teaching"
 permalink: /teaching/
 author_profile: true
+description: "Teaching portfolio in Virtual Reality, Augmented Reality, immersive systems design, and research-led project formats."
 ---
 
-{% include base_path %}
+## Teaching philosophy
+
+I teach immersive technologies as an integrated practice of technical implementation, human-centered design, and empirical evaluation. Students work in project-based and lab-based formats with close links to research and transfer.
+
+## Courses taught
+
+| Course | Level | Institution | Years | Language |
+|---|---|---|---|---|
+{% for course in site.data.courses %}
+| {{ course.name }} | {{ course.level }} | {{ course.institution }} | {{ course.years }} | {{ course.language }} |
+{% endfor %}
+
+## Teaching formats
+
+- Project-based learning with iterative prototypes
+- Lab-based experiments in immersive environments
+- Industry and transfer collaborations in selected modules
+
+## Supervision
+
+- Supervision of student projects and theses in XR, QoE, and human-centered digital systems
+- Research-oriented seminar support with publication and prototyping pathways
+
+## Current teaching entries
 
 {% for post in site.teaching reversed %}
   {% include archive-single.html %}

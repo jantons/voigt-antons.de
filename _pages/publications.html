@@ -3,34 +3,92 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+description: "Selected and complete publications with filtering by year, type, venue, and topic tags."
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<div class="wordwrap"><strong>Metrics:</strong> citation and h-index details on <a href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ">Google Scholar</a>.</div>
 
-{% include base_path %}
+## Selected publications
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+{% assign selected_ids = "2025-09-01-J32,2024-03-14-C71,2024-04-25-C75,2024-04-15-C73,2024-03-15-OC34,2024-03-15-J28" | split: "," %}
+{% for sid in selected_ids %}
+  {% assign pub = site.publications | where_exp: "item", "item.path contains sid" | first %}
+  {% if pub %}
+  <div class="list__item">
+    <article class="archive__item">
+      <h3 class="archive__item-title"><a href="{{ pub.url }}">{{ pub.title }}</a></h3>
+      <p><strong>{{ pub.date | date: "%Y" }}</strong> · {{ pub.venue }} · {{ pub.category | capitalize }}</p>
+      <p>
+        {% if pub.title contains "Virtual" or pub.title contains "XR" or pub.title contains "Augmented" %}<span class="notice--info">XR</span>{% endif %}
+        {% if pub.title contains "Experience" or pub.title contains "Quality" %}<span class="notice--info">QoE</span>{% endif %}
+        {% if pub.title contains "Emotion" or pub.title contains "Behavior" %}<span class="notice--info">Psychophysiology</span>{% endif %}
+      </p>
+    </article>
+  </div>
+  {% endif %}
+{% endfor %}
 
+## Filter all publications
 
+<label for="pub-filter-year">Year:</label>
+<select id="pub-filter-year"><option value="">All</option></select>
+<label for="pub-filter-type">Type:</label>
+<select id="pub-filter-type"><option value="">All</option></select>
+<label for="pub-filter-venue">Venue:</label>
+<input id="pub-filter-venue" type="text" placeholder="Filter venue">
+<label for="pub-filter-topic">Topic:</label>
+<select id="pub-filter-topic">
+  <option value="">All</option>
+  <option value="xr">XR</option>
+  <option value="qoe">QoE</option>
+  <option value="psychophysiology">Psychophysiology</option>
+  <option value="digital-health">Digital health</option>
+</select>
 
+<div id="publication-list">
+{% for post in site.publications reversed %}
+  {% assign topic = "xr" %}
+  {% assign title_l = post.title | downcase %}
+  {% if title_l contains "quality" or title_l contains "experience" %}{% assign topic = "qoe" %}{% endif %}
+  {% if title_l contains "emotion" or title_l contains "physio" or title_l contains "behavior" %}{% assign topic = "psychophysiology" %}{% endif %}
+  {% if title_l contains "health" or title_l contains "medizin" %}{% assign topic = "digital-health" %}{% endif %}
+  <div class="list__item publication-item" data-year="{{ post.date | date: '%Y' }}" data-type="{{ post.category }}" data-venue="{{ post.venue | downcase }}" data-topic="{{ topic }}">
+    <article class="archive__item" itemtype="https://schema.org/ScholarlyArticle">
+      <h3 class="archive__item-title"><a href="{{ post.url }}">{{ post.citation | default: post.title }}</a></h3>
+      <p>{{ post.date | date: "%Y" }} · {{ post.venue }} · <strong>Topic:</strong> {{ topic }}</p>
+      <p>
+        {% if post.paperurl %}<a href="{{ post.paperurl }}">DOI/Paper</a> · {% endif %}
+        <a href="{{ post.url }}#bibtex">BibTeX</a>
+      </p>
+    </article>
+  </div>
+{% endfor %}
+</div>
+
+<script>
+(function () {
+  const items = Array.from(document.querySelectorAll('.publication-item'));
+  const year = document.getElementById('pub-filter-year');
+  const type = document.getElementById('pub-filter-type');
+  const venue = document.getElementById('pub-filter-venue');
+  const topic = document.getElementById('pub-filter-topic');
+
+  function fill(select, key) {
+    const vals = [...new Set(items.map(i => i.dataset[key]).filter(Boolean))].sort().reverse();
+    vals.forEach(v => {
+      const o = document.createElement('option');
+      o.value = v; o.textContent = v; select.appendChild(o);
+    });
+  }
+  fill(year, 'year'); fill(type, 'type');
+
+  function apply() {
+    const y = year.value, t = type.value, v = venue.value.toLowerCase(), tp = topic.value;
+    items.forEach(i => {
+      const ok = (!y || i.dataset.year === y) && (!t || i.dataset.type === t) && (!v || i.dataset.venue.includes(v)) && (!tp || i.dataset.topic === tp);
+      i.style.display = ok ? '' : 'none';
+    });
+  }
+  [year, type, venue, topic].forEach(el => el.addEventListener('input', apply));
+})();
+</script>

@@ -3,36 +3,51 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+description: "Academic CV of Prof. Dr.-Ing. Jan-Niklas Voigt-Antons including appointments, grants, teaching, service, and external profiles."
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+[Download CV (PDF)](/files/cv.pdf){: .btn .btn--primary}
 
-## Current Position
+## Appointments
 
-* **Professor (Prof. Dr.-Ing.)**, Immersive Reality Lab
-* Hamm-Lippstadt University of Applied Sciences, Germany
+- **Professor (Prof. Dr.-Ing.)**, Hamm-Lippstadt University of Applied Sciences, Immersive Reality Lab (current)
+- **Research and academic positions** in immersive media, human-centered computing, and quality of experience (prior appointments)
 
-## Research Areas
+## Education
 
-* Immersive technologies (AR/VR/MR)
-* Human-computer interaction and interaction design
-* Quality of experience (QoE) and user-centered evaluation
-* Physiological and behavioral methods for media experience research
-* Digital health and assistive interaction systems
+- **Doctor of Engineering (Dr.-Ing.)**
+- **Academic background in engineering and human-centered system evaluation**
 
-## Academic Profiles
+## Industry and transfer experience
 
-* [Google Scholar](https://scholar.google.de/citations?user=IFIaOZsAAAAJ)
-* [ORCID](https://orcid.org/0000-0002-2786-9262)
-* [LinkedIn](https://www.linkedin.com/in/jnvoigtantons/)
-* [GitHub](https://github.com/jantons)
+- Collaboration with industry and public-sector partners in applied R&D
+- Project transfer from prototype stage to practical deployment contexts
 
-## Selected Recent Contributions (2024)
+## Grants and funded projects (selected)
 
-* Co-editor of the book *The digitalization of healthcare for older adults* (Berlin Universities Publishing).
-* Contributions at international XR/HCI venues including ACM VRST, IEEE ISMAR, and ACM CHI.
-* Ongoing work on XR social acceptability, cloud gaming quality of experience, and immersive interview training.
+- ARiadne
+- Didymos-XR
+- MIA-PROM
+- DigiOnTrack
+- Virtuelles Institut AR/VR
 
-For a complete and continuously updated list of publications, please visit the [Publications](/publications/) page.
+## Teaching and supervision
+
+- Courses in **Virtual Reality**, **Augmented Reality**, and immersive systems design
+- Supervision of student projects and theses in XR, QoE, and digital health contexts
+
+## Service and leadership
+
+- Director, Immersive Reality Lab
+- Reviewing and committee contributions in XR/HCI/QoE communities
+- Standardization-related dissemination outputs
+
+## Metrics and profiles
+
+- [Google Scholar](https://scholar.google.de/citations?user=IFIaOZsAAAAJ)
+- [ORCID](https://orcid.org/0000-0002-2786-9262)
+- [HSHL profile](https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons)
+- [ResearchGate](https://www.researchgate.net/profile/Jan-Niklas-Voigt-Antons)
+- [Berlin Universities Publishing](https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/)

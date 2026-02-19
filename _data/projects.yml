@@ -1,99 +1,282 @@
-- id: didymos-xr
-  name: "Didymos-XR"
+- id: virtualinst
+  name: "Digitalise SÜDWESTFALEN"
+  period: "2023–2027"
+  funding_program: "Innovative Hochschule"
+  funder: "BMBF; MKW.NRW"
+  role: "Head of the Virtual Institute"
+  partners:
+    - "South Westphalia University of Applied Sciences"
+    - "Economic Development Agency Soest District GmbH"
+  transfer_partners_estimate: 2
+  topics: ["VR/AR", "Knowledge transfer", "Regional innovation"]
+  outputs:
+    - label: "Project website"
+      url: "https://digitalise-swf.de"
+  evidence_links:
+    - label: "Digitalise SWF"
+      url: "https://digitalise-swf.de"
+
+- id: didymos
+  name: "DIDYMOS-XR"
   period: "2023–2026"
-  funding_program: "EU collaborative research (Digital Twins / XR)"
+  funding_program: "HORIZON Action Grant Budget-Based"
   funder: "European Union"
-  role: "Work package lead (QoE and human-centered evaluation)"
-  partners: ["TH Köln", "industrial partners", "public-sector partners"]
-  transfer_partners_estimate: 6
-  topics: ["Digital twins", "XR", "QoE"]
+  role: "Project Lead"
+  partners:
+    - "Joanneum Research"
+    - "American University of Beirut"
+    - "CERTH"
+    - "DigitalTwin Technology GmbH"
+    - "University of Patras"
+    - "Ficosa"
+    - "Technical University of Berlin"
+    - "Fiware Foundation"
+    - "Neàpolis"
+    - "idealworks"
+    - "Capgemini"
+    - "Trilateral Research"
+    - "i2CAT"
+  transfer_partners_estimate: 13
+  topics: ["Digital twins", "XR", "AI", "Ethics-by-design"]
   outputs:
-    - label: "Dynamic and Responsible Digital Twins for Extended Reality"
-      url: "/publication/2025-09-01-J32"
-    - label: "A quality of experience approach for cloud gaming in virtual reality"
-      url: "/publication/2024-07-01-J29"
+    - label: "Project website"
+      url: "https://didymos-xr.eu/"
   evidence_links:
-    - label: "Project profile on HSHL"
-      url: "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
-    - label: "External publication proof (Scientific Reports)"
-      url: "https://www.nature.com/articles/s41598-025-17855-9"
-
-- id: ariadne
-  name: "ARiadne"
-  period: "2024–ongoing"
-  funding_program: "Applied research and transfer"
-  funder: "Public funding"
-  role: "Principal Investigator"
-  partners: ["regional industry partners", "HSHL teaching and transfer network"]
-  transfer_partners_estimate: 4
-  topics: ["XR", "Spatial interaction", "Learning"]
-  outputs:
-    - label: "Assessing Social Acceptability in Immersive Environments"
-      url: "/publication/2025-03-01-C87"
-    - label: "A user study on physically active locomotion in social virtual reality"
-      url: "/publication/2025-01-01-J31"
-  evidence_links:
-    - label: "Project context on HSHL profile"
-      url: "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
-    - label: "Lab website"
-      url: "https://immersive-reality-lab.de/"
-
-- id: mia-prom
-  name: "MIA-PROM"
-  period: "2024–ongoing"
-  funding_program: "Applied human-centered AI/XR research"
-  funder: "Public funding"
-  role: "Co-PI"
-  partners: ["academic collaborators", "practice partners"]
-  transfer_partners_estimate: 5
-  topics: ["QoE", "Psychophysiology", "Digital health"]
-  outputs:
-    - label: "Arousal Effects on Evaluation and Perception in Multimedia Quality"
-      url: "/publication/2023-03-02-J25"
-    - label: "User-centered measurements for immersive interaction quality"
-      url: "/publication/2025-01-01-C84"
-  evidence_links:
-    - label: "HSHL profile"
-      url: "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
-    - label: "ORCID profile"
-      url: "https://orcid.org/0000-0002-2786-9262"
+    - label: "DIDYMOS-XR"
+      url: "https://didymos-xr.eu/"
 
 - id: digiontrack
   name: "DigiOnTrack"
-  period: "2024–ongoing"
-  funding_program: "Digital teaching and transfer"
-  funder: "Public transfer funding"
-  role: "Work package lead"
-  partners: ["higher-education partners", "regional stakeholders"]
-  transfer_partners_estimate: 5
-  topics: ["Learning", "Transfer", "XR"]
+  period: "2023–2025"
+  funding_program: "mFUND"
+  funder: "Federal Ministry for Digital Affairs and Transport"
+  role: "Project Lead"
+  partners:
+    - "5micron GmbH"
+    - "OSTAKON GmbH"
+    - "Deutsche Eisenbahn Service AG"
+  transfer_partners_estimate: 3
+  topics: ["Predictive maintenance", "Rail monitoring", "Machine learning"]
   outputs:
-    - label: "Recent XR teaching-transfer outputs"
-      url: "/publications/"
-    - label: "Immersive Systems Design course"
-      url: "/teaching/"
+    - label: "Project page"
+      url: "https://www.hshl.de/forschung-unternehmen/forschungsprojekte/forschungsprojekte-im-themenfeld-mensch-maschine-interaktion/digiontrack/"
   evidence_links:
-    - label: "HSHL profile"
-      url: "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
-    - label: "Lab website"
-      url: "https://immersive-reality-lab.de/"
+    - label: "HSHL project page"
+      url: "https://www.hshl.de/forschung-unternehmen/forschungsprojekte/forschungsprojekte-im-themenfeld-mensch-maschine-interaktion/digiontrack/"
 
-- id: virtuelles-institut-ar-vr
-  name: "Virtuelles Institut AR/VR"
-  period: "2024–ongoing"
-  funding_program: "State-level collaborative initiative"
-  funder: "State innovation ecosystem"
-  role: "Scientific partner"
-  partners: ["multi-university AR/VR network"]
-  transfer_partners_estimate: 6
-  topics: ["AR/VR", "Network building", "Education"]
+- id: miaprom
+  name: "MIA-PROM"
+  period: "2022–2025"
+  funding_program: "KIAS"
+  funder: "Bundesministerium für Bildung und Forschung"
+  role: "Project Lead"
+  partners:
+    - "Charité - University Berlin"
+    - "University of Applied Sciences Munich"
+    - "Technical University of Berlin"
+    - "Hamm-Lippstadt University of Applied Sciences"
+    - "Dexter Health GmbH"
+    - "Acalta GmbH"
+    - "ZAR rehabilitation center Berlin"
+    - "Seehof rehabilitation center Berlin"
+  transfer_partners_estimate: 8
+  topics: ["Digital health", "PROM", "Virtual assistant", "Accessibility"]
   outputs:
-    - label: "Network-enabled student projects"
-      url: "/teaching/"
-    - label: "Joint dissemination outputs"
-      url: "/talks/"
+    - label: "Project website"
+      url: "https://mia-prom.de"
   evidence_links:
-    - label: "HSHL profile"
-      url: "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
-    - label: "Google Scholar profile"
-      url: "https://scholar.google.com/citations?user=IFIaOZsAAAAJ"
+    - label: "MIA-PROM"
+      url: "https://mia-prom.de"
+
+- id: ariadne
+  name: "ARiadne"
+  period: "2024–2026"
+  funding_program: "Central Innovation Program for SMEs (ZIM)"
+  funder: "Federal Ministry for Economic Affairs and Energy (BMWE)"
+  role: "Project Lead"
+  partners: ["SWCode"]
+  transfer_partners_estimate: 1
+  topics: ["AR navigation", "Multimodal UI", "Personalized routing"]
+  outputs:
+    - label: "Project page"
+      url: "https://www.hshl.de/forschung-unternehmen/forschungsprojekte/forschungsprojekte-im-themenfeld-mensch-maschine-interaktion/ariadne/"
+  evidence_links:
+    - label: "HSHL project page"
+      url: "https://www.hshl.de/forschung-unternehmen/forschungsprojekte/forschungsprojekte-im-themenfeld-mensch-maschine-interaktion/ariadne/"
+
+- id: fastjets
+  name: "XR Emergency Training for Military Fast Jets"
+  period: "2024–2025"
+  funding_program: "Training Optimization Program"
+  funder: "German Air Force"
+  role: "Project Lead"
+  partners: ["Adams Simulation and Training"]
+  transfer_partners_estimate: 1
+  topics: ["XR training", "Psychophysiology", "Aviation safety"]
+  outputs:
+    - label: "Study video"
+      url: "https://www.youtube.com/watch?v=PmYzJgXgXuU"
+  evidence_links:
+    - label: "Research video"
+      url: "https://www.youtube.com/watch?v=PmYzJgXgXuU"
+
+- id: sbm
+  name: "Silent Bed Monitor"
+  period: "2025–2027"
+  funding_program: "Central Innovation Program for SMEs (ZIM)"
+  funder: "Federal Ministry for Economic Affairs and Energy (BMWE)"
+  role: "Project Lead"
+  partners: ["5micron GmbH"]
+  transfer_partners_estimate: 1
+  topics: ["Home health monitoring", "Sensor systems", "Machine learning"]
+  outputs: []
+  evidence_links: []
+
+- id: voiceadapt
+  name: "VoiceAdapt"
+  period: "2018–2021"
+  funding_program: "JPI More Years, Better Lives"
+  funder: "European Union / BMBF"
+  role: "Project Lead"
+  partners: ["Universität Toronto", "Universität Alberta", "NuroGames", "AIT"]
+  transfer_partners_estimate: 4
+  topics: ["Aphasia", "Adaptive interfaces", "Digital rehabilitation"]
+  outputs: []
+  evidence_links: []
+
+- id: bfn
+  name: "Bernstein Focus Neurotechnology - Berlin"
+  period: "2008–2014"
+  funding_program: "Bernstein Focus"
+  funder: "BMBF"
+  role: "Project Lead"
+  partners: ["Charité, Berlin", "Physikalisch-Technische Bundesanstalt"]
+  transfer_partners_estimate: 2
+  topics: ["Neurotechnology", "Brain-reading", "HCI"]
+  outputs: []
+  evidence_links: []
+
+- id: mih
+  name: "Mobil im Havelland"
+  period: "2018–2021"
+  funding_program: "Gerontology and geriatrics research"
+  funder: "BMBF"
+  role: "Project Lead"
+  partners: ["Charité - Universitätsmedizin Berlin", "Havelland Kliniken Unternehmensgruppe"]
+  transfer_partners_estimate: 2
+  topics: ["Mobility", "Gerontology", "Rural healthcare"]
+  outputs: []
+  evidence_links: []
+
+- id: art
+  name: "ART"
+  period: "2020–2021"
+  funding_program: "EIT Digital"
+  funder: "EIT Digital"
+  role: "Project Lead"
+  partners: ["Politecnico di Milano", "TIM", "FifthIngenium"]
+  transfer_partners_estimate: 3
+  topics: ["AR/VR", "Tourism", "5G"]
+  outputs: []
+  evidence_links: []
+
+- id: bgf
+  name: "BGF Pflege"
+  period: "2020–2021"
+  funding_program: "Health promotion in long-term care"
+  funder: "AOK Nordost"
+  role: "Project Lead"
+  partners:
+    - "Charité - Universitätsmedizin Berlin"
+    - "Johanniter-Stift Berlin-Johannisthal"
+  transfer_partners_estimate: 2
+  topics: ["Long-term care", "Prevention", "Digital assessment"]
+  outputs: []
+  evidence_links: []
+
+- id: demtab
+  name: "DemTab"
+  period: "2018–2021"
+  funding_program: "Innovationsfonds"
+  funder: "G-BA"
+  role: "Project Lead"
+  partners: ["Charité - Universitätsmedizin Berlin"]
+  transfer_partners_estimate: 1
+  topics: ["Dementia care", "Digital tools"]
+  outputs: []
+  evidence_links: []
+
+- id: pflegetab
+  name: "PflegeTab"
+  period: "2015–2018"
+  funding_program: "GKV-Spitzenverband"
+  funder: "GKV-Spitzenverband"
+  role: "Project Lead"
+  partners: ["Charité – Universitätsmedizin Berlin", "DOMICIL Seniorenpflegeheim Am Schlosspark"]
+  transfer_partners_estimate: 2
+  topics: ["Dementia", "Care technology", "Tablet-based interventions"]
+  outputs: []
+  evidence_links: []
+
+- id: xrwise
+  name: "XRwise"
+  period: "2025–2027"
+  funding_program: "Innovationsprogramm für Geschäftsmodelle und Pionierlösungen"
+  funder: "Bundesministerium für Wirtschaft und Energie"
+  role: "Project Lead"
+  partners: ["HAW Hamburg"]
+  transfer_partners_estimate: 1
+  topics: ["XR", "Business models", "Event creator"]
+  outputs:
+    - label: "Project website"
+      url: "https://xrevent-creator.de"
+  evidence_links:
+    - label: "XR Event Creator"
+      url: "https://xrevent-creator.de"
+
+- id: itt
+  name: "ITT"
+  period: "2026–2029"
+  funding_program: "EFRE"
+  funder: "European Union / State of North Rhine-Westphalia"
+  role: "Project Lead"
+  partners: ["DTHG Service GmbH", "Hochschule Hamm-Lippstadt"]
+  transfer_partners_estimate: 2
+  topics: ["Immersive training", "Theatre technology", "Vocational education"]
+  outputs: []
+  evidence_links: []
+
+- id: xrt
+  name: "XRT-HuFuSa"
+  period: "2026–2029"
+  funding_program: "EFRE"
+  funder: "European Union / State of North Rhine-Westphalia"
+  role: "Project Lead"
+  partners:
+    - "Hochschule Hamm-Lippstadt"
+    - "Fachhochschule Südwestfalen"
+    - "WE are XR GmbH"
+    - "Deutsche Windtechnik GmbH & Co.KG"
+    - "PTS Labs GmbH"
+  transfer_partners_estimate: 5
+  topics: ["XR training", "Digital twins", "Critical industries"]
+  outputs: []
+  evidence_links: []
+
+- id: infuse
+  name: "INFUSE"
+  period: "2026–2028"
+  funding_program: "DAAD funding"
+  funder: "DAAD"
+  role: "Project Contributor"
+  partners:
+    - "Universidade Federal de Santa Catarina"
+    - "Saitama University"
+    - "Suranaree University of Technology"
+    - "KIIT"
+    - "Wirtschaftsförderung Lippstadt GmbH"
+    - "Stadt Hamm"
+  transfer_partners_estimate: 6
+  topics: ["International education", "Inclusive learning", "Future skills"]
+  outputs: []
+  evidence_links: []

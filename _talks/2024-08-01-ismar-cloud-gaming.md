@@ -5,6 +5,9 @@ type: "Conference contribution"
 permalink: /talks/2024-08-01-ismar-cloud-gaming
 venue: "23rd IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2024)"
 date: 2024-08-01
+talk_type: "peer-reviewed"
+role: "co-author"
+publication_url: "/publication/2024-10-10-C82"
 location: "Greater Seattle Area, USA"
 ---
 

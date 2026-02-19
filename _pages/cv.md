@@ -12,42 +12,49 @@ redirect_from:
 
 ## Appointments
 
-- **Professor (Prof. Dr.-Ing.)**, Hamm-Lippstadt University of Applied Sciences, Immersive Reality Lab (current)
-- **Research and academic positions** in immersive media, human-centered computing, and quality of experience (prior appointments)
+- **since 2024:** Professor of Computer Science (Immersive Media), Hamm-Lippstadt University of Applied Sciences (HSHL).
+- **Current:** Director, Immersive Reality Lab.
+- **Prior academic appointments:** TU Berlin and collaborating research environments (see publication timeline and external profiles).
 
 ## Education
 
-- **Doctor of Engineering (Dr.-Ing.)**
-- **Academic background in engineering and human-centered system evaluation**
+- **Dr.-Ing.** (Engineering).
+- Interdisciplinary profile bridging computer science, human factors, and empirical experience evaluation.
 
-## Industry and transfer experience
+## Industry and transfer
 
-- Collaboration with industry and public-sector partners in applied R&D
-- Project transfer from prototype stage to practical deployment contexts
+- Applied R&D with industry and public stakeholders in XR, digital twins, and human-centered system evaluation.
+- Transfer formats: prototypes, training modules, workshops, and pilot deployments.
 
-## Grants and funded projects (selected)
+## Grants and projects (selected)
 
-- ARiadne
-- Didymos-XR
-- MIA-PROM
-- DigiOnTrack
-- Virtuelles Institut AR/VR
+{% for project in site.data.projects %}
+- **{{ project.name }}** ({{ project.period }}) — {{ project.role }}
+{% endfor %}
 
-## Teaching and supervision
+## Teaching (selected)
 
-- Courses in **Virtual Reality**, **Augmented Reality**, and immersive systems design
-- Supervision of student projects and theses in XR, QoE, and digital health contexts
+{% for course in site.data.courses %}
+- **{{ course.title }}** ({{ course.years }}) — {{ course.objective }}
+{% endfor %}
 
-## Service and leadership
+## Service (selected)
 
-- Director, Immersive Reality Lab
-- Reviewing and committee contributions in XR/HCI/QoE communities
-- Standardization-related dissemination outputs
+- Director, Immersive Reality Lab.
+- Reviewing and service in venues including ACM CHI, IEEE ISMAR, ACM VRST, and QoMEX.
+- Standardization-related dissemination and invited talks.
 
-## Metrics and profiles
+## Selected publications
 
-- [Google Scholar](https://scholar.google.de/citations?user=IFIaOZsAAAAJ)
+- [Dynamic and Responsible Digital Twins for Extended Reality](/publication/2025-09-01-J32)
+- [A quality of experience approach for cloud gaming in virtual reality](/publication/2024-07-01-J29)
+- [Arousal Effects on Evaluation and Perception in Multimedia Quality](/publication/2023-03-02-J25)
+- [The digitalization of healthcare for older adults (editorship)](https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/)
+
+## External profiles
+
+- [Google Scholar](https://scholar.google.com/citations?user=IFIaOZsAAAAJ)
 - [ORCID](https://orcid.org/0000-0002-2786-9262)
+- [DBLP](https://dblp.org/pid/39/10762)
+- [ACM author profile](https://dl.acm.org/profile/99659317387)
 - [HSHL profile](https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons)
-- [ResearchGate](https://www.researchgate.net/profile/Jan-Niklas-Voigt-Antons)
-- [Berlin Universities Publishing](https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/)

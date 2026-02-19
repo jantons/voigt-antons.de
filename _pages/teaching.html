@@ -8,26 +8,45 @@ description: "Teaching portfolio in Virtual Reality, Augmented Reality, immersiv
 
 ## Teaching philosophy
 
-I teach immersive technologies as an integrated practice of technical implementation, human-centered design, and empirical evaluation. Students work in project-based and lab-based formats with close links to research and transfer.
+I teach immersive technologies as a combination of technical implementation, human-centered design, and empirical evaluation.
 
 ## Courses taught
 
-| Course | Level | Institution | Years | Language |
-|---|---|---|---|---|
-{% for course in site.data.courses %}
-| {{ course.name }} | {{ course.level }} | {{ course.institution }} | {{ course.years }} | {{ course.language }} |
-{% endfor %}
+<table>
+  <thead>
+    <tr>
+      <th>Course</th>
+      <th>Level</th>
+      <th>Language</th>
+      <th>Years</th>
+      <th>Learning objective</th>
+      <th>Example student outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for course in site.data.courses %}
+    <tr>
+      <td>{{ course.title }}</td>
+      <td>{{ course.level }}</td>
+      <td>{{ course.language }}</td>
+      <td>{{ course.years }}</td>
+      <td>{{ course.objective }}</td>
+      <td>{{ course.outcome }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 ## Teaching formats
 
 - Project-based learning with iterative prototypes
 - Lab-based experiments in immersive environments
-- Industry and transfer collaborations in selected modules
+- Research-linked seminar formats with publication pathways
 
 ## Supervision
 
-- Supervision of student projects and theses in XR, QoE, and human-centered digital systems
-- Research-oriented seminar support with publication and prototyping pathways
+- Typical supervision volume: multiple theses and project groups per year across XR, QoE, and digital health topics.
+- Example topics: social acceptability in XR, QoE under network degradation, multimodal user-state assessment, and XR-based training concepts.
 
 ## Current teaching entries
 

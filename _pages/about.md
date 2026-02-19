@@ -8,34 +8,41 @@ redirect_from:
   - /about.html
 ---
 
-# Prof. Dr.-Ing. Jan-Niklas Voigt-Antons
+**Prof. Dr.-Ing. Jan-Niklas Voigt-Antons** works on human-centered Extended Reality (XR) and experience measurement for spatial interaction, learning/training, and digital health.
 
-**Human-centered Extended Reality (XR) and Experience Measurement for spatial interaction, learning/training, and digital health.**
+## Appointments & affiliation
 
-- **Director, Immersive Reality Lab** ([Lab profile](https://immersive-reality-lab.de/pages/team_voigtantons.html))
+Professor of Computer Science (Immersive Media), Hamm-Lippstadt University of Applied Sciences (HSHL). Director, Immersive Reality Lab.
+
+- [HSHL profile](https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons)
+- [Immersive Reality Lab profile](https://immersive-reality-lab.de/pages/team_voigtantons.html)
+
+## Evidence snapshot
+
 - **2,700+ citations** ([Google Scholar](https://scholar.google.de/citations?user=IFIaOZsAAAAJ))
-- **210+ publications** ([Google Scholar publications list](https://scholar.google.de/citations?user=IFIaOZsAAAAJ&hl=de))
+- **210+ publications** ([Google Scholar publication list](https://scholar.google.de/citations?user=IFIaOZsAAAAJ&hl=de))
+- **Persistent research identity** ([ORCID](https://orcid.org/0000-0002-2786-9262), [DBLP](https://dblp.org/pid/39/10762), [ACM DL](https://dl.acm.org/profile/99659317387))
+
+## Research lines snapshot
+
+{% for line in site.data.highlights.research_lines %}
+### {{ line.name }}
+{{ line.claim }}
+
+**Keywords:** {{ line.keywords | join: ", " }}
+
+[See outputs](/research/#{{ line.id }}){: .btn .btn--info}
+{% endfor %}
 
 [Research](/research/){: .btn .btn--primary}
 [Projects](/projects/){: .btn .btn--primary}
-[Contact](/#contact){: .btn .btn--primary}
-
-[Google Scholar](https://scholar.google.de/citations?user=IFIaOZsAAAAJ){: .btn .btn--info}
-[ORCID](https://orcid.org/0000-0002-2786-9262){: .btn .btn--info}
-[HSHL profile](https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons){: .btn .btn--info}
-[Lab website](https://immersive-reality-lab.de/){: .btn .btn--info}
-
-My work combines computer science, interaction design, and human factors to make immersive systems effective, safe, and trustworthy in real-world settings. At Hamm-Lippstadt University of Applied Sciences, I lead the Immersive Reality Lab and collaborate with academia, industry, and public partners in externally funded projects.
+[Contact](/contact/){: .btn .btn--primary}
 
 ## Featured elsewhere
 
-- [Official profile at Hamm-Lippstadt University of Applied Sciences (HSHL)](https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons)
+- [Official profile at HSHL](https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons)
 - [Google Scholar profile](https://scholar.google.de/citations?user=IFIaOZsAAAAJ)
-- [ResearchGate profile](https://www.researchgate.net/profile/Jan-Niklas-Voigt-Antons)
+- [ORCID profile](https://orcid.org/0000-0002-2786-9262)
+- [DBLP profile](https://dblp.org/pid/39/10762)
+- [ACM author profile](https://dl.acm.org/profile/99659317387)
 - [Berlin Universities Publishing author page](https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/)
-
-## Contact {#contact}
-
-- **Email:** [jan-niklas@voigt-antons.de](mailto:jan-niklas@voigt-antons.de)
-- **Institution:** Hamm-Lippstadt University of Applied Sciences
-- **Location:** Hamm / Lippstadt / Berlin, Germany

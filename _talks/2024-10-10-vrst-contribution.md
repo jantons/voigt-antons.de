@@ -5,6 +5,9 @@ type: "Conference contribution"
 permalink: /talks/2024-10-10-vrst-contribution
 venue: "30th ACM Symposium on Virtual Reality Software and Technology (VRST 2024)"
 date: 2024-10-10
+talk_type: "peer-reviewed"
+role: "co-author"
+publication_url: "/publication/2024-10-10-C79"
 location: "Trier, Germany"
 ---
 

@@ -8,26 +8,29 @@ description: "Academic leadership, reviewing, program committees, standardizatio
 
 ## Leadership
 
-- **Director, Immersive Reality Lab**, Hamm-Lippstadt University of Applied Sciences
-- Strategic development of research and transfer in XR, QoE, and human-centered digital systems
-- Coordination of collaborations with academia, industry, and public stakeholders
+- **{{ site.data.service.leadership.role }}**, Hamm-Lippstadt University of Applied Sciences.
+- **Mission:** {{ site.data.service.leadership.mission }}
+- **Team structure:** {{ site.data.service.leadership.team_structure }}
+- **Infrastructure:** {{ site.data.service.leadership.infrastructure | join: ", " }}
 
-## Reviewing activity (selected fields)
+## Reviewing and program committees (selected)
 
-- **HCI/XR:** conference and journal reviewing in immersive interaction and human factors
-- **QoE/Multimedia:** reviewing contributions on quality assessment and digital experience
-- **Human-centered AI and digital systems:** peer review for interdisciplinary venues
+### Conferences
+{% for conf in site.data.service.reviewing.conferences %}
+- {{ conf }}
+{% endfor %}
 
-## Program committees and organization
+### Journals
+{% for journal in site.data.service.reviewing.journals %}
+- {{ journal }}
+{% endfor %}
 
-- Program committee and organizational contributions to international XR/HCI venues
-- Session chair and reviewer roles linked to CHI, ISMAR, VRST related communities
+## Community and standardization
 
-## Standardization and community outputs
+{% for item in site.data.service.community %}
+- [{{ item.label }}]({{ item.url }})
+{% endfor %}
 
-- Contributions linked to ITU-focused quality and multimedia standardization output streams
-- Research dissemination at the intersection of evidence-based UX and technical system design
+## Invited talks and dissemination
 
-## Invited talks and panels
-
-- See the dedicated [Talks page](/talks/) for recent conference contributions and appearances
+See [Talks and presentations](/talks/) for recent invited talks, conference contributions, and media appearances.

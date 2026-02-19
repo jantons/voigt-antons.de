@@ -5,6 +5,9 @@ type: "Conference contribution"
 permalink: /talks/2024-10-01-ismar-contribution
 venue: "23rd IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2024)"
 date: 2024-10-01
+talk_type: "peer-reviewed"
+role: "co-author"
+publication_url: "/publication/2025-06-01-C89"
 location: "Greater Seattle Area, USA"
 ---
 

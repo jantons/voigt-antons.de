@@ -6,27 +6,25 @@ author_profile: true
 description: "Selected and complete publications with filtering by year, type, venue, and topic tags."
 ---
 
-<div class="wordwrap"><strong>Metrics:</strong> citation and h-index details on <a href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ">Google Scholar</a>.</div>
+<div class="wordwrap"><strong>External profiles:</strong> <a href="https://scholar.google.com/citations?user=IFIaOZsAAAAJ">Google Scholar</a> · <a href="https://dblp.org/pid/39/10762">DBLP</a> · <a href="https://dl.acm.org/profile/99659317387">ACM DL</a> · <a href="https://orcid.org/0000-0002-2786-9262">ORCID</a></div>
 
 ## Selected publications
 
-{% assign selected_ids = "2025-09-01-J32,2024-03-14-C71,2024-04-25-C75,2024-04-15-C73,2024-03-15-OC34,2024-03-15-J28" | split: "," %}
-{% for sid in selected_ids %}
-  {% assign pub = site.publications | where_exp: "item", "item.path contains sid" | first %}
-  {% if pub %}
-  <div class="list__item">
-    <article class="archive__item">
-      <h3 class="archive__item-title"><a href="{{ pub.url }}">{{ pub.title }}</a></h3>
-      <p><strong>{{ pub.date | date: "%Y" }}</strong> · {{ pub.venue }} · {{ pub.category | capitalize }}</p>
-      <p>
-        {% if pub.title contains "Virtual" or pub.title contains "XR" or pub.title contains "Augmented" %}<span class="notice--info">XR</span>{% endif %}
-        {% if pub.title contains "Experience" or pub.title contains "Quality" %}<span class="notice--info">QoE</span>{% endif %}
-        {% if pub.title contains "Emotion" or pub.title contains "Behavior" %}<span class="notice--info">Psychophysiology</span>{% endif %}
-      </p>
-    </article>
-  </div>
-  {% endif %}
-{% endfor %}
+### XR & Spatial Interaction
+- [Perceptibility and Preference of Dynamic Weight Changes in Virtual Reality Through Pseudo-Haptic and Vibrotactile Cues](/publication/2024-12-01-C83)
+- [Towards Socially Acceptable Virtual Reality Interactions in Public Contexts](/publication/2025-06-01-C89)
+
+### Quality of Experience (QoE)
+- [A quality of experience approach for cloud gaming in virtual reality](/publication/2024-07-01-J29)
+- [Dynamic and Responsible Digital Twins for Extended Reality](/publication/2025-09-01-J32)
+
+### Psychophysiology & Behavioral Measurement
+- [Arousal Effects on Evaluation and Perception in Multimedia Quality](/publication/2023-03-02-J25)
+- [User-centered measurements for immersive interaction quality](/publication/2025-01-01-C84)
+
+### Digital Health & Learning
+- [The digitalization of healthcare for older adults (book)](https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/)
+- [Current and Future Trends in Human-Centered Digitalization in Healthcare (2024 editorship)](/publication/2024-10-16-BC4)
 
 ## Filter all publications
 

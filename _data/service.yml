@@ -1,0 +1,15 @@
+leadership:
+  mission: "The Immersive Reality Lab develops and evaluates trustworthy XR systems for learning, work, and public-space interaction."
+  role: "Director, Immersive Reality Lab"
+  team_structure: "Interdisciplinary team of researchers and student assistants"
+  infrastructure: ["XR headsets", "eye-tracking setups", "physiological sensing", "behavioral observation and coding"]
+
+reviewing:
+  conferences: ["ACM CHI", "IEEE ISMAR", "ACM VRST", "QoMEX"]
+  journals: ["IEEE Access", "Frontiers", "Electronics"]
+
+community:
+  - label: "Standardization-related publication stream"
+    url: "/publications/"
+  - label: "Talks and dissemination"
+    url: "/talks/"

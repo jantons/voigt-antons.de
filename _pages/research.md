@@ -8,14 +8,21 @@ description: "Research lines in XR, QoE, psychophysiology, and digital health wi
 
 ## Research overview
 
-I investigate how immersive and interactive systems can be designed and evaluated to improve experience quality, task performance, and trust. The work combines controlled experimentation, behavioral observation, and psychophysiological measurement with applied prototyping in XR contexts.
+I investigate how immersive and interactive systems can be designed and evaluated to improve experience quality, task performance, and trust.
 
-## 1) XR and Spatial Interaction
+## Methods toolbox
 
-**Claim:** Natural, socially acceptable spatial interaction improves effectiveness and adoption of XR systems.
+`Eye tracking` · `Physiological sensing` · `Behavioral coding` · `QoE questionnaires` · `Simulator studies` · `Statistical analysis` · `Multimodal fusion`
 
-**Methods:** Interaction design, user studies, simulator experiments, mixed methods, task analytics  
-**Applications:** Training, simulation, collaboration, public-space XR
+Related outputs: [Psychophysiology-tagged work](/publications/?topic=psychophysiology) and [QoE-tagged work](/publications/?topic=qoe).
+
+## Cross-cutting application domains
+
+Safety-critical training · Public-space MR · Digital twins · Health communication · Intelligent agents
+
+## XR & Spatial Interaction {#xr-spatial-interaction}
+
+**Why it matters:** Spatial interaction quality directly influences usability, social acceptance, and deployment readiness.
 
 **Representative outputs**
 - [Towards Socially Acceptable Virtual Reality Interactions in Public Contexts](/publication/2025-06-01-C89)
@@ -26,12 +33,9 @@ I investigate how immersive and interactive systems can be designed and evaluate
 - [Didymos-XR](/projects/#didymos-xr)
 - [ARiadne](/projects/#ariadne)
 
-## 2) Quality of Experience (QoE)
+## Quality of Experience (QoE) {#qoe}
 
-**Claim:** QoE-driven design enables robust optimization of immersive and cloud-based media systems.
-
-**Methods:** QoE questionnaires, factorial experiments, network impairment simulation, statistics, longitudinal logging  
-**Applications:** VR cloud gaming, media delivery, digital platforms
+**Why it matters:** QoE data links technical system behavior to perceived quality, trust, and adoption.
 
 **Representative outputs**
 - [Impact of Packet Loss and Delay on Presence and User Experience in VR Cloud Gaming](/publication/2024-10-10-C82)
@@ -42,15 +46,12 @@ I investigate how immersive and interactive systems can be designed and evaluate
 - [Didymos-XR](/projects/#didymos-xr)
 - [MIA-PROM](/projects/#mia-prom)
 
-## 3) Psychophysiology and Behavioral Measurement
+## Psychophysiology & Behavioral Measurement {#psychophysiology}
 
-**Claim:** Physiological and behavioral signals provide complementary evidence for experience and workload assessment.
-
-**Methods:** Eye tracking, physiological sensing, behavioral coding, multimodal fusion, human-subject studies  
-**Applications:** Human factors evaluation, safety-critical interaction, adaptive interfaces
+**Why it matters:** Multimodal measurements help quantify user state beyond self-report alone.
 
 **Representative outputs**
-- [Arousal Effects on Evaluation and Perception in Multimedia Quality](/publication/2023-05-04-J26)
+- [Arousal Effects on Evaluation and Perception in Multimedia Quality](/publication/2023-03-02-J25)
 - [Assessing Social Acceptability in Immersive Environments](/publication/2025-03-01-C87)
 - [User-centered measurements for immersive interaction quality](/publication/2025-01-01-C84)
 
@@ -58,12 +59,9 @@ I investigate how immersive and interactive systems can be designed and evaluate
 - [MIA-PROM](/projects/#mia-prom)
 - [DigiOnTrack](/projects/#digiontrack)
 
-## 4) Digital Health and Learning
+## Digital Health & Learning {#digital-health-learning}
 
-**Claim:** XR and game-based approaches can increase engagement and effectiveness in health and educational settings.
-
-**Methods:** Co-design, iterative prototyping, serious games, educational intervention studies  
-**Applications:** Health communication, professional training, higher education
+**Why it matters:** Human-centered XR can improve engagement and measurable outcomes in education and health communication.
 
 **Representative outputs**
 - [The digitalization of healthcare for older adults (book editorship)](https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/)

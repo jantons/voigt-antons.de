@@ -5,6 +5,9 @@ type: "Conference contribution"
 permalink: /talks/2024-05-11-chi-contribution
 venue: "ACM Conference on Human Factors in Computing Systems (CHI 2024)"
 date: 2024-05-11
+talk_type: "peer-reviewed"
+role: "co-author"
+publication_url: "/publication/2024-05-11-C74"
 location: "Honolulu, USA"
 ---
 

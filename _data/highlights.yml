@@ -1,0 +1,17 @@
+research_lines:
+  - id: xr-spatial-interaction
+    name: "XR & Spatial Interaction"
+    claim: "Natural spatial interaction in XR improves effectiveness and social acceptability in real contexts."
+    keywords: ["Embodied interaction", "Social acceptability", "Mixed reality"]
+  - id: qoe
+    name: "Quality of Experience (QoE)"
+    claim: "QoE methods provide actionable evidence for optimizing immersive and cloud-based media systems."
+    keywords: ["Questionnaires", "Network impairments", "Statistical modeling"]
+  - id: psychophysiology
+    name: "Psychophysiology & Behavioral Measurement"
+    claim: "Physiological and behavioral signals complement self-reports for robust user-state assessment."
+    keywords: ["Eye tracking", "Multimodal sensing", "Workload"]
+  - id: digital-health-learning
+    name: "Digital Health & Learning"
+    claim: "XR and serious-game approaches increase engagement and improve applied training outcomes."
+    keywords: ["Serious games", "Health communication", "Training"]

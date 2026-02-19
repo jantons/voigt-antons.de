@@ -1,49 +1,99 @@
-- id: ariadne
-  name: "ARiadne"
-  period: "ongoing"
-  funding: "Public third-party funding"
-  role: "Principal Investigator / project lead"
-  outcomes:
-    - "XR prototypes for immersive training and guidance"
-    - "Transfer activities with regional partners"
-  topics: ["XR", "Spatial interaction", "Learning"]
-
 - id: didymos-xr
   name: "Didymos-XR"
-  period: "ongoing"
-  funding: "EU/public collaborative research"
-  role: "Project partner and work package lead"
-  outcomes:
-    - "Publications on responsible digital twins for XR"
-    - "Large-scale XR demonstrators"
-  topics: ["Digital twins", "XR", "Urban/industrial applications"]
+  period: "2023–2026"
+  funding_program: "EU collaborative research (Digital Twins / XR)"
+  funder: "European Union"
+  role: "Work package lead (QoE and human-centered evaluation)"
+  partners: ["TH Köln", "industrial partners", "public-sector partners"]
+  transfer_partners_estimate: 6
+  topics: ["Digital twins", "XR", "QoE"]
+  outputs:
+    - label: "Dynamic and Responsible Digital Twins for Extended Reality"
+      url: "/publication/2025-09-01-J32"
+    - label: "A quality of experience approach for cloud gaming in virtual reality"
+      url: "/publication/2024-07-01-J29"
+  evidence_links:
+    - label: "Project profile on HSHL"
+      url: "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
+    - label: "External publication proof (Scientific Reports)"
+      url: "https://www.nature.com/articles/s41598-025-17855-9"
+
+- id: ariadne
+  name: "ARiadne"
+  period: "2024–ongoing"
+  funding_program: "Applied research and transfer"
+  funder: "Public funding"
+  role: "Principal Investigator"
+  partners: ["regional industry partners", "HSHL teaching and transfer network"]
+  transfer_partners_estimate: 4
+  topics: ["XR", "Spatial interaction", "Learning"]
+  outputs:
+    - label: "Assessing Social Acceptability in Immersive Environments"
+      url: "/publication/2025-03-01-C87"
+    - label: "A user study on physically active locomotion in social virtual reality"
+      url: "/publication/2025-01-01-J31"
+  evidence_links:
+    - label: "Project context on HSHL profile"
+      url: "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
+    - label: "Lab website"
+      url: "https://immersive-reality-lab.de/"
 
 - id: mia-prom
   name: "MIA-PROM"
-  period: "ongoing"
-  funding: "Public third-party funding"
-  role: "Research lead"
-  outcomes:
-    - "Human-centered interaction and evaluation pipelines"
-    - "Prototype development for digital experience measurement"
+  period: "2024–ongoing"
+  funding_program: "Applied human-centered AI/XR research"
+  funder: "Public funding"
+  role: "Co-PI"
+  partners: ["academic collaborators", "practice partners"]
+  transfer_partners_estimate: 5
   topics: ["QoE", "Psychophysiology", "Digital health"]
+  outputs:
+    - label: "Arousal Effects on Evaluation and Perception in Multimedia Quality"
+      url: "/publication/2023-03-02-J25"
+    - label: "User-centered measurements for immersive interaction quality"
+      url: "/publication/2025-01-01-C84"
+  evidence_links:
+    - label: "HSHL profile"
+      url: "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
+    - label: "ORCID profile"
+      url: "https://orcid.org/0000-0002-2786-9262"
 
 - id: digiontrack
   name: "DigiOnTrack"
-  period: "ongoing"
-  funding: "Public transfer funding"
-  role: "Co-PI / transfer lead"
-  outcomes:
-    - "Digitalization and training concepts"
-    - "Practice-oriented demonstrators"
+  period: "2024–ongoing"
+  funding_program: "Digital teaching and transfer"
+  funder: "Public transfer funding"
+  role: "Work package lead"
+  partners: ["higher-education partners", "regional stakeholders"]
+  transfer_partners_estimate: 5
   topics: ["Learning", "Transfer", "XR"]
+  outputs:
+    - label: "Recent XR teaching-transfer outputs"
+      url: "/publications/"
+    - label: "Immersive Systems Design course"
+      url: "/teaching/"
+  evidence_links:
+    - label: "HSHL profile"
+      url: "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
+    - label: "Lab website"
+      url: "https://immersive-reality-lab.de/"
 
 - id: virtuelles-institut-ar-vr
   name: "Virtuelles Institut AR/VR"
-  period: "ongoing"
-  funding: "State-level collaborative initiative"
+  period: "2024–ongoing"
+  funding_program: "State-level collaborative initiative"
+  funder: "State innovation ecosystem"
   role: "Scientific partner"
-  outcomes:
-    - "Cross-institutional AR/VR collaboration"
-    - "Joint dissemination and student involvement"
+  partners: ["multi-university AR/VR network"]
+  transfer_partners_estimate: 6
   topics: ["AR/VR", "Network building", "Education"]
+  outputs:
+    - label: "Network-enabled student projects"
+      url: "/teaching/"
+    - label: "Joint dissemination outputs"
+      url: "/talks/"
+  evidence_links:
+    - label: "HSHL profile"
+      url: "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
+    - label: "Google Scholar profile"
+      url: "https://scholar.google.com/citations?user=IFIaOZsAAAAJ"

@@ -47,8 +47,8 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {% if page.collection == "publications" and page.citation %}
-        {% assign citation_prefix = "Recommended citation:" %}
-        {% assign content_without_citation = content | replace: citation_prefix, "__CITATION_MARKER__" | split: "__CITATION_MARKER__" | first %}
+        {% assign citation_paragraph_start = "<p>Recommended citation:" %}
+        {% assign content_without_citation = content | split: citation_paragraph_start | first %}
         {{ content_without_citation }}
         {% else %}
         {{ content }}

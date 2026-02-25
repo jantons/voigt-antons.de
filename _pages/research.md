@@ -3,12 +3,42 @@ layout: archive
 title: "Research"
 permalink: /research/
 author_profile: true
-description: "Research lines in XR, QoE, psychophysiology, and digital health with representative outputs and project links."
+description: "Research by Jan-Niklas Voigt-Antons on Extended Reality, spatial interaction, Quality of Experience, psychophysiological measurement, and digital health applications."
 ---
 
 ## Research overview
 
 I investigate how immersive and interactive systems can be designed and evaluated to improve experience quality, task performance, and trust.
+
+## What I Research (in plain language)
+
+I study how virtual and augmented reality systems can be built so they actually work well for people — not just technically, but in terms of how natural, comfortable, and useful they feel. My lab measures user experience using questionnaires, eye tracking, and physiological sensors, and applies these findings to improve VR/AR for training, healthcare, and everyday use.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchProject",
+  "name": "XR & Spatial Interaction",
+  "description": "Research on natural spatial interaction in Extended Reality, focusing on embodied interaction, social acceptability, and mixed reality deployment.",
+  "url": "https://voigt-antons.de/research/#xr-spatial-interaction",
+  "member": {
+    "@id": "https://voigt-antons.de/#person"
+  },
+  "keywords": ["Embodied interaction", "Social acceptability", "Mixed reality", "XR", "Spatial interaction"]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchProject",
+  "name": "Quality of Experience (QoE)",
+  "description": "Research linking technical behavior of immersive systems to perceived experience quality, trust, and adoption.",
+  "url": "https://voigt-antons.de/research/#qoe",
+  "member": { "@id": "https://voigt-antons.de/#person" },
+  "keywords": ["QoE", "User experience", "VR cloud gaming", "Trust", "Perception"]
+}
+</script>
 
 ## Methods toolbox
 

@@ -2,7 +2,7 @@
 permalink: /
 title: "About"
 author_profile: true
-description: "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons: Human-centered XR and experience measurement for spatial interaction, learning, training, and digital health."
+description: "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons: Human-centered XR and experience measurement for spatial interaction, learning, training, digital health, and immersive media research."
 redirect_from: 
   - /about/
   - /about.html

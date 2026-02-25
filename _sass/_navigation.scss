@@ -211,7 +211,9 @@
 
       &:first-child {
         font-weight: bold;
-        text-wrap: wrap;
+        white-space: nowrap;
+        text-wrap: nowrap;
+        hyphens: none;
 
         a {
           margin-left: 0;

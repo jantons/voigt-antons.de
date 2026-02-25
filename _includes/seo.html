@@ -246,7 +246,29 @@
 }
 </script>
 <meta name="citation_title" content="{{ page.title | escape }}" />
-<meta name="citation_author" content="Voigt-Antons, Jan-Niklas" />
+{% if page.authors %}
+  {% assign normalized_authors = page.authors | replace: ' and ', ' & ' %}
+  {% assign author_segments = normalized_authors | split: ' & ' %}
+  {% assign primary_authors = author_segments | first | split: '., ' %}
+  {% for author in primary_authors %}
+    {% assign clean_author = author | strip %}
+    {% if clean_author != '' %}
+      {% assign citation_author_value = clean_author %}
+      {% unless citation_author_value contains '.' %}
+        {% assign citation_author_value = citation_author_value | append: '.' %}
+      {% endunless %}
+<meta name="citation_author" content="{{ citation_author_value | escape }}" />
+    {% endif %}
+  {% endfor %}
+  {% if author_segments.size > 1 %}
+    {% assign trailing_author = author_segments | last | strip %}
+    {% if trailing_author != '' %}
+<meta name="citation_author" content="{{ trailing_author | escape }}" />
+    {% endif %}
+  {% endif %}
+{% else %}
+<meta name="citation_author" content="{{ site.author.name | escape }}" />
+{% endif %}
 <meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}" />
 {% if page.paperurl %}<meta name="citation_pdf_url" content="{{ page.paperurl | escape }}" />{% endif %}
 {% endif %}

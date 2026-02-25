@@ -161,6 +161,7 @@ analytics:
 # Reading Files
 include:
   - .htaccess
+  - _headers
   - _pages
   - files
 exclude:

@@ -46,7 +46,13 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% if page.collection == "publications" and page.citation %}
+        {% assign citation_paragraph_start = "<p>Recommended citation:" %}
+        {% assign content_without_citation = content | split: citation_paragraph_start | first %}
+        {{ content_without_citation }}
+        {% else %}
         {{ content }}
+        {% endif %}
 
         {% if page.citation and page.paperurl and page.slidesurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a></p>

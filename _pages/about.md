@@ -8,7 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-**Prof. Dr.-Ing. Jan-Niklas Voigt-Antons** works on human-centered Extended Reality (XR) and experience measurement for spatial interaction, learning/training, and digital health.
+**Prof. Dr.-Ing. Jan-Niklas Voigt-Antons** is a Professor of Computer Science
+(Immersive Media) at Hamm-Lippstadt University of Applied Sciences (HSHL) and
+Director of the Immersive Reality Lab. His research focuses on human-centered
+Extended Reality (XR), Quality of Experience (QoE) measurement, psychophysiological
+sensing, and digital health applications. With over 2,700 citations and 210+
+publications, his work bridges immersive technology design with rigorous
+user-experience evaluation. He contributes to ITU-T standardization efforts and
+collaborates internationally on XR research.
 
 ## Appointments & affiliation
 

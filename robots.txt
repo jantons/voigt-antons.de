@@ -1,6 +1,20 @@
 User-agent: *
 Allow: /
-Disallow: /markdown/
-Disallow: /assets/js/vendor/
+
+# Explicitly allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
 
 Sitemap: https://voigt-antons.de/sitemap.xml

@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "XR-Forscher & Professor für Immersive Media"
+title: "XR Researcher & Professor of Immersive Media"
 author_profile: true
 description: "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons: Human-centered XR and experience measurement for spatial interaction, learning, training, digital health, and immersive media research."
 redirect_from: 

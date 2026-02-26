@@ -1,6 +1,6 @@
 ---
 permalink: /impressum
-title: "Impressum"
+title: "Legal Notice"
 author_profile: true
 ---
 
@@ -16,19 +16,18 @@ Marker Allee 76-78
 
 Germany
 
-Kontakt
+Contact
 =======
 Telefon: +49 (0) 2381 87 89 914
 
 E-Mail: jan-niklas.voigt-antons@hshl.de
 
-Berufsbezeichnung und berufsrechtliche Regelungen
+Professional title and professional regulations
 ======
-Berufsbezeichnung:
+Professional title:
 
-Psychologe
+Psychologist
 
-Verbraucherstreitbeilegung/Universalschlichtungsstelle
+Consumer dispute resolution / universal arbitration board
 ------
-Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren teilzunehmen.
-
+I am not willing or obliged to participate in dispute resolution proceedings.

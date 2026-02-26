@@ -141,14 +141,11 @@ og_image                 :  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : Person
-  name                   : "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons"
-  links:
-    - https://scholar.google.de/citations?user=IFIaOZsAAAAJ
-    - https://orcid.org/0000-0002-2786-9262
-    - https://www.linkedin.com/in/jnvoigtantons/
-    - https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons
-    - https://immersive-reality-lab.de/pages/team_voigtantons.html
+  # Keep this block disabled to prevent legacy theme/person schema generation.
+  # The canonical Person JSON-LD is maintained in `_includes/head/custom.html`.
+  type                   :
+  name                   :
+  links: []
 
 
 # Analytics

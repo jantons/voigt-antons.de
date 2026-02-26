@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Academic CV of Prof. Dr.-Ing. Jan-Niklas Voigt-Antons"
 permalink: /cv/
 author_profile: true
 description: "Academic CV of Prof. Dr.-Ing. Jan-Niklas Voigt-Antons including appointments, grants, teaching, service, and external profiles."

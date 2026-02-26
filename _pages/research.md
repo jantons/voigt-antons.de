@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Research"
+title: "XR Research: Extended Reality, Spatial Interaction & QoE"
 permalink: /research/
 author_profile: true
 description: "Research by Jan-Niklas Voigt-Antons on Extended Reality, spatial interaction, Quality of Experience, psychophysiological measurement, and digital health applications."

@@ -31,30 +31,81 @@
 <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-
+{% if page.url == "/" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons",
+  "@id": "https://voigt-antons.de/#person",
+  "name": "Jan-Niklas Voigt-Antons",
+  "honorificPrefix": "Prof. Dr.-Ing.",
+  "givenName": "Jan-Niklas",
+  "familyName": "Voigt-Antons",
+  "url": "https://voigt-antons.de/",
+  "image": "https://voigt-antons.de/images/profile.png",
+  "email": "jan-niklas@voigt-antons.de",
   "jobTitle": "Professor of Computer Science (Immersive Media)",
-  "affiliation": {
-    "@type": "CollegeOrUniversity",
-    "name": "Hamm-Lippstadt University of Applied Sciences"
-  },
-  "areaServed": ["Germany", "European Union"],
-  "knowsAbout": ["XR", "Spatial Interaction", "Quality of Experience", "Psychophysiology", "Digital Health"],
+  "description": "Professor für Informatik (Immersive Media) an der Hochschule Hamm-Lippstadt. Forschungsschwerpunkte: Extended Reality, Quality of Experience, Psychophysiologie und Digital Health.",
   "sameAs": [
-    "https://scholar.google.com/citations?user=IFIaOZsAAAAJ",
+    "https://scholar.google.de/citations?user=IFIaOZsAAAAJ",
     "https://orcid.org/0000-0002-2786-9262",
+    "https://github.com/jantons",
+    "https://www.linkedin.com/in/jnvoigtantons",
     "https://dblp.org/pid/39/10762",
-    "https://dl.acm.org/profile/99659317387",
-    "https://www.linkedin.com/in/jnvoigtantons/",
-    "https://immersive-reality-lab.de/pages/team_voigtantons.html",
-    "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
+    "https://dl.acm.org/profile/99659317387"
   ],
-  "url": "https://voigt-antons.de/"
+  "worksFor": {
+    "@type": "EducationalOrganization",
+    "@id": "https://www.hshl.de/#organization",
+    "name": "Hamm-Lippstadt University of Applied Sciences",
+    "alternateName": "HSHL",
+    "url": "https://www.hshl.de"
+  },
+  "affiliation": {
+    "@type": "ResearchOrganization",
+    "name": "Immersive Reality Lab",
+    "url": "https://immersive-reality-lab.de"
+  },
+  "knowsAbout": [
+    "Extended Reality",
+    "Virtual Reality",
+    "Quality of Experience",
+    "Psychophysiology",
+    "Digital Health",
+    "Human-Computer Interaction",
+    "Immersive Media"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hamm",
+    "addressRegion": "Nordrhein-Westfalen",
+    "addressCountry": "DE"
+  }
 }
 </script>
+{% endif %}
+
+{% unless page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://voigt-antons.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.title | default: site.title | escape }}",
+      "item": "{{ page.url | prepend: site.url | replace: 'index.html', '' }}"
+    }
+  ]
+}
+</script>
+{% endunless %}
 
 <!-- end custom head snippets -->

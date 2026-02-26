@@ -13,7 +13,7 @@ title_separator          : "-"
 name                     : &name "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons"
 description              : &description "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons — Professor of Computer Science (Immersive Media) at HSHL. Research on XR, Quality of Experience, psychophysiology, and digital health. 2,700+ citations, 210+ publications."
 url                      : https://voigt-antons.de # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/" # the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "jantons/voigt-antons.de"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
@@ -27,7 +27,7 @@ author:
   bio              : "Hamm-Lippstadt University of Applied Sciences"
   location         : "Hamm - Lippstadt - Berlin, Germany"
   employer         : # DATA 
-  uri              : "https://www.voigt-antons.de/" 
+  uri              : "https://voigt-antons.de/"
   email            : "jan-niklas@voigt-antons.de" 
 
   # Academic websites

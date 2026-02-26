@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /search/
+Disallow: /markdown/
+Disallow: /portfolio/
 
 # Explicitly allow AI crawlers
 User-agent: GPTBot

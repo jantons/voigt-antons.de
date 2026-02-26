@@ -85,27 +85,4 @@
 </script>
 {% endif %}
 
-{% unless page.url == "/" %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://voigt-antons.de/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "{{ page.title | default: site.title | escape }}",
-      "item": "{{ page.url | prepend: site.url | replace: 'index.html', '' }}"
-    }
-  ]
-}
-</script>
-{% endunless %}
-
 <!-- end custom head snippets -->

@@ -47,6 +47,22 @@ his profiles on LinkedIn, Google Scholar, or the HSHL website.
         "@type": "Answer",
         "text": "The Immersive Reality Lab at Hamm-Lippstadt University of Applied Sciences (HSHL) is directed by Prof. Voigt-Antons. It investigates how immersive technologies can be designed and evaluated to improve experience quality, task performance, and user trust."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Quality of Experience (QoE)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quality of Experience is a research field that links technical system behavior (e.g., network latency, resolution) to how users perceive and rate their experience. Prof. Voigt-Antons develops QoE methods for immersive and cloud-based media systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I collaborate with or contact Jan-Niklas Voigt-Antons?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can reach Prof. Voigt-Antons via email at jan-niklas@voigt-antons.de or through his profiles on LinkedIn, Google Scholar, or the HSHL website."
+      }
     }
   ]
 }

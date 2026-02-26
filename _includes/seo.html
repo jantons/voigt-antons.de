@@ -230,6 +230,31 @@
 </script>
 {% endif %}
 
+
+{% if page.collection == 'posts' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "@id": "https://voigt-antons.de/#person",
+    "name": "Jan-Niklas Voigt-Antons"
+  },
+  "url": "{{ page.url | absolute_url }}",
+  "publisher": {
+    "@type": "Person",
+    "name": "Jan-Niklas Voigt-Antons",
+    "url": "https://voigt-antons.de"
+  },
+  "description": {{ seo_description | jsonify }}
+}
+</script>
+{% endif %}
+
 {% if page.collection == 'publications' %}
 <script type="application/ld+json">
 {

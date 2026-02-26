@@ -3,7 +3,7 @@ layout: archive
 title: "Contact"
 permalink: /contact/
 author_profile: true
-description: "Contact details for Prof. Dr.-Ing. Jan-Niklas Voigt-Antons."
+description: "Contact Prof. Dr.-Ing. Jan-Niklas Voigt-Antons at Hamm-Lippstadt University of Applied Sciences (HSHL), Director of the Immersive Reality Lab, for research in XR, Quality of Experience, psychophysiology, and digital health."
 ---
 
 ## Contact details

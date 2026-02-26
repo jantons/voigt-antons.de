@@ -189,6 +189,8 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - CODEBASE_REVIEW.md
+  - markdown_generator
   - tmp
   - vendor
 keep_files:

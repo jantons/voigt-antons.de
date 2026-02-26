@@ -1,4 +1,6 @@
 ---
+sitemap: false
+published: false
 layout: archive
 title: "Sitemap"
 permalink: /sitemap/

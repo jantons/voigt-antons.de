@@ -112,17 +112,10 @@
   </script>
 {% endif %}
 
-{% if site.social %}
-  <script type="application/ld+json">
-    {
-      "@context" : "http://schema.org",
-      "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name" : "{{ site.social.name | default: site.name }}",
-      "url" : {{ seo_url | jsonify }},
-      "sameAs" : {{ site.social.links | jsonify }}
-    }
-  </script>
-{% endif %}
+{% comment %}
+  Disabled the legacy theme `site.social` Person schema block to avoid duplicate
+  and conflicting Person definitions on the homepage.
+{% endcomment %}
 
 
 {% if page.url and page.url != "/" %}
@@ -180,55 +173,10 @@
 }
 </script>
 
-{% if page.url == "/" %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://voigt-antons.de/#person",
-  "name": "Jan-Niklas Voigt-Antons",
-  "honorificPrefix": "Prof. Dr.-Ing.",
-  "url": "https://voigt-antons.de",
-  "image": "https://voigt-antons.de/images/profile.png",
-  "email": "jan-niklas@voigt-antons.de",
-  "jobTitle": "Professor of Computer Science (Immersive Media)",
-  "worksFor": {
-    "@type": "CollegeOrUniversity",
-    "name": "Hamm-Lippstadt University of Applied Sciences",
-    "alternateName": "HSHL",
-    "url": "https://www.hshl.de"
-  },
-  "affiliation": {
-    "@type": "ResearchOrganization",
-    "name": "Immersive Reality Lab",
-    "url": "https://immersive-reality-lab.de"
-  },
-  "alumniOf": [],
-  "knowsAbout": [
-    "Extended Reality (XR)",
-    "Quality of Experience (QoE)",
-    "Virtual Reality",
-    "Mixed Reality",
-    "Psychophysiology",
-    "Eye Tracking",
-    "Digital Health",
-    "Serious Games",
-    "Human-Computer Interaction",
-    "Spatial Interaction"
-  ],
-  "sameAs": [
-    "https://scholar.google.de/citations?user=IFIaOZsAAAAJ",
-    "https://orcid.org/0000-0002-2786-9262",
-    "https://dblp.org/pid/39/10762",
-    "https://dl.acm.org/profile/99659317387",
-    "https://www.linkedin.com/in/jnvoigtantons",
-    "https://github.com/jantons",
-    "https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons"
-  ],
-  "description": "Professor and researcher specializing in human-centered Extended Reality, Quality of Experience measurement, psychophysiology, and digital health. Director of the Immersive Reality Lab at HSHL."
-}
-</script>
-{% endif %}
+{% comment %}
+  Homepage Person schema is intentionally maintained in `_includes/head/custom.html`
+  to keep a single canonical Person entity definition with `@id`.
+{% endcomment %}
 
 
 {% if page.collection == 'posts' %}

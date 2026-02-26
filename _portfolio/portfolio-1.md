@@ -1,4 +1,6 @@
 ---
+sitemap: false
+published: false
 title: "Multimodal Interactive Assistance for Digital PROM Collection"
 excerpt: "Research project on accessible, AI-supported collection of patient-reported outcome measures (PROMs)."
 collection: portfolio

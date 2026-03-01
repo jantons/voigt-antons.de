@@ -9,46 +9,34 @@ redirect_from:
   - /about.html
 ---
 
-<div class="section-block section-block--white">
+<div class="section-block section-block--white" markdown="1">
 
-**Prof. Dr.-Ing. Jan-Niklas Voigt-Antons** is a Professor of Computer Science
-(Immersive Media) at Hamm-Lippstadt University of Applied Sciences (HSHL) and
-Director of the Immersive Reality Lab. His research focuses on human-centered
-Extended Reality (XR), Quality of Experience (QoE) measurement, psychophysiological
-sensing, and digital health applications. With over 2,700 citations and 210+
-publications, his work bridges immersive technology design with rigorous
-user-experience evaluation. He contributes to ITU-T standardization efforts and
-collaborates internationally on XR research.
+**Prof. Dr.-Ing. Jan-Niklas Voigt-Antons** is a Professor of Computer Science (Immersive Media) at Hamm-Lippstadt University of Applied Sciences (HSHL) and Director of the Immersive Reality Lab. His research focuses on human-centered Extended Reality (XR), Quality of Experience (QoE) measurement, psychophysiological sensing, and digital health applications. With over 2,700 citations and 210+ publications, his work bridges immersive technology design with rigorous user-experience evaluation. He contributes to ITU-T standardization efforts and collaborates internationally on XR research.
 
 </div>
 
-<div class="section-block section-block--light">
+<div class="section-block section-block--light" markdown="1">
 
 ## Appointments & affiliation
 
-<div class="affiliation-box">
-  <div class="role">Professor of Computer Science (Immersive Media)</div>
-  <div class="institution">Hamm-Lippstadt University of Applied Sciences (HSHL), Director of the Immersive Reality Lab</div>
-  <div class="links">
-    <a href="https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons">HSHL profile</a>
-    <a href="https://immersive-reality-lab.de/pages/team_voigtantons.html">Immersive Reality Lab profile</a>
-  </div>
+<div class="affiliation-box" markdown="1">
+
+**Professor of Computer Science (Immersive Media)**
+
+Hamm-Lippstadt University of Applied Sciences (HSHL). Director, Immersive Reality Lab.
+
+<div class="links">
+<a href="https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons">HSHL profile</a> &nbsp;&nbsp;
+<a href="https://immersive-reality-lab.de/pages/team_voigtantons.html">Immersive Reality Lab profile</a>
+</div>
+
 </div>
 
 </div>
 
 <div class="section-block section-block--white">
 
-<div class="research-card">
-  <h3>Quality of Experience (QoE)</h3>
-  <p>QoE methods provide actionable evidence for optimizing immersive and cloud-based media systems.</p>
-  <div class="keyword-tags">
-    <span class="keyword-tag">Questionnaires</span>
-    <span class="keyword-tag">Network impairments</span>
-    <span class="keyword-tag">Statistical modeling</span>
-  </div>
-  <a href="/research/#quality-of-experience-qoe" class="btn btn--primary">See outputs</a>
-</div>
+<h2>Evidence snapshot</h2>
 
 <div class="metrics-grid">
   <div class="metric-card">
@@ -58,7 +46,7 @@ collaborates internationally on XR research.
     </a>
   </div>
   <div class="metric-card">
-    <a href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ&hl=de">
+    <a href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ&amp;hl=de">
       <span class="metric-number">210+</span>
       <span class="metric-label">Publications</span>
     </a>
@@ -81,7 +69,7 @@ collaborates internationally on XR research.
 
 <div class="section-block section-block--light">
 
-## Research lines snapshot
+<h2>Research lines snapshot</h2>
 
 {% for line in site.data.highlights.research_lines %}
 <div class="research-card">
@@ -92,22 +80,26 @@ collaborates internationally on XR research.
     <span class="keyword-tag">{{ keyword }}</span>
     {% endfor %}
   </div>
-  <a href="/research/#{{ line.id }}" class="btn btn--info btn--small">See outputs</a>
+  <a href="/research/#{{ line.id }}" class="btn btn--primary">See outputs</a>
 </div>
 {% endfor %}
 
-<h2>Featured elsewhere</h2>
+<p>
+  <a href="/research/" class="btn btn--primary">Research</a>
+  <a href="/projects/" class="btn btn--primary">Projects</a>
+  <a href="/contact/" class="btn btn--primary">Contact</a>
+</p>
 
 </div>
 
 <div class="section-block section-block--white">
 
-## Featured elsewhere
+<h2>Featured elsewhere</h2>
 
 <div class="profile-links">
   <a href="https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons" class="profile-chip"><i class="fas fa-university" aria-hidden="true"></i> HSHL</a>
   <a href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ" class="profile-chip"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
-  <a href="https://orcid.org/0000-0002-2786-9262" class="profile-chip"><i class="fas fa-id-card" aria-hidden="true"></i> ORCID</a>
+  <a href="https://orcid.org/0000-0002-2786-9262" class="profile-chip"><i class="fab fa-orcid" aria-hidden="true"></i> ORCID</a>
   <a href="https://dblp.org/pid/39/10762" class="profile-chip"><i class="fas fa-database" aria-hidden="true"></i> DBLP</a>
   <a href="https://dl.acm.org/profile/99659317387" class="profile-chip"><i class="fas fa-book" aria-hidden="true"></i> ACM DL</a>
   <a href="https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/" class="profile-chip"><i class="fas fa-landmark" aria-hidden="true"></i> BerlinUP</a>

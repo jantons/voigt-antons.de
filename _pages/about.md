@@ -1,9 +1,10 @@
 ---
+layout: single
 permalink: /
 title: "XR Researcher & Professor of Immersive Media"
 author_profile: true
 description: "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons: Human-centered XR and experience measurement for spatial interaction, learning, training, digital health, and immersive media research."
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
@@ -38,7 +39,16 @@ collaborates internationally on XR research.
 
 <div class="section-block section-block--white">
 
-## Evidence snapshot
+<div class="research-card">
+  <h3>Quality of Experience (QoE)</h3>
+  <p>QoE methods provide actionable evidence for optimizing immersive and cloud-based media systems.</p>
+  <div class="keyword-tags">
+    <span class="keyword-tag">Questionnaires</span>
+    <span class="keyword-tag">Network impairments</span>
+    <span class="keyword-tag">Statistical modeling</span>
+  </div>
+  <a href="/research/#quality-of-experience-qoe" class="btn btn--primary">See outputs</a>
+</div>
 
 <div class="metrics-grid">
   <div class="metric-card">
@@ -86,9 +96,7 @@ collaborates internationally on XR research.
 </div>
 {% endfor %}
 
-[Research](/research/){: .btn .btn--primary}
-[Projects](/projects/){: .btn .btn--primary}
-[Contact](/contact/){: .btn .btn--primary}
+<h2>Featured elsewhere</h2>
 
 </div>
 

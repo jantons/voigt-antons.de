@@ -17,7 +17,7 @@ redirect_from:
 
 <div class="section-block section-block--light" markdown="1">
 
-## Appointments & affiliation
+<h2>Appointments &amp; affiliation</h2>
 
 <div class="affiliation-box" markdown="1">
 

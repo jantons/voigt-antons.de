@@ -44,8 +44,6 @@
    CSS Custom Properties – Single Source of Truth
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
-
 :root {
   --color-primary: #52adc8;
   --color-primary-dark: #3a8da8;
@@ -58,7 +56,7 @@
   --color-accent-light: #faf5e8;
   --font-heading: "Source Serif 4", "Georgia", serif;
   --font-body: "Source Sans 3", "Helvetica Neue", sans-serif;
-  --transition-base: all 0.2s ease;
+  --transition-base: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.07);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.09);
   --shadow-teal: 0 4px 16px rgba(82, 173, 200, 0.18);
@@ -97,14 +95,14 @@ select {
 
 /* Masthead site title – serif */
 .masthead__menu-item--lg a {
-  font-family: var(--font-heading) !important;
+  font-family: var(--font-heading);
 }
 
 /* Sidebar headings – sans for compactness */
 .sidebar h2,
 .sidebar h3,
 .sidebar h4 {
-  font-family: var(--font-body) !important;
+  font-family: var(--font-body);
 }
 
 /* ==========================================================================
@@ -190,9 +188,9 @@ select {
 
 .section-block {
   padding: 2.5rem 0;
-  margin: 0 -1.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  margin: 0 -1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .section-block--light {
@@ -205,32 +203,6 @@ select {
   background: #ffffff;
 }
 
-/* New: teal-tinted accent section for visual anchors */
-.section-block--accent {
-  background: linear-gradient(135deg, #eaf5f9 0%, #f2f8fb 100%);
-  border-top: 3px solid var(--color-primary);
-  border-bottom: 1px solid #d4e9f0;
-  position: relative;
-  overflow: hidden;
-}
-
-.section-block--accent::before {
-  content: "";
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 180px;
-  height: 180px;
-  background: radial-gradient(circle, rgba(82, 173, 200, 0.12) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-/* New: warm accent section for e.g. news or projects */
-.section-block--warm {
-  background: linear-gradient(135deg, #fdfbf5 0%, #faf5e8 100%);
-  border-top: 3px solid var(--color-accent);
-  border-bottom: 1px solid #ede4c8;
-}
 
 /* ==========================================================================
    Sidebar Profile – Card Treatment
@@ -257,7 +229,7 @@ select {
 
 .author__bio {
   font-size: 0.82rem !important;
-  color: var(--color-text-muted) !important;
+  color: var(--color-text-muted);
   line-height: 1.5 !important;
 }
 
@@ -273,7 +245,7 @@ select {
 }
 
 .author__urls a:hover {
-  color: var(--color-primary) !important;
+  color: var(--color-primary);
   text-decoration: none !important;
 }
 
@@ -386,7 +358,7 @@ select {
 }
 
 .pub-badge--bookchapter {
-  background: #faf5e8;
+  background: var(--color-accent-light);
   color: #7a5a10;
   border: 1px solid #e2ca80;
 }
@@ -448,12 +420,12 @@ select {
 }
 
 .metric-card {
-  background: #f7fafb;
+  background: var(--color-bg-subtle);
   border: 1px solid #e4ecf0;
   border-radius: 6px;
   padding: 1.25rem 1rem;
   text-align: center;
-  transition: var(--transition-base), box-shadow 0.18s ease;
+  transition: var(--transition-base);
 }
 
 .metric-card:hover {
@@ -518,7 +490,7 @@ select {
 
 .research-card .keyword-tag {
   background: #f0f7fa;
-  color: #3a8da8;
+  color: var(--color-primary-dark);
   font-size: 0.8rem;
   padding: 0.25rem 0.65rem;
   border-radius: 3px;
@@ -555,7 +527,7 @@ select {
   font-size: 0.85rem;
   color: #3a5a6f;
   text-decoration: none;
-  transition: var(--transition-base), box-shadow 0.18s ease;
+  transition: var(--transition-base);
   font-weight: 500;
 }
 
@@ -587,7 +559,7 @@ select {
 
 /* Pagination buttons */
 .pagination--pager {
-  transition: var(--transition-base), box-shadow 0.18s ease;
+  transition: var(--transition-base);
 }
 
 .pagination--pager:hover {
@@ -609,11 +581,11 @@ select {
    ========================================================================== */
 
 .greedy-nav .visible-links a.active {
-  color: var(--color-primary) !important;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
 .greedy-nav .visible-links a.active::before {
-  transform: scaleX(1) !important;
-  background: var(--color-primary) !important;
+  transform: scaleX(1);
+  background: var(--color-primary);
 }

@@ -39,6 +39,13 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/* ==========================================================================
+   CSS Custom Properties – Single Source of Truth
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
+
 :root {
   --color-primary: #52adc8;
   --color-primary-dark: #3a8da8;
@@ -51,18 +58,58 @@
   --color-accent-light: #faf5e8;
   --font-heading: "Source Serif 4", "Georgia", serif;
   --font-body: "Source Sans 3", "Helvetica Neue", sans-serif;
+  --transition-base: all 0.2s ease;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.09);
+  --shadow-teal: 0 4px 16px rgba(82, 173, 200, 0.18);
 }
 
+/* ==========================================================================
+   Typography – Complete System
+   ========================================================================== */
+
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--font-heading);
+  color: var(--color-text);
+}
+
+h4,
+h5,
+h6 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--color-text);
 }
 
 body,
 p,
-li {
+li,
+td,
+th,
+label,
+input,
+textarea,
+select {
   font-family: var(--font-body);
 }
+
+/* Masthead site title – serif */
+.masthead__menu-item--lg a {
+  font-family: var(--font-heading) !important;
+}
+
+/* Sidebar headings – sans for compactness */
+.sidebar h2,
+.sidebar h3,
+.sidebar h4 {
+  font-family: var(--font-body) !important;
+}
+
+/* ==========================================================================
+   Page Content
+   ========================================================================== */
 
 .page__content {
   max-width: 720px;
@@ -86,7 +133,6 @@ li {
   border-radius: 2px;
 }
 
-
 .section-block h2 {
   margin-top: 0;
 }
@@ -96,12 +142,51 @@ li {
   line-height: 1.7;
 }
 
+/* ==========================================================================
+   Buttons – Micro-interactions & Unified Color
+   ========================================================================== */
+
+/* Override default btn to use teal primary */
+.btn {
+  background-color: var(--color-primary);
+  transition: background-color 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-teal);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
 .btn--primary {
   padding: 0.5rem 1.25rem;
   border-radius: 4px;
   font-weight: 600;
   letter-spacing: 0.02em;
+  background-color: var(--color-primary);
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+  }
 }
+
+.btn--inverse {
+  &:hover {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-teal);
+  }
+}
+
+/* ==========================================================================
+   Section Blocks – Visual Variety
+   ========================================================================== */
 
 .section-block {
   padding: 2.5rem 0;
@@ -119,6 +204,198 @@ li {
 .section-block--white {
   background: #ffffff;
 }
+
+/* New: teal-tinted accent section for visual anchors */
+.section-block--accent {
+  background: linear-gradient(135deg, #eaf5f9 0%, #f2f8fb 100%);
+  border-top: 3px solid var(--color-primary);
+  border-bottom: 1px solid #d4e9f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-block--accent::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(82, 173, 200, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* New: warm accent section for e.g. news or projects */
+.section-block--warm {
+  background: linear-gradient(135deg, #fdfbf5 0%, #faf5e8 100%);
+  border-top: 3px solid var(--color-accent);
+  border-bottom: 1px solid #ede4c8;
+}
+
+/* ==========================================================================
+   Sidebar Profile – Card Treatment
+   ========================================================================== */
+
+/* Wrap the sidebar profile area in a subtle card */
+.author__avatar img {
+  border: 3px solid var(--color-primary-light) !important;
+  box-shadow: 0 0 0 1px var(--color-border), var(--shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.author__avatar img:hover {
+  box-shadow: 0 0 0 1px var(--color-primary), var(--shadow-teal);
+}
+
+.author__name {
+  font-family: var(--font-heading) !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  color: var(--color-text) !important;
+  letter-spacing: -0.01em;
+}
+
+.author__bio {
+  font-size: 0.82rem !important;
+  color: var(--color-text-muted) !important;
+  line-height: 1.5 !important;
+}
+
+/* Sidebar social links – always visible on desktop, better hover */
+.author__urls a {
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  color: var(--color-text-muted) !important;
+  font-size: 0.82rem !important;
+}
+
+.author__urls a:hover {
+  color: var(--color-primary) !important;
+  text-decoration: none !important;
+  padding-left: 4px;
+}
+
+/* Subtle divider between avatar and bio sections on desktop */
+@media screen and (min-width: 1024px) {
+  .author__content {
+    border-top: 1px solid var(--color-border);
+    padding-top: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .author__urls-wrapper {
+    border-top: 1px solid var(--color-border);
+    padding-top: 0.75rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* ==========================================================================
+   Publication List – Visual Hierarchy
+   ========================================================================== */
+
+/* Publication list item as a card */
+.list__item {
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-left: 3px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 0.85rem;
+  background: #fff;
+  transition: var(--transition-base), box-shadow 0.18s ease;
+}
+
+.list__item:hover {
+  border-left-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateX(2px);
+}
+
+/* Year headers in archive lists */
+.archive__subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem !important;
+  font-weight: 600;
+  color: var(--color-text);
+  border-bottom: 2px solid var(--color-primary) !important;
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Publication item title */
+.archive__item-title {
+  font-family: var(--font-body) !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.archive__item-title a {
+  color: var(--color-text) !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease;
+}
+
+.archive__item-title a:hover {
+  color: var(--color-primary) !important;
+}
+
+/* Publication excerpt / authors */
+.archive__item-excerpt {
+  font-size: 0.83rem !important;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-top: 0.3rem;
+}
+
+/* Publication type badge – add via category class on the list item */
+.pub-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.18rem 0.55rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  line-height: 1.6;
+}
+
+.pub-badge--conference {
+  background: #e8f4f8;
+  color: #2a7a96;
+  border: 1px solid #bde0ed;
+}
+
+.pub-badge--journal {
+  background: #eaf5e9;
+  color: #2a6e28;
+  border: 1px solid #b5ddb3;
+}
+
+.pub-badge--bookchapter {
+  background: #faf5e8;
+  color: #7a5a10;
+  border: 1px solid #e2ca80;
+}
+
+.pub-badge--other {
+  background: #f3f0fa;
+  color: #5a3d8a;
+  border: 1px solid #c9b8e8;
+}
+
+/* Page meta (venue, date) */
+.page__meta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Research Cards – Polished
+   ========================================================================== */
 
 .affiliation-box {
   background: linear-gradient(135deg, #f7fafb 0%, #eef4f7 100%);
@@ -152,6 +429,7 @@ li {
   color: var(--color-primary);
 }
 
+/* Metrics grid */
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -165,6 +443,13 @@ li {
   border-radius: 6px;
   padding: 1.25rem 1rem;
   text-align: center;
+  transition: var(--transition-base), box-shadow 0.18s ease;
+}
+
+.metric-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-teal);
+  transform: translateY(-2px);
 }
 
 .metric-card .metric-number {
@@ -173,6 +458,7 @@ li {
   font-weight: 700;
   color: var(--color-primary);
   line-height: 1.2;
+  font-family: var(--font-heading);
 }
 
 .metric-card .metric-label {
@@ -191,6 +477,7 @@ li {
   color: var(--color-primary-dark);
 }
 
+/* Research cards */
 .research-card {
   background: #ffffff;
   border: 1px solid #e8ecf0;
@@ -202,7 +489,7 @@ li {
 }
 
 .research-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
 
@@ -227,7 +514,18 @@ li {
   border-radius: 3px;
   font-weight: 500;
   border: 1px solid #d4e8ef;
+  transition: background 0.15s ease, color 0.15s ease;
 }
+
+.research-card .keyword-tag:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Profile Chips
+   ========================================================================== */
 
 .profile-links {
   display: flex;
@@ -247,7 +545,7 @@ li {
   font-size: 0.85rem;
   color: #3a5a6f;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: var(--transition-base), box-shadow 0.18s ease;
   font-weight: 500;
 }
 
@@ -255,5 +553,57 @@ li {
   background: #f0f7fa;
   border-color: var(--color-primary);
   color: var(--color-primary);
-  box-shadow: 0 2px 8px rgba(82, 173, 200, 0.15);
+  box-shadow: var(--shadow-teal);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Global Micro-interactions
+   ========================================================================== */
+
+/* Links in page content – smooth color transition */
+.page__content a {
+  transition: color 0.15s ease;
+}
+
+/* Navigation items (outside greedy nav) */
+.nav__list a {
+  transition: color 0.15s ease, padding-left 0.15s ease;
+}
+
+.nav__list a:hover {
+  padding-left: 3px;
+}
+
+/* Pagination buttons */
+.pagination--pager {
+  transition: var(--transition-base), box-shadow 0.18s ease;
+}
+
+.pagination--pager:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Archive grid item hover */
+.archive__item {
+  transition: transform 0.15s ease;
+}
+
+.archive__item:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Greedy Nav – Active Page Indicator (JS-side adds .active class)
+   ========================================================================== */
+
+.greedy-nav .visible-links a.active {
+  color: var(--color-primary) !important;
+  font-weight: 600;
+}
+
+.greedy-nav .visible-links a.active::before {
+  transform: scaleX(1) !important;
+  background: var(--color-primary) !important;
 }

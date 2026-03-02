@@ -32,6 +32,19 @@
 
     {% assign display_title = post.citation | default: title %}
     <div class="archive__item-title" itemprop="headline">
+      {% if post.collection == 'publications' %}
+        {% if post.category == 'conferences' %}
+          <span class="pub-badge pub-badge--conference">Conference</span>
+        {% elsif post.category == 'manuscripts' %}
+          <span class="pub-badge pub-badge--journal">Journal</span>
+        {% elsif post.category == 'bookchapters' %}
+          <span class="pub-badge pub-badge--bookchapter">Book Chapter</span>
+        {% elsif post.category == 'books' %}
+          <span class="pub-badge pub-badge--bookchapter">Book</span>
+        {% elsif post.category == 'standardizations' %}
+          <span class="pub-badge pub-badge--other">Standard</span>
+        {% endif %}
+      {% endif %}
       {% if post.link %}
         <a href="{{ post.link }}">{{ display_title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}

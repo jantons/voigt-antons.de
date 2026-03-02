@@ -25,6 +25,15 @@ $(document).ready(function(){
     $(".author__urls-wrapper button").toggleClass("open");
   });
 
+  // Mark active nav link based on current URL
+  var currentPath = window.location.pathname.replace(/\/$/, "");
+  $(".greedy-nav .visible-links a").each(function() {
+    var linkPath = $(this).attr("href").replace(/\/$/, "");
+    if (linkPath && currentPath && currentPath.startsWith(linkPath) && linkPath !== "") {
+      $(this).addClass("active");
+    }
+  });
+
   // init smooth scroll, this needs to be slightly more than then fixed masthead height
   $("a").smoothScroll({offset: -65});
 

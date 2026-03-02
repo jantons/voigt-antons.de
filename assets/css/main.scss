@@ -263,19 +263,26 @@ select {
 
 /* Sidebar social links – always visible on desktop, better hover */
 .author__urls a {
-  transition: color 0.15s ease, padding-left 0.15s ease;
+  transition: color 0.15s ease;
   color: var(--color-text-muted) !important;
   font-size: 0.82rem !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .author__urls a:hover {
   color: var(--color-primary) !important;
   text-decoration: none !important;
-  padding-left: 4px;
 }
 
-/* Subtle divider between avatar and bio sections on desktop */
+/* Prevent sidebar content from overflowing into main content area */
 @media screen and (min-width: 1024px) {
+  .sidebar {
+    overflow-x: hidden;
+  }
+
   .author__content {
     border-top: 1px solid var(--color-border);
     padding-top: 0.75rem;
@@ -293,15 +300,18 @@ select {
    Publication List – Visual Hierarchy
    ========================================================================== */
 
-/* Publication list item as a card */
+/* Publication list item as a card – keep original padding-right (right-sidebar accommodation) */
 .list__item {
-  padding: 1.1rem 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.25rem;
+  /* padding-right intentionally NOT overridden – original SCSS handles right-sidebar offset */
   border: 1px solid var(--color-border);
   border-left: 3px solid transparent;
   border-radius: 5px;
   margin-bottom: 0.85rem;
   background: #fff;
-  transition: var(--transition-base), box-shadow 0.18s ease;
+  transition: border-left-color 0.18s ease, box-shadow 0.18s ease, transform 0.15s ease;
 }
 
 .list__item:hover {

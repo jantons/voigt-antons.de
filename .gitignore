@@ -8,10 +8,18 @@ local/
 # Ignore the Gemfile that is generated
 Gemfile.lock
 
-# Ingore files created by npm
+# Ignore files created by npm
 node_modules
 package-lock.json
 
-# IDE and tooling
-.claude/
-.idea/
+# Ignore the vendor file at root level and bundle for alternative installation
+/vendor/
+.bundle/
+
+# Ignore folders related to IDEs
+.vscode/
+
+# Ignore files created by MacOS
+.DS_Store
+.github/workflows/scrape_talks.yml
+.github/workflows/scrape_talks.yml

@@ -67,9 +67,9 @@ Safety-critical training · Public-space MR · Digital twins · Health communica
   <p><strong>Why it matters:</strong> Spatial interaction quality directly influences usability, social acceptance, and deployment readiness.</p>
   <p><strong>Representative outputs</strong></p>
   <ul>
-    <li><a href="/publication/2025-06-01-C89">Towards Socially Acceptable Virtual Reality Interactions in Public Contexts</a></li>
-    <li><a href="/publication/2025-01-01-J31">A user study on physically active locomotion in social virtual reality</a></li>
-    <li><a href="/publication/2024-12-01-C83">Perceptibility and Preference of Dynamic Weight Changes in Virtual Reality Through Pseudo-Haptic and Vibrotactile Cues</a></li>
+    <li><a href="/publication/2024-10-01-C78">Working with Mixed Reality in Public: Effects of Virtual Display Layouts on Feeling of Safety, Productivity and Social Acceptability</a></li>
+    <li><a href="/publication/2021-05-10-C64">Influence of Interactivity and Social Environments on User Experience and Social Acceptability in Virtual Reality</a></li>
+    <li><a href="/publication/2024-05-11-C74">Experiencing Dynamic Weight Changes in Virtual Reality Through Pseudo-Haptics and Vibrotactile Feedback</a></li>
   </ul>
   <p><strong>Representative projects</strong></p>
   <ul>
@@ -83,9 +83,9 @@ Safety-critical training · Public-space MR · Digital twins · Health communica
   <p><strong>Why it matters:</strong> QoE data links technical system behavior to perceived quality, trust, and adoption.</p>
   <p><strong>Representative outputs</strong></p>
   <ul>
-    <li><a href="/publication/2024-10-10-C82">Impact of Packet Loss and Delay on Presence and User Experience in VR Cloud Gaming</a></li>
+    <li><a href="/publication/2024-08-01-C81">VR Cloud Gaming UX: Exploring the Impact of Network Quality on Emotion, Presence, Game Experience and Cybersickness</a></li>
     <li><a href="/publication/2025-09-01-J32">Dynamic and Responsible Digital Twins for Extended Reality</a></li>
-    <li><a href="/publication/2024-07-01-J29">A quality of experience approach for cloud gaming in virtual reality</a></li>
+    <li><a href="/publication/2023-08-01-OJ5">User states in extended reality media experiences for entertainment games</a></li>
   </ul>
   <p><strong>Representative projects</strong></p>
   <ul>
@@ -99,9 +99,9 @@ Safety-critical training · Public-space MR · Digital twins · Health communica
   <p><strong>Why it matters:</strong> Multimodal measurements help quantify user state beyond self-report alone.</p>
   <p><strong>Representative outputs</strong></p>
   <ul>
-    <li><a href="/publication/2023-03-02-J25">Arousal Effects on Evaluation and Perception in Multimedia Quality</a></li>
-    <li><a href="/publication/2025-03-01-C87">Assessing Social Acceptability in Immersive Environments</a></li>
-    <li><a href="/publication/2025-01-01-C84">User-centered measurements for immersive interaction quality</a></li>
+    <li><a href="/publication/2016-02-06-J5">Using Electroencephalography to Analyze Sleepiness due to Low-quality Audiovisual Stimuli</a></li>
+    <li><a href="/publication/2024-04-25-C75">The Impact of Social Environment and Interaction Focus on User Experience and Social Acceptability of an Augmented Reality Game</a></li>
+    <li><a href="/publication/2023-01-05-J24">Real-time affect detection in virtual reality: a technique based on a three-dimensional model of affect and EEG signals</a></li>
   </ul>
   <p><strong>Representative projects</strong></p>
   <ul>

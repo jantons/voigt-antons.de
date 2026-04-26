@@ -57,8 +57,8 @@ redirect_from:
 ## Selected publications
 
 - [Dynamic and Responsible Digital Twins for Extended Reality](/publication/2025-09-01-J32)
-- [A quality of experience approach for cloud gaming in virtual reality](/publication/2024-07-01-J29)
-- [Arousal Effects on Evaluation and Perception in Multimedia Quality](/publication/2023-03-02-J25)
+- [VR Cloud Gaming UX: Exploring the Impact of Network Quality on Emotion, Presence, Game Experience and Cybersickness](/publication/2024-08-01-C81)
+- [Psychophysiology-based QoE Assessment: A Survey](/publication/2016-09-15-J6)
 - [The digitalization of healthcare for older adults (editorship)](https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/)
 
 ## External profiles

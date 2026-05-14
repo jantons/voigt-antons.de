@@ -65,7 +65,7 @@ description: "Selected and complete publications with filtering by year, type, v
       <h3 class="archive__item-title"><a href="{{ post.url }}">{{ post.citation | default: post.title }}</a></h3>
       <p>{{ post.date | date: "%Y" }} · {{ post.venue }} · <strong>Topic:</strong> {{ topic }}</p>
       <p>
-        {% assign _purl = post.paperurl | strip %}{% if _purl != "" %}<a href="{{ _purl }}">DOI/Paper</a> · {% endif %}
+        {% assign _purl = post.paperurl | strip %}{% if _purl != "" %}<a href="{{ _purl }}">DOI/Paper</a> · {% elsif post.forthcoming %}<span class="forthcoming-badge">Forthcoming</span> · {% endif %}
         <a href="{{ post.url }}#bibtex">BibTeX</a>
       </p>
     </article>

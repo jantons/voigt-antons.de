@@ -16,6 +16,12 @@ I investigate how immersive and interactive systems can be designed and evaluate
 
 I study how virtual and augmented reality systems can be built so they actually work well for people — not just technically, but in terms of how natural, comfortable, and useful they feel. My lab measures user experience using questionnaires, eye tracking, and physiological sensors, and applies these findings to improve VR/AR for training, healthcare, and everyday use.
 
+## What distinguishes this lab
+
+Most XR research either studies interaction in the lab or measures physiology separately. We do both together, and we take XR outside the lab — into hospitals, public spaces, and safety-critical training environments. This combination — multimodal measurement (EEG, eye tracking, behavioral coding) coupled with ecologically valid XR deployments — lets us answer questions that neither approach alone can address: not just "does this feel good?" but "what do bodies and brains reveal about quality that users cannot consciously articulate?"
+
+The result is a research profile that crosses from standardization (ITU-T, ETSI) to clinical deployment, with a unifying thread: making immersive systems measurably better for real people in real contexts.
+
 </div>
 
 <script type="application/ld+json">

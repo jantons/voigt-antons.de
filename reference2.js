@@ -1467,7 +1467,7 @@ window.publications = [
     "authors": "Kuhlencord, M., Ohse, J., Fox, J., Peperkorn, N., Rätsch, M., Voigt-Antons, J.-N. & Shiban, Y.",
     "download_link": "http://dx.doi.org/10.2196/30621",
     "abstract": "This article explores the use of artificial intelligence (AI) and extended reality (XR) in clinical-psychological diagnostics. It discusses both the opportunities and challenges of integrating these innovative technologies into diagnostic practice, with a focus on improving assessment accuracy and patient experience. The paper emphasizes the importance of interdisciplinary research to ensure effective and ethically responsible applications.",
-    "citation": "Kuhlencord, M., Ohse, J., Fox, J., Peperkorn, N., Rätsch, M., Voigt-Antons, J.-N. & Shiban, Y. (2025). Using promising technologies in clinical-psychological diagnostics: Focus auf KI und XR Focus auf KI und XR. Psychologie in Österreich, (4 & 5), 278-285."
+    "citation": "Kuhlencord, M., Ohse, J., Fox, J., Peperkorn, N., Rätsch, M., Voigt-Antons, J.-N. & Shiban, Y. (2025). Using promising technologies in clinical-psychological diagnostics: Focus auf KI und XR. Psychologie in Österreich, (4 & 5), 278-285."
   },
   {
     "id": "OJ5",

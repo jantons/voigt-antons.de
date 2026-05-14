@@ -85,7 +85,7 @@ Safety-critical training · Public-space MR · Digital twins · Health communica
   <ul>
     <li><a href="/publication/2024-08-01-C81">VR Cloud Gaming UX: Exploring the Impact of Network Quality on Emotion, Presence, Game Experience and Cybersickness</a></li>
     <li><a href="/publication/2025-09-01-J32">Dynamic and Responsible Digital Twins for Extended Reality</a></li>
-    <li><a href="/publication/2023-08-01-OJ5">User states in extended reality media experiences for entertainment games</a></li>
+    <li><a href="/publication/2023-08-01-OJ5">Editorial: User states in extended reality media experiences for entertainment games</a></li>
   </ul>
   <p><strong>Representative projects</strong></p>
   <ul>

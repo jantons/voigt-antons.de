@@ -51,34 +51,22 @@ var toggleTheme = () => {
    Plotly integration script so that Markdown codeblocks will be rendered
    ========================================================================== */
 
-// Read the Plotly data from the code block, hide it, and render the chart as new node. This allows for the 
-// JSON data to be retrieve when the theme is switched. The listener should only be added if the data is 
-// actually present on the page.
-import { plotlyDarkLayout, plotlyLightLayout } from './theme.js';
-let plotlyElements = document.querySelectorAll("pre>code.language-plotly");
+// Plotly is loaded on-demand from CDN only when a plotly code block exists.
+// This avoids bundling ~3MB into every page load.
+var plotlyElements = document.querySelectorAll("pre>code.language-plotly");
 if (plotlyElements.length > 0) {
-  document.addEventListener("readystatechange", () => {
-    if (document.readyState === "complete") {
-      plotlyElements.forEach((elem) => {
-        // Parse the Plotly JSON data and hide it
-        var jsonData = JSON.parse(elem.textContent);
-        elem.parentElement.classList.add("hidden");
-
-        // Add the Plotly node
-        let chartElement = document.createElement("div");
-        elem.parentElement.after(chartElement);
-
-        // Set the theme for the plot and render it
-        const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
-        if (jsonData.layout) {
-          jsonData.layout.template = (jsonData.layout.template) ? { ...theme, ...jsonData.layout.template } : theme;
-        } else {
-          jsonData.layout = { template: theme };
-        }
-        Plotly.react(chartElement, jsonData.data, jsonData.layout);
-      });
-    }
-  });
+  var plotlyScript = document.createElement("script");
+  plotlyScript.src = "https://cdn.plot.ly/plotly-basic-3.0.0.min.js";
+  plotlyScript.onload = function() {
+    plotlyElements.forEach(function(elem) {
+      var jsonData = JSON.parse(elem.textContent);
+      elem.parentElement.classList.add("hidden");
+      var chartElement = document.createElement("div");
+      elem.parentElement.after(chartElement);
+      Plotly.react(chartElement, jsonData.data, jsonData.layout || {});
+    });
+  };
+  document.head.appendChild(plotlyScript);
 }
 
 /* ==========================================================================

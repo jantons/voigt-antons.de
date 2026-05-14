@@ -160,7 +160,7 @@
 <meta name="keywords" content="Extended Reality, XR, Quality of Experience, spatial interaction, psychophysiology, digital health, immersive media">
 <meta property="og:description" content="{{ seo_description }}">
 <meta property="og:image" content="https://voigt-antons.de/images/profile.png">
-<meta property="og:type" content="website">
+{% if page.date %}<meta property="og:type" content="article">{% else %}<meta property="og:type" content="website">{% endif %}
 <meta name="twitter:card" content="summary">
 
 <script type="application/ld+json">

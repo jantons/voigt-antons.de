@@ -21,6 +21,7 @@
   period: "2023–2026"
   funding_program: "HORIZON Action Grant Budget-Based"
   funder: "European Union"
+  budget_note: "Multi-million EUR EU Action Grant (13-partner consortium)"
   role: "Project Lead"
   partners:
     - "Joanneum Research"
@@ -141,8 +142,12 @@
   partners: ["Universität Toronto", "Universität Alberta", "NuroGames", "AIT"]
   transfer_partners_estimate: 4
   topics: ["Aphasia", "Adaptive interfaces", "Digital rehabilitation"]
-  outputs: []
-  evidence_links: []
+  outputs:
+    - label: "User-Centered Design of a Multimodal Training App for People with Aphasia (ASHA 2020)"
+      url: "/publication/2020-11-01-OC17"
+  evidence_links:
+    - label: "ASHA 2020 proposal"
+      url: "/publication/2020-11-01-OC17"
 
 - id: bfn
   name: "Bernstein Focus Neurotechnology - Berlin"
@@ -153,8 +158,14 @@
   partners: ["Charité, Berlin", "Physikalisch-Technische Bundesanstalt"]
   transfer_partners_estimate: 2
   topics: ["Neurotechnology", "Brain-reading", "HCI"]
-  outputs: []
-  evidence_links: []
+  outputs:
+    - label: "Psychophysiology-based QoE Assessment: A Survey (2016)"
+      url: "/publication/2016-09-15-J6"
+    - label: "Using EEG to Analyze Sleepiness due to Low-quality Audiovisual Stimuli (2016)"
+      url: "/publication/2016-02-06-J5"
+  evidence_links:
+    - label: "Key journal publications"
+      url: "/publications/?topic=psychophysiology"
 
 - id: mih
   name: "Mobil im Havelland"
@@ -203,8 +214,12 @@
   partners: ["Charité - Universitätsmedizin Berlin"]
   transfer_partners_estimate: 1
   topics: ["Dementia care", "Digital tools"]
-  outputs: []
-  evidence_links: []
+  outputs:
+    - label: "Ambulante Versorgung von Menschen mit Demenz – Querschnittsdaten aus der DemTab-Studie (Charité 2021)"
+      url: "/publication/2021-02-01-OC19"
+  evidence_links:
+    - label: "Charité congress abstract"
+      url: "/publication/2021-02-01-OC19"
 
 - id: pflegetab
   name: "PflegeTab"
@@ -215,8 +230,14 @@
   partners: ["Charité – Universitätsmedizin Berlin", "DOMICIL Seniorenpflegeheim Am Schlosspark"]
   transfer_partners_estimate: 2
   topics: ["Dementia", "Care technology", "Tablet-based interventions"]
-  outputs: []
-  evidence_links: []
+  outputs:
+    - label: "PflegeTab: Enhancing Quality of Life Using a Psychosocial Internet-based Intervention (ISRII 2016)"
+      url: "/publication/2016-04-01-C37"
+    - label: "Akzeptanz neuer Technologien im Arbeitsalltag von Pflegeheimmitarbeitern (DGMS 2016)"
+      url: "/publication/2016-09-01-OC6"
+  evidence_links:
+    - label: "ISRII 2016 poster"
+      url: "/publication/2016-04-01-C37"
 
 - id: xrwise
   name: "XRwise"

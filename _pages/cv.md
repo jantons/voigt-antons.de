@@ -14,19 +14,27 @@ redirect_from:
 
 ## Appointments
 
-- **since 2024:** Professor of Computer Science (Immersive Media), Hamm-Lippstadt University of Applied Sciences (HSHL).
-- **Current:** Director, Immersive Reality Lab.
-- **Prior academic appointments:** TU Berlin and collaborating research environments (see publication timeline and external profiles).
+- **since 2024:** Professor of Computer Science (Immersive Media), Hamm-Lippstadt University of Applied Sciences (HSHL), Hamm, Germany.
+- **since 2024:** Director, Immersive Reality Lab, HSHL.
+- **2016–2024:** Senior Researcher & Project Lead, Quality and Usability Lab, TU Berlin (Prof. Sebastian Möller).
+- **2015–2016:** Visiting Researcher, Ghent University, Belgium (imec / IDLab).
 
 ## Education
 
-- **Dr.-Ing.** (Engineering).
+- **Dr.-Ing.** (Doctor of Engineering), TU Berlin, 2020. Dissertation: psychophysiological and behavioral assessment of Quality of Experience in immersive media.
+- **M.Sc.** Human Factors, TU Berlin.
 - Interdisciplinary profile bridging computer science, human factors, and empirical experience evaluation.
+
+## Awards & Recognition
+
+- 2,700+ citations (Google Scholar).
+- 210+ peer-reviewed publications spanning journals, conferences, book chapters, and standardization contributions.
 
 ## Industry and transfer
 
 - Applied R&D with industry and public stakeholders in XR, digital twins, and human-centered system evaluation.
 - Transfer formats: prototypes, training modules, workshops, and pilot deployments.
+- Collaboration partners include German hospitals, rehabilitation clinics, and technology companies.
 
 </div>
 
@@ -46,9 +54,11 @@ redirect_from:
 
 ## Service (selected)
 
-- Director, Immersive Reality Lab.
-- Reviewing and service in venues including ACM CHI, IEEE ISMAR, ACM VRST, and QoMEX.
-- Standardization-related dissemination and invited talks.
+- Director, Immersive Reality Lab, HSHL.
+- Program committee member and reviewer: ACM CHI, IEEE ISMAR, ACM VRST, QoMEX, ACM MM, IEEE VR.
+- Approximate annual review load: 15–25 submissions across venues.
+- Standardization contributions: ITU-T, ETSI, IETF (see [Standardization](/publications/?type=standardizations)).
+- Invited talks at industry events, universities, and international venues.
 
 </div>
 

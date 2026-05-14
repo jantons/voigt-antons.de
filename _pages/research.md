@@ -116,8 +116,7 @@ Safety-critical training · Public-space MR · Digital twins · Health communica
   <p><strong>Representative outputs</strong></p>
   <ul>
     <li><a href="https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/">The digitalization of healthcare for older adults (book editorship)</a></li>
-    <li><a href="/publications/">Immersive interview training and social interaction studies</a></li>
-    <li><a href="/publications/">Recent XR teaching-transfer publications</a></li>
+    <li><a href="/publications/?topic=digital-health">Browse all digital health publications</a></li>
   </ul>
   <p><strong>Representative projects</strong></p>
   <ul>

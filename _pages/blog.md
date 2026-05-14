@@ -3,6 +3,7 @@ layout: archive
 title: "Blog"
 permalink: /blog/
 author_profile: true
+description: "Reflections on XR research, academic life, and immersive technology by Prof. Dr.-Ing. Jan-Niklas Voigt-Antons."
 ---
 
 <div class="section-block section-block--white" markdown="1">

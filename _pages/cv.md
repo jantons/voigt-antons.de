@@ -59,7 +59,7 @@ redirect_from:
 - [Dynamic and Responsible Digital Twins for Extended Reality](/publication/2025-09-01-J32)
 - [VR Cloud Gaming UX: Exploring the Impact of Network Quality on Emotion, Presence, Game Experience and Cybersickness](/publication/2024-08-01-C81)
 - [Psychophysiology-based QoE Assessment: A Survey](/publication/2016-09-15-J6)
-- [The digitalization of healthcare for older adults (editorship)](https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/)
+- [The digitalization of healthcare for older adults. - Digitalization as an answer to substantial challenges in our healthcare system](https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/)
 
 ## External profiles
 

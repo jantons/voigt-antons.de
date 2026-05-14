@@ -26,5 +26,5 @@ main:
   - title: "Contact"
     url: /contact/
 
-  - title: "FAQ"
-    url: /faq/
+  # FAQ removed from main nav to reduce greedy-nav overflow at medium viewports.
+  # Still accessible via /faq/ directly or from the CV/Contact page.

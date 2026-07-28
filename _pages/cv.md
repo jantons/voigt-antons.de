@@ -14,17 +14,17 @@ redirect_from:
 
 ## Appointments
 
-- **since 11/2021:** Professor of Computer Science (Immersive Media), Hamm-Lippstadt University of Applied Sciences (HSHL), Hamm, Germany. Director, Immersive Reality Lab.
-- **since 11/2021:** Guest Researcher, Technische Universität Berlin.
-- **since 06/2022:** Member of the Department Council, HSHL.
-- **since 10/2022:** Member of the Commission for Quality Improvement, HSHL.
-- **since 2022:** Lead, Human-Machine Interaction research area, HSHL.
+- **since 2024:** Co-Head, Computer Visualistics and Design degree program (with a co-lead), HSHL.
 - **since 2024:** Founder and Director, HealthTech-HL research group.
-- **since 11/2024:** Co-Head, Computer Visualistics and Design degree program (with a co-lead).
-- **2015–2021:** Senior Research Scientist, Technische Universität Berlin.
+- **since 2022:** Member of the Commission for Quality Improvement, HSHL.
+- **since 2022:** Lead, Human-Machine Interaction research area, HSHL.
+- **since 2022:** Member of the Department Council, HSHL.
+- **since 2021:** Professor of Computer Science (Immersive Media), Hamm-Lippstadt University of Applied Sciences (HSHL), Hamm, Germany. Director, Immersive Reality Lab.
+- **since 2021:** Guest Researcher, Technische Universität Berlin.
 - **2018–2022:** Guest Researcher, DFKI Berlin.
-- **2009–2014:** Research Scientist, Telekom Innovation Laboratories.
+- **2015–2021:** Senior Research Scientist, Technische Universität Berlin.
 - **2012:** Guest Researcher, INRS Montreal.
+- **2009–2014:** Research Scientist, Telekom Innovation Laboratories.
 
 ## Education
 
@@ -80,23 +80,23 @@ redirect_from:
 - **{{ project.name }}** ({{ project.period }}) — {{ project.role }}
 {% endfor %}
 
-## Teaching (selected)
+## Teaching
 
-{% for course in site.data.courses %}
-- **{{ course.title }}** ({{ course.years }}) — {{ course.objective }}
-{% endfor %}
+- Continuous teaching activity since 2013, at Technische Universität Berlin and Hamm-Lippstadt University of Applied Sciences (HSHL), in German and English.
+- Topics: {% for course in site.data.courses %}{{ course.title }}{% unless forloop.last %} · {% endunless %}{% endfor %}.
+- Module responsibility: "Human Perception" ("Mensch und Wahrnehmung") and "UX Research".
 
 ## Service (selected)
 
 - Director, Immersive Reality Lab, HSHL.
-- Steering Committee, International Conference on Quality of Multimedia Experience (QoMEX), since 05/2026.
+- Steering Committee, International Conference on Quality of Multimedia Experience (QoMEX), since 2026.
 - Technical Program Chair, MMVE 2026, Hong Kong (co-located with ACM MMSys '26).
 - General Chair, QoMEX 2022, Lippstadt.
 - Editorial Board, *Virtual Worlds* (MDPI), since 2025.
 - Editorial Board, *Quality and User Experience* (Springer), since 2021.
 - Reviewer: IEEE TVCG, IEEE TMM, JMIR, Experimental Brain Research, Journal of Building Engineering, QoMEX, INTERSPEECH, ICASSP.
 - Advisory Board: TD-CHAT (Charité Berlin, 2025–2027), STOP-CSAM (Charité Berlin, 2023–2025).
-- Invited talks at industry events, universities, and international venues — see [Talks](/talks/).
+- Invited talks at industry events, universities, and international venues.
 
 </div>
 

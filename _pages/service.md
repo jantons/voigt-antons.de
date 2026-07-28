@@ -45,8 +45,4 @@ description: "Academic leadership, reviewing, program committees, standardizatio
 - [{{ item.label }}]({{ item.url }})
 {% endfor %}
 
-## Invited talks and dissemination
-
-See [Talks and presentations](/talks/) for recent invited talks, conference contributions, and media appearances.
-
 </div>

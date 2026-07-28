@@ -19,7 +19,6 @@ For search engines, please use the machine-readable [sitemap.xml](/sitemap.xml).
 - [Teaching](/teaching/)
 - [Service & Leadership](/service/)
 - [CV](/cv/)
-- [Talks](/talks/)
 - [Legal Notice](/impressum/)
 - [Contact](/#contact)
 

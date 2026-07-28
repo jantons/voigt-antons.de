@@ -3,7 +3,7 @@ layout: archive
 title: "Teaching in XR, Immersive Media & Human-Centered Design"
 permalink: /teaching/
 author_profile: true
-description: "Teaching portfolio in Virtual Reality, Augmented Reality, immersive systems design, and research-led project formats."
+description: "Teaching portfolio in Virtual Reality, Augmented Reality, human-centered design, and research-led project formats."
 ---
 
 <div class="section-block section-block--white">
@@ -14,62 +14,29 @@ description: "Teaching portfolio in Virtual Reality, Augmented Reality, immersiv
 
 </div>
 
-<div class="section-block section-block--light">
+<div class="section-block section-block--light" markdown="1">
 
-<h2>Courses taught</h2>
+## Teaching record
 
-<table>
-  <thead>
-    <tr>
-      <th>Course</th>
-      <th>Level</th>
-      <th>Language</th>
-      <th>Years</th>
-      <th>Learning objective</th>
-      <th>Example student outcome</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for course in site.data.courses %}
-    <tr>
-      <td>{{ course.title }}</td>
-      <td>{{ course.level }}</td>
-      <td>{{ course.language }}</td>
-      <td>{{ course.years }}</td>
-      <td>{{ course.objective }}</td>
-      <td>{{ course.outcome }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+Continuous teaching activity since 2013, at Technische Universität Berlin and Hamm-Lippstadt University of Applied Sciences (HSHL), in German and English.
 
-</div>
+**Topics taught:**
 
-<div class="section-block section-block--white">
-
-<h2>Teaching formats</h2>
-
-<ul>
-  <li>Project-based learning with iterative prototypes</li>
-  <li>Lab-based experiments in immersive environments</li>
-  <li>Research-linked seminar formats with publication pathways</li>
-</ul>
-
-<h2>Supervision</h2>
-
-<ul>
-  <li>Typical supervision volume: multiple theses and project groups per year across XR, QoE, and digital health topics.</li>
-  <li>Example topics: social acceptability in XR, QoE under network degradation, multimodal user-state assessment, and XR-based training concepts.</li>
-</ul>
-
-</div>
-
-<div class="section-block section-block--light">
-
-<h2>Current teaching entries</h2>
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html hide_teaching_meta=true %}
+<div class="keywords">
+{% for course in site.data.courses %}
+<span class="keyword-tag">{{ course.title }}</span>
 {% endfor %}
+</div>
+
+**Module responsibility:** "Human Perception" ("Mensch und Wahrnehmung") and "UX Research".
+
+</div>
+
+<div class="section-block section-block--white" markdown="1">
+
+## Supervision
+
+- 5 ongoing doctoral projects in the Immersive Reality Lab.
+- 35 Master's and 70 Bachelor's theses supervised since 2011.
 
 </div>

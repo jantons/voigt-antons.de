@@ -40,6 +40,7 @@ I welcome inquiries across the following areas:
   <a href="https://scholar.google.com/citations?user=IFIaOZsAAAAJ" class="profile-chip"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
   <a href="https://orcid.org/0000-0002-2786-9262" class="profile-chip"><i class="fab fa-orcid" aria-hidden="true"></i> ORCID</a>
   <a href="https://dblp.org/pid/39/10762" class="profile-chip"><i class="fas fa-database" aria-hidden="true"></i> DBLP</a>
+  <a href="https://www.scopus.com/authid/detail.uri?authorId=57194940462" class="profile-chip"><i class="fas fa-database" aria-hidden="true"></i> Scopus</a>
   <a href="https://www.linkedin.com/in/jnvoigtantons/" class="profile-chip"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
 </div>
 

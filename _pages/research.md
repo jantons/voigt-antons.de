@@ -20,7 +20,7 @@ I study how virtual and augmented reality systems can be built so they actually 
 
 Most XR research either studies interaction in the lab or measures physiology separately. We do both together, and we take XR outside the lab — into hospitals, public spaces, and safety-critical training environments. This combination — multimodal measurement (EEG, eye tracking, behavioral coding) coupled with ecologically valid XR deployments — lets us answer questions that neither approach alone can address: not just "does this feel good?" but "what do bodies and brains reveal about quality that users cannot consciously articulate?"
 
-The result is a research profile that crosses from standardization (ITU-T, ETSI) to clinical deployment, with a unifying thread: making immersive systems measurably better for real people in real contexts.
+The result is a research profile that crosses from ITU-T standardization to clinical deployment, with a unifying thread: making immersive systems measurably better for real people in real contexts.
 
 </div>
 
@@ -128,6 +128,21 @@ Safety-critical training · Public-space MR · Digital twins · Health communica
   <ul>
     <li><a href="/projects/#ariadne">ARiadne</a></li>
     <li><a href="/projects/#virtuelles-institut-ar-vr">Virtuelles Institut AR/VR</a></li>
+  </ul>
+</div>
+
+<div class="research-card" id="generative-ai-media">
+  <h3>Generative AI in Media Contexts</h3>
+  <p><strong>Why it matters:</strong> Embodied agents and synthetic media content are entering training and health communication faster than methods to evaluate trust and acceptance in them.</p>
+  <p><strong>Representative outputs</strong></p>
+  <ul>
+    <li><a href="/publication/2024-08-01-C80">Enhancing Job Interview Preparation Through Immersive Experiences Using Photorealistic, AI-powered Metahuman Avatars</a></li>
+    <li><a href="/publication/2026-01-01-J36">Multimodal Assistance in Rehabilitation: User Experience of Embodied and Non-Embodied Agents for Collecting Patient-Reported Outcome Measures</a></li>
+    <li><a href="/publication/2024-03-15-J28">Situativität, Funktionalität und Vertrauen: Ergebnisse einer szenariobasierten Interviewstudie zur Erklärbarkeit von KI in der Medizin</a></li>
+  </ul>
+  <p><strong>Representative projects</strong></p>
+  <ul>
+    <li><a href="/projects/#miaprom">MIA-PROM</a></li>
   </ul>
 </div>
 

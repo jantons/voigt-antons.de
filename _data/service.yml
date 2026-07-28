@@ -1,15 +1,29 @@
 leadership:
   mission: "The Immersive Reality Lab develops and evaluates trustworthy XR systems for learning, work, and public-space interaction."
   role: "Director, Immersive Reality Lab"
-  team_structure: "Interdisciplinary team of researchers and student assistants"
+  team_structure: "11 research staff and 7 student assistants; annual budget of approximately €1 million"
   infrastructure: ["XR headsets", "eye-tracking setups", "physiological sensing", "behavioral observation and coding"]
 
 reviewing:
-  conferences: ["ACM CHI", "IEEE ISMAR", "ACM VRST", "QoMEX"]
-  journals: ["IEEE Access", "Frontiers", "Electronics"]
+  conferences: ["ACM CHI", "IEEE ISMAR", "ACM VRST", "QoMEX", "INTERSPEECH", "ICASSP"]
+  journals: ["IEEE Transactions on Visualization and Computer Graphics", "IEEE Transactions on Multimedia", "JMIR", "Experimental Brain Research", "Journal of Building Engineering"]
 
 community:
-  - label: "Standardization-related publication stream"
-    url: "/publications/"
+  - label: "Steering Committee, QoMEX (since 05/2026)"
+    url: "/cv/"
+  - label: "Technical Program Chair, MMVE 2026 (Hong Kong, co-located with ACM MMSys '26)"
+    url: "/talks/"
+  - label: "General Chair, QoMEX 2022, Lippstadt"
+    url: "/talks/"
+  - label: "Editorial Board, Virtual Worlds (MDPI, since 2025)"
+    url: "/cv/"
+  - label: "Editorial Board, Quality and User Experience (Springer, since 2021)"
+    url: "/cv/"
+  - label: "Advisory Board, TD-CHAT (Charité Berlin, 2025–2027)"
+    url: "/cv/"
+  - label: "Advisory Board, STOP-CSAM (Charité Berlin, 2023–2025)"
+    url: "/cv/"
+  - label: "Standardization"
+    url: "/standardization/"
   - label: "Talks and dissemination"
     url: "/talks/"

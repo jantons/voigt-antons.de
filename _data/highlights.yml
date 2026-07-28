@@ -15,3 +15,7 @@ research_lines:
     name: "Digital Health & Learning"
     claim: "XR and serious-game approaches increase engagement and improve applied training outcomes."
     keywords: ["Serious games", "Health communication", "Training"]
+  - id: generative-ai-media
+    name: "Generative AI in Media Contexts"
+    claim: "Embodied agents and synthetic media content require calibrated trust as they enter training and health communication."
+    keywords: ["Embodied agents", "Synthetic media", "Calibrated trust"]

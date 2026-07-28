@@ -8,6 +8,10 @@ description: "Funded projects, roles, and transfer outcomes in XR, digital twins
 
 <div class="section-block section-block--white" markdown="1">
 
+## Funding overview
+
+Continuous third-party funding since 2015: approximately **€4.275 million across 19 funded projects** from 10 funding lines, with awards running through 2029. 18 projects self-initiated and led; 3 as consortium coordinator.
+
 ## Funding table
 
 | Project | Period | Funding program / funder | Role | Partners | Outputs |

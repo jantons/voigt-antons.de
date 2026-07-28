@@ -15,7 +15,7 @@ redirect_from:
 
 His lab's signature: combining EEG, eye tracking, and physiological sensing with XR deployment studies to measure user experience beyond what questionnaires capture. His EEG research showed that brains detect audio quality degradations that listeners consciously rate as acceptable — a finding with direct implications for invisible quality thresholds in streaming systems. This methodological approach now spans public-space mixed reality, VR cloud gaming, safety-critical XR training, and digital health.
 
-With 2,700+ citations and 210+ publications across ACM CHI, IEEE VR, QoMEX, and ITU-T standardization, he collaborates internationally through Horizon Europe grants, BMBF-funded projects, and clinical partnerships with Charité Berlin.
+With 2,983 citations (h-index 29, i10-index 84; Google Scholar, 27 July 2026) and 223 publications across ACM CHI, IEEE VR, QoMEX, and ITU-T standardization, he collaborates internationally through Horizon Europe grants, BMBF-funded projects, and clinical partnerships with Charité Berlin.
 
 </div>
 
@@ -45,13 +45,13 @@ Hamm-Lippstadt University of Applied Sciences (HSHL). Director, Immersive Realit
 <div class="metrics-grid">
   <div class="metric-card">
     <a href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ">
-      <span class="metric-number">2,700+</span>
-      <span class="metric-label">Citations</span>
+      <span class="metric-number">2,983</span>
+      <span class="metric-label">Citations (Google Scholar, 27 Jul 2026)</span>
     </a>
   </div>
   <div class="metric-card">
     <a href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ&amp;hl=de">
-      <span class="metric-number">210+</span>
+      <span class="metric-number">223</span>
       <span class="metric-label">Publications</span>
     </a>
   </div>
@@ -105,6 +105,7 @@ Hamm-Lippstadt University of Applied Sciences (HSHL). Director, Immersive Realit
   <a href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ" class="profile-chip"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
   <a href="https://orcid.org/0000-0002-2786-9262" class="profile-chip"><i class="fab fa-orcid" aria-hidden="true"></i> ORCID</a>
   <a href="https://dblp.org/pid/39/10762" class="profile-chip"><i class="fas fa-database" aria-hidden="true"></i> DBLP</a>
+  <a href="https://www.scopus.com/authid/detail.uri?authorId=57194940462" class="profile-chip"><i class="fas fa-database" aria-hidden="true"></i> Scopus</a>
   <a href="https://dl.acm.org/profile/99659317387" class="profile-chip"><i class="fas fa-book" aria-hidden="true"></i> ACM DL</a>
   <a href="https://berlinup.books.tu-berlin.de/en/autor_innen/jan-niklas-voigt-antons/" class="profile-chip"><i class="fas fa-landmark" aria-hidden="true"></i> BerlinUP</a>
 </div>

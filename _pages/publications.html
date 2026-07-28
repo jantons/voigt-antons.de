@@ -100,5 +100,16 @@ description: "Selected and complete publications with filtering by year, type, v
     });
   }
   [year, type, venue, topic].forEach(el => el.addEventListener('input', apply));
+
+  const params = new URLSearchParams(window.location.search);
+  const paramYear = params.get('year');
+  const paramType = params.get('type');
+  const paramVenue = params.get('venue');
+  const paramTopic = params.get('topic');
+  if (paramYear && [...year.options].some(o => o.value === paramYear)) year.value = paramYear;
+  if (paramType && [...type.options].some(o => o.value === paramType)) type.value = paramType;
+  if (paramVenue) venue.value = paramVenue;
+  if (paramTopic && [...topic.options].some(o => o.value === paramTopic)) topic.value = paramTopic;
+  if (paramYear || paramType || paramVenue || paramTopic) apply();
 })();
 </script>

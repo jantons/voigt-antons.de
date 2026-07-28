@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons"
 title_separator          : "-"
 name                     : &name "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons"
-description              : &description "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons — Professor of Computer Science (Immersive Media) at HSHL. Research on XR, Quality of Experience, psychophysiology, and digital health. 2,700+ citations, 210+ publications."
+description              : &description "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons — Professor of Computer Science (Immersive Media) at HSHL. Research on XR, Quality of Experience, psychophysiology, and digital health. 2,983 citations, 223 publications."
 url                      : https://voigt-antons.de # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "jantons/voigt-antons.de"
@@ -42,7 +42,7 @@ author:
   ssrn             : # URL
   pubmed           : # URL
   researchgate     : # URL
-  scopus           : # URL
+  scopus           : "https://www.scopus.com/authid/detail.uri?authorId=57194940462"
   zotero           : # URL
 
 

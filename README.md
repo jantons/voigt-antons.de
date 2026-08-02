@@ -13,21 +13,21 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── 404.html                    Fehlerseite (GitHub Pages nutzt sie automatisch)
 ├── .nojekyll                   verhindert Jekyll-Verarbeitung
 ├── robots.txt
-├── sitemap.xml                 generiert, 251 URLs
+├── sitemap.xml                 generiert, 253 URLs
 │
 ├── assets/
 │   ├── style.css               gemeinsames Stylesheet (Light-first + Dark-Toggle)
 │   └── main.js                 Theme-Toggle, Mobile-Nav, Scroll-Reveal
 │
 ├── data/
-│   ├── publications.json       232 Einträge — Quelle für alles Publikationsbezogene
+│   ├── publications.json       234 Einträge — Quelle für alles Publikationsbezogene
 │   ├── posts.json              generiert aus content/posts/
 │   └── redirects.json          alte → neue Publikations-URLs
 │
 ├── content/posts/*.md          5 Blogbeiträge als Markdown (Quelldateien)
 │
 ├── research/index.html         5 Forschungslinien ausführlich
-├── projects/index.html         Fördertabelle (18 Zeilen), Detailblöcke
+├── projects/index.html         Förderverzeichnis (20 Vorhaben, Volumen), Detailblöcke
 ├── publications/index.html     Filterbare Liste (Jahr, Typ, Thema, Volltextsuche)
 ├── cv/index.html               CV inkl. Service, Gremien, Standardisierung
 ├── teaching/index.html         Lehrportfolio und Betreuung
@@ -35,7 +35,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── tags/index.html             Weiterleitung alter /tags/#slug-Links
 ├── impressum/index.html        Impressum + Datenschutz (Gerüst, siehe unten)
 │
-├── publication/<id>/index.html 232 generierte Detailseiten mit BibTeX
+├── publication/<id>/index.html 234 generierte Detailseiten mit BibTeX
 ├── posts/JJJJ/MM/<slug>/       5 generierte Beitragsseiten
 └── tools/
     ├── build_publication_pages.py
@@ -90,7 +90,7 @@ Ein Eintrag:
 |---|---|---|
 | `id` | **URL-Schlüssel — stabil, wird nicht mehr geändert** | `JJJJ-MM-TT-<Nr>` |
 | `ref` | **Nummer aus dem Publikationsverzeichnis, wird angezeigt** | z. B. `C102`, `J37` |
-| `t` | Publikationstyp | `journal`, `conference`, `chapter`, `book`, `standard` |
+| `t` | Publikationstyp | `journal`, `conference`, `chapter`, `book`, `standard`, `position` |
 | `tp` | Forschungslinie | `xr`, `qoe`, `psychophysiology`, `digital-health` |
 | `d` | DOI oder Paper-URL | optional |
 | `n` | Auszeichnung, „In press" o. Ä. | optional |
@@ -125,11 +125,11 @@ die Detailseiten überhaupt, statt nur eine Liste.
 
 ### Datenstand
 
-`data/publications.json` enthält **232 Einträge, 2010–2026** — importiert aus
-`04_Publikationsverzeichnis_Voigt-Antons.docx`.
+`data/publications.json` enthält **234 Einträge, 2010–2026** — importiert aus
+`2026-08-03-List_of_publications_Voigt-Antons_full_new.docx`.
 
 Aufteilung: 163 Konferenzbeiträge · 45 Journalartikel · 17 Standardisierungsbeiträge ·
-5 Buchkapitel · 2 Bücher.
+5 Buchkapitel · 2 Bücher · 2 VDE-Positionspapiere.
 
 Themen: 65 Psychophysiology · 63 XR · 62 Digital Health · 42 QoE.
 
@@ -137,8 +137,9 @@ Bibliometrie (Google Scholar, 2. August 2026): 2.987 Zitationen · h-Index 29 ·
 Die Zahlen stehen auf Startseite, Publikationsseite und im CV sowie unter `meta.bibliometrics`
 in `data/publications.json`. Halbjährlich aktualisieren.
 
-Nummernstand: `B1–B2`, `BC1–BC5`, `C1–C103`, `J1–J39`, `OC1–OC54`, `OJ1–OJ6`, `S1–S17` —
-alle Reihen lückenlos und ohne Doppelvergabe. `tools/check_site.py` prüft das bei jedem Lauf.
+Nummernstand: `B1–B2`, `BC1–BC5`, `C1–C105`, `J1–J39`, `OC1–OC58`, `OJ1–OJ6`, `P1–P2`, `S1–S17` —
+alle 234 Einträge nummeriert, alle Reihen lückenlos, keine Doppelvergabe.
+`tools/check_site.py` prüft das bei jedem Lauf.
 
 Beim Import aufgefallen:
 
@@ -180,6 +181,18 @@ Beim Import aufgefallen:
 
    *Bewusst nicht aufgenommen:* vier Preprints (arXiv, PsyArXiv, OSF, PeerJ), der
    DigiOnTrack-Projektbericht, das Einleitungskapitel von `[B2]` und die PflegeTab-Broschüre.
+
+   *Stand 3. August 2026:* Alle Funde sind ins Verzeichnis übernommen; die Seite ist damit
+   vollständig synchron. Beim Abgleich der neuen Fassung fielen zwei Datenfehler auf, die du
+   inzwischen behoben hast — `[OC45]`/`[OC46]` waren doppelt vergeben und `[C44]` hatte als
+   Titel nur noch „s.". Beides fand `tools/check_site.py` bzw. der Import-Abgleich.
+
+   *Nachgetragen als eigener Typ `position`:* die beiden VDE-Positionspapiere „Gestaltung
+   Digitalisierung im Gesundheitswesen" (VDE ITG/DGBMT, 2022) und „Vernetzte und intelligente
+   Medizintechnik als Treiber eines modernen Gesundheitssystems" (VDE DGBMT, 2026). Bewusst
+   **nicht** unter `conference` — es gibt weder Konferenz noch Peer Review; das hätte die Zahl
+   der begutachteten Konferenzbeiträge verfälscht. Beim 2026er-Papier widersprechen sich
+   Impressum („Juni 2026") und empfohlene Zitierweise („April 2026"); hinterlegt ist nur das Jahr.
 
 5. **Eine hochzitierte Arbeit fehlt im Verzeichnis:** „Influence of Hand Tracking as a Way of
    Interaction in Virtual Reality on User Experience" (QoMEX 2020, Athlone) — Erstautorschaft und
@@ -354,7 +367,17 @@ python3 -m http.server 8000
    Platzhaltern in eckigen Klammern und muss rechtlich geprüft werden.
 3. **Bibliometrie aktuell halten.** Stand 2. August 2026. Halbjährlich nachziehen — veraltete
    Zitationszahlen fallen negativ auf.
-4. **Projektzahl klären.** Die Fördertabelle listet 18 Projekte, im Text steht an zehn Stellen 19.
+4. **Fehlende Zeile im Drittmittelverzeichnis.** `05_Drittmittelprojekte_Voigt-Antons.pdf` nennt
+   in der Zusammenfassung 4,275 Mio. € in 19 Vorhaben; die Projektübersicht darunter listet aber
+   nur 3,971 Mio. €. Es fehlt **eine Zeile über 304 T€ mit der Rolle Teilprojektleiter** —
+   nach deiner Bestätigung **PflegeTab (2015–2018, GKV-Spitzenverband)**. Damit ergeben sich
+   20 Vorhaben, und alle Teilsummen stimmen exakt:
+   6 · 546 T€ (alleiniger Antragsteller) + 3 · 841 T€ (Verbundkoordinator) +
+   9 · 2.788 T€ (Teilprojektleiter) + 2 · 100 T€ (Mitantragsteller) = **20 · 4.275 T€**.
+   **Im PDF muss „19 Vorhaben" auf „20" geändert werden** — die Website steht bereits auf 20.
+   Drei Signale hatten darauf gedeutet: die Rollenspalte summiert sich auf 20, es fehlten 304 T€,
+   und die Einleitung sagt „kontinuierlich seit 2015", während das früheste gelistete Vorhaben
+   2016 begann.
 5. **Zweisprachigkeit.** Falls die Seite auch deutschen Berufungsverfahren dienen soll, wäre eine
    deutsche Fassung der Startseite unter `/de/` sinnvoll.
 

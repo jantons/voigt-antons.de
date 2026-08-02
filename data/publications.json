@@ -1,14 +1,15 @@
 {
  "meta": {
-  "updated": "2026-08-02",
-  "total_claimed": 232,
-  "note": "Complete publication record, imported from the official Publikationsverzeichnis (04_Publikationsverzeichnis_Voigt-Antons.docx). Field keys: id, y=year, t=type, ti=title, a=authors, v=venue, tp=topic, d=DOI or paper URL, n=note.",
+  "updated": "2026-08-03",
+  "total_claimed": 234,
+  "note": "Complete publication record, imported from the official Publikationsverzeichnis (2026-08-03-List_of_publications_Voigt-Antons_full_new.docx). Entries marked [XX] there are submitted-only and intentionally excluded. Field keys: id, ref, y, t, ti, a, v, tp, d, n.",
   "types": {
    "journal": "Peer-reviewed journal article",
    "conference": "Peer-reviewed conference or workshop paper",
    "chapter": "Book chapter",
    "book": "Monograph or edited volume",
-   "standard": "Contribution to international standardization"
+   "standard": "Contribution to international standardization",
+   "position": "Position paper / policy advisory report"
   },
   "topics": {
    "xr": "XR & Spatial Interaction",
@@ -27,18 +28,17 @@
  "items": [
   {
    "id": "2026-06-15-ar-marketing-review",
-   "ref": "",
+   "ref": "OC58",
    "y": 2026,
    "t": "conference",
    "ti": "From Interaction to Purchase: A Review on How Augmented Reality Impacts User Experience in Marketing",
    "a": "Henning, J., Vona, F., Pütter, J. & Voigt-Antons, J.-N.",
    "v": "International Conference on Human-Computer Interaction (HCII 2026), pp. 309–328, Springer",
-   "tp": "xr",
-   "n": "Not yet listed in the Publikationsverzeichnis"
+   "tp": "xr"
   },
   {
    "id": "2026-06-01-C103",
-   "ref": "C103",
+   "ref": "C105",
    "y": 2026,
    "t": "conference",
    "ti": "The Three-Body Problem of Collaboration: Effects of Asymmetric Physical Co-Presence in Augmented Reality",
@@ -48,7 +48,7 @@
   },
   {
    "id": "2026-06-01-C102",
-   "ref": "C102",
+   "ref": "C104",
    "y": 2026,
    "t": "conference",
    "ti": "Experiencing the Path: Comparing Visual Cues for User Experience and Performance in Outdoor Augmented Reality Navigation",
@@ -58,7 +58,7 @@
   },
   {
    "id": "2026-06-01-C101",
-   "ref": "C101",
+   "ref": "C103",
    "y": 2026,
    "t": "conference",
    "ti": "How Close Is Too Close? Exploring the Impact of Avatar Proximity on User Experience in Collaborative Augmented and Virtual Reality",
@@ -67,8 +67,19 @@
    "tp": "xr"
   },
   {
+   "id": "2026-04-01-vde-medizintechnik",
+   "ref": "P2",
+   "y": 2026,
+   "t": "position",
+   "ti": "Vernetzte und intelligente Medizintechnik als Treiber eines modernen Gesundheitssystems",
+   "a": "Anstädt, T., Becker, K., Calmer, B., Czaplik, M., Friedrich, P., Hübschen, M., Kumbroch, A., Meyer, M., Ruwwe-Glösenkamp, K., Schmoldt, D., Voigt-Antons, J.-N., Weber, P. & Wolff, D.",
+   "v": "VDE Positionspapier. Offenbach am Main: VDE Verband der Elektrotechnik Elektronik Informationstechnik e.V. (VDE DGBMT)",
+   "tp": "digital-health",
+   "d": "https://www.vde.com/dgbmt"
+  },
+  {
    "id": "2026-04-01-C99",
-   "ref": "C99",
+   "ref": "C101",
    "y": 2026,
    "t": "conference",
    "ti": "When Simulation Meets Physiology: Adaptive Resilience for Mission-Critical XR in Fast-Jet Training",
@@ -79,7 +90,7 @@
   },
   {
    "id": "2026-04-01-C98",
-   "ref": "C98",
+   "ref": "C100",
    "y": 2026,
    "t": "conference",
    "ti": "Understanding Cross-Cultural User Experience in Virtual Reality Across Presence, Emotion, and Interaction",
@@ -89,7 +100,7 @@
   },
   {
    "id": "2026-04-01-C100",
-   "ref": "C100",
+   "ref": "C102",
    "y": 2026,
    "t": "conference",
    "ti": "XR Training in Challenging Environments: The Wind Turbines Case",
@@ -100,7 +111,7 @@
   },
   {
    "id": "2026-03-01-OC54",
-   "ref": "OC54",
+   "ref": "OC57",
    "y": 2026,
    "t": "conference",
    "ti": "A Modular Multimodal Dialog Architecture for Digital PROM Collection",
@@ -110,7 +121,7 @@
   },
   {
    "id": "2026-03-01-C97",
-   "ref": "C97",
+   "ref": "C99",
    "y": 2026,
    "t": "conference",
    "ti": "Evaluating the Impact of Distractions and Spatial Constraints in Public XR",
@@ -198,7 +209,7 @@
   },
   {
    "id": "2025-11-01-C96",
-   "ref": "C96",
+   "ref": "C98",
    "y": 2025,
    "t": "conference",
    "ti": "Unmanned Aerial Vehicles Control in a Digital Twin: Exploring the Effect of Different Points of View on User Experience in Virtual Reality",
@@ -209,7 +220,7 @@
   },
   {
    "id": "2025-10-01-OC52",
-   "ref": "OC52",
+   "ref": "OC55",
    "y": 2025,
    "t": "conference",
    "ti": "Comparing robot, avatar, and voice assistance in PROMIS administration – a cross-randomized controlled trial",
@@ -220,7 +231,7 @@
   },
   {
    "id": "2025-09-01-OC51",
-   "ref": "OC51",
+   "ref": "OC54",
    "y": 2025,
    "t": "conference",
    "ti": "Nutzererfahrung von Kindern und Jugendlichen mit einem multimodalen, interaktiven System zur digitalen Erfassung von patient-reported outcomes",
@@ -241,7 +252,7 @@
   },
   {
    "id": "2025-09-01-C95",
-   "ref": "C95",
+   "ref": "C97",
    "y": 2025,
    "t": "conference",
    "ti": "Finding My Way: Influence of Different Audio Augmented Reality Navigation Cues on User Experience and Subjective Usefulness",
@@ -252,7 +263,7 @@
   },
   {
    "id": "2025-09-01-C94",
-   "ref": "C94",
+   "ref": "C96",
    "y": 2025,
    "t": "conference",
    "ti": "Exploring the Effect of Heights and User Stance on User Experience in Extended Reality Climbing",
@@ -263,7 +274,7 @@
   },
   {
    "id": "2025-09-01-C93",
-   "ref": "C93",
+   "ref": "C95",
    "y": 2025,
    "t": "conference",
    "ti": "Augmented Reality in the Treatment of Stress and Anxiety Disorders: A Literature Synthesis",
@@ -274,7 +285,7 @@
   },
   {
    "id": "2025-09-01-C92",
-   "ref": "C92",
+   "ref": "C94",
    "y": 2025,
    "t": "conference",
    "ti": "Emotionally Adaptive Virtual Health Assistants for Enhanced Social Presence and Trust",
@@ -285,7 +296,7 @@
   },
   {
    "id": "2025-09-01-C91",
-   "ref": "C91",
+   "ref": "C93",
    "y": 2025,
    "t": "conference",
    "ti": "The Impact of Spatial Misalignment and Time Delay on Collaborative Presence in Augmented Reality",
@@ -296,7 +307,7 @@
   },
   {
    "id": "2025-09-01-C90",
-   "ref": "C90",
+   "ref": "C92",
    "y": 2025,
    "t": "conference",
    "ti": "Size Matters: The Impact of Avatar Size on User Experience in Healthcare Applications",
@@ -307,7 +318,7 @@
   },
   {
    "id": "2025-08-01-OC53",
-   "ref": "OC53",
+   "ref": "OC56",
    "y": 2025,
    "t": "conference",
    "ti": "Too Immersive for the Field? Addressing Safety Risks in Extended Reality User Studies",
@@ -318,18 +329,17 @@
   },
   {
    "id": "2025-06-15-adaptive-health-assistants",
-   "ref": "",
+   "ref": "OC52",
    "y": 2025,
    "t": "conference",
    "ti": "Designing Adaptive Virtual Health Assistants Using Cognitive and Emotional State Predictions",
    "a": "Ashrafi, N., Schorlemmer, J., Vona, F., Kojić, T., Hillmann, S., Braytee, A., Wang, Y.-K., Kocaballi, A. B., Moreira, C. & Möller, S. & Voigt-Antons, J.-N.",
    "v": "International Conference on Human-Computer Interaction (HCII 2025), pp. 243–253, Springer",
-   "tp": "digital-health",
-   "n": "Not yet listed in the Publikationsverzeichnis"
+   "tp": "digital-health"
   },
   {
    "id": "2025-06-01-OC50",
-   "ref": "OC50",
+   "ref": "OC53",
    "y": 2025,
    "t": "conference",
    "ti": "Integrating Virtual and Augmented Reality into Public Education: Opportunities and Challenges in Language Learning",
@@ -340,7 +350,7 @@
   },
   {
    "id": "2025-06-01-OC49",
-   "ref": "OC49",
+   "ref": "OC51",
    "y": 2025,
    "t": "conference",
    "ti": "Comparing User Behavior in Real vs. Virtual Supermarket Shelves: An Eye-Tracking Study Using Tobii 3 Pro and Meta Quest Pro",
@@ -351,7 +361,7 @@
   },
   {
    "id": "2025-06-01-OC48",
-   "ref": "OC48",
+   "ref": "OC50",
    "y": 2025,
    "t": "conference",
    "ti": "Optimized User Experience for Labeling Systems for Predictive Maintenance Applications",
@@ -362,7 +372,7 @@
   },
   {
    "id": "2025-06-01-OC47",
-   "ref": "OC47",
+   "ref": "OC49",
    "y": 2025,
    "t": "conference",
    "ti": "Enabling Sustainable Everyday Mobility: The Role of E-Cargo Bikes in Urban and Rural Contexts",
@@ -373,7 +383,7 @@
   },
   {
    "id": "2025-06-01-OC46",
-   "ref": "OC46",
+   "ref": "OC48",
    "y": 2025,
    "t": "conference",
    "ti": "Sales Skill Training in Virtual Reality: An evaluation utilizing CAVE and Virtual Avatars",
@@ -384,7 +394,7 @@
   },
   {
    "id": "2025-06-01-OC45",
-   "ref": "OC45",
+   "ref": "OC47",
    "y": 2025,
    "t": "conference",
    "ti": "Exploring the Effects of Different Asymmetric Game Designs on User Experience in Collaborative Virtual Reality",
@@ -395,7 +405,7 @@
   },
   {
    "id": "2025-06-01-OC44",
-   "ref": "OC44",
+   "ref": "OC46",
    "y": 2025,
    "t": "conference",
    "ti": "Avatar Appearance Beyond Pixels - User Ratings and Avatar Preferences within Health Applications",
@@ -406,7 +416,7 @@
   },
   {
    "id": "2025-06-01-C89",
-   "ref": "C89",
+   "ref": "C91",
    "y": 2025,
    "t": "conference",
    "ti": "Digital Twins for Extended Reality Tourism: User Experience Evaluation Across User Groups",
@@ -417,7 +427,7 @@
   },
   {
    "id": "2025-03-01-C88",
-   "ref": "C88",
+   "ref": "C90",
    "y": 2025,
    "t": "conference",
    "ti": "Multimodal User Experience in Extended Reality: Exploring Hand Tracking, Voice, and Passthrough Interactions",
@@ -429,7 +439,7 @@
   },
   {
    "id": "2025-03-01-C87",
-   "ref": "C87",
+   "ref": "C89",
    "y": 2025,
    "t": "conference",
    "ti": "Influence of Interactivity in Shaping User Experience and Social Acceptance of Mobile XR",
@@ -440,7 +450,7 @@
   },
   {
    "id": "2025-03-01-C86",
-   "ref": "C86",
+   "ref": "C88",
    "y": 2025,
    "t": "conference",
    "ti": "Hands vs. Controllers: Comparing User Interactions in Virtual Reality Shopping Environments",
@@ -451,7 +461,7 @@
   },
   {
    "id": "2025-03-01-C85",
-   "ref": "C85",
+   "ref": "C87",
    "y": 2025,
    "t": "conference",
    "ti": "Comparing Pass-Through Quality of Mixed Reality Devices: A User Experience Study During Real-World Tasks",
@@ -494,7 +504,7 @@
   },
   {
    "id": "2025-01-01-C84",
-   "ref": "C84",
+   "ref": "C86",
    "y": 2025,
    "t": "conference",
    "ti": "User-Centric Evaluation Methods for Digital Twin Applications in Extended Reality",
@@ -505,7 +515,7 @@
   },
   {
    "id": "2024-12-01-C83",
-   "ref": "C83",
+   "ref": "C85",
    "y": 2024,
    "t": "conference",
    "ti": "Exploring Augmented Table Setup and Lighting Customization in a Simulated Restaurant to Improve the User Experience",
@@ -561,7 +571,7 @@
   },
   {
    "id": "2024-10-10-C82",
-   "ref": "C82",
+   "ref": "C84",
    "y": 2024,
    "t": "conference",
    "ti": "Digital Eyes: Social Implications of XR EyeSight",
@@ -572,7 +582,7 @@
   },
   {
    "id": "2024-10-10-C79",
-   "ref": "C79",
+   "ref": "C81",
    "y": 2024,
    "t": "conference",
    "ti": "Single Vs Dual: Influence of the Number of Displays on User Experience Within Virtually Embodied Conversational Systems",
@@ -583,7 +593,7 @@
   },
   {
    "id": "2024-10-01-C78",
-   "ref": "C78",
+   "ref": "C80",
    "y": 2024,
    "t": "conference",
    "ti": "Working with Mixed Reality in Public: Effects of Virtual Display Layouts on Feeling of Safety, Productivity and Social Acceptability",
@@ -594,18 +604,17 @@
   },
   {
    "id": "2024-09-15-mobility-resources-gps",
-   "ref": "",
+   "ref": "OC45",
    "y": 2024,
    "t": "conference",
    "ti": "Resources of Out-of-Home Mobility among Older Adults in Rural Areas — Results of a GPS/GIS-based Study",
    "a": "Mümken, S., Haeger, C., Spang, R. P., Brauer, M., Voigt-Antons, J.-N. & Gellert, P.",
    "v": "Zeitschrift für Gerontologie und Geriatrie, 57, S109",
-   "tp": "digital-health",
-   "n": "Not yet listed in the Publikationsverzeichnis"
+   "tp": "digital-health"
   },
   {
    "id": "2024-09-01-OC43",
-   "ref": "OC43",
+   "ref": "OC44",
    "y": 2024,
    "t": "conference",
    "ti": "What importance does outpatient care have for mobility in rural areas? Results from a GPS study among persons aged 75 and older",
@@ -615,7 +624,7 @@
   },
   {
    "id": "2024-08-01-C81",
-   "ref": "C81",
+   "ref": "C83",
    "y": 2024,
    "t": "conference",
    "ti": "VR Cloud Gaming UX: Exploring the Impact of Network Quality on Emotion, Presence, Game Experience and Cybersickness",
@@ -626,7 +635,7 @@
   },
   {
    "id": "2024-08-01-C80",
-   "ref": "C80",
+   "ref": "C82",
    "y": 2024,
    "t": "conference",
    "ti": "Enhancing Job Interview Preparation Through Immersive Experiences Using Photorealistic, AI-powered Metahuman Avatars",
@@ -648,7 +657,7 @@
   },
   {
    "id": "2024-06-01-OC42",
-   "ref": "OC42",
+   "ref": "OC43",
    "y": 2024,
    "t": "conference",
    "ti": "Infrastructure Optimization for Predictive Maintenance: Enhanced Backend and Artificial Intelligence Integration",
@@ -659,7 +668,7 @@
   },
   {
    "id": "2024-06-01-OC41",
-   "ref": "OC41",
+   "ref": "OC42",
    "y": 2024,
    "t": "conference",
    "ti": "Optimized User Experience for Labeling Systems for Predictive Maintenance Applications",
@@ -670,7 +679,7 @@
   },
   {
    "id": "2024-06-01-OC40",
-   "ref": "OC40",
+   "ref": "OC41",
    "y": 2024,
    "t": "conference",
    "ti": "Dishonesty Tendencies in Testing Scenarios Among Students with Virtual Reality and Computer-Mediated Technology",
@@ -681,7 +690,7 @@
   },
   {
    "id": "2024-06-01-OC39",
-   "ref": "OC39",
+   "ref": "OC40",
    "y": 2024,
    "t": "conference",
    "ti": "Optimizing XR User Experiences through Network-Based Asset Bundles",
@@ -692,7 +701,7 @@
   },
   {
    "id": "2024-06-01-OC38",
-   "ref": "OC38",
+   "ref": "OC39",
    "y": 2024,
    "t": "conference",
    "ti": "The influence of the level of detail and interactivity of 3D elements on UX in XR applications",
@@ -703,7 +712,7 @@
   },
   {
    "id": "2024-06-01-OC37",
-   "ref": "OC37",
+   "ref": "OC38",
    "y": 2024,
    "t": "conference",
    "ti": "Effect of external characteristics of a virtual human being during the use of a computer-assisted therapy tool",
@@ -714,7 +723,7 @@
   },
   {
    "id": "2024-05-11-C74",
-   "ref": "C74",
+   "ref": "C76",
    "y": 2024,
    "t": "conference",
    "ti": "Experiencing Dynamic Weight Changes in Virtual Reality Through Pseudo-Haptics and Vibrotactile Feedback",
@@ -725,7 +734,7 @@
   },
   {
    "id": "2024-04-25-C77",
-   "ref": "C77",
+   "ref": "C79",
    "y": 2024,
    "t": "conference",
    "ti": "Investigating the impact of virtual element misalignment in collaborative Augmented Reality experiences",
@@ -736,7 +745,7 @@
   },
   {
    "id": "2024-04-25-C76",
-   "ref": "C76",
+   "ref": "C78",
    "y": 2024,
    "t": "conference",
    "ti": "Comparing Continuous and Retrospective Emotion Ratings in Remote VR Study",
@@ -747,7 +756,7 @@
   },
   {
    "id": "2024-04-25-C75",
-   "ref": "C75",
+   "ref": "C77",
    "y": 2024,
    "t": "conference",
    "ti": "The Impact of Social Environment and Interaction Focus on User Experience and Social Acceptability of an Augmented Reality Game",
@@ -758,7 +767,7 @@
   },
   {
    "id": "2024-04-15-C73",
-   "ref": "C73",
+   "ref": "C75",
    "y": 2024,
    "t": "conference",
    "ti": "Influence of Gameplay Duration, Hand Tracking, and Controller Based Control Methods on UX in VR",
@@ -780,7 +789,7 @@
   },
   {
    "id": "2024-03-14-C72",
-   "ref": "C72",
+   "ref": "C74",
    "y": 2024,
    "t": "conference",
    "ti": "The Influence of Extended Reality and Virtual Characters' Embodiment Levels on User Experience in Well-Being Activities",
@@ -791,7 +800,7 @@
   },
   {
    "id": "2024-03-14-C71",
-   "ref": "C71",
+   "ref": "C73",
    "y": 2024,
    "t": "conference",
    "ti": "Influence of Personality and Communication Behavior of a Conversational Agent on User Experience and Social Presence in Augmented Reality",
@@ -813,7 +822,7 @@
   },
   {
    "id": "2023-11-01-OC35",
-   "ref": "OC35",
+   "ref": "OC36",
    "y": 2023,
    "t": "conference",
    "ti": "Beziehungsarbeit in partizipativen Forschungskontexten – Lösung oder Folgeproblem?",
@@ -878,7 +887,7 @@
   },
   {
    "id": "2023-07-21-OC36",
-   "ref": "OC36",
+   "ref": "OC37",
    "y": 2023,
    "t": "conference",
    "ti": "Shaping the Metaverse: policy engagement with immersive technologies in the UK",
@@ -889,7 +898,7 @@
   },
   {
    "id": "2023-07-18-C70",
-   "ref": "C70",
+   "ref": "C72",
    "y": 2023,
    "t": "conference",
    "ti": "Exploring users' sense of safety in public using an Augmented Reality application",
@@ -900,7 +909,7 @@
   },
   {
    "id": "2023-07-18-C69",
-   "ref": "C69",
+   "ref": "C71",
    "y": 2023,
    "t": "conference",
    "ti": "Protect and Extend - Using GANs for Synthetic Data Generation of Time-Series Medical Records",
@@ -912,7 +921,7 @@
   },
   {
    "id": "2023-07-18-C68",
-   "ref": "C68",
+   "ref": "C70",
    "y": 2023,
    "t": "conference",
    "ti": "An Investigation of the Influence of Ambient Noise on User Experience in Virtual Reality",
@@ -923,7 +932,7 @@
   },
   {
    "id": "2023-07-09-OC33",
-   "ref": "OC33",
+   "ref": "OC34",
    "y": 2023,
    "t": "conference",
    "ti": "Embedding Self-Assessment Manikins in Mobile Augmented Reality Applications",
@@ -934,7 +943,7 @@
   },
   {
    "id": "2023-07-01-OC34",
-   "ref": "OC34",
+   "ref": "OC35",
    "y": 2023,
    "t": "conference",
    "ti": "Designing User-Centered Simulations of Leadership Situations for Cave Automatic Virtual Environments: Development and Usability Study",
@@ -967,7 +976,7 @@
   },
   {
    "id": "2023-03-01-OC32",
-   "ref": "OC32",
+   "ref": "OC33",
    "y": 2023,
    "t": "conference",
    "ti": "Impact of spatial auditory navigation on user experience during augmented outdoor navigation tasks",
@@ -989,7 +998,7 @@
   },
   {
    "id": "2022-12-20-OC31",
-   "ref": "OC31",
+   "ref": "OC32",
    "y": 2022,
    "t": "conference",
    "ti": "Dementia and the role of evidence-based guidelines in primary care – Results of a cluster randomised controlled trial",
@@ -1000,7 +1009,7 @@
   },
   {
    "id": "2022-11-24-OC28",
-   "ref": "OC28",
+   "ref": "OC29",
    "y": 2022,
    "t": "conference",
    "ti": "ColorTable: Manipulating Tasting Experiences, Impact of Light Color on Food Flavor Perception",
@@ -1011,7 +1020,7 @@
   },
   {
    "id": "2022-10-04-C67",
-   "ref": "C67",
+   "ref": "C69",
    "y": 2022,
    "t": "conference",
    "ti": "The Storytime Dataset: Simulated Videotelephony Clips for Quality Perception Research",
@@ -1022,7 +1031,7 @@
   },
   {
    "id": "2022-10-04-C66",
-   "ref": "C66",
+   "ref": "C68",
    "y": 2022,
    "t": "conference",
    "ti": "Investigation of Personal Space perception in Augmented Reality",
@@ -1033,18 +1042,17 @@
   },
   {
    "id": "2022-09-15-mobility-support-75plus",
-   "ref": "",
+   "ref": "OC25",
    "y": 2022,
    "t": "conference",
    "ti": "Individual Technology-supported Mobility Support for People aged 75 and over in Rural Areas",
    "a": "Mümken, S., Haeger, C., Voigt-Antons, J.-N., Spang, R. P. & Gellert, P.",
    "v": "Zeitschrift für Gerontologie und Geriatrie, 55(Suppl. 1), 110",
-   "tp": "digital-health",
-   "n": "Not yet listed in the Publikationsverzeichnis"
+   "tp": "digital-health"
   },
   {
    "id": "2022-08-06-OC30",
-   "ref": "OC30",
+   "ref": "OC31",
    "y": 2022,
    "t": "conference",
    "ti": "Making Sense of the Noise - Integrating Multiple Analyses for Stop and Trip Classification",
@@ -1055,7 +1063,7 @@
   },
   {
    "id": "2022-08-06-OC29",
-   "ref": "OC29",
+   "ref": "OC30",
    "y": 2022,
    "t": "conference",
    "ti": "The STAGA-Dataset: Stop and Trip Annotated GPS and Accelerometer Data of Everyday Life",
@@ -1066,7 +1074,7 @@
   },
   {
    "id": "2022-06-16-OC27",
-   "ref": "OC27",
+   "ref": "OC28",
    "y": 2022,
    "t": "conference",
    "ti": "Reconstruction and Physiological Basis of Samsung’s Galaxy Watch Stress Score",
@@ -1077,7 +1085,7 @@
   },
   {
    "id": "2022-06-16-OC25",
-   "ref": "OC25",
+   "ref": "OC26",
    "y": 2022,
    "t": "conference",
    "ti": "Using Eye Tracking for Assessing User Experience of Text Readability in Virtual Reality",
@@ -1088,7 +1096,7 @@
   },
   {
    "id": "2022-05-29-OC26",
-   "ref": "OC26",
+   "ref": "OC27",
    "y": 2022,
    "t": "conference",
    "ti": "Towards Improvement of UX using Gamification for Public Artistic and Historical Artefacts in AR",
@@ -1107,6 +1115,17 @@
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 0060 – E, Geneva, Switzerland",
    "tp": "qoe",
    "d": "https://www.itu.int/md/T22-SG12-C-0060/en"
+  },
+  {
+   "id": "2022-03-01-vde-digitalisierung-gesundheitswesen",
+   "ref": "P1",
+   "y": 2022,
+   "t": "position",
+   "ti": "Gestaltung Digitalisierung im Gesundheitswesen",
+   "a": "Anstädt, T., Becker, K., Czaplik, M., Laurila-Dürsch, J., Friedrich, P., Hilfenhaus, C., Lingnau, B., Hübschen, M., Schmoldt, D., Strehlau, H., Voigt-Antons, J.-N. & Wolff, D.",
+   "v": "VDE Positionspapier. Offenbach am Main: Informationstechnische Gesellschaft im VDE (ITG) mit Unterstützung der VDE DGBMT",
+   "tp": "digital-health",
+   "d": "https://www.vde.com/itg"
   },
   {
    "id": "2022-01-20-OJ4",
@@ -1253,7 +1272,7 @@
   },
   {
    "id": "2021-05-10-C65",
-   "ref": "C65",
+   "ref": "C67",
    "y": 2021,
    "t": "conference",
    "ti": "Don’t Worry be Happy - Using virtual environments to induce emotional states measured by subjective scales and heart rate parameters",
@@ -1264,7 +1283,7 @@
   },
   {
    "id": "2021-05-10-C64",
-   "ref": "C64",
+   "ref": "C66",
    "y": 2021,
    "t": "conference",
    "ti": "Influence of Interactivity and Social Environments on User Experience and Social Acceptability in Virtual Reality",
@@ -1341,7 +1360,7 @@
   },
   {
    "id": "2020-12-01-C63",
-   "ref": "C63",
+   "ref": "C65",
    "y": 2020,
    "t": "conference",
    "ti": "Exploring Visualisation for Financial Statements in Virtual Reality",
@@ -1429,26 +1448,24 @@
   },
   {
    "id": "2020-05-26-hand-tracking-vr",
-   "ref": "",
+   "ref": "C64",
    "y": 2020,
    "t": "conference",
    "ti": "Influence of Hand Tracking as a Way of Interaction in Virtual Reality on User Experience",
    "a": "Voigt-Antons, J.-N., Kojić, T., Ali, D. & Möller, S.",
    "v": "12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2004.12642",
-   "n": "Not yet listed in the Publikationsverzeichnis"
+   "d": "https://doi.org/10.48550/arXiv.2004.12642"
   },
   {
    "id": "2020-05-26-flow-music-learning",
-   "ref": "",
+   "ref": "C63",
    "y": 2020,
    "t": "conference",
    "ti": "Assessing Differences in Flow State Induced by an Adaptive Music Learning Software",
    "a": "Haug, M., Camps, P., Umland, T. & Voigt-Antons, J.-N.",
    "v": "12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
-   "tp": "psychophysiology",
-   "n": "Not yet listed in the Publikationsverzeichnis"
+   "tp": "psychophysiology"
   },
   {
    "id": "2020-05-01-C61",

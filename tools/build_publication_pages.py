@@ -30,6 +30,7 @@ TYPE_LABEL = {
     "chapter": "Book chapter",
     "book": "Book / edited volume",
     "standard": "Standardization contribution",
+    "position": "Position paper",
 }
 TYPE_BADGE = {
     "journal": ("JOURNAL", "venue"),
@@ -37,6 +38,7 @@ TYPE_BADGE = {
     "chapter": ("CHAPTER", "venue t-book"),
     "book": ("BOOK", "venue t-book"),
     "standard": ("STANDARD", "venue t-standard"),
+    "position": ("POSITION PAPER", "venue t-position"),
 }
 TOPIC_LABEL = {
     "xr": ("XR & Spatial Interaction", "xr-spatial-interaction"),
@@ -50,6 +52,7 @@ BIBTEX_TYPE = {
     "chapter": "incollection",
     "book": "book",
     "standard": "techreport",
+    "position": "techreport",
 }
 
 NAV = """<nav>

@@ -13,21 +13,21 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── 404.html                    Fehlerseite (GitHub Pages nutzt sie automatisch)
 ├── .nojekyll                   verhindert Jekyll-Verarbeitung
 ├── robots.txt
-├── sitemap.xml                 generiert, 245 URLs
+├── sitemap.xml                 generiert, 246 URLs
 │
 ├── assets/
 │   ├── style.css               gemeinsames Stylesheet (Light-first + Dark-Toggle)
 │   └── main.js                 Theme-Toggle, Mobile-Nav, Scroll-Reveal
 │
 ├── data/
-│   ├── publications.json       226 Einträge — Quelle für alles Publikationsbezogene
+│   ├── publications.json       227 Einträge — Quelle für alles Publikationsbezogene
 │   ├── posts.json              generiert aus content/posts/
 │   └── redirects.json          alte → neue Publikations-URLs
 │
 ├── content/posts/*.md          5 Blogbeiträge als Markdown (Quelldateien)
 │
 ├── research/index.html         5 Forschungslinien ausführlich
-├── projects/index.html         19 Projekte, Fördertabelle, Detailblöcke
+├── projects/index.html         Fördertabelle (18 Zeilen), Detailblöcke
 ├── publications/index.html     Filterbare Liste (Jahr, Typ, Thema, Volltextsuche)
 ├── cv/index.html               CV inkl. Service, Gremien, Standardisierung
 ├── teaching/index.html         Lehrportfolio und Betreuung
@@ -35,7 +35,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── tags/index.html             Weiterleitung alter /tags/#slug-Links
 ├── impressum/index.html        Impressum + Datenschutz (Gerüst, siehe unten)
 │
-├── publication/<id>/index.html 226 generierte Detailseiten mit BibTeX
+├── publication/<id>/index.html 227 generierte Detailseiten mit BibTeX
 ├── posts/JJJJ/MM/<slug>/       5 generierte Beitragsseiten
 └── tools/
     ├── build_publication_pages.py
@@ -125,13 +125,17 @@ die Detailseiten überhaupt, statt nur eine Liste.
 
 ### Datenstand
 
-`data/publications.json` enthält **226 Einträge, 2010–2026** — importiert aus
+`data/publications.json` enthält **227 Einträge, 2010–2026** — importiert aus
 `04_Publikationsverzeichnis_Voigt-Antons.docx`.
 
-Aufteilung: 157 Konferenzbeiträge · 45 Journalartikel · 17 Standardisierungsbeiträge ·
+Aufteilung: 158 Konferenzbeiträge · 45 Journalartikel · 17 Standardisierungsbeiträge ·
 5 Buchkapitel · 2 Bücher.
 
 Themen: 64 Psychophysiology · 61 XR · 59 Digital Health · 42 QoE.
+
+Bibliometrie (Google Scholar, 2. August 2026): 2.987 Zitationen · h-Index 29 · i10-Index 83.
+Die Zahlen stehen auf Startseite, Publikationsseite und im CV sowie unter `meta.bibliometrics`
+in `data/publications.json`. Halbjährlich aktualisieren.
 
 Nummernstand: `B1–B2`, `BC1–BC5`, `C1–C103`, `J1–J39`, `OC1–OC54`, `OJ1–OJ6`, `S1–S17` —
 alle Reihen lückenlos und ohne Doppelvergabe. `tools/check_site.py` prüft das bei jedem Lauf.
@@ -154,8 +158,29 @@ Beim Import aufgefallen:
    („What importance does outpatient care have…") als Zweittitel desselben Journalartikels
    führt. Die beiden Einträge beschreiben also womöglich dieselbe Arbeit in zwei Fassungen.
 
+3. **Hinweise stehen im Word-Dokument teils hinter dem DOI** — Auszeichnungen und Fußnoten wie
+   „Shared first authorship". Beim ersten Import wurden sie verschluckt, weil der Parser nach der
+   URL abgeschnitten hat. Betroffen waren `[J15]`, `[J16]` und `[J18]`; alle sind nachgetragen.
+   **Bei künftigen Importen darauf achten.**
+4. **Eine hochzitierte Arbeit fehlt im Verzeichnis:** „Influence of Hand Tracking as a Way of
+   Interaction in Virtual Reality on User Experience" (QoMEX 2020, Athlone) — Erstautorschaft und
+   laut Google Scholar mit 148 Zitationen die drittmeistzitierte Arbeit überhaupt. Sie steht als
+   `2020-05-26-hand-tracking-vr` ohne `ref` auf der Seite und sollte ins Word-Dokument
+   nachgetragen werden. Hinterlegt ist die arXiv-DOI (`10.48550/arXiv.2004.12642`); die
+   IEEE-Proceedings-DOI habe ich nicht sicher ermitteln können und deshalb nicht geraten.
+
 `tools/check_site.py` schlägt Alarm bei doppelten DOIs, doppelt vergebenen Nummern und
 Lücken in einer Nummernreihe.
+
+### Das Feld `n` (Notizen)
+
+Enthält ausschließlich Belegbares: Auszeichnungen und Autorschafts-Fußnoten aus dem
+Word-Dokument, dazu „In press" für noch nicht erschienene Arbeiten.
+
+Beim Relaunch standen dort zunächst drei „Forthcoming"-Markierungen, die aus der alten Website
+stammten und inzwischen überholt waren (die Konferenzen hatten stattgefunden), sowie ein
+„Most-cited work" ohne Quelle. Beides ist entfernt. Faustregel: **Was in `n` steht, muss im
+Publikationsverzeichnis oder in einer anderen belegbaren Quelle stehen.**
 
 Alle 125 bereits existierenden Publikations-URLs sind unverändert erhalten.
 
@@ -308,9 +333,9 @@ python3 -m http.server 8000
    `<link>`-Zeilen in allen Seiten entfernen.
 2. **Impressum und Datenschutz vervollständigen.** `impressum/index.html` ist ein Gerüst mit
    Platzhaltern in eckigen Klammern und muss rechtlich geprüft werden.
-3. **Bibliometrie-Datum.** Die Zahlen im Hero (2.983 Zitationen, h-Index 29) tragen das Datum
-   27. Juli 2026. Halbjährlich aktualisieren — veraltete Zitationszahlen fallen negativ auf.
-4. **Restliche Publikationen** aus BibTeX ergänzen (siehe oben).
+3. **Bibliometrie aktuell halten.** Stand 2. August 2026. Halbjährlich nachziehen — veraltete
+   Zitationszahlen fallen negativ auf.
+4. **Projektzahl klären.** Die Fördertabelle listet 18 Projekte, im Text steht an zehn Stellen 19.
 5. **Zweisprachigkeit.** Falls die Seite auch deutschen Berufungsverfahren dienen soll, wäre eine
    deutsche Fassung der Startseite unter `/de/` sinnvoll.
 

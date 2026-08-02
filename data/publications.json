@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-08-02",
-  "total_claimed": 226,
+  "total_claimed": 227,
   "note": "Complete publication record, imported from the official Publikationsverzeichnis (04_Publikationsverzeichnis_Voigt-Antons.docx). Field keys: id, y=year, t=type, ti=title, a=authors, v=venue, tp=topic, d=DOI or paper URL, n=note.",
   "types": {
    "journal": "Peer-reviewed journal article",
@@ -15,6 +15,13 @@
    "qoe": "Quality of Experience",
    "psychophysiology": "Psychophysiology & Behavioural Measurement",
    "digital-health": "Digital Health & Learning"
+  },
+  "bibliometrics": {
+   "source": "Google Scholar",
+   "as_of": "2026-08-02",
+   "citations": 2987,
+   "h_index": 29,
+   "i10_index": 83
   }
  },
  "items": [
@@ -36,8 +43,7 @@
    "ti": "Experiencing the Path: Comparing Visual Cues for User Experience and Performance in Outdoor Augmented Reality Navigation",
    "a": "Henning, J., Vona, F., Hinzmann, S., Amer, M. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 18th International Conference on Quality of Multimedia Experience (QoMEX 2026), Cardiff, UK",
-   "tp": "xr",
-   "n": "Forthcoming"
+   "tp": "xr"
   },
   {
    "id": "2026-06-01-C101",
@@ -47,8 +53,7 @@
    "ti": "How Close Is Too Close? Exploring the Impact of Avatar Proximity on User Experience in Collaborative Augmented and Virtual Reality",
    "a": "Vona, F., Amer, M., Abdellatif, O., Stern, M., Moreira, C. P., Jorge, J. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 18th International Conference on Quality of Multimedia Experience (QoMEX 2026), Cardiff, UK",
-   "tp": "xr",
-   "n": "Forthcoming"
+   "tp": "xr"
   },
   {
    "id": "2026-04-01-C99",
@@ -100,8 +105,7 @@
    "ti": "Evaluating the Impact of Distractions and Spatial Constraints in Public XR",
    "a": "Shumeliuk, A., Warsinke, M., Kojic, T., Möller, S., Voigt-Antons, J.-N. & Vergari, M.",
    "v": "Paper presented at 2nd IEEE VR Workshop on Social Interaction and Collaboration in eXtended Reality (SIC-XR 2026), Daegu, Korea",
-   "tp": "xr",
-   "n": "Forthcoming"
+   "tp": "xr"
   },
   {
    "id": "2026-02-01-J35",
@@ -399,7 +403,7 @@
    "v": "Paper presented at the international workshop on IMmersive Mixed and Virtual Environment Systems (MMVE 2025), Stellenbosch, South Africa",
    "tp": "xr",
    "d": "https://doi.org/10.1145/3712677.3720459",
-   "n": "Best Paper Award, MMVE @ ACM MMSys"
+   "n": "Workshop Best Paper Award, MMVE 2025"
   },
   {
    "id": "2025-03-01-C87",
@@ -871,7 +875,7 @@
    "v": "Paper presented at the 15th International Conference on Quality of Multimedia Experience (QoMEX 2023), Ghent, Belgium",
    "tp": "digital-health",
    "d": "https://doi.org/10.1109/QoMEX58391.2023.10178496",
-   "n": "Diversity and Societal Impact Award"
+   "n": "Diversity and Societal Impact Award, QoMEX 2023"
   },
   {
    "id": "2023-07-18-C68",
@@ -1224,7 +1228,7 @@
    "v": "Paper presented at the IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2021), Lisbon, Portugal",
    "tp": "xr",
    "d": "https://doi.org/10.1109/VR50410.2021.00096",
-   "n": "Conference Paper Honorable Mention"
+   "n": "Conference Paper Honorable Mention, IEEE VR 2021"
   },
   {
    "id": "2021-04-22-S9",
@@ -1343,7 +1347,8 @@
    "a": "Porcu, S., Floris, A., Voigt-Antons, J.-N., Atzori, L. & Möller, S.",
    "v": "IEEE Transactions on Network and Service Management, vol. 17, no. 4, pp. 2702-2716",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/TNSM.2020.3018303"
+   "d": "https://doi.org/10.1109/TNSM.2020.3018303",
+   "n": "Best Journal Paper Award, IEEE Communications Society (MMTC) 2023"
   },
   {
    "id": "2020-07-10-OC16",
@@ -1377,6 +1382,18 @@
    "v": "Paper presented at the 12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
    "tp": "xr",
    "d": "https://doi.org/10.1109/QoMEX48832.2020.9123125"
+  },
+  {
+   "id": "2020-05-26-hand-tracking-vr",
+   "ref": "",
+   "y": 2020,
+   "t": "conference",
+   "ti": "Influence of Hand Tracking as a Way of Interaction in Virtual Reality on User Experience",
+   "a": "Voigt-Antons, J.-N., Kojić, T., Ali, D. & Möller, S.",
+   "v": "12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
+   "tp": "xr",
+   "d": "https://doi.org/10.48550/arXiv.2004.12642",
+   "n": "Not yet listed in the Publikationsverzeichnis"
   },
   {
    "id": "2020-05-01-C61",
@@ -1516,7 +1533,8 @@
    "a": "Cha, J.*, Voigt-Antons, J.-N.*, Trahms, C., O’Sullivan, J., Gellert, P., Kuhlmey, A., Möller, S. & Nordheim, J.",
    "v": "Quality and User Experience, 1-13",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1007/s41233-019-0028-2"
+   "d": "https://doi.org/10.1007/s41233-019-0028-2",
+   "n": "Shared first authorship"
   },
   {
    "id": "2019-01-01-J15",
@@ -1527,7 +1545,8 @@
    "a": "Regal, G.*, Voigt-Antons, J.-N.*, Schmidt, S., Schrammel, J., Kojić, T., Tscheligi, M. & Möller, S.",
    "v": "Quality and User Experience, 1-13",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/s41233-019-0029-1"
+   "d": "https://doi.org/10.1007/s41233-019-0029-1",
+   "n": "Shared first authorship"
   },
   {
    "id": "2019-01-01-J14",

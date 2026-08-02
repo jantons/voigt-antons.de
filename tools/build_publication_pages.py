@@ -160,7 +160,11 @@ def page(p, prev_item, next_item):
     links.append('<a class="btn btn-2" href="#bibtex">BibTeX &#8595;</a>')
     links.append('<a class="btn btn-2" href="/publications/">All publications</a>')
 
-    meta_rows = [("Type", e(TYPE_LABEL.get(p["t"], "Other"))), ("Year", e(str(p["y"])))]
+    meta_rows = []
+    if p.get("ref"):
+        meta_rows.append(("Reference", "<code>[%s]</code> in the Publikationsverzeichnis"
+                          % e(p["ref"])))
+    meta_rows += [("Type", e(TYPE_LABEL.get(p["t"], "Other"))), ("Year", e(str(p["y"])))]
     if topic_name:
         meta_rows.append(("Research line", '<a class="inline-link" href="/research/#%s">%s</a>'
                           % (topic_anchor, e(topic_name))))
@@ -210,7 +214,7 @@ def page(p, prev_item, next_item):
 <header class="page-head">
   <div class="wrap">
     <div class="crumbs"><a href="/">Home</a> / <a href="/publications/">Publications</a> / {year}</div>
-    <span class="{badge_cls}" style="display:inline-block;margin-bottom:16px">{badge}</span>
+    <span class="{badge_cls}" style="display:inline-block;margin-bottom:16px">{badge}</span>{refbadge}
     <h1 style="font-size:clamp(1.5rem,3.4vw,2.3rem);max-width:34ch">{title}</h1>
     <p class="lede" style="font-size:1rem">{authors}</p>
     <p class="lede" style="font-size:.95rem;font-style:italic;margin-top:6px">{venue}</p>
@@ -250,6 +254,8 @@ def page(p, prev_item, next_item):
         year=e(str(p["y"])),
         badge=label,
         badge_cls=badge_cls,
+        refbadge=('<span class="refnum" style="margin-left:8px">[%s]</span>' % e(p["ref"])
+                  if p.get("ref") else ""),
         authors=e(p["a"]),
         venue=e(p["v"]),
         links="".join(links),
@@ -274,6 +280,15 @@ def main():
     # Drop pages whose entry no longer exists in the JSON (best effort: some
     # filesystems disallow unlink from this process).
     keep = {p["id"] for p in items}
+
+    # Redirect stubs for renamed ids also live under /publication/ and must
+    # survive this cleanup — otherwise every run would delete them again.
+    redirects = ROOT / "data" / "redirects.json"
+    if redirects.exists():
+        for entry in json.loads(redirects.read_text(encoding="utf-8")):
+            src = entry["from"].strip("/")
+            if src.startswith("publication/"):
+                keep.add(src.split("/", 1)[1])
     for d in OUT.iterdir():
         if d.is_dir() and d.name not in keep:
             try:

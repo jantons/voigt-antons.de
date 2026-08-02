@@ -20,6 +20,7 @@
  "items": [
   {
    "id": "2026-06-01-C103",
+   "ref": "C103",
    "y": 2026,
    "t": "conference",
    "ti": "The Three-Body Problem of Collaboration: Effects of Asymmetric Physical Co-Presence in Augmented Reality",
@@ -29,6 +30,7 @@
   },
   {
    "id": "2026-06-01-C102",
+   "ref": "C102",
    "y": 2026,
    "t": "conference",
    "ti": "Experiencing the Path: Comparing Visual Cues for User Experience and Performance in Outdoor Augmented Reality Navigation",
@@ -39,6 +41,7 @@
   },
   {
    "id": "2026-06-01-C101",
+   "ref": "C101",
    "y": 2026,
    "t": "conference",
    "ti": "How Close Is Too Close? Exploring the Impact of Avatar Proximity on User Experience in Collaborative Augmented and Virtual Reality",
@@ -49,6 +52,7 @@
   },
   {
    "id": "2026-04-01-C99",
+   "ref": "C99",
    "y": 2026,
    "t": "conference",
    "ti": "When Simulation Meets Physiology: Adaptive Resilience for Mission-Critical XR in Fast-Jet Training",
@@ -59,6 +63,7 @@
   },
   {
    "id": "2026-04-01-C98",
+   "ref": "C98",
    "y": 2026,
    "t": "conference",
    "ti": "Understanding Cross-Cultural User Experience in Virtual Reality Across Presence, Emotion, and Interaction",
@@ -68,6 +73,7 @@
   },
   {
    "id": "2026-04-01-C100",
+   "ref": "C100",
    "y": 2026,
    "t": "conference",
    "ti": "XR Training in Challenging Environments: The Wind Turbines Case",
@@ -78,6 +84,7 @@
   },
   {
    "id": "2026-03-01-OC54",
+   "ref": "OC54",
    "y": 2026,
    "t": "conference",
    "ti": "A Modular Multimodal Dialog Architecture for Digital PROM Collection",
@@ -87,6 +94,7 @@
   },
   {
    "id": "2026-03-01-C97",
+   "ref": "C97",
    "y": 2026,
    "t": "conference",
    "ti": "Evaluating the Impact of Distractions and Spatial Constraints in Public XR",
@@ -97,6 +105,7 @@
   },
   {
    "id": "2026-02-01-J35",
+   "ref": "J35",
    "y": 2026,
    "t": "journal",
    "ti": "Effects of Change in Dysfunctional Beliefs and Self-Esteem in Avatar-Based Cognitive Therapy for Symptoms of Social Anxiety Disorder: A Randomized Parallel Trial",
@@ -107,6 +116,7 @@
   },
   {
    "id": "2026-01-15-J34",
+   "ref": "J34",
    "y": 2026,
    "t": "journal",
    "ti": "Evaluating Transfer in Higher Education: A Modular Questionnaire for Target Group-specific Assessment of Event Formats",
@@ -117,16 +127,18 @@
   },
   {
    "id": "2026-01-02-J36",
+   "ref": "J37",
    "y": 2026,
    "t": "journal",
-   "ti": "Out-of-home mobility enhancement by a physiotherapist-led motivational counselling intervention among rural community-dwelling older adults 75+: The MOBILE RCT",
+   "ti": "Out-of-home mobility enhancement by a physiotherapist-led motivational counseling intervention among rural community-dwelling older adults 75+: The MOBILE RCT",
    "a": "Haeger, C., Mümken, S. A., Spang, R. P., Brauer, M., O’Sullivan, J. L., Lech, S., Xue, Q.-L., Stockburger, M., Keller, J., Voigt-Antons, J.-N. & Gellert, P.",
-   "v": "BMC Geriatrics",
+   "v": "BMC Geriatrics, 26, 481",
    "tp": "digital-health",
    "d": "https://doi.org/10.1186/s12877-026-07244-w"
   },
   {
    "id": "2026-01-01-J38",
+   "ref": "J39",
    "y": 2026,
    "t": "journal",
    "ti": "User Experience and Therapist Effectiveness of Different Virtual Character Types in Virtual Reality Exposure Therapy: A Mixed-Methods Study",
@@ -138,6 +150,7 @@
   },
   {
    "id": "2026-01-01-J37",
+   "ref": "J38",
    "y": 2026,
    "t": "journal",
    "ti": "Hearing the Way: Influence of Varying Spatialized Audio Cues and Device Type on AR Navigation Experience",
@@ -148,6 +161,7 @@
   },
   {
    "id": "2026-01-01-J36",
+   "ref": "J36",
    "y": 2026,
    "t": "journal",
    "ti": "Multimodal Assistance in Rehabilitation: User Experience of Embodied and Non-Embodied Agents for Collecting Patient-Reported Outcome Measures",
@@ -158,6 +172,7 @@
   },
   {
    "id": "2026-01-01-J33",
+   "ref": "J33",
    "y": 2026,
    "t": "journal",
    "ti": "Spoofer detection framework for V2X systems via tensor-based DoA estimation and Yolo-based object detection",
@@ -168,6 +183,7 @@
   },
   {
    "id": "2025-11-01-C96",
+   "ref": "C96",
    "y": 2025,
    "t": "conference",
    "ti": "Unmanned Aerial Vehicles Control in a Digital Twin: Exploring the Effect of Different Points of View on User Experience in Virtual Reality",
@@ -178,6 +194,7 @@
   },
   {
    "id": "2025-10-01-OC52",
+   "ref": "OC52",
    "y": 2025,
    "t": "conference",
    "ti": "Comparing robot, avatar, and voice assistance in PROMIS administration – a cross-randomized controlled trial",
@@ -188,6 +205,7 @@
   },
   {
    "id": "2025-09-01-OC51",
+   "ref": "OC51",
    "y": 2025,
    "t": "conference",
    "ti": "Nutzererfahrung von Kindern und Jugendlichen mit einem multimodalen, interaktiven System zur digitalen Erfassung von patient-reported outcomes",
@@ -197,6 +215,7 @@
   },
   {
    "id": "2025-09-01-J32",
+   "ref": "J32",
    "y": 2025,
    "t": "journal",
    "ti": "Dynamic and Responsible Digital Twins for Extended Reality",
@@ -207,6 +226,7 @@
   },
   {
    "id": "2025-09-01-C95",
+   "ref": "C95",
    "y": 2025,
    "t": "conference",
    "ti": "Finding My Way: Influence of Different Audio Augmented Reality Navigation Cues on User Experience and Subjective Usefulness",
@@ -217,6 +237,7 @@
   },
   {
    "id": "2025-09-01-C94",
+   "ref": "C94",
    "y": 2025,
    "t": "conference",
    "ti": "Exploring the Effect of Heights and User Stance on User Experience in Extended Reality Climbing",
@@ -227,6 +248,7 @@
   },
   {
    "id": "2025-09-01-C93",
+   "ref": "C93",
    "y": 2025,
    "t": "conference",
    "ti": "Augmented Reality in the Treatment of Stress and Anxiety Disorders: A Literature Synthesis",
@@ -237,6 +259,7 @@
   },
   {
    "id": "2025-09-01-C92",
+   "ref": "C92",
    "y": 2025,
    "t": "conference",
    "ti": "Emotionally Adaptive Virtual Health Assistants for Enhanced Social Presence and Trust",
@@ -247,6 +270,7 @@
   },
   {
    "id": "2025-09-01-C91",
+   "ref": "C91",
    "y": 2025,
    "t": "conference",
    "ti": "The Impact of Spatial Misalignment and Time Delay on Collaborative Presence in Augmented Reality",
@@ -257,6 +281,7 @@
   },
   {
    "id": "2025-09-01-C90",
+   "ref": "C90",
    "y": 2025,
    "t": "conference",
    "ti": "Size Matters: The Impact of Avatar Size on User Experience in Healthcare Applications",
@@ -267,6 +292,7 @@
   },
   {
    "id": "2025-08-01-OC53",
+   "ref": "OC53",
    "y": 2025,
    "t": "conference",
    "ti": "Too Immersive for the Field? Addressing Safety Risks in Extended Reality User Studies",
@@ -277,6 +303,7 @@
   },
   {
    "id": "2025-06-01-OC50",
+   "ref": "OC50",
    "y": 2025,
    "t": "conference",
    "ti": "Integrating Virtual and Augmented Reality into Public Education: Opportunities and Challenges in Language Learning",
@@ -287,6 +314,7 @@
   },
   {
    "id": "2025-06-01-OC49",
+   "ref": "OC49",
    "y": 2025,
    "t": "conference",
    "ti": "Comparing User Behavior in Real vs. Virtual Supermarket Shelves: An Eye-Tracking Study Using Tobii 3 Pro and Meta Quest Pro",
@@ -297,6 +325,7 @@
   },
   {
    "id": "2025-06-01-OC48",
+   "ref": "OC48",
    "y": 2025,
    "t": "conference",
    "ti": "Optimized User Experience for Labeling Systems for Predictive Maintenance Applications",
@@ -307,6 +336,7 @@
   },
   {
    "id": "2025-06-01-OC47",
+   "ref": "OC47",
    "y": 2025,
    "t": "conference",
    "ti": "Enabling Sustainable Everyday Mobility: The Role of E-Cargo Bikes in Urban and Rural Contexts",
@@ -317,6 +347,7 @@
   },
   {
    "id": "2025-06-01-OC46",
+   "ref": "OC46",
    "y": 2025,
    "t": "conference",
    "ti": "Sales Skill Training in Virtual Reality: An evaluation utilizing CAVE and Virtual Avatars",
@@ -327,6 +358,7 @@
   },
   {
    "id": "2025-06-01-OC45",
+   "ref": "OC45",
    "y": 2025,
    "t": "conference",
    "ti": "Exploring the Effects of Different Asymmetric Game Designs on User Experience in Collaborative Virtual Reality",
@@ -337,6 +369,7 @@
   },
   {
    "id": "2025-06-01-OC44",
+   "ref": "OC44",
    "y": 2025,
    "t": "conference",
    "ti": "Avatar Appearance Beyond Pixels - User Ratings and Avatar Preferences within Health Applications",
@@ -347,6 +380,7 @@
   },
   {
    "id": "2025-06-01-C89",
+   "ref": "C89",
    "y": 2025,
    "t": "conference",
    "ti": "Digital Twins for Extended Reality Tourism: User Experience Evaluation Across User Groups",
@@ -357,6 +391,7 @@
   },
   {
    "id": "2025-03-01-C88",
+   "ref": "C88",
    "y": 2025,
    "t": "conference",
    "ti": "Multimodal User Experience in Extended Reality: Exploring Hand Tracking, Voice, and Passthrough Interactions",
@@ -368,6 +403,7 @@
   },
   {
    "id": "2025-03-01-C87",
+   "ref": "C87",
    "y": 2025,
    "t": "conference",
    "ti": "Influence of Interactivity in Shaping User Experience and Social Acceptance of Mobile XR",
@@ -378,6 +414,7 @@
   },
   {
    "id": "2025-03-01-C86",
+   "ref": "C86",
    "y": 2025,
    "t": "conference",
    "ti": "Hands vs. Controllers: Comparing User Interactions in Virtual Reality Shopping Environments",
@@ -388,6 +425,7 @@
   },
   {
    "id": "2025-03-01-C85",
+   "ref": "C85",
    "y": 2025,
    "t": "conference",
    "ti": "Comparing Pass-Through Quality of Mixed Reality Devices: A User Experience Study During Real-World Tasks",
@@ -398,6 +436,7 @@
   },
   {
    "id": "2025-01-15-BC5",
+   "ref": "BC5",
    "y": 2025,
    "t": "chapter",
    "ti": "Nutzende im Fokus! Ein Weg zur nachhaltigen Entwicklung von Gesundheits-Apps",
@@ -408,6 +447,7 @@
   },
   {
    "id": "2025-01-01-OJ6",
+   "ref": "OJ6",
    "y": 2025,
    "t": "journal",
    "ti": "Der Einsatz von vielversprechenden Technologien in der klinisch-psychologischen Diagnostik: Fokus auf KI und XR",
@@ -417,6 +457,7 @@
   },
   {
    "id": "2025-01-01-J31",
+   "ref": "J31",
    "y": 2025,
    "t": "journal",
    "ti": "Outcomes of a Mobile Information Technology-Based Intervention to Target Naming Among Individuals with Post-Stroke Aphasia: A Virtual Randomized Controlled Trial",
@@ -427,6 +468,7 @@
   },
   {
    "id": "2025-01-01-C84",
+   "ref": "C84",
    "y": 2025,
    "t": "conference",
    "ti": "User-Centric Evaluation Methods for Digital Twin Applications in Extended Reality",
@@ -437,6 +479,7 @@
   },
   {
    "id": "2024-12-01-C83",
+   "ref": "C83",
    "y": 2024,
    "t": "conference",
    "ti": "Exploring Augmented Table Setup and Lighting Customization in a Simulated Restaurant to Improve the User Experience",
@@ -447,6 +490,7 @@
   },
   {
    "id": "2024-11-01-J30",
+   "ref": "J30",
    "y": 2024,
    "t": "journal",
    "ti": "Development of a Tablet-Based Outpatient Care Application for People With Dementia: Interview and Workshop Study",
@@ -457,6 +501,7 @@
   },
   {
    "id": "2024-10-16-BC4",
+   "ref": "BC4",
    "y": 2024,
    "t": "chapter",
    "ti": "Multimodal Interactive Assistance for the Digital Collection of Patient-Reported Outcome Measures",
@@ -467,6 +512,7 @@
   },
   {
    "id": "2024-10-16-BC3",
+   "ref": "BC3",
    "y": 2024,
    "t": "chapter",
    "ti": "Using Immersive Technologies to support healthcare of elderly and fragile people",
@@ -477,6 +523,7 @@
   },
   {
    "id": "2024-10-16-B2",
+   "ref": "B2",
    "y": 2024,
    "t": "book",
    "ti": "The digitalization of healthcare for older adults. - Digitalization as an answer to substantial challenges in our healthcare system",
@@ -488,6 +535,7 @@
   },
   {
    "id": "2024-10-10-C82",
+   "ref": "C82",
    "y": 2024,
    "t": "conference",
    "ti": "Digital Eyes: Social Implications of XR EyeSight",
@@ -498,6 +546,7 @@
   },
   {
    "id": "2024-10-10-C79",
+   "ref": "C79",
    "y": 2024,
    "t": "conference",
    "ti": "Single Vs Dual: Influence of the Number of Displays on User Experience Within Virtually Embodied Conversational Systems",
@@ -508,6 +557,7 @@
   },
   {
    "id": "2024-10-01-C78",
+   "ref": "C78",
    "y": 2024,
    "t": "conference",
    "ti": "Working with Mixed Reality in Public: Effects of Virtual Display Layouts on Feeling of Safety, Productivity and Social Acceptability",
@@ -518,16 +568,17 @@
   },
   {
    "id": "2024-09-01-OC43",
+   "ref": "OC43",
    "y": 2024,
    "t": "conference",
    "ti": "What importance does outpatient care have for mobility in rural areas? Results from a GPS study among persons aged 75 and older",
    "a": "Haeger, C., Mümken, S., Spang, R. P., Brauer, M., Voigt-Antons, J.N. & Gellert, P.",
    "v": "Paper presented at the 23. Deutscher Kongress für Versorgungsforschung 2024. Potsdam, Germany",
-   "tp": "digital-health",
-   "d": "https://doi.org/10.1007/s00103-024-03917-2"
+   "tp": "digital-health"
   },
   {
    "id": "2024-08-01-C81",
+   "ref": "C81",
    "y": 2024,
    "t": "conference",
    "ti": "VR Cloud Gaming UX: Exploring the Impact of Network Quality on Emotion, Presence, Game Experience and Cybersickness",
@@ -538,6 +589,7 @@
   },
   {
    "id": "2024-08-01-C80",
+   "ref": "C80",
    "y": 2024,
    "t": "conference",
    "ti": "Enhancing Job Interview Preparation Through Immersive Experiences Using Photorealistic, AI-powered Metahuman Avatars",
@@ -548,16 +600,18 @@
   },
   {
    "id": "2024-07-01-J29",
+   "ref": "J29",
    "y": 2024,
    "t": "journal",
-   "ti": "Außerhäusliche Mobilität von Personen ab 75 Jahren im ländlichen Raum",
+   "ti": "Außerhäusliche Mobilität von Personen ab 75 Jahren im ländlichen Raum. Ergebnisse aus einer GPS-Studie",
    "a": "Haeger, C., Mümken, S. A., Spang, R. P., Brauer, M., Voigt-Antons, J.-N. & Gellert, P.",
-   "v": "Ergebnisse aus einer GPS-Studie. Bundesgesundheitsblatt",
+   "v": "Bundesgesundheitsblatt – Gesundheitsforschung – Gesundheitsschutz, 67(8), 921–930",
    "tp": "digital-health",
    "d": "https://doi.org/10.1007/s00103-024-03917-2"
   },
   {
    "id": "2024-06-01-OC42",
+   "ref": "OC42",
    "y": 2024,
    "t": "conference",
    "ti": "Infrastructure Optimization for Predictive Maintenance: Enhanced Backend and Artificial Intelligence Integration",
@@ -568,6 +622,7 @@
   },
   {
    "id": "2024-06-01-OC41",
+   "ref": "OC41",
    "y": 2024,
    "t": "conference",
    "ti": "Optimized User Experience for Labeling Systems for Predictive Maintenance Applications",
@@ -578,6 +633,7 @@
   },
   {
    "id": "2024-06-01-OC40",
+   "ref": "OC40",
    "y": 2024,
    "t": "conference",
    "ti": "Dishonesty Tendencies in Testing Scenarios Among Students with Virtual Reality and Computer-Mediated Technology",
@@ -588,6 +644,7 @@
   },
   {
    "id": "2024-06-01-OC39",
+   "ref": "OC39",
    "y": 2024,
    "t": "conference",
    "ti": "Optimizing XR User Experiences through Network-Based Asset Bundles",
@@ -598,6 +655,7 @@
   },
   {
    "id": "2024-06-01-OC38",
+   "ref": "OC38",
    "y": 2024,
    "t": "conference",
    "ti": "The influence of the level of detail and interactivity of 3D elements on UX in XR applications",
@@ -608,6 +666,7 @@
   },
   {
    "id": "2024-06-01-OC37",
+   "ref": "OC37",
    "y": 2024,
    "t": "conference",
    "ti": "Effect of external characteristics of a virtual human being during the use of a computer-assisted therapy tool",
@@ -618,6 +677,7 @@
   },
   {
    "id": "2024-05-11-C74",
+   "ref": "C74",
    "y": 2024,
    "t": "conference",
    "ti": "Experiencing Dynamic Weight Changes in Virtual Reality Through Pseudo-Haptics and Vibrotactile Feedback",
@@ -627,17 +687,8 @@
    "d": "https://doi.org/10.1145/3613904.3642552"
   },
   {
-   "id": "2024-04-25-OC32",
-   "y": 2023,
-   "t": "conference",
-   "ti": "Impact of spatial auditory navigation on user experience during augmented outdoor navigation tasks",
-   "a": "Voigt-Antons, J.-N., Sun, Z., Vergari, M., Ashrafi, N., Vona, F., & Kojić, T.",
-   "v": "Paper presented at the annual congress of the Deutsche Gesellschaft für Akustik (DAGA 2023), Hamburg, Germany",
-   "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2404.16473"
-  },
-  {
    "id": "2024-04-25-C77",
+   "ref": "C77",
    "y": 2024,
    "t": "conference",
    "ti": "Investigating the impact of virtual element misalignment in collaborative Augmented Reality experiences",
@@ -648,6 +699,7 @@
   },
   {
    "id": "2024-04-25-C76",
+   "ref": "C76",
    "y": 2024,
    "t": "conference",
    "ti": "Comparing Continuous and Retrospective Emotion Ratings in Remote VR Study",
@@ -658,6 +710,7 @@
   },
   {
    "id": "2024-04-25-C75",
+   "ref": "C75",
    "y": 2024,
    "t": "conference",
    "ti": "The Impact of Social Environment and Interaction Focus on User Experience and Social Acceptability of an Augmented Reality Game",
@@ -668,6 +721,7 @@
   },
   {
    "id": "2024-04-15-C73",
+   "ref": "C73",
    "y": 2024,
    "t": "conference",
    "ti": "Influence of Gameplay Duration, Hand Tracking, and Controller Based Control Methods on UX in VR",
@@ -677,17 +731,8 @@
    "d": "https://doi.org/10.1145/3652212.3652222"
   },
   {
-   "id": "2024-03-15-OC34",
-   "y": 2023,
-   "t": "conference",
-   "ti": "Designing User-Centered Simulations of Leadership Situations for Cave Automatic Virtual Environments: Development and Usability Study",
-   "a": "Vona, F., Ceranic, M., Rybnikova, I., & Voigt-Antons, J.-N.",
-   "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2023). Copenhagen, Denmark",
-   "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2403.10312"
-  },
-  {
    "id": "2024-03-15-J28",
+   "ref": "J28",
    "y": 2024,
    "t": "journal",
    "ti": "Situativität, Funktionalität und Vertrauen: Ergebnisse einer szenariobasierten Interviewstudie zur Erklärbarkeit von KI in der Medizin",
@@ -698,6 +743,7 @@
   },
   {
    "id": "2024-03-14-C72",
+   "ref": "C72",
    "y": 2024,
    "t": "conference",
    "ti": "The Influence of Extended Reality and Virtual Characters' Embodiment Levels on User Experience in Well-Being Activities",
@@ -708,6 +754,7 @@
   },
   {
    "id": "2024-03-14-C71",
+   "ref": "C71",
    "y": 2024,
    "t": "conference",
    "ti": "Influence of Personality and Communication Behavior of a Conversational Agent on User Experience and Social Presence in Augmented Reality",
@@ -718,6 +765,7 @@
   },
   {
    "id": "2023-12-01-J27",
+   "ref": "J27",
    "y": 2023,
    "t": "journal",
    "ti": "Effectiveness of a tablet-based intervention for people living with dementia in primary care – A Cluster Randomized Controlled Trial",
@@ -728,6 +776,7 @@
   },
   {
    "id": "2023-11-01-OC35",
+   "ref": "OC35",
    "y": 2023,
    "t": "conference",
    "ti": "Beziehungsarbeit in partizipativen Forschungskontexten – Lösung oder Folgeproblem?",
@@ -737,6 +786,7 @@
   },
   {
    "id": "2023-10-01-S17",
+   "ref": "S17",
    "y": 2023,
    "t": "standard",
    "ti": "Use cases and MPEG technologies for Metaverse-related experiences",
@@ -747,6 +797,7 @@
   },
   {
    "id": "2023-09-06-S16",
+   "ref": "S16",
    "y": 2023,
    "t": "standard",
    "ti": "ITU-T P.IntVR: \"Subjective Test Method for Interactive Virtual Reality Applications\" - Test methods and test measurements for Interactive Virtual Reality",
@@ -757,6 +808,7 @@
   },
   {
    "id": "2023-09-06-S15",
+   "ref": "S15",
    "y": 2023,
    "t": "standard",
    "ti": "ITU-T P.IntVR: \"Subjective Test Method for Interactive Virtual Reality Applications\" - Test methods, test equipment, and test participants for Interactive Virtual Reality",
@@ -767,6 +819,7 @@
   },
   {
    "id": "2023-09-06-S14",
+   "ref": "S14",
    "y": 2023,
    "t": "standard",
    "ti": "ITU-T P.IntVR: \"Subjective Test Method for Interactive Virtual Reality Applications\" - Social acceptability, test paradigm, experimental design and test environment for Interactive Virtual Reality - Quality of Experience aspects for Interactive Virtual Reality",
@@ -777,6 +830,7 @@
   },
   {
    "id": "2023-08-01-OJ5",
+   "ref": "OJ5",
    "y": 2023,
    "t": "journal",
    "ti": "Editorial: User states in extended reality media experiences for entertainment games",
@@ -787,6 +841,7 @@
   },
   {
    "id": "2023-07-21-OC36",
+   "ref": "OC36",
    "y": 2023,
    "t": "conference",
    "ti": "Shaping the Metaverse: policy engagement with immersive technologies in the UK",
@@ -797,6 +852,7 @@
   },
   {
    "id": "2023-07-18-C70",
+   "ref": "C70",
    "y": 2023,
    "t": "conference",
    "ti": "Exploring users' sense of safety in public using an Augmented Reality application",
@@ -807,6 +863,7 @@
   },
   {
    "id": "2023-07-18-C69",
+   "ref": "C69",
    "y": 2023,
    "t": "conference",
    "ti": "Protect and Extend - Using GANs for Synthetic Data Generation of Time-Series Medical Records",
@@ -818,6 +875,7 @@
   },
   {
    "id": "2023-07-18-C68",
+   "ref": "C68",
    "y": 2023,
    "t": "conference",
    "ti": "An Investigation of the Influence of Ambient Noise on User Experience in Virtual Reality",
@@ -828,6 +886,7 @@
   },
   {
    "id": "2023-07-09-OC33",
+   "ref": "OC33",
    "y": 2023,
    "t": "conference",
    "ti": "Embedding Self-Assessment Manikins in Mobile Augmented Reality Applications",
@@ -837,7 +896,19 @@
    "d": "https://doi.org/10.1007/978-3-031-35634-6_25"
   },
   {
+   "id": "2023-07-01-OC34",
+   "ref": "OC34",
+   "y": 2023,
+   "t": "conference",
+   "ti": "Designing User-Centered Simulations of Leadership Situations for Cave Automatic Virtual Environments: Development and Usability Study",
+   "a": "Vona, F., Ceranic, M., Rybnikova, I., & Voigt-Antons, J.-N.",
+   "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2023). Copenhagen, Denmark",
+   "tp": "xr",
+   "d": "https://doi.org/10.48550/arXiv.2403.10312"
+  },
+  {
    "id": "2023-05-04-J26",
+   "ref": "J26",
    "y": 2023,
    "t": "journal",
    "ti": "Effects of User Factors on User Experience in Virtual Reality - Age, Gender, and VR Experience as Influencing Factors for VR Exergames",
@@ -848,6 +919,7 @@
   },
   {
    "id": "2023-03-02-J25",
+   "ref": "J25",
    "y": 2023,
    "t": "journal",
    "ti": "Smartphone Global Positioning System–Based System to Assess Mobility in Health Research: Development, Accuracy, and Usability Study",
@@ -857,7 +929,19 @@
    "d": "https://doi.org/10.2196/42258"
   },
   {
+   "id": "2023-03-01-OC32",
+   "ref": "OC32",
+   "y": 2023,
+   "t": "conference",
+   "ti": "Impact of spatial auditory navigation on user experience during augmented outdoor navigation tasks",
+   "a": "Voigt-Antons, J.-N., Sun, Z., Vergari, M., Ashrafi, N., Vona, F., & Kojić, T.",
+   "v": "Paper presented at the annual congress of the Deutsche Gesellschaft für Akustik (DAGA 2023), Hamburg, Germany",
+   "tp": "xr",
+   "d": "https://doi.org/10.48550/arXiv.2404.16473"
+  },
+  {
    "id": "2023-01-05-J24",
+   "ref": "J24",
    "y": 2023,
    "t": "journal",
    "ti": "Real-time affect detection in virtual reality: a technique based on a three-dimensional model of affect and EEG signals",
@@ -867,17 +951,8 @@
    "d": "https://doi.org/10.3389/frvir.2022.964754"
   },
   {
-   "id": "2022-12-23-OJ3",
-   "y": 2021,
-   "t": "journal",
-   "ti": "Towards an updated understanding of immersive multimedia experiences",
-   "a": "Voigt-Antons, J.-N. & Kojić, T.",
-   "v": "ACM SIGMM Records, 13(4), Article 7, (2021)",
-   "tp": "xr",
-   "d": "https://doi.org/10.1145/3578508.3578515"
-  },
-  {
    "id": "2022-12-20-OC31",
+   "ref": "OC31",
    "y": 2022,
    "t": "conference",
    "ti": "Dementia and the role of evidence-based guidelines in primary care – Results of a cluster randomised controlled trial",
@@ -888,6 +963,7 @@
   },
   {
    "id": "2022-11-24-OC28",
+   "ref": "OC28",
    "y": 2022,
    "t": "conference",
    "ti": "ColorTable: Manipulating Tasting Experiences, Impact of Light Color on Food Flavor Perception",
@@ -898,6 +974,7 @@
   },
   {
    "id": "2022-10-04-C67",
+   "ref": "C67",
    "y": 2022,
    "t": "conference",
    "ti": "The Storytime Dataset: Simulated Videotelephony Clips for Quality Perception Research",
@@ -908,6 +985,7 @@
   },
   {
    "id": "2022-10-04-C66",
+   "ref": "C66",
    "y": 2022,
    "t": "conference",
    "ti": "Investigation of Personal Space perception in Augmented Reality",
@@ -918,6 +996,7 @@
   },
   {
    "id": "2022-08-06-OC30",
+   "ref": "OC30",
    "y": 2022,
    "t": "conference",
    "ti": "Making Sense of the Noise - Integrating Multiple Analyses for Stop and Trip Classification",
@@ -928,6 +1007,7 @@
   },
   {
    "id": "2022-08-06-OC29",
+   "ref": "OC29",
    "y": 2022,
    "t": "conference",
    "ti": "The STAGA-Dataset: Stop and Trip Annotated GPS and Accelerometer Data of Everyday Life",
@@ -938,6 +1018,7 @@
   },
   {
    "id": "2022-06-16-OC27",
+   "ref": "OC27",
    "y": 2022,
    "t": "conference",
    "ti": "Reconstruction and Physiological Basis of Samsung’s Galaxy Watch Stress Score",
@@ -948,6 +1029,7 @@
   },
   {
    "id": "2022-06-16-OC25",
+   "ref": "OC25",
    "y": 2022,
    "t": "conference",
    "ti": "Using Eye Tracking for Assessing User Experience of Text Readability in Virtual Reality",
@@ -958,6 +1040,7 @@
   },
   {
    "id": "2022-05-29-OC26",
+   "ref": "OC26",
    "y": 2022,
    "t": "conference",
    "ti": "Towards Improvement of UX using Gamification for Public Artistic and Historical Artefacts in AR",
@@ -968,6 +1051,7 @@
   },
   {
    "id": "2022-05-25-S13",
+   "ref": "S13",
    "y": 2022,
    "t": "standard",
    "ti": "ITU-T P.IntVR: \"Subjective Test Method for Interactive Virtual Reality Applications\" - Quality of Experience aspects for Interactive Virtual Reality",
@@ -977,17 +1061,8 @@
    "d": "https://www.itu.int/md/T22-SG12-C-0060/en"
   },
   {
-   "id": "2022-04-01-S8",
-   "y": 2021,
-   "t": "standard",
-   "ti": "Contribution to DKE/AK STD_1000.8.5: VDE-Anwendungsregel \"Digitale Qualifizierung im Gesundheitsbereich – Grundlagen\"",
-   "a": "Voigt-Antons, J.-N.",
-   "v": "Contribution presented to the DKE Deutsche Kommission Elektrotechnik, Elektronik Informationstechnik in DIN und VDE, Frankfurt am Main, Germany",
-   "tp": "qoe",
-   "d": "https://www.dke.de/de/normen-standards/dokument?id=7170726&type=dke%7Cdokument"
-  },
-  {
    "id": "2022-01-20-OJ4",
+   "ref": "OJ4",
    "y": 2022,
    "t": "journal",
    "ti": "Mobility enhancement among older adults 75 + in rural areas: Study protocol of the MOBILE randomized controlled trial",
@@ -997,7 +1072,19 @@
    "d": "https://doi.org/10.1186/s12877-021-02739-0"
   },
   {
+   "id": "2022-01-01-J23",
+   "ref": "J23",
+   "y": 2022,
+   "t": "journal",
+   "ti": "A tablet-based intervention for activating nursing home residents with dementia: results from a cluster-randomized controlled trial",
+   "a": "O'Sullivan, J. L., Lech, S., Gellert, P., Grittner, U., Voigt-Antons, J.-N., Möller, S., Kuhlmey, A., & Nordheim, J.",
+   "v": "International psychogeriatrics, 34(2), 129–141",
+   "tp": "digital-health",
+   "d": "https://doi.org/10.1017/S1041610221000818"
+  },
+  {
    "id": "2021-12-18-J22",
+   "ref": "J22",
    "y": 2021,
    "t": "journal",
    "ti": "Dementia care and the role of guideline adherence in primary care: cross-sectional findings from the DemTab study",
@@ -1008,6 +1095,7 @@
   },
   {
    "id": "2021-11-01-J21",
+   "ref": "J21",
    "y": 2021,
    "t": "journal",
    "ti": "Working with environmental noise and noise-cancellation: A workload assessment with EEG and subjective measures",
@@ -1018,6 +1106,7 @@
   },
   {
    "id": "2021-10-08-OC24",
+   "ref": "OC24",
    "y": 2021,
    "t": "conference",
    "ti": "Nutzung GPS-basierter Bewegungsdaten im Längsschnitt zur Evaluation am Beispiel der MOBILE-Intervention zur Förderung außerhäuslicher Mobilität alter Menschen",
@@ -1028,6 +1117,7 @@
   },
   {
    "id": "2021-09-29-S12",
+   "ref": "S12",
    "y": 2021,
    "t": "standard",
    "ti": "ITU-T P.IntVR: \"Subjective Test Method for Interactive Virtual Reality Applications\"",
@@ -1038,6 +1128,7 @@
   },
   {
    "id": "2021-09-29-S11",
+   "ref": "S11",
    "y": 2021,
    "t": "standard",
    "ti": "Update of Human IF for ITU-T Rec G.1035",
@@ -1048,6 +1139,7 @@
   },
   {
    "id": "2021-08-01-J20",
+   "ref": "J20",
    "y": 2021,
    "t": "journal",
    "ti": "Emotion visualization in Virtual Reality: An integrative review",
@@ -1058,6 +1150,7 @@
   },
   {
    "id": "2021-07-03-OC23",
+   "ref": "OC23",
    "y": 2021,
    "t": "conference",
    "ti": "Influence of Visualisation Design of Data Streams on User Experience in Virtual Reality",
@@ -1068,6 +1161,7 @@
   },
   {
    "id": "2021-07-03-OC22",
+   "ref": "OC22",
    "y": 2021,
    "t": "conference",
    "ti": "Automatic Recognition of Experienced Emotional State from Body Movement",
@@ -1078,6 +1172,7 @@
   },
   {
    "id": "2021-07-03-OC21",
+   "ref": "OC21",
    "y": 2021,
    "t": "conference",
    "ti": "DemSelf, a Mobile App for Self-Administered Touch-Based Cognitive Screening: Participatory Design with Stakeholders",
@@ -1088,6 +1183,7 @@
   },
   {
    "id": "2021-07-03-OC20",
+   "ref": "OC20",
    "y": 2021,
    "t": "conference",
    "ti": "User Experience of Connected Services in Cars",
@@ -1097,17 +1193,8 @@
    "d": "https://doi.org/10.1007/978-3-030-78645-8_29"
   },
   {
-   "id": "2021-06-29-J23",
-   "y": 2022,
-   "t": "journal",
-   "ti": "A tablet-based intervention for activating nursing home residents with dementia: results from a cluster-randomized controlled trial",
-   "a": "O'Sullivan, J. L., Lech, S., Gellert, P., Grittner, U., Voigt-Antons, J.-N., Möller, S., Kuhlmey, A., & Nordheim, J.",
-   "v": "International psychogeriatrics, 34(2), 129–141",
-   "tp": "digital-health",
-   "d": "https://doi.org/10.1017/S1041610221000818"
-  },
-  {
    "id": "2021-05-21-OJ2",
+   "ref": "OJ2",
    "y": 2021,
    "t": "journal",
    "ti": "Implementation and Effects of an Information Technology-Based Intervention to Support Speech and Language Therapy Among Stroke Patients with Aphasia: Protocol for a Virtual Randomized Controlled Trial, JMIR Research Protoc. 2021;10(7):e30621,",
@@ -1118,6 +1205,7 @@
   },
   {
    "id": "2021-05-10-C65",
+   "ref": "C65",
    "y": 2021,
    "t": "conference",
    "ti": "Don’t Worry be Happy - Using virtual environments to induce emotional states measured by subjective scales and heart rate parameters",
@@ -1128,6 +1216,7 @@
   },
   {
    "id": "2021-05-10-C64",
+   "ref": "C64",
    "y": 2021,
    "t": "conference",
    "ti": "Influence of Interactivity and Social Environments on User Experience and Social Acceptability in Virtual Reality",
@@ -1139,6 +1228,7 @@
   },
   {
    "id": "2021-04-22-S9",
+   "ref": "S9",
    "y": 2021,
    "t": "standard",
    "ti": "Contribution to ITU-T Rec G.1035: Contribution for Human Influencing Factors - Static and Dynamic Human Factors",
@@ -1149,6 +1239,7 @@
   },
   {
    "id": "2021-04-22-S10",
+   "ref": "S10",
    "y": 2021,
    "t": "standard",
    "ti": "Proposal for new Work Item P.IntVR: Subjective Test Method for Interactive Virtual Reality Applications",
@@ -1158,10 +1249,22 @@
    "d": "https://www.itu.int/md/T17-SG12-C-0548/en"
   },
   {
+   "id": "2021-04-01-S8",
+   "ref": "S8",
+   "y": 2021,
+   "t": "standard",
+   "ti": "Contribution to DKE/AK STD_1000.8.5: VDE-Anwendungsregel \"Digitale Qualifizierung im Gesundheitsbereich – Grundlagen\"",
+   "a": "Voigt-Antons, J.-N.",
+   "v": "Contribution presented to the DKE Deutsche Kommission Elektrotechnik, Elektronik Informationstechnik in DIN und VDE, Frankfurt am Main, Germany",
+   "tp": "qoe",
+   "d": "https://www.dke.de/de/normen-standards/dokument?id=7170726&type=dke%7Cdokument"
+  },
+  {
    "id": "2021-04-01-J19",
+   "ref": "J19",
    "y": 2021,
    "t": "journal",
-   "ti": "User-Specific Touch Interfaces: A Viable Solution for an Aging Society?, Behaviour & Information Technology,",
+   "ti": "User-Specific Touch Interfaces: A Viable Solution for an Aging Society?",
    "a": "Shahal, A., Spang, R., Minge, M., Trahms, C. & Voigt-Antons, J.-N.",
    "v": "Behaviour & Information Technology",
    "tp": "digital-health",
@@ -1169,6 +1272,7 @@
   },
   {
    "id": "2021-02-01-OC19",
+   "ref": "OC19",
    "y": 2021,
    "t": "conference",
    "ti": "Ambulante Versorgung von Menschen mit Demenz in Berlin und Umgebung - Querschnittsdaten aus der DemTab-Studie",
@@ -1177,7 +1281,19 @@
    "tp": "digital-health"
   },
   {
-   "id": "2021-01-15-C63",
+   "id": "2021-01-01-OJ3",
+   "ref": "OJ3",
+   "y": 2021,
+   "t": "journal",
+   "ti": "Towards an updated understanding of immersive multimedia experiences",
+   "a": "Voigt-Antons, J.-N. & Kojić, T.",
+   "v": "ACM SIGMM Records, 13(4), Article 7, (2021)",
+   "tp": "xr",
+   "d": "https://doi.org/10.1145/3578508.3578515"
+  },
+  {
+   "id": "2020-12-01-C63",
+   "ref": "C63",
    "y": 2020,
    "t": "conference",
    "ti": "Exploring Visualisation for Financial Statements in Virtual Reality",
@@ -1188,6 +1304,7 @@
   },
   {
    "id": "2020-11-24-OJ1",
+   "ref": "OJ1",
    "y": 2020,
    "t": "journal",
    "ti": "QUALINET White Paper on Definitions of Immersive Media Experience (IMEx). arXiv preprint arXiv:2007.07032",
@@ -1198,6 +1315,7 @@
   },
   {
    "id": "2020-11-01-OC18",
+   "ref": "OC18",
    "y": 2020,
    "t": "conference",
    "ti": "DemTab – Tabletgestützte ambulante Versorgung von Menschen mit Demenz: Leitlinienbasierte Behandlungsplanung, individuelles Krankheitsmanagement und Vernetzung",
@@ -1208,6 +1326,7 @@
   },
   {
    "id": "2020-11-01-OC17",
+   "ref": "OC17",
    "y": 2020,
    "t": "conference",
    "ti": "12170: User-Centered Design of a Multimodal Training App for People with Aphasia",
@@ -1217,6 +1336,7 @@
   },
   {
    "id": "2020-08-20-J18",
+   "ref": "J18",
    "y": 2020,
    "t": "journal",
    "ti": "Estimation of the Quality of Experience During Video Streaming From Facial Expression and Gaze Direction",
@@ -1227,6 +1347,7 @@
   },
   {
    "id": "2020-07-10-OC16",
+   "ref": "OC16",
    "y": 2020,
    "t": "conference",
    "ti": "Predicting tap locations on touch screens in the field using accelerometer and gyroscope sensor readings",
@@ -1237,6 +1358,7 @@
   },
   {
    "id": "2020-07-10-OC15",
+   "ref": "OC15",
    "y": 2020,
    "t": "conference",
    "ti": "Accuracy Assessment of ARKit 2Based Gaze Estimation",
@@ -1247,6 +1369,7 @@
   },
   {
    "id": "2020-06-23-C62",
+   "ref": "C62",
    "y": 2020,
    "t": "conference",
    "ti": "Comparing emotional states induced by 360 videos via head-mounted display and computer screen",
@@ -1257,6 +1380,7 @@
   },
   {
    "id": "2020-05-01-C61",
+   "ref": "C61",
    "y": 2020,
    "t": "conference",
    "ti": "Impact of Tactile and Visual Feedback on Breathing Rhythm and User Experience in VR Exergaming",
@@ -1267,6 +1391,7 @@
   },
   {
    "id": "2020-05-01-C60",
+   "ref": "C60",
    "y": 2020,
    "t": "conference",
    "ti": "Development and Validation of Pictographic Scales for Rapid Assessment of Affective States in Virtual Reality",
@@ -1277,6 +1402,7 @@
   },
   {
    "id": "2020-05-01-C59",
+   "ref": "C59",
    "y": 2020,
    "t": "conference",
    "ti": "User Experience of Reading in Virtual Reality — Finding Values for Text Distance, Size and Contrast",
@@ -1287,6 +1413,7 @@
   },
   {
    "id": "2020-02-01-OC14",
+   "ref": "OC14",
    "y": 2020,
    "t": "conference",
    "ti": "DemTab – Tablet-basierte ambulante Versorgung von Menschen mit Demenz: eine cluster-randomisierte kontrollierte Studie",
@@ -1296,6 +1423,7 @@
   },
   {
    "id": "2020-01-01-J17",
+   "ref": "J17",
    "y": 2020,
    "t": "journal",
    "ti": "Quality of life in people with dementia living in nursing homes: validation of an eight-item version of the QUALIDEM for intensive longitudinal assessment",
@@ -1306,6 +1434,7 @@
   },
   {
    "id": "2019-12-01-C58",
+   "ref": "C58",
    "y": 2019,
    "t": "conference",
    "ti": "Impact of Constant Visual Biofeedback on User Experience in Virtual Reality Exergames",
@@ -1316,6 +1445,7 @@
   },
   {
    "id": "2019-09-01-OC13",
+   "ref": "OC13",
    "y": 2019,
    "t": "conference",
    "ti": "Informations- und Kommunikationstechnologien in der Versorgung von Menschen mit Demenz",
@@ -1325,6 +1455,7 @@
   },
   {
    "id": "2019-08-01-C57",
+   "ref": "C57",
    "y": 2019,
    "t": "conference",
    "ti": "Exploring Diachronic Changes of Biomedical Knowledge using Distributed Concept Representations",
@@ -1335,6 +1466,7 @@
   },
   {
    "id": "2019-06-01-C56",
+   "ref": "C56",
    "y": 2019,
    "t": "conference",
    "ti": "Influence of Network Delay in Virtual Reality Multiplayer Exergames: Who is actually delayed?",
@@ -1345,6 +1477,7 @@
   },
   {
    "id": "2019-06-01-C55",
+   "ref": "C55",
    "y": 2019,
    "t": "conference",
    "ti": "Influence of UI Complexity and Positioning on User Experience During VR Exergames",
@@ -1355,6 +1488,7 @@
   },
   {
    "id": "2019-06-01-C54",
+   "ref": "C54",
    "y": 2019,
    "t": "conference",
    "ti": "Emotional Impact of Video Quality: Self-Assessment and Facial Expression Recognition",
@@ -1365,16 +1499,17 @@
   },
   {
    "id": "2019-05-01-OC12",
+   "ref": "OC12",
    "y": 2019,
    "t": "conference",
    "ti": "Tablet-based Outpatient Care of People with Dementia: A Qualitative Feasibility Study",
    "a": "Lech, S., Supplieth J., O‘Sullivan, J. L., Voigt-Antons, J.-N., Gellert, P., Kuhlmey, A. & Nordheim, J.",
    "v": "Poster presented at the International Association of Gerontology and Geriatrics European Region Congress, Gothenburg, SWE",
-   "tp": "digital-health",
-   "d": "https://doi.org/10.1024/1662-9647/a000210"
+   "tp": "digital-health"
   },
   {
    "id": "2019-01-01-J16",
+   "ref": "J16",
    "y": 2019,
    "t": "journal",
    "ti": "Finding critical features for predicting quality of life in tablet-based serious games for dementia",
@@ -1385,6 +1520,7 @@
   },
   {
    "id": "2019-01-01-J15",
+   "ref": "J15",
    "y": 2019,
    "t": "journal",
    "ti": "Questionnaires Embedded in Virtual Environments: Reliability and positioning of rating scales in Virtual Environments",
@@ -1395,6 +1531,7 @@
   },
   {
    "id": "2019-01-01-J14",
+   "ref": "J14",
    "y": 2019,
    "t": "journal",
    "ti": "Tablet-Based Outpatient Care for People With Dementia - The DemTab Study Protocol",
@@ -1405,6 +1542,7 @@
   },
   {
    "id": "2019-01-01-J13",
+   "ref": "J13",
    "y": 2019,
    "t": "journal",
    "ti": "P300 indicates context-dependent change in speech quality beyond phonological change",
@@ -1415,6 +1553,7 @@
   },
   {
    "id": "2019-01-01-J12",
+   "ref": "J12",
    "y": 2019,
    "t": "journal",
    "ti": "Associations of Health App Use and Perceived Effectiveness in People with Cardiovascular Diseases and Diabetes – a Population-based Survey",
@@ -1425,6 +1564,7 @@
   },
   {
    "id": "2019-01-01-J11",
+   "ref": "J11",
    "y": 2019,
    "t": "journal",
    "ti": "Neural correlates of speech quality dimensions analyzed using electroencephalography (EEG)",
@@ -1435,6 +1575,7 @@
   },
   {
    "id": "2019-01-01-J10",
+   "ref": "J10",
    "y": 2019,
    "t": "journal",
    "ti": "Mapping attention during gameplay: assessment of behavioral and event-related potential (ERP) markers in an auditory Oddball task",
@@ -1445,6 +1586,7 @@
   },
   {
    "id": "2018-10-01-OC11",
+   "ref": "OC11",
    "y": 2018,
    "t": "conference",
    "ti": "Tablet-based outpatient care for people with dementia: Guideline-based treatment planning, personalized disease management and network-based care",
@@ -1454,6 +1596,7 @@
   },
   {
    "id": "2018-10-01-C53",
+   "ref": "C53",
    "y": 2018,
    "t": "conference",
    "ti": "Using Virtual Reality and Head-Mounted Displays to Increase Performance in Rowing Workouts",
@@ -1464,6 +1607,7 @@
   },
   {
    "id": "2018-09-01-OC10",
+   "ref": "OC10",
    "y": 2018,
    "t": "conference",
    "ti": "Tabletgestützte ambulante Versorgung von Menschen mit Demenz",
@@ -1473,6 +1617,7 @@
   },
   {
    "id": "2018-06-01-C52",
+   "ref": "C52",
    "y": 2018,
    "t": "conference",
    "ti": "„OurPuppet“ – Entwicklung einer Mensch-Technik-Interaktion für die Unterstützung informell Pflegender",
@@ -1482,6 +1627,7 @@
   },
   {
    "id": "2018-05-01-C51",
+   "ref": "C51",
    "y": 2018,
    "t": "conference",
    "ti": "Influence of Virtual Environments and Conversations on User Engagement During Multiplayer Exergames",
@@ -1492,6 +1638,7 @@
   },
   {
    "id": "2018-05-01-C50",
+   "ref": "C50",
    "y": 2018,
    "t": "conference",
    "ti": "User Experience of Web Browsing - The Relationship of Usability and Quality of Experience",
@@ -1502,6 +1649,7 @@
   },
   {
    "id": "2018-05-01-C49",
+   "ref": "C49",
    "y": 2018,
    "t": "conference",
    "ti": "Dissociating Perceptual Quality Dimensions of Transmitted Speech Using Electroencephalography",
@@ -1512,6 +1660,7 @@
   },
   {
    "id": "2018-05-01-C48",
+   "ref": "C48",
    "y": 2018,
    "t": "conference",
    "ti": "Impact of Virtual Environments on Motivation and Engagement during Exergames",
@@ -1522,6 +1671,7 @@
   },
   {
    "id": "2018-05-01-C47",
+   "ref": "C47",
    "y": 2018,
    "t": "conference",
    "ti": "Estimating Quality Ratings from Touch Interactions in Mobile Games",
@@ -1532,6 +1682,7 @@
   },
   {
    "id": "2018-05-01-C46",
+   "ref": "C46",
    "y": 2018,
    "t": "conference",
    "ti": "Effects of delay on perceived quality, behavior and oscillatory brain activity in dyadic telephone conversations",
@@ -1542,6 +1693,7 @@
   },
   {
    "id": "2018-05-01-C45",
+   "ref": "C45",
    "y": 2018,
    "t": "conference",
    "ti": "Predicting personality traits from touchscreen based interactions",
@@ -1552,6 +1704,7 @@
   },
   {
    "id": "2018-01-01-J9",
+   "ref": "J9",
    "y": 2018,
    "t": "journal",
    "ti": "Exploring Attitudes of Healthcare Professionals towards ICT-based Interventions for Nursing Home Residents with Dementia: A Mixed-Methods Approach",
@@ -1562,6 +1715,7 @@
   },
   {
    "id": "2017-12-01-C44",
+   "ref": "C44",
    "y": 2017,
    "t": "conference",
    "ti": "BeST-App: Mobile Applikation eines Spiegeltherapie-Eigentrainings nach Schlaganfall",
@@ -1571,6 +1725,7 @@
   },
   {
    "id": "2017-10-01-C43",
+   "ref": "C43",
    "y": 2017,
    "t": "conference",
    "ti": "Comparing standard assessment of cognitive and motor abilities with the performance measures of mobile-health apps",
@@ -1580,6 +1735,7 @@
   },
   {
    "id": "2017-07-01-OC9",
+   "ref": "OC9",
    "y": 2017,
    "t": "conference",
    "ti": "Tablet-based intervention for Nursing Home Residents with Dementia: A cluster RCT",
@@ -1589,6 +1745,7 @@
   },
   {
    "id": "2017-07-01-OC8",
+   "ref": "OC8",
    "y": 2017,
    "t": "conference",
    "ti": "Information and Communications Technology in Dementia Care: Acceptance among Professional Caregivers",
@@ -1598,6 +1755,7 @@
   },
   {
    "id": "2017-07-01-C42",
+   "ref": "C42",
    "y": 2017,
    "t": "conference",
    "ti": "Towards prediction of user experience from touch interactions with mobile applications",
@@ -1608,6 +1766,7 @@
   },
   {
    "id": "2017-05-01-C41",
+   "ref": "C41",
    "y": 2017,
    "t": "conference",
    "ti": "Exploring diverse measures for evaluating QoE in the context of WebRTC",
@@ -1618,6 +1777,7 @@
   },
   {
    "id": "2017-01-01-J8",
+   "ref": "J8",
    "y": 2017,
    "t": "journal",
    "ti": "Perceptual references for independent dimensions of speech quality as measured by electroencephalography",
@@ -1628,25 +1788,18 @@
   },
   {
    "id": "2017-01-01-J7",
+   "ref": "J7",
    "y": 2017,
    "t": "journal",
-   "ti": "Did you notice it? – How can we predict the subjective detection of video quality changes from eye movements? Journal of Selected Topics in Signal Processing, 11, 37-47,",
+   "ti": "Did you notice it? – How can we predict the subjective detection of video quality changes from eye movements?",
    "a": "Radun, J., Nuutinen, M., Antons, J.-N. & Arndt, S.",
-   "v": "",
+   "v": "IEEE Journal of Selected Topics in Signal Processing, 11, 37–47",
    "tp": "psychophysiology",
    "d": "https://doi.org/10.1109/JSTSP.2016.2607696"
   },
   {
-   "id": "2016-11-01-OC7",
-   "y": 2016,
-   "t": "conference",
-   "ti": "Eine Tablet-gestützte psychosoziale Intervention zur Erhaltung der Lebensqualität von Pflegeheimbewohnern mit Demenz",
-   "a": "O’Sullivan, J., Antons, J.-N., Jordan, L.-M., Nordheim, J., Möller, S. & Kuhlmey, A.",
-   "v": "Erste Ergebnisse des Forschungsprojekts PflegeTab als Poster. Poster presented at the Deutsche Gesellschaft für Psychiatrie und Psychotherapie, Psychosomatik und Nervenheilkunde Kongress 2016 (DGPPN 2016), Berlin, Germany",
-   "tp": "digital-health"
-  },
-  {
-   "id": "2016-09-15-J6",
+   "id": "2017-01-01-J6",
+   "ref": "J6",
    "y": 2017,
    "t": "journal",
    "ti": "Psychophysiology-based QoE Assessment: A Survey",
@@ -1657,7 +1810,18 @@
    "n": "Most-cited work"
   },
   {
+   "id": "2016-11-01-OC7",
+   "ref": "OC7",
+   "y": 2016,
+   "t": "conference",
+   "ti": "Eine Tablet-gestützte psychosoziale Intervention zur Erhaltung der Lebensqualität von Pflegeheimbewohnern mit Demenz",
+   "a": "O’Sullivan, J., Antons, J.-N., Jordan, L.-M., Nordheim, J., Möller, S. & Kuhlmey, A.",
+   "v": "Erste Ergebnisse des Forschungsprojekts PflegeTab als Poster. Poster presented at the Deutsche Gesellschaft für Psychiatrie und Psychotherapie, Psychosomatik und Nervenheilkunde Kongress 2016 (DGPPN 2016), Berlin, Germany",
+   "tp": "digital-health"
+  },
+  {
    "id": "2016-09-01-OC6",
+   "ref": "OC6",
    "y": 2016,
    "t": "conference",
    "ti": "Akzeptanz neuer Technologien im Arbeitsalltag von Pflegeheimmitarbeitern",
@@ -1667,6 +1831,7 @@
   },
   {
    "id": "2016-09-01-OC5",
+   "ref": "OC5",
    "y": 2016,
    "t": "conference",
    "ti": "Functional connectivity of orienting and executive attentional networks during flow: Granger Causality analysis of EEG recordings",
@@ -1677,6 +1842,7 @@
   },
   {
    "id": "2016-08-01-C40",
+   "ref": "C40",
    "y": 2016,
    "t": "conference",
    "ti": "Enhancing Video Streaming Using Real-Time Gaze Tracking",
@@ -1687,6 +1853,7 @@
   },
   {
    "id": "2016-08-01-C39",
+   "ref": "C39",
    "y": 2016,
    "t": "conference",
    "ti": "User Experience in Authentication Research: A Survey",
@@ -1697,6 +1864,7 @@
   },
   {
    "id": "2016-06-01-C38",
+   "ref": "C38",
    "y": 2016,
    "t": "conference",
    "ti": "Measuring flow through attentional engagement during game play: validation of a novel technique",
@@ -1706,6 +1874,7 @@
   },
   {
    "id": "2016-04-01-C37",
+   "ref": "C37",
    "y": 2016,
    "t": "conference",
    "ti": "PflegeTab: Enhancing Quality of Life Using a Psychosocial Internet-based Intervention for Residential Dementia Care",
@@ -1715,6 +1884,7 @@
   },
   {
    "id": "2016-02-06-J5",
+   "ref": "J5",
    "y": 2016,
    "t": "journal",
    "ti": "Using Electroencephalography to Analyze Sleepiness due to Low-quality Audiovisual Stimuli",
@@ -1725,6 +1895,7 @@
   },
   {
    "id": "2016-02-01-C36",
+   "ref": "C36",
    "y": 2016,
    "t": "conference",
    "ti": "Review on Using Physiology in Quality of Experience",
@@ -1735,6 +1906,7 @@
   },
   {
    "id": "2016-01-01-S7",
+   "ref": "S7",
    "y": 2016,
    "t": "standard",
    "ti": "Structure proposal for the work item on the use of physiological measures as an additional test method for speech quality assessment (P.PHYSIO)",
@@ -1745,6 +1917,7 @@
   },
   {
    "id": "2015-11-01-OC4",
+   "ref": "OC4",
    "y": 2015,
    "t": "conference",
    "ti": "Motivating New Interaction Experiences Involving Implicit Interaction, Body Sensors, Adaptive, and Persuasive Interfaces",
@@ -1755,6 +1928,7 @@
   },
   {
    "id": "2015-06-01-OC3",
+   "ref": "OC3",
    "y": 2015,
    "t": "conference",
    "ti": "Investigating the Neural Correlates of the Subjective Flow Experience During Game Play: an EEG Study",
@@ -1764,6 +1938,7 @@
   },
   {
    "id": "2015-05-01-S6",
+   "ref": "S6",
    "y": 2015,
    "t": "standard",
    "ti": "Proposal to Work on a Recommendation on the Use of Physiological Measures as an Additional Test Method for Speech Quality Assessment",
@@ -1774,6 +1949,7 @@
   },
   {
    "id": "2015-05-01-S5",
+   "ref": "S5",
    "y": 2015,
    "t": "standard",
    "ti": "Comments on Draft P.GAME",
@@ -1784,6 +1960,7 @@
   },
   {
    "id": "2015-05-01-C35",
+   "ref": "C35",
    "y": 2015,
    "t": "conference",
    "ti": "Impact of Perceived Quality and other Influencing Factors on Emotional Video Experience",
@@ -1794,6 +1971,7 @@
   },
   {
    "id": "2015-05-01-C34",
+   "ref": "C34",
    "y": 2015,
    "t": "conference",
    "ti": "A method for feedback delay measurement using a low-cost Arduino microcontroller",
@@ -1804,6 +1982,7 @@
   },
   {
    "id": "2015-05-01-C33",
+   "ref": "C33",
    "y": 2015,
    "t": "conference",
    "ti": "Emotional Responses to Thermally Augmented Audiovisual Stimuli",
@@ -1814,6 +1993,7 @@
   },
   {
    "id": "2015-05-01-C32",
+   "ref": "C32",
    "y": 2015,
    "t": "conference",
    "ti": "Using electroencephalography and subjective self-assessment to measure the influence of quality variations in cloud gaming",
@@ -1824,6 +2004,7 @@
   },
   {
    "id": "2015-05-01-C31",
+   "ref": "C31",
    "y": 2015,
    "t": "conference",
    "ti": "Towards a New ITU-T Recommendation for Subjective Methods Evaluating Gaming QoE",
@@ -1834,6 +2015,7 @@
   },
   {
    "id": "2015-05-01-C30",
+   "ref": "C30",
    "y": 2015,
    "t": "conference",
    "ti": "Indirect assessment of subjective flow experience during game play: adaptation of an attentional behavioral paradigm",
@@ -1843,6 +2025,7 @@
   },
   {
    "id": "2015-03-01-OC2",
+   "ref": "OC2",
    "y": 2015,
    "t": "conference",
    "ti": "Challenging ITU-T P.835: Searching for the optimal order of scales for assessing the quality of complex speech signals",
@@ -1852,6 +2035,7 @@
   },
   {
    "id": "2015-01-01-B1",
+   "ref": "B1",
    "y": 2015,
    "t": "book",
    "ti": "Neural Correlates of Quality Perception for Complex Speech Signals",
@@ -1862,6 +2046,7 @@
   },
   {
    "id": "2014-12-01-S4",
+   "ref": "S4",
    "y": 2014,
    "t": "standard",
    "ti": "Effect of Presenting Multiple vs. Single Rating Scales After Stimulus Presentation on Subjective Quality Ratings",
@@ -1872,6 +2057,7 @@
   },
   {
    "id": "2014-12-01-C29",
+   "ref": "C29",
    "y": 2014,
    "t": "conference",
    "ti": "Evaluation von automatisierter Erfassung der Blickzuwendung während der Spiegeltherapie",
@@ -1881,6 +2067,7 @@
   },
   {
    "id": "2014-09-01-C28",
+   "ref": "C28",
    "y": 2014,
    "t": "conference",
    "ti": "Is Low Quality Media Affecting the Level of Fatigue?",
@@ -1891,6 +2078,7 @@
   },
   {
    "id": "2014-09-01-C27",
+   "ref": "C27",
    "y": 2014,
    "t": "conference",
    "ti": "Using Eye-Tracking and Correlates of Brain Activity to Predict Quality Scores",
@@ -1901,6 +2089,7 @@
   },
   {
    "id": "2014-09-01-C26",
+   "ref": "C26",
    "y": 2014,
    "t": "conference",
    "ti": "A Next Step Towards Measuring Perceived Quality of Speech Through Physiology",
@@ -1910,6 +2099,7 @@
   },
   {
    "id": "2014-05-01-C25",
+   "ref": "C25",
    "y": 2014,
    "t": "conference",
    "ti": "Characterization of Human Emotions and Preferences for Text-to-Speech Systems Using Multimodal Neuroimaging Methods",
@@ -1920,6 +2110,7 @@
   },
   {
    "id": "2014-01-01-J4",
+   "ref": "J4",
    "y": 2014,
    "t": "journal",
    "ti": "Methods for Assessing the Quality of Transmitted Speech and of Speech Communication Services",
@@ -1930,6 +2121,7 @@
   },
   {
    "id": "2014-01-01-J3",
+   "ref": "J3",
    "y": 2014,
    "t": "journal",
    "ti": "Using Electroencephalography to Measure Perceived Video Quality",
@@ -1940,6 +2132,7 @@
   },
   {
    "id": "2014-01-01-BC2",
+   "ref": "BC2",
    "y": 2014,
    "t": "chapter",
    "ti": "Brain Activity Correlates of Quality of Experience",
@@ -1950,6 +2143,7 @@
   },
   {
    "id": "2014-01-01-BC1",
+   "ref": "BC1",
    "y": 2014,
    "t": "chapter",
    "ti": "Evoking Emotions and Evaluating Emotional Impact",
@@ -1960,6 +2154,7 @@
   },
   {
    "id": "2013-12-01-S3",
+   "ref": "S3",
    "y": 2013,
    "t": "standard",
    "ti": "Effects of Rating Scale Order on Subjective Quality Ratings of the Speech Signal Alone, the Background Noise Alone, and Overall Quality",
@@ -1970,6 +2165,7 @@
   },
   {
    "id": "2013-12-01-S2",
+   "ref": "S2",
    "y": 2013,
    "t": "standard",
    "ti": "Using Physiological Data for Assessing Variations of the Cognitive State Evoked by Quality Profiles",
@@ -1980,6 +2176,7 @@
   },
   {
    "id": "2013-12-01-C24",
+   "ref": "C24",
    "y": 2013,
    "t": "conference",
    "ti": "Objective Characterization of Human Behavioural Characteristics for QoE Assessment: A Pilot Study on the Use of Electroencephalography Features",
@@ -1990,6 +2187,7 @@
   },
   {
    "id": "2013-11-01-C23",
+   "ref": "C23",
    "y": 2013,
    "t": "conference",
    "ti": "The Effects of Text-to-Speech System Quality on Emotional States and Frontal Alpha Band Power",
@@ -2000,6 +2198,7 @@
   },
   {
    "id": "2013-10-01-C22",
+   "ref": "C22",
    "y": 2013,
    "t": "conference",
    "ti": "Einfluss der Audiomodalität auf die Wahrnehmung und Qualitätsbeurteilung (audio-)visueller Stimuli",
@@ -2009,6 +2208,7 @@
   },
   {
    "id": "2013-09-01-C21",
+   "ref": "C21",
    "y": 2013,
    "t": "conference",
    "ti": "Effect of Questionnaire Order on Ratings of Perceived Quality and Experienced Affect",
@@ -2019,6 +2219,7 @@
   },
   {
    "id": "2013-09-01-C20",
+   "ref": "C20",
    "y": 2013,
    "t": "conference",
    "ti": "Does Low Quality Audiovisual Content Increase Fatigue of Viewers?",
@@ -2029,6 +2230,7 @@
   },
   {
    "id": "2013-08-01-C19",
+   "ref": "C19",
    "y": 2013,
    "t": "conference",
    "ti": "Changes in blinking behavior while watching videos with reduced quality",
@@ -2038,6 +2240,7 @@
   },
   {
    "id": "2013-07-01-C18",
+   "ref": "C18",
    "y": 2013,
    "t": "conference",
    "ti": "Subjective quality ratings and physiological correlates of synthesized speech",
@@ -2048,6 +2251,7 @@
   },
   {
    "id": "2013-07-01-C17",
+   "ref": "C17",
    "y": 2013,
    "t": "conference",
    "ti": "Changes of vigilance caused by varying bit rate conditions",
@@ -2058,6 +2262,7 @@
   },
   {
    "id": "2013-06-01-C16",
+   "ref": "C16",
    "y": 2013,
    "t": "conference",
    "ti": "Auditory BCIs for Visually Impaired Users: Should Developers Worry About the Quality of Text-to-Speech Readers?",
@@ -2067,6 +2272,7 @@
   },
   {
    "id": "2013-05-01-C15",
+   "ref": "C15",
    "y": 2013,
    "t": "conference",
    "ti": "Neurophysiological Experimental Facility for Quality of Experience (QoE) Assessment",
@@ -2076,6 +2282,7 @@
   },
   {
    "id": "2013-05-01-C14",
+   "ref": "C14",
    "y": 2013,
    "t": "conference",
    "ti": "Cognitive, Affective, and Experience Correlates of Speech Quality Perception in Complex Listening Conditions",
@@ -2086,6 +2293,7 @@
   },
   {
    "id": "2013-04-01-C13",
+   "ref": "C13",
    "y": 2013,
    "t": "conference",
    "ti": "Did You Notice? Neuronal Processing of Multimodal Mobile Phone Feedback",
@@ -2096,6 +2304,7 @@
   },
   {
    "id": "2013-03-01-S1",
+   "ref": "S1",
    "y": 2013,
    "t": "standard",
    "ti": "Investigating the Subjective Judgment Process Using Physiological Data",
@@ -2106,6 +2315,7 @@
   },
   {
    "id": "2013-03-01-OC1",
+   "ref": "OC1",
    "y": 2013,
    "t": "conference",
    "ti": "Neural correlates of Affective States and Speech Perception: Towards Quality-of- Experience Measurement of Reverberant Speech",
@@ -2115,6 +2325,7 @@
   },
   {
    "id": "2013-01-01-J2",
+   "ref": "J2",
    "y": 2013,
    "t": "journal",
    "ti": "Single-trial analysis of the neural correlates of speech quality perception",
@@ -2125,6 +2336,7 @@
   },
   {
    "id": "2012-10-01-C12",
+   "ref": "C12",
    "y": 2012,
    "t": "conference",
    "ti": "NeuroPad: Use Cases For A Mobile Physiological Interface",
@@ -2135,6 +2347,7 @@
   },
   {
    "id": "2012-08-01-C11",
+   "ref": "C11",
    "y": 2012,
    "t": "conference",
    "ti": "Zum Einsatz von Elektroenzephalographie bei der Messung der Wahrnehmug gestörter Sprache",
@@ -2144,6 +2357,7 @@
   },
   {
    "id": "2012-07-01-C9",
+   "ref": "C9",
    "y": 2012,
    "t": "conference",
    "ti": "Too Tired for Calling? A Physiological Measure of Fatigue Caused by Bandwidth Limitations",
@@ -2154,6 +2368,7 @@
   },
   {
    "id": "2012-07-01-C10",
+   "ref": "C10",
    "y": 2012,
    "t": "conference",
    "ti": "Perception of Low-Quality Videos Analyzed by Means of Electroencephalography",
@@ -2164,6 +2379,7 @@
   },
   {
    "id": "2012-04-01-C8",
+   "ref": "C8",
    "y": 2012,
    "t": "conference",
    "ti": "Correlating Physiological with Behavioural Data in Quality Research",
@@ -2173,6 +2389,7 @@
   },
   {
    "id": "2012-01-01-J1",
+   "ref": "J1",
    "y": 2012,
    "t": "journal",
    "ti": "Analyzing Speech Quality Perception using Electro-Encephalography",
@@ -2183,6 +2400,7 @@
   },
   {
    "id": "2011-12-01-C7",
+   "ref": "C7",
    "y": 2011,
    "t": "conference",
    "ti": "A Physiological Approach to Determine Video Quality",
@@ -2193,6 +2411,7 @@
   },
   {
    "id": "2011-05-01-C6",
+   "ref": "C6",
    "y": 2011,
    "t": "conference",
    "ti": "Using ERPs to Assess the Processing of Words Under Broadcast Bit Rate Limitations",
@@ -2202,6 +2421,7 @@
   },
   {
    "id": "2010-11-01-C5",
+   "ref": "C5",
    "y": 2010,
    "t": "conference",
    "ti": "Subjective Listening Tests and Neural Correlates of Speech Degradation in Case of Signal-correlated Noise",
@@ -2211,6 +2431,7 @@
   },
   {
    "id": "2010-10-01-C4",
+   "ref": "C4",
    "y": 2010,
    "t": "conference",
    "ti": "You think it's hi-fi – yet your brain might spot the difference: An EEG study on subconscious processing of noisy audio signals",
@@ -2220,6 +2441,7 @@
   },
   {
    "id": "2010-09-01-C3",
+   "ref": "C3",
    "y": 2010,
    "t": "conference",
    "ti": "Assessing the (Sub-)Conscious Processing of Noise based on ERPs",
@@ -2229,6 +2451,7 @@
   },
   {
    "id": "2010-09-01-C2",
+   "ref": "C2",
    "y": 2010,
    "t": "conference",
    "ti": "Neural correlates of speech degradation – Subjective ratings and brain activation in case of signal-correlated noise",
@@ -2239,6 +2462,7 @@
   },
   {
    "id": "2010-01-01-C1",
+   "ref": "C1",
    "y": 2010,
    "t": "conference",
    "ti": "Using ERPs for Assessing the (Sub)Conscious Perception of Noise",

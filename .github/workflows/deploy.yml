@@ -48,6 +48,7 @@ jobs:
         run: |
           python3 tools/build_publication_pages.py
           python3 tools/build_posts.py
+          python3 tools/build_redirects.py
           python3 tools/build_sitemap.py
 
       - name: Commit generated pages

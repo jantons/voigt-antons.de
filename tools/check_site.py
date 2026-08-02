@@ -109,6 +109,43 @@ def main():
         problems.append("data/publications.json: %s" % err)
         items = []
 
+    # A DOI identifies exactly one work. Two entries sharing one is almost
+    # always a copy-paste slip in the source bibliography.
+    by_doi = {}
+    for item in items:
+        doi = item.get("d", "")
+        if doi.startswith("https://doi.org/"):
+            by_doi.setdefault(doi, []).append(item["id"])
+    for doi, ids in by_doi.items():
+        if len(ids) > 1:
+            problems.append("publications.json: %s is used by %s" % (doi, ", ".join(ids)))
+
+    # The reference number from the Publikationsverzeichnis identifies one
+    # publication. Two entries claiming the same one means the import drifted.
+    by_ref = {}
+    for item in items:
+        if item.get("ref"):
+            by_ref.setdefault(item["ref"], []).append(item["id"])
+    for ref, ids in by_ref.items():
+        if len(ids) > 1:
+            problems.append("publications.json: reference [%s] is claimed by %s"
+                            % (ref, ", ".join(ids)))
+
+    # Each series (J, C, OC, …) has to run 1..n without gaps; a gap means an
+    # entry was dropped or the numbering drifted from the Word document.
+    series = {}
+    for item in items:
+        ref = item.get("ref", "")
+        prefix = "".join(c for c in ref if c.isalpha())
+        number = ref[len(prefix):]
+        if prefix and number.isdigit():
+            series.setdefault(prefix, []).append(int(number))
+    for prefix, numbers in sorted(series.items()):
+        gaps = sorted(set(range(1, max(numbers) + 1)) - set(numbers))
+        if gaps:
+            problems.append("publications.json: series %s has gaps at %s"
+                            % (prefix, ", ".join("%s%d" % (prefix, g) for g in gaps[:10])))
+
     seen = set()
     for item in items:
         for key in ("id", "y", "t", "ti", "a", "v", "tp"):

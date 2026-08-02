@@ -47,7 +47,7 @@ The question "Which AR cues work best in everyday life?" therefore has no univer
 **Related publications:**
 
 - [Finding My Way: Influence of Different Audio Augmented Reality Navigation Cues on User Experience and Subjective Usefulness](/publication/2025-09-01-C95)
-- [Impact of spatial auditory navigation on user experience during augmented outdoor navigation tasks](/publication/2024-04-25-OC32)
+- [Impact of spatial auditory navigation on user experience during augmented outdoor navigation tasks](/publication/2023-03-01-OC32)
 
 ## What opportunities this creates for city centers and retail
 

@@ -174,7 +174,9 @@
       if (p.d) links.push('<a href="' + esc(p.d) + '" rel="noopener">DOI / paper ↗</a>');
       links.push('<a href="/publication/' + esc(p.id) + '#bibtex">BibTeX</a>');
       return '<article class="pub">' +
-        '<span class="pub-year">' + esc(p.y) + '</span>' +
+        '<span class="pub-year">' + esc(p.y) +
+          (p.ref ? '<span class="pub-ref">[' + esc(p.ref) + ']</span>' : '') +
+        '</span>' +
         '<span>' +
           '<span class="pub-title"><a href="/publication/' + esc(p.id) + '">' + esc(p.ti) + '</a></span>' +
           '<span class="pub-authors">' + esc(p.a) + '</span>' +
@@ -197,7 +199,7 @@
       if (t && p.t !== t) return false;
       if (tp && p.tp !== tp) return false;
       if (q) {
-        var hay = (p.ti + ' ' + p.a + ' ' + p.v).toLowerCase();
+        var hay = (p.ti + ' ' + p.a + ' ' + p.v + ' ' + (p.ref || '')).toLowerCase();
         if (hay.indexOf(q) === -1) return false;
       }
       return true;

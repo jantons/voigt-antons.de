@@ -13,7 +13,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── 404.html                    Fehlerseite (GitHub Pages nutzt sie automatisch)
 ├── .nojekyll                   verhindert Jekyll-Verarbeitung
 ├── robots.txt
-├── sitemap.xml                 generiert, 238 URLs
+├── sitemap.xml                 generiert, 245 URLs
 │
 ├── assets/
 │   ├── style.css               gemeinsames Stylesheet (Light-first + Dark-Toggle)
@@ -21,7 +21,8 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 │
 ├── data/
 │   ├── publications.json       226 Einträge — Quelle für alles Publikationsbezogene
-│   └── posts.json              generiert aus content/posts/
+│   ├── posts.json              generiert aus content/posts/
+│   └── redirects.json          alte → neue Publikations-URLs
 │
 ├── content/posts/*.md          5 Blogbeiträge als Markdown (Quelldateien)
 │
@@ -39,6 +40,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 └── tools/
     ├── build_publication_pages.py
     ├── build_posts.py
+    ├── build_redirects.py
     ├── build_sitemap.py
     └── check_site.py
 ```
@@ -48,6 +50,7 @@ Beide Generatoren brauchen nur Python 3 und die Standardbibliothek. Nach inhaltl
 ```bash
 python3 tools/build_publication_pages.py
 python3 tools/build_posts.py
+python3 tools/build_redirects.py
 python3 tools/build_sitemap.py
 ```
 
@@ -85,11 +88,25 @@ Ein Eintrag:
 
 | Feld | Bedeutung | Werte |
 |---|---|---|
-| `id` | URL-Slug, entspricht dem alten Jekyll-Schema | `JJJJ-MM-TT-<Typ><Nr>` |
+| `id` | **URL-Schlüssel — stabil, wird nicht mehr geändert** | `JJJJ-MM-TT-<Nr>` |
+| `ref` | **Nummer aus dem Publikationsverzeichnis, wird angezeigt** | z. B. `C102`, `J37` |
 | `t` | Publikationstyp | `journal`, `conference`, `chapter`, `book`, `standard` |
 | `tp` | Forschungslinie | `xr`, `qoe`, `psychophysiology`, `digital-health` |
 | `d` | DOI oder Paper-URL | optional |
-| `n` | Auszeichnung, „Forthcoming" o. Ä. | optional |
+| `n` | Auszeichnung, „In press" o. Ä. | optional |
+
+### Warum `id` und `ref` getrennt sind
+
+Die Nummern im Publikationsverzeichnis verschieben sich, sobald du mittendrin etwas einfügst:
+Wird ein Artikel zu `[J36]`, rutschen `[J36]`–`[J38]` eine Position weiter. Steckte die Nummer
+in der URL, bräuchte **jede** nachfolgende Publikation eine neue Adresse und eine Weiterleitung.
+
+Deshalb: `id` ist ein einmal vergebener, stabiler Schlüssel. `ref` trägt die Nummer aus dem
+Verzeichnis und wird auf Detailseite und in der Liste als `[C102]` angezeigt. Eine
+Renummerierung ändert damit nur `ref` — kein Link bricht, keine Weiterleitung nötig.
+
+Praxisbeweis: Beim Nachtragen von `[J36]` sind drei Nummern verrutscht — geändert wurden vier
+`ref`-Werte, sonst nichts. Keine URL, keine Weiterleitung, kein toter Link.
 
 Nach jeder Änderung:
 
@@ -116,18 +133,29 @@ Aufteilung: 157 Konferenzbeiträge · 45 Journalartikel · 17 Standardisierungsb
 
 Themen: 64 Psychophysiology · 61 XR · 59 Digital Health · 42 QoE.
 
-Zwei Dinge, die beim Import aufgefallen sind und die du prüfen solltest:
+Nummernstand: `B1–B2`, `BC1–BC5`, `C1–C103`, `J1–J39`, `OC1–OC54`, `OJ1–OJ6`, `S1–S17` —
+alle Reihen lückenlos und ohne Doppelvergabe. `tools/check_site.py` prüft das bei jedem Lauf.
 
-1. **Ein Paper fehlt im Word-Dokument:** „Multimodal Assistance in Rehabilitation: User Experience
-   of Embodied and Non-Embodied Agents…" (Virtual Worlds 5(1), 15). Es stand auf deiner alten
-   Seite, wird auf Startseite und Forschungsseite verlinkt und ist unter
-   `2026-01-01-J36` erhalten geblieben. Im Verzeichnis trägt `[J36]` inzwischen aber ein anderes
-   Paper („Out-of-home mobility enhancement…"), das ich deshalb unter `2026-01-02-J36` abgelegt
-   habe. Beide URLs funktionieren — die Nummerierung im Word-Dokument sollte trotzdem geprüft
-   werden.
-2. **Zwei DOIs kommen doppelt vor:** `10.1007/s00103-024-03917-2` bei `[OC43]` und `[J29]`,
-   sowie `10.1024/1662-9647/a000210` bei `[OC12]` und `[J14]`. Vermutlich beim Zusammenstellen
-   des Verzeichnisses kopiert.
+Beim Import aufgefallen:
+
+1. **Ein Paper fehlte zunächst im Verzeichnis** — „Multimodal Assistance in Rehabilitation…"
+   (Virtual Worlds 5(1), 15). Inzwischen als `[J36]` nachgetragen; `[J36]`–`[J38]` sind dafür
+   auf `[J37]`–`[J39]` gerückt. Weil die Verzeichnisnummer im Feld `ref` und nicht in der URL
+   steckt, hat diese Verschiebung **keinen einzigen Link verändert**.
+2. **Zwei DOIs standen doppelt im Verzeichnis** — behoben, aber im Word-Dokument noch drin:
+   `10.1007/s00103-024-03917-2` bei `[OC43]` und `[J29]`, sowie `10.1024/1662-9647/a000210`
+   bei `[OC12]` und `[J14]`. Über Crossref geprüft: beide DOIs gehören eindeutig dem jeweiligen
+   Journalartikel (Bundesgesundheitsblatt 67(8), 921–930 bzw. GeroPsych 32(3), 135–144). Die
+   Konferenzbeiträge `[OC43]` (DKVF 2024) und `[OC12]` (IAGG-ER 2019) hatten den DOI nur
+   mitkopiert und stehen jetzt ohne. Eigene DOIs waren für sie nicht auffindbar — falls es
+   welche gibt, gehören sie ins Feld `d`.
+
+   Beim Prüfen ist außerdem aufgefallen, dass Crossref den englischen Titel von `[OC43]`
+   („What importance does outpatient care have…") als Zweittitel desselben Journalartikels
+   führt. Die beiden Einträge beschreiben also womöglich dieselbe Arbeit in zwei Fassungen.
+
+`tools/check_site.py` schlägt Alarm bei doppelten DOIs, doppelt vergebenen Nummern und
+Lücken in einer Nummernreihe.
 
 Alle 125 bereits existierenden Publikations-URLs sind unverändert erhalten.
 
@@ -211,6 +239,7 @@ Falls du es doch lokal machen willst — etwa um das Ergebnis vor dem Push zu se
 ```bash
 python3 tools/build_publication_pages.py
 python3 tools/build_posts.py
+python3 tools/build_redirects.py
 python3 tools/build_sitemap.py
 python3 tools/check_site.py
 ```

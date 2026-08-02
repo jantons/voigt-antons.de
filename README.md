@@ -21,13 +21,14 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 │
 ├── data/
 │   ├── publications.json       234 Einträge — Quelle für alles Publikationsbezogene
+│   ├── projects.json           22 Drittmittelvorhaben — Quelle für Seite UND Bewerbung
 │   ├── posts.json              generiert aus content/posts/
 │   └── redirects.json          alte → neue Publikations-URLs
 │
 ├── content/posts/*.md          5 Blogbeiträge als Markdown (Quelldateien)
 │
 ├── research/index.html         5 Forschungslinien ausführlich
-├── projects/index.html         Förderverzeichnis (22 Vorhaben, Volumen), Detailblöcke
+├── projects/index.html         Förderverzeichnis (generiert), Detailblöcke (von Hand)
 ├── publications/index.html     Filterbare Liste (Jahr, Typ, Thema, Volltextsuche)
 ├── cv/index.html               CV inkl. Service, Gremien, Standardisierung
 ├── teaching/index.html         Lehrportfolio und Betreuung
@@ -40,9 +41,11 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 └── tools/
     ├── build_publication_pages.py
     ├── build_posts.py
+    ├── build_projects.py       Fördertabelle aus data/projects.json
     ├── build_redirects.py
     ├── build_sitemap.py
-    └── check_site.py
+    ├── check_site.py
+    └── export_projects_docx.py Förderverzeichnis als Word-Datei
 ```
 
 Beide Generatoren brauchen nur Python 3 und die Standardbibliothek. Nach inhaltlichen Änderungen:
@@ -50,6 +53,7 @@ Beide Generatoren brauchen nur Python 3 und die Standardbibliothek. Nach inhaltl
 ```bash
 python3 tools/build_publication_pages.py
 python3 tools/build_posts.py
+python3 tools/build_projects.py
 python3 tools/build_redirects.py
 python3 tools/build_sitemap.py
 ```
@@ -225,6 +229,77 @@ Die früher gemeldeten Fehlzuordnungen der GPS-Mobilitätsstudien sind damit beh
 
 Zum Nachjustieren genügt es, `tp` im jeweiligen Eintrag zu ändern — erlaubt sind `xr`, `qoe`,
 `psychophysiology`, `digital-health`.
+
+---
+
+## Drittmittelprojekte pflegen
+
+Alle Vorhaben liegen in **`data/projects.json`** — die einzige Quelle. Daraus entsteht sowohl
+der Abschnitt „Full funding record" auf `/projects/` als auch die Tabelle für
+Bewerbungsunterlagen. Beträge in Tausend Euro.
+
+```json
+{
+  "id": "ariadne",
+  "from": 2024, "to": 2026,
+  "name": "SDK for high-precision, multimodal, AR-integrated pedestrian navigation",
+  "short": "ARiadne",
+  "funder": "ZIM (BMWE)",
+  "role": "subproject",
+  "volume": 208,
+  "partners": "SWCode",
+  "ongoing": true
+}
+```
+
+Rollen: `sole` (alleiniger Antragsteller) · `coordinator` (Verbundkoordinator) ·
+`subproject` (Teilprojektleiter) · `co` (Mitantragsteller). Vorhaben ohne eigenes
+Fördervolumen stehen unter `without_own_volume` und zählen nicht in die Summen.
+
+**Es gibt kein `ongoing`-Feld.** Ob ein Vorhaben läuft, wird aus dem Endjahr abgeleitet
+(`to >= aktuelles Jahr`). Damit kann die Seite nicht behaupten, ein abgeschlossenes Projekt
+laufe noch — der Abschnitt „Ongoing projects" pflegt sich mit dem Jahreswechsel selbst.
+Auch `funder_short` (Kurzform für die Karten) und `blurb` (Kartentext) leben in der JSON.
+
+Nach jeder Änderung:
+
+```bash
+python3 tools/build_projects.py     # Website aktualisieren
+```
+
+Das Skript schreibt **zwei** Abschnitte auf `/projects/`: „Ongoing projects" (Karten) und
+„Full funding record" (Tabelle), jeweils zwischen HTML-Kommentar-Markern. Die Detailblöcke
+darunter bleiben handgeschrieben — `check_site.py` prüft aber, ob ihre Laufzeitangaben noch
+zur JSON passen.
+
+### Warum das eine eigene Datenquelle ist
+
+Die Zahlen standen bisher nur als HTML auf der Seite und wurden für jede Bewerbung von Hand
+in Word übertragen. Genau dort sind die Fehler entstanden, die wir gefunden haben: eine
+Rollenübersicht, die sich auf 20 Vorhaben addierte, während die Summenzeile 19 sagte; 304 T€,
+die in der Projektliste fehlten; drei Vorhaben, die gar nicht auftauchten.
+
+Jetzt werden **alle Summen berechnet, nie getippt** — Rollenaufteilung, Gesamtvolumen, der
+Anteil eigenständig geleiteter Vorhaben. `tools/check_site.py` rechnet zusätzlich bei jedem
+Lauf nach, ob die gerenderte Seite noch zur JSON passt, und prüft Startseite und CV auf
+dieselben Werte. Gegengetestet: Ändert man einen Betrag in der JSON, meldet der Check vier
+Abweichungen und bricht mit Exit-Code 1 ab. Dasselbe gilt für eine Laufzeit im Detailblock,
+die von der JSON abweicht — so ist aufgefallen, dass DIDYMOS-XR dort noch mit „2023–2026"
+stand, obwohl das Vorhaben im Dezember 2025 endete.
+
+### Verzeichnis für Bewerbungen erzeugen
+
+```bash
+pip install python-docx
+python3 tools/export_projects_docx.py --lang de     # Drittmittelprojekte_…_2026-08-03.docx
+python3 tools/export_projects_docx.py --lang en
+```
+
+Erzeugt Zusammenfassung, Rollentabelle, vollständige Projektübersicht und Stichtag — mit
+denselben Zahlen wie die Website. Die Formulierungen folgen deinem bisherigen Verzeichnis.
+
+**Offen:** Die Rolle bei `fastjets` und `virtual-institute` ist mit `"role_unconfirmed": true`
+markiert; beide Skripte weisen beim Lauf darauf hin. Nach der Klärung das Flag entfernen.
 
 ---
 

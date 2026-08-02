@@ -9,3 +9,7 @@ local/
 # macOS
 .DS_Store
 
+
+# Generated Word exports (regenerate: python3 tools/export_projects_docx.py)
+/Drittmittelprojekte_Voigt-Antons_*.docx
+/Funding-record_Voigt-Antons_*.docx

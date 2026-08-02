@@ -68,6 +68,95 @@ def resolves(url):
     return target.exists() or (target / "index.html").exists()
 
 
+def check_projects():
+    """Funding record: the rendered page must add up to data/projects.json.
+
+    This is the check that would have caught the inconsistency in the 2026
+    application document, where the role breakdown summed to 20 projects while
+    the total said 19, and the listed amounts fell €304k short of the headline
+    figure.
+    """
+    data_path = ROOT / "data" / "projects.json"
+    page_path = ROOT / "projects" / "index.html"
+    if not (data_path.exists() and page_path.exists()):
+        return 0
+
+    try:
+        data = json.loads(data_path.read_text(encoding="utf-8"))
+    except ValueError as err:
+        problems.append("data/projects.json: %s" % err)
+        return 0
+
+    projects = data["projects"]
+    ids = [p["id"] for p in projects]
+    for dup in {i for i in ids if ids.count(i) > 1}:
+        problems.append("projects.json: duplicate id %s" % dup)
+
+    roles = data["meta"]["roles"]
+    for p in projects:
+        if p["role"] not in roles:
+            problems.append("projects.json: %s has unknown role %r" % (p["id"], p["role"]))
+        if p["from"] > p["to"]:
+            problems.append("projects.json: %s ends before it starts" % p["id"])
+
+    # Hand-written detail blocks must state the same period as the data.
+    page_text = page_path.read_text(encoding="utf-8")
+    by_id = {p["id"]: p for p in projects}
+    by_id.update({o["id"]: o for o in data.get("without_own_volume", [])})
+    for m in re.finditer(r'<article class="line rv" id="([^"]+)">\s*'
+                         r'<div class="line-label"><span class="lnum">([^<]+)</span>',
+                         page_text):
+        pid, shown = m.group(1), m.group(2).strip()
+        p = by_id.get(pid)
+        if not p:
+            continue
+        expected = (str(p["from"]) if p["from"] == p["to"]
+                    else "%d–%d" % (p["from"], p["to"]))
+        if shown != expected:
+            problems.append("projects/index.html: detail block #%s says %s, "
+                            "projects.json says %s" % (pid, shown, expected))
+
+    expected_n = len(projects)
+    expected_v = sum(p["volume"] for p in projects)
+    expected_led = sum(p["volume"] for p in projects
+                       if p["role"] in data["meta"]["self_led_roles"])
+
+    text = page_path.read_text(encoding="utf-8")
+    body = re.search(r"<tbody>(.*?)</tbody>", text, re.S)
+    if not body:
+        problems.append("projects/index.html: no funding table found")
+        return expected_n
+
+    amounts = [int(m.replace(",", ""))
+               for m in re.findall(r'class="amt">&euro;([\d,]+)k', body.group(1))]
+    if len(amounts) != expected_n:
+        problems.append("projects/index.html: table has %d rows, projects.json has %d — "
+                        "run tools/build_projects.py" % (len(amounts), expected_n))
+    if sum(amounts) != expected_v:
+        problems.append("projects/index.html: table sums to EUR %dk, projects.json to EUR %dk"
+                        % (sum(amounts), expected_v))
+
+    # The headline figures must agree with the data, wherever they appear.
+    for label, value in (("total", expected_v), ("self-led", expected_led)):
+        millions = "%.3f" % (value / 1000.0)
+        if label == "total" and ("€%s million" % millions) not in text and \
+                ("€%sM" % millions) not in text:
+            problems.append("projects/index.html: headline total does not state €%s million"
+                            % millions)
+
+    for page in ("index.html", "cv/index.html"):
+        t = (ROOT / page).read_text(encoding="utf-8")
+        if "third-party funding" in t or "funded projects" in t:
+            if "%.3f" % (expected_v / 1000.0) not in t.replace(",", "."):
+                problems.append("%s: funding total is out of sync with data/projects.json"
+                                % page)
+            if str(expected_n) + "</b><span>funded projects" not in t and \
+                    "%d funded projects" % expected_n not in t:
+                problems.append("%s: project count is out of sync with data/projects.json"
+                                % page)
+    return expected_n
+
+
 def main():
     pages = sorted(html_files())
     if not pages:
@@ -175,8 +264,10 @@ def main():
         problems.append("posts.json lists %d posts but content/posts has %d markdown files — "
                         "run tools/build_posts.py" % (len(posts), sources))
 
-    print("checked %d HTML pages, %d publications, %d posts"
-          % (len(pages), len(items), len(posts)))
+    projects = check_projects()
+
+    print("checked %d HTML pages, %d publications, %d posts, %d funded projects"
+          % (len(pages), len(items), len(posts), projects))
 
     if problems:
         print("\n%d problem(s):" % len(problems))

@@ -27,7 +27,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── content/posts/*.md          5 Blogbeiträge als Markdown (Quelldateien)
 │
 ├── research/index.html         5 Forschungslinien ausführlich
-├── projects/index.html         Förderverzeichnis (20 Vorhaben, Volumen), Detailblöcke
+├── projects/index.html         Förderverzeichnis (22 Vorhaben, Volumen), Detailblöcke
 ├── publications/index.html     Filterbare Liste (Jahr, Typ, Thema, Volltextsuche)
 ├── cv/index.html               CV inkl. Service, Gremien, Standardisierung
 ├── teaching/index.html         Lehrportfolio und Betreuung
@@ -374,7 +374,30 @@ python3 -m http.server 8000
    20 Vorhaben, und alle Teilsummen stimmen exakt:
    6 · 546 T€ (alleiniger Antragsteller) + 3 · 841 T€ (Verbundkoordinator) +
    9 · 2.788 T€ (Teilprojektleiter) + 2 · 100 T€ (Mitantragsteller) = **20 · 4.275 T€**.
-   **Im PDF muss „19 Vorhaben" auf „20" geändert werden** — die Website steht bereits auf 20.
+   **Im PDF fehlen außerdem zwei weitere Vorhaben:**
+   „XR Emergency Training for Military Fast Jets" (2024–2025, Training Optimization Programme
+   der Luftwaffe, 44 T€) und „Digitalise SÜDWESTFALEN — Virtual Institute, Initialprojekt"
+   (2023–2027, Innovative Hochschule, 290 T€).
+
+   Mit allen drei Ergänzungen steht die Website auf **22 Vorhaben · 4.609 T€**, davon
+   20 eigenständig beantragt und geleitet (4.509 T€):
+
+   | Rolle | Vorhaben | Volumen |
+   |---|---|---|
+   | Alleiniger Antragsteller | 7 | 590 T€ |
+   | Verbundkoordinator | 3 | 841 T€ |
+   | Teilprojektleiter | 10 | 3.078 T€ |
+   | Mitantragsteller | 2 | 100 T€ |
+   | **Summe** | **22** | **4.609 T€** |
+
+   **Die im August 2026 verschickte Bewerbung nennt noch 19 Vorhaben / 4,275 Mio. €.**
+   Das ist unkritisch: Bewerbungsunterlagen sind Momentaufnahmen zum Einreichungsdatum, und
+   die Abweichung geht nach oben. Die Website trägt deshalb einen eigenen Stichtag.
+   **Für künftige Bewerbungen sind die Zahlen dieser Seite maßgeblich.**
+
+   Zwei Rollen habe ich eingeordnet, ohne sie belegen zu können: Fast Jets als *alleiniger
+   Antragsteller* (analog zu GESOBAU, Augletics, Huawei) und Digitalise SÜDWESTFALEN als
+   *Teilprojektleiter* (eigenes Teilvorhaben im Verbund). **Bitte prüfen.**
    Drei Signale hatten darauf gedeutet: die Rollenspalte summiert sich auf 20, es fehlten 304 T€,
    und die Einleitung sagt „kontinuierlich seit 2015", während das früheste gelistete Vorhaben
    2016 begann.

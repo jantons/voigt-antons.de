@@ -17,7 +17,9 @@ name: Build & Deploy
 
 on:
   push:
-    branches: [main]
+    # This repository uses "master". "main" is listed too so the workflow keeps
+    # working if the branch is ever renamed.
+    branches: [master, main]
   pull_request:
   workflow_dispatch:
 
@@ -69,23 +71,34 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "Regenerate publication and post pages [skip ci]"
-          git push
-          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+          # A failing push must not abort the run: the freshly generated files
+          # are already on disk and get deployed either way. The usual cause is
+          # Settings -> Actions -> General -> Workflow permissions being set to
+          # read-only.
+          if git push; then
+            echo "committed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Could not push the regenerated pages. The site was still deployed \
+          from the freshly generated files, but the repository now lags behind. Check \
+          Settings -> Actions -> General -> Workflow permissions (needs read and write)."
+          fi
 
       - name: Check links, anchors and structured data
         run: python3 tools/check_site.py
 
       - uses: actions/configure-pages@v5
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && github.event_name != 'pull_request'
 
       - uses: actions/upload-pages-artifact@v4
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && github.event_name != 'pull_request'
         with:
           path: '.'
 
   deploy:
     needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

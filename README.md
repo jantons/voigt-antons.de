@@ -226,13 +226,22 @@ oder sie direkt auf github.com zu bearbeiten und auf „Commit changes" zu klick
 1. **build** — lässt `build_publication_pages.py` und `build_posts.py` laufen, **committet die
    erzeugten Seiten automatisch zurück** in den Branch, und prüft anschließend mit
    `check_site.py` auf tote Links, kaputte Anker, ungültiges JSON-LD und unbalanciertes HTML.
-2. **deploy** — veröffentlicht das Repository-Root auf GitHub Pages. Nur auf `main`.
+2. **deploy** — veröffentlicht das Repository-Root auf GitHub Pages. Nur auf dem Default-Branch.
 
 Der Bot-Commit trägt `[skip ci]` und wird mit `GITHUB_TOKEN` gemacht — beides verhindert, dass
 sich der Workflow selbst erneut auslöst. Eine Endlosschleife ist ausgeschlossen.
 
-Einmalig einzustellen: **Settings → Pages → Source: „GitHub Actions"** (nicht „Deploy from a
-branch"). Custom Domain eintragen, „Enforce HTTPS" aktivieren.
+Einmalig einzustellen:
+
+1. **Settings → Pages → Source: „GitHub Actions"** (nicht „Deploy from a branch").
+   Custom Domain eintragen, „Enforce HTTPS" aktivieren.
+2. **Settings → Actions → General → Workflow permissions: „Read and write permissions".**
+   Ohne das kann der Workflow die generierten Seiten nicht zurückcommitten. Die Seite wird
+   trotzdem deployt, aber das Repository läuft dem Live-Stand hinterher — der Workflow gibt
+   dann eine Warnung aus.
+
+Der Branch dieses Repositorys heißt **`master`**. Der Workflow reagiert auf `master` und `main`;
+die Deploy-Bedingung hängt am Default-Branch des Repositorys und übersteht eine Umbenennung.
 
 Falls du es doch lokal machen willst — etwa um das Ergebnis vor dem Push zu sehen:
 

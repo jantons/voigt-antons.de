@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-08-02",
-  "total_claimed": 227,
+  "total_claimed": 232,
   "note": "Complete publication record, imported from the official Publikationsverzeichnis (04_Publikationsverzeichnis_Voigt-Antons.docx). Field keys: id, y=year, t=type, ti=title, a=authors, v=venue, tp=topic, d=DOI or paper URL, n=note.",
   "types": {
    "journal": "Peer-reviewed journal article",
@@ -25,6 +25,17 @@
   }
  },
  "items": [
+  {
+   "id": "2026-06-15-ar-marketing-review",
+   "ref": "",
+   "y": 2026,
+   "t": "conference",
+   "ti": "From Interaction to Purchase: A Review on How Augmented Reality Impacts User Experience in Marketing",
+   "a": "Henning, J., Vona, F., Pütter, J. & Voigt-Antons, J.-N.",
+   "v": "International Conference on Human-Computer Interaction (HCII 2026), pp. 309–328, Springer",
+   "tp": "xr",
+   "n": "Not yet listed in the Publikationsverzeichnis"
+  },
   {
    "id": "2026-06-01-C103",
    "ref": "C103",
@@ -123,9 +134,9 @@
    "ref": "J34",
    "y": 2026,
    "t": "journal",
-   "ti": "Evaluating Transfer in Higher Education: A Modular Questionnaire for Target Group-specific Assessment of Event Formats",
+   "ti": "A Modular Questionnaire for Target-Group-Specific Evaluation of Event Formats: Developed in the Context of Virtual Worlds Knowledge Transfer",
    "a": "Hinzmann, S., Bestgen, A.-K., Schorlemmer, J., Beierlein, C., Kolbe, J. & Voigt-Antons, J.-N.",
-   "v": "Virtual Worlds, 5(1)",
+   "v": "Virtual Worlds, 5(1), 10",
    "tp": "qoe",
    "d": "https://doi.org/10.3390/virtualworlds5010010"
   },
@@ -222,7 +233,7 @@
    "ref": "J32",
    "y": 2025,
    "t": "journal",
-   "ti": "Dynamic and Responsible Digital Twins for Extended Reality",
+   "ti": "Interactive digital twins enabling responsible extended reality applications",
    "a": "Antoun, M., Elhajj, I. H., Papadopoulos, P. K., Rizk, A., Islam, T., Huerta, I., Toledo, L., Arvanitis, G., Moustakas, K., Jevtić, A., Agustí, I., Vona, F., Voigt-Antons, J.-N., Warsinke, M., Bailer, W., Thallinger, G., Howkins, B., Poder, I., Ruess, M. & Asmar, D.",
    "v": "Scientific Reports, 15, 34539",
    "tp": "qoe",
@@ -304,6 +315,17 @@
    "v": "Paper presented at the Mensch und Computer 2025 (MuC 2025). Chemnitz, Germany",
    "tp": "xr",
    "d": "https://doi.org/10.18420/muc2025-mci-ws13-231"
+  },
+  {
+   "id": "2025-06-15-adaptive-health-assistants",
+   "ref": "",
+   "y": 2025,
+   "t": "conference",
+   "ti": "Designing Adaptive Virtual Health Assistants Using Cognitive and Emotional State Predictions",
+   "a": "Ashrafi, N., Schorlemmer, J., Vona, F., Kojić, T., Hillmann, S., Braytee, A., Wang, Y.-K., Kocaballi, A. B., Moreira, C. & Möller, S. & Voigt-Antons, J.-N.",
+   "v": "International Conference on Human-Computer Interaction (HCII 2025), pp. 243–253, Springer",
+   "tp": "digital-health",
+   "n": "Not yet listed in the Publikationsverzeichnis"
   },
   {
    "id": "2025-06-01-OC50",
@@ -464,9 +486,9 @@
    "ref": "J31",
    "y": 2025,
    "t": "journal",
-   "ti": "Outcomes of a Mobile Information Technology-Based Intervention to Target Naming Among Individuals with Post-Stroke Aphasia: A Virtual Randomized Controlled Trial",
+   "ti": "Outcomes of an App-Based Intervention to Target Naming Among Individuals With Poststroke Aphasia: Virtual Randomized Controlled Trial",
    "a": "Kim, E., Laird, L., Wilson, C., Steward, S., Mildner, P., Möller, S., Schatz, R., Spang, R. P., Voigt-Antons, J.-N. & Rochon, E.",
-   "v": "JMIR Mhealth Uhealth, 13:e67711",
+   "v": "JMIR mHealth and uHealth, 13(1), e67711",
    "tp": "digital-health",
    "d": "http://dx.doi.org/10.2196/67711"
   },
@@ -569,6 +591,17 @@
    "v": "Paper presented at the 23rd IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2024), Greater Seattle Area, USA",
    "tp": "xr",
    "d": "https://doi.org/10.1109/ISMAR62088.2024.00089"
+  },
+  {
+   "id": "2024-09-15-mobility-resources-gps",
+   "ref": "",
+   "y": 2024,
+   "t": "conference",
+   "ti": "Resources of Out-of-Home Mobility among Older Adults in Rural Areas — Results of a GPS/GIS-based Study",
+   "a": "Mümken, S., Haeger, C., Spang, R. P., Brauer, M., Voigt-Antons, J.-N. & Gellert, P.",
+   "v": "Zeitschrift für Gerontologie und Geriatrie, 57, S109",
+   "tp": "digital-health",
+   "n": "Not yet listed in the Publikationsverzeichnis"
   },
   {
    "id": "2024-09-01-OC43",
@@ -999,6 +1032,17 @@
    "d": "https://doi.org/10.1109/QoMEX55416.2022.9900887"
   },
   {
+   "id": "2022-09-15-mobility-support-75plus",
+   "ref": "",
+   "y": 2022,
+   "t": "conference",
+   "ti": "Individual Technology-supported Mobility Support for People aged 75 and over in Rural Areas",
+   "a": "Mümken, S., Haeger, C., Voigt-Antons, J.-N., Spang, R. P. & Gellert, P.",
+   "v": "Zeitschrift für Gerontologie und Geriatrie, 55(Suppl. 1), 110",
+   "tp": "digital-health",
+   "n": "Not yet listed in the Publikationsverzeichnis"
+  },
+  {
    "id": "2022-08-06-OC30",
    "ref": "OC30",
    "y": 2022,
@@ -1393,6 +1437,17 @@
    "v": "12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
    "tp": "xr",
    "d": "https://doi.org/10.48550/arXiv.2004.12642",
+   "n": "Not yet listed in the Publikationsverzeichnis"
+  },
+  {
+   "id": "2020-05-26-flow-music-learning",
+   "ref": "",
+   "y": 2020,
+   "t": "conference",
+   "ti": "Assessing Differences in Flow State Induced by an Adaptive Music Learning Software",
+   "a": "Haug, M., Camps, P., Umland, T. & Voigt-Antons, J.-N.",
+   "v": "12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
+   "tp": "psychophysiology",
    "n": "Not yet listed in the Publikationsverzeichnis"
   },
   {

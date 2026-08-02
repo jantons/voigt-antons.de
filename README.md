@@ -13,14 +13,14 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── 404.html                    Fehlerseite (GitHub Pages nutzt sie automatisch)
 ├── .nojekyll                   verhindert Jekyll-Verarbeitung
 ├── robots.txt
-├── sitemap.xml                 generiert, 246 URLs
+├── sitemap.xml                 generiert, 251 URLs
 │
 ├── assets/
 │   ├── style.css               gemeinsames Stylesheet (Light-first + Dark-Toggle)
 │   └── main.js                 Theme-Toggle, Mobile-Nav, Scroll-Reveal
 │
 ├── data/
-│   ├── publications.json       227 Einträge — Quelle für alles Publikationsbezogene
+│   ├── publications.json       232 Einträge — Quelle für alles Publikationsbezogene
 │   ├── posts.json              generiert aus content/posts/
 │   └── redirects.json          alte → neue Publikations-URLs
 │
@@ -35,7 +35,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── tags/index.html             Weiterleitung alter /tags/#slug-Links
 ├── impressum/index.html        Impressum + Datenschutz (Gerüst, siehe unten)
 │
-├── publication/<id>/index.html 227 generierte Detailseiten mit BibTeX
+├── publication/<id>/index.html 232 generierte Detailseiten mit BibTeX
 ├── posts/JJJJ/MM/<slug>/       5 generierte Beitragsseiten
 └── tools/
     ├── build_publication_pages.py
@@ -125,13 +125,13 @@ die Detailseiten überhaupt, statt nur eine Liste.
 
 ### Datenstand
 
-`data/publications.json` enthält **227 Einträge, 2010–2026** — importiert aus
+`data/publications.json` enthält **232 Einträge, 2010–2026** — importiert aus
 `04_Publikationsverzeichnis_Voigt-Antons.docx`.
 
-Aufteilung: 158 Konferenzbeiträge · 45 Journalartikel · 17 Standardisierungsbeiträge ·
+Aufteilung: 163 Konferenzbeiträge · 45 Journalartikel · 17 Standardisierungsbeiträge ·
 5 Buchkapitel · 2 Bücher.
 
-Themen: 64 Psychophysiology · 61 XR · 59 Digital Health · 42 QoE.
+Themen: 65 Psychophysiology · 63 XR · 62 Digital Health · 42 QoE.
 
 Bibliometrie (Google Scholar, 2. August 2026): 2.987 Zitationen · h-Index 29 · i10-Index 83.
 Die Zahlen stehen auf Startseite, Publikationsseite und im CV sowie unter `meta.bibliometrics`
@@ -162,7 +162,26 @@ Beim Import aufgefallen:
    „Shared first authorship". Beim ersten Import wurden sie verschluckt, weil der Parser nach der
    URL abgeschnitten hat. Betroffen waren `[J15]`, `[J16]` und `[J18]`; alle sind nachgetragen.
    **Bei künftigen Importen darauf achten.**
-4. **Eine hochzitierte Arbeit fehlt im Verzeichnis:** „Influence of Hand Tracking as a Way of
+4. **Abgleich mit dem Google-Scholar-Export (August 2026).** 193 bereinigte Scholar-Einträge
+   gegen die Seite geprüft: 175 Treffer. Ergebnis:
+
+   *Drei Titel im Verzeichnis waren veraltet* — es standen die eingereichten statt der
+   erschienenen Fassungen. Korrigiert und über Crossref bzw. Scholar belegt:
+   `[J32]` → „Interactive digital twins enabling responsible extended reality applications"
+   (Sci Rep 15, 34539) · `[J34]` → „A Modular Questionnaire for Target-Group-Specific
+   Evaluation of Event Formats…" (Virtual Worlds 5(1), 10) · `[J31]` → „Outcomes of an
+   App-Based Intervention… With Poststroke Aphasia" (JMIR mHealth 13(1), e67711).
+   **Diese Titel gehören auch im Word-Dokument berichtigt.**
+
+   *Fünf weitere Arbeiten fehlten im Verzeichnis* und stehen jetzt ohne `ref` auf der Seite:
+   „Assessing Differences in Flow State Induced by an Adaptive Music Learning Software"
+   (QoMEX 2020) · „From Interaction to Purchase" (HCII 2026) · „Designing Adaptive Virtual
+   Health Assistants…" (HCII 2025) · zwei Kongressabstracts in Z Gerontol Geriatr (2024, 2022).
+
+   *Bewusst nicht aufgenommen:* vier Preprints (arXiv, PsyArXiv, OSF, PeerJ), der
+   DigiOnTrack-Projektbericht, das Einleitungskapitel von `[B2]` und die PflegeTab-Broschüre.
+
+5. **Eine hochzitierte Arbeit fehlt im Verzeichnis:** „Influence of Hand Tracking as a Way of
    Interaction in Virtual Reality on User Experience" (QoMEX 2020, Athlone) — Erstautorschaft und
    laut Google Scholar mit 148 Zitationen die drittmeistzitierte Arbeit überhaupt. Sie steht als
    `2020-05-26-hand-tracking-vr` ohne `ref` auf der Seite und sollte ins Word-Dokument

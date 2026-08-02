@@ -13,14 +13,14 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── 404.html                    Fehlerseite (GitHub Pages nutzt sie automatisch)
 ├── .nojekyll                   verhindert Jekyll-Verarbeitung
 ├── robots.txt
-├── sitemap.xml                 137 URLs
+├── sitemap.xml                 generiert, 238 URLs
 │
 ├── assets/
 │   ├── style.css               gemeinsames Stylesheet (Light-first + Dark-Toggle)
 │   └── main.js                 Theme-Toggle, Mobile-Nav, Scroll-Reveal
 │
 ├── data/
-│   ├── publications.json       125 Einträge — Quelle für alles Publikationsbezogene
+│   ├── publications.json       226 Einträge — Quelle für alles Publikationsbezogene
 │   └── posts.json              generiert aus content/posts/
 │
 ├── content/posts/*.md          5 Blogbeiträge als Markdown (Quelldateien)
@@ -34,11 +34,13 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── tags/index.html             Weiterleitung alter /tags/#slug-Links
 ├── impressum/index.html        Impressum + Datenschutz (Gerüst, siehe unten)
 │
-├── publication/<id>/index.html 125 generierte Detailseiten mit BibTeX
+├── publication/<id>/index.html 226 generierte Detailseiten mit BibTeX
 ├── posts/JJJJ/MM/<slug>/       5 generierte Beitragsseiten
 └── tools/
     ├── build_publication_pages.py
-    └── build_posts.py
+    ├── build_posts.py
+    ├── build_sitemap.py
+    └── check_site.py
 ```
 
 Beide Generatoren brauchen nur Python 3 und die Standardbibliothek. Nach inhaltlichen Änderungen:
@@ -46,6 +48,7 @@ Beide Generatoren brauchen nur Python 3 und die Standardbibliothek. Nach inhaltl
 ```bash
 python3 tools/build_publication_pages.py
 python3 tools/build_posts.py
+python3 tools/build_sitemap.py
 ```
 
 **Fehlt noch, muss von dir ergänzt werden:**
@@ -105,20 +108,38 @@ die Detailseiten überhaupt, statt nur eine Liste.
 
 ### Datenstand
 
-`data/publications.json` enthält **125 von 223** Einträgen: vollständig 2020–2026 plus vier ältere
-Schlüsselarbeiten. Mehr war von der bestehenden Seite nicht auslesbar — die Publikationsseite wird
-serverseitig abgeschnitten ausgeliefert. Die restlichen Einträge vor 2020 exportierst du am besten
-einmalig aus deinem BibTeX und hängst sie an das `items`-Array an.
+`data/publications.json` enthält **226 Einträge, 2010–2026** — importiert aus
+`04_Publikationsverzeichnis_Voigt-Antons.docx`.
 
-Aufteilung der erfassten Einträge: 83 Conference · 28 Journal · 10 Standardisierung · 3 Buchkapitel · 1 Buch.
+Aufteilung: 157 Konferenzbeiträge · 45 Journalartikel · 17 Standardisierungsbeiträge ·
+5 Buchkapitel · 2 Bücher.
 
-### Ein Hinweis zu den Themen-Tags
+Themen: 64 Psychophysiology · 61 XR · 59 Digital Health · 42 QoE.
 
-Ich habe die `tp`-Werte von deiner alten Seite übernommen, ohne sie zu korrigieren. Ein paar wirken
-falsch zugeordnet — etwa die GPS-Mobilitätsstudien (`2022-01-20-OJ4`, `2021-10-08-OC24`,
-`2022-08-06-OC29`) und `2023-11-01-OC35` (Beziehungsarbeit in partizipativer Forschung), die alle
-unter `xr` laufen, inhaltlich aber `digital-health` sind. Das wollte ich nicht stillschweigend
-ändern.
+Zwei Dinge, die beim Import aufgefallen sind und die du prüfen solltest:
+
+1. **Ein Paper fehlt im Word-Dokument:** „Multimodal Assistance in Rehabilitation: User Experience
+   of Embodied and Non-Embodied Agents…" (Virtual Worlds 5(1), 15). Es stand auf deiner alten
+   Seite, wird auf Startseite und Forschungsseite verlinkt und ist unter
+   `2026-01-01-J36` erhalten geblieben. Im Verzeichnis trägt `[J36]` inzwischen aber ein anderes
+   Paper („Out-of-home mobility enhancement…"), das ich deshalb unter `2026-01-02-J36` abgelegt
+   habe. Beide URLs funktionieren — die Nummerierung im Word-Dokument sollte trotzdem geprüft
+   werden.
+2. **Zwei DOIs kommen doppelt vor:** `10.1007/s00103-024-03917-2` bei `[OC43]` und `[J29]`,
+   sowie `10.1024/1662-9647/a000210` bei `[OC12]` und `[J14]`. Vermutlich beim Zusammenstellen
+   des Verzeichnisses kopiert.
+
+Alle 125 bereits existierenden Publikations-URLs sind unverändert erhalten.
+
+### Themen-Tags
+
+Die `tp`-Werte wurden komplett neu vergeben — nach Schlagwortregeln plus einer kuratierten
+Korrekturliste für Fälle, in denen die Regeln danebenliegen (etwa VR-Exergame-Studien, die wegen
+„Exergame" fälschlich unter Digital Health landeten, oder EEG-Arbeiten, die als XR getaggt waren).
+Die früher gemeldeten Fehlzuordnungen der GPS-Mobilitätsstudien sind damit behoben.
+
+Zum Nachjustieren genügt es, `tp` im jeweiligen Eintrag zu ändern — erlaubt sind `xr`, `qoe`,
+`psychophysiology`, `digital-health`.
 
 ---
 
@@ -169,24 +190,40 @@ Interne Links zu Papers schreibst du als `/publication/<id>` — die Detailseite
 
 ## Deployment auf GitHub Pages
 
-Deployment läuft über `.github/workflows/deploy.yml`. Der Workflow hat zwei Jobs:
+**Du musst nichts lokal ausführen.** Es genügt, eine Quelldatei zu ändern und zu pushen —
+oder sie direkt auf github.com zu bearbeiten und auf „Commit changes" zu klicken.
 
-1. **verify** — führt beide Generatoren aus und bricht ab, wenn sich der Output vom
-   eingecheckten Stand unterscheidet. Danach `tools/check_site.py`: prüft Tag-Balance,
-   Anker, tote interne Links, JSON-LD und die Konsistenz von `data/*.json` mit den
-   generierten Seiten. Läuft auch auf Pull Requests.
-2. **deploy** — lädt das Repository-Root als Pages-Artefakt hoch. Nur auf `main`.
+`.github/workflows/deploy.yml` erledigt den Rest:
+
+1. **build** — lässt `build_publication_pages.py` und `build_posts.py` laufen, **committet die
+   erzeugten Seiten automatisch zurück** in den Branch, und prüft anschließend mit
+   `check_site.py` auf tote Links, kaputte Anker, ungültiges JSON-LD und unbalanciertes HTML.
+2. **deploy** — veröffentlicht das Repository-Root auf GitHub Pages. Nur auf `main`.
+
+Der Bot-Commit trägt `[skip ci]` und wird mit `GITHUB_TOKEN` gemacht — beides verhindert, dass
+sich der Workflow selbst erneut auslöst. Eine Endlosschleife ist ausgeschlossen.
 
 Einmalig einzustellen: **Settings → Pages → Source: „GitHub Actions"** (nicht „Deploy from a
 branch"). Custom Domain eintragen, „Enforce HTTPS" aktivieren.
 
-Lokal dasselbe prüfen:
+Falls du es doch lokal machen willst — etwa um das Ergebnis vor dem Push zu sehen:
 
 ```bash
 python3 tools/build_publication_pages.py
 python3 tools/build_posts.py
+python3 tools/build_sitemap.py
 python3 tools/check_site.py
 ```
+
+### Warum überhaupt Generatoren statt einfach HTML schreiben?
+
+Weil Konsistenz über 130 Dateien von Hand nicht durchzuhalten ist. Eine Änderung an Navigation
+oder Footer trifft jede einzelne Publikations- und Beitragsseite — das Skript macht das in einer
+Sekunde identisch. Und weil das Ergebnis reproduzierbar ist: gleiche Quelle rein, byte-gleiches
+HTML raus. Nur deshalb kann die CI überhaupt prüfen, ob etwas auseinandergelaufen ist.
+
+Inhalte (Texte, BibTeX-Daten, Zusammenfassungen) schreibst du oder ein LLM. Das Umwandeln in
+gleichförmiges HTML ist Mechanik — dafür ist ein Skript das richtige Werkzeug.
 
 DNS beim Registrar:
 

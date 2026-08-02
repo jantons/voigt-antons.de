@@ -1,8 +1,17 @@
 name: Build & Deploy
 
-# The site is plain static HTML — no Jekyll, no npm. This workflow verifies the
-# generated pages are in sync with their sources, then publishes the repository
-# root to GitHub Pages.
+# The site is plain static HTML — no Jekyll, no npm.
+#
+# You only ever edit the SOURCES:
+#   data/publications.json   → publication pages
+#   content/posts/*.md       → blog posts
+#
+# This workflow runs the two generators in tools/, commits whatever they
+# produced back to the branch, checks the result for dead links and broken
+# markup, and publishes the repository root to GitHub Pages.
+#
+# That means you never have to run Python locally — editing a file directly on
+# github.com and hitting "Commit changes" is enough.
 #
 # Requires: Settings → Pages → Source: "GitHub Actions".
 
@@ -13,55 +22,73 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write      # the build job commits the generated pages
   pages: write
   id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false   # never cancel a run that might be mid-commit
 
 jobs:
-  verify:
+  build:
     runs-on: ubuntu-latest
+    outputs:
+      committed: ${{ steps.commit.outputs.committed }}
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
 
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
-      - name: Regenerate publication and post pages
+      - name: Generate publication and post pages
         run: |
           python3 tools/build_publication_pages.py
           python3 tools/build_posts.py
+          python3 tools/build_sitemap.py
 
-      - name: Fail if generated output drifted from its sources
+      - name: Commit generated pages
+        id: commit
+        # Commits are made with GITHUB_TOKEN, which by design does not trigger
+        # another workflow run — so this cannot loop.
         run: |
-          if ! git diff --quiet; then
-            echo "::error::Generated pages are out of date. Run the two scripts in tools/ and commit the result."
-            git --no-pager diff --stat
-            exit 1
+          if git diff --quiet; then
+            echo "Generated pages already up to date."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+
+          echo "Generators changed the following files:"
+          git --no-pager diff --stat
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Regenerate publication and post pages [skip ci]"
+          git push
+          echo "committed=true" >> "$GITHUB_OUTPUT"
 
       - name: Check links, anchors and structured data
         run: python3 tools/check_site.py
 
+      - uses: actions/configure-pages@v5
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+
+      - uses: actions/upload-pages-artifact@v4
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          path: '.'
+
   deploy:
-    needs: verify
+    needs: build
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v5
-
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v4
-        with:
-          path: '.'
-
       - id: deployment
         uses: actions/deploy-pages@v4

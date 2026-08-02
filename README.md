@@ -53,7 +53,9 @@ python3 tools/build_posts.py
 - `images/profile.png` — Portrait (empfohlen: zusätzlich `profile.webp`, ~800 px)
 - `images/og-card.png` — Social-Preview, 1200 × 630 px
 - `files/cv.pdf` — der CV-Download ist der primäre Call-to-Action im Hero
-- `CNAME` — Inhalt: `voigt-antons.de`
+
+Diese drei Pfade stehen in `tools/check_site.py` unter `ALLOW_MISSING` und lassen die Prüfung
+deshalb nicht fehlschlagen. Sobald die Dateien im Repo liegen, kannst du sie dort entfernen.
 
 ---
 
@@ -167,20 +169,24 @@ Interne Links zu Papers schreibst du als `/publication/<id>` — die Detailseite
 
 ## Deployment auf GitHub Pages
 
+Deployment läuft über `.github/workflows/deploy.yml`. Der Workflow hat zwei Jobs:
+
+1. **verify** — führt beide Generatoren aus und bricht ab, wenn sich der Output vom
+   eingecheckten Stand unterscheidet. Danach `tools/check_site.py`: prüft Tag-Balance,
+   Anker, tote interne Links, JSON-LD und die Konsistenz von `data/*.json` mit den
+   generierten Seiten. Läuft auch auf Pull Requests.
+2. **deploy** — lädt das Repository-Root als Pages-Artefakt hoch. Nur auf `main`.
+
+Einmalig einzustellen: **Settings → Pages → Source: „GitHub Actions"** (nicht „Deploy from a
+branch"). Custom Domain eintragen, „Enforce HTTPS" aktivieren.
+
+Lokal dasselbe prüfen:
+
 ```bash
-git init
-git add .
-git commit -m "Relaunch"
-git branch -M main
-git remote add origin git@github.com:jantons/voigt-antons.de.git
-git push -u origin main
-
-echo "voigt-antons.de" > CNAME
-git add CNAME && git commit -m "Add CNAME" && git push
+python3 tools/build_publication_pages.py
+python3 tools/build_posts.py
+python3 tools/check_site.py
 ```
-
-Dann **Settings → Pages → Source: Deploy from a branch → `main` / `root`**, Custom Domain eintragen,
-„Enforce HTTPS" aktivieren.
 
 DNS beim Registrar:
 

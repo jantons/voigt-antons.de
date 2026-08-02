@@ -1,0 +1,67 @@
+name: Build & Deploy
+
+# The site is plain static HTML — no Jekyll, no npm. This workflow verifies the
+# generated pages are in sync with their sources, then publishes the repository
+# root to GitHub Pages.
+#
+# Requires: Settings → Pages → Source: "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Regenerate publication and post pages
+        run: |
+          python3 tools/build_publication_pages.py
+          python3 tools/build_posts.py
+
+      - name: Fail if generated output drifted from its sources
+        run: |
+          if ! git diff --quiet; then
+            echo "::error::Generated pages are out of date. Run the two scripts in tools/ and commit the result."
+            git --no-pager diff --stat
+            exit 1
+          fi
+
+      - name: Check links, anchors and structured data
+        run: python3 tools/check_site.py
+
+  deploy:
+    needs: verify
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

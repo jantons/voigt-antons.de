@@ -40,9 +40,19 @@ ANCHORS = {"didymos-xr", "mia-prom", "virtual-institute", "digiontrack", "ariadn
            "infuse", "bernstein"}
 
 
-def is_ongoing(p, year=None):
-    """Derived, never stored — see meta.ongoing_note in data/projects.json."""
-    return p["to"] >= (year or datetime.date.today().year)
+def ends(p):
+    """End of the funding period as (year, month). to_month is optional."""
+    return (p["to"], p.get("to_month", 12))
+
+
+def is_ongoing(p, today=None):
+    """Derived, never stored — see meta.ongoing_note in data/projects.json.
+
+    Year granularity alone is not enough: a project that ran out in spring would
+    keep showing as active until January. Hence the optional to_month.
+    """
+    today = today or datetime.date.today()
+    return ends(p) >= (today.year, today.month)
 
 
 def period(p):
@@ -209,9 +219,16 @@ def main():
 
     n = len(data["projects"])
     v = sum(p["volume"] for p in data["projects"])
-    running = [p["short"] for p in data["projects"] if is_ongoing(p)]
+    running = [p["short"] for p in data["projects"] + data.get("without_own_volume", [])
+               if is_ongoing(p)]
     print("wrote funding record: %d projects, €%sk" % (n, format(v, ",")))
-    print("currently running (derived from end year): %s" % ", ".join(running))
+    print("currently running (derived from the end date): %s" % ", ".join(running))
+
+    vague = [p["short"] for p in data["projects"] + data.get("without_own_volume", [])
+             if p["to"] == datetime.date.today().year and "to_month" not in p]
+    if vague:
+        print("note: ends this year without to_month, so still counted as running: %s"
+              % ", ".join(vague))
 
     unconfirmed = [p["short"] for p in data["projects"] if p.get("role_unconfirmed")]
     if unconfirmed:

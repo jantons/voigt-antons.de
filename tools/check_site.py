@@ -99,6 +99,12 @@ def check_projects():
         if p["from"] > p["to"]:
             problems.append("projects.json: %s ends before it starts" % p["id"])
 
+    for p in projects + data.get("without_own_volume", []):
+        month = p.get("to_month")
+        if month is not None and not (isinstance(month, int) and 1 <= month <= 12):
+            problems.append("projects.json: %s has to_month %r, expected 1–12"
+                            % (p["id"], month))
+
     # Hand-written detail blocks must state the same period as the data.
     page_text = page_path.read_text(encoding="utf-8")
     by_id = {p["id"]: p for p in projects}

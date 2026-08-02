@@ -17,7 +17,7 @@
     ],
     "funding_lines": 10,
     "funding_lines_note": "Number of distinct funding programmes, maintained by hand — it cannot be derived from the funder column, since several projects share one line.",
-    "ongoing_note": "'Ongoing' is derived from the end year, never stored — a project counts as running while to >= the current year. That way the website cannot claim a finished project is still active."
+    "ongoing_note": "'Ongoing' is derived from the end date, never stored — a project counts as running while (to, to_month) >= (current year, current month). to_month is optional and defaults to 12; give it whenever a project ends mid-year, otherwise the site keeps showing it as active until January. That way the website cannot claim a finished project is still running."
   },
   "projects": [
     {
@@ -75,6 +75,7 @@
       "id": "ariadne",
       "from": 2024,
       "to": 2026,
+      "to_month": 7,
       "name": "SDK for high-precision, multimodal, AR-integrated pedestrian navigation",
       "short": "ARiadne",
       "funder": "ZIM (BMWE)",
@@ -93,7 +94,6 @@
       "role": "sole",
       "volume": 44,
       "partners": "Adams Simulation and Training",
-      "role_unconfirmed": true,
       "blurb": "Emergency-procedure training in XR under realistic stress, with physiological measurement.",
       "funder_short": "German Air Force"
     },
@@ -107,7 +107,6 @@
       "role": "subproject",
       "volume": 290,
       "partners": "South Westphalia UAS, Economic Development Agency Soest District",
-      "role_unconfirmed": true,
       "blurb": "Regional VR/AR knowledge transfer and innovation across South Westphalia."
     },
     {

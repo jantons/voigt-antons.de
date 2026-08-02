@@ -256,8 +256,12 @@ Rollen: `sole` (alleiniger Antragsteller) · `coordinator` (Verbundkoordinator) 
 `subproject` (Teilprojektleiter) · `co` (Mitantragsteller). Vorhaben ohne eigenes
 Fördervolumen stehen unter `without_own_volume` und zählen nicht in die Summen.
 
-**Es gibt kein `ongoing`-Feld.** Ob ein Vorhaben läuft, wird aus dem Endjahr abgeleitet
-(`to >= aktuelles Jahr`). Damit kann die Seite nicht behaupten, ein abgeschlossenes Projekt
+**Es gibt kein `ongoing`-Feld.** Ob ein Vorhaben läuft, wird aus dem Enddatum abgeleitet:
+`(to, to_month) >= (aktuelles Jahr, aktueller Monat)`. `to_month` ist optional und steht sonst
+auf 12 — **trag es ein, sobald ein Projekt mitten im Jahr endet**, sonst zeigt die Seite es bis
+zum Januar weiter als laufend. Genau das war bei ARiadne der Fall (Ende Juli 2026).
+`build_projects.py` weist beim Lauf auf Vorhaben hin, die im laufenden Jahr enden und noch kein
+`to_month` haben. Damit kann die Seite nicht behaupten, ein abgeschlossenes Projekt
 laufe noch — der Abschnitt „Ongoing projects" pflegt sich mit dem Jahreswechsel selbst.
 Auch `funder_short` (Kurzform für die Karten) und `blurb` (Kartentext) leben in der JSON.
 

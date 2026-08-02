@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "title": "When Navigation Speaks to its Environment: How AR Can Change the Way We Move Through Cities",
+      "date": "2026-04-22",
+      "slug": "ariadne",
+      "summary": "The ARiadne project develops AR pedestrian navigation with HSHL and SWCode — and drew a visit from NRW Minister of Economics Mona Neubaur in April 2026.",
+      "tags": [
+        "ARiadne",
+        "augmented reality",
+        "HSHL",
+        "navigation",
+        "SWCode",
+        "user experience"
+      ],
+      "url": "/posts/2026/04/ariadne/"
+    },
+    {
+      "title": "CHI 2026: XR Research from the Immersive Reality Lab",
+      "date": "2026-04-14",
+      "slug": "chi-2026",
+      "summary": "Three lab contributions at CHI 2026 in Barcelona — on XR under stress, adaptive resilience in fast-jet training, and cross-cultural user experience in VR.",
+      "tags": [
+        "CHI 2026",
+        "extended reality",
+        "mission-critical XR",
+        "quality of experience",
+        "resilience",
+        "social XR",
+        "trust"
+      ],
+      "url": "/posts/2026/04/chi-2026/"
+    },
+    {
+      "title": "MMVE 2026: How Immersive Media Systems Bring XR Research Together",
+      "date": "2026-04-08",
+      "slug": "mmve-2026",
+      "summary": "A workshop at the intersection of immersive technology, experience design, perception research and systems development — and the question of who gets left behind as XR spreads.",
+      "tags": [
+        "accessibility",
+        "extended reality",
+        "immersive media",
+        "MMVE 2026",
+        "quality of experience",
+        "workshop"
+      ],
+      "url": "/posts/2026/04/mmve-2026/"
+    },
+    {
+      "title": "Looking Ahead: How Intelligent AR Navigation Could Transform Cities",
+      "date": "2026-03-30",
+      "slug": "ar-navigation",
+      "summary": "How does urban space change when digital information no longer has to be searched for on a map, but instead appears directly in the field of view?",
+      "tags": [
+        "accessible navigation",
+        "ARiadne",
+        "augmented reality",
+        "digital city",
+        "navigation",
+        "urban space",
+        "user experience"
+      ],
+      "url": "/posts/2026/03/ar-navigation/"
+    },
+    {
+      "title": "Why Human-Centered XR Metrics Matter",
+      "date": "2026-02-25",
+      "slug": "human-centered-xr-metrics",
+      "summary": "Frame rate, latency and tracking precision are essential — but they cannot tell you whether an XR experience is usable, engaging and safe for real people.",
+      "tags": [
+        "digital health",
+        "extended reality",
+        "psychophysiology",
+        "quality of experience"
+      ],
+      "url": "/posts/2026/02/human-centered-xr-metrics/"
+    }
+  ]
+}

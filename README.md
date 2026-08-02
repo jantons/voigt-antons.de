@@ -1,107 +1,250 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# voigt-antons.de — persönliche Website
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
-
-# Getting Started
-
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
-
-See more info at https://academicpages.github.io/
-
-### Additional Tutorials
-
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
-
-## Running locally
-
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-### Troubleshooting local setup
-
-- If `bundle install` fails due to network restrictions or firewall rules, verify access to `https://rubygems.org` and any configured proxy settings.
-- If `jekyll` is not found after install, run commands through Bundler (`bundle exec jekyll serve -l -H localhost`) so the project gem versions are used.
-- For JavaScript assets, install Node dependencies with `npm install` and rebuild bundled JS with `npm run build:js`.
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
-```
-
-You should now be able to access the website from `localhost:4000`.
-
-### Using the DevContainer in VS Code
-
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
-
-# Maintenance
-
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
+Statische Website ohne Build-Kette, ohne Framework, ohne Abhängigkeiten. Direkt auf GitHub Pages
+lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Detailseiten.
 
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+## Struktur
+
+```
+/
+├── index.html                  Startseite
+├── 404.html                    Fehlerseite (GitHub Pages nutzt sie automatisch)
+├── .nojekyll                   verhindert Jekyll-Verarbeitung
+├── robots.txt
+├── sitemap.xml                 137 URLs
+│
+├── assets/
+│   ├── style.css               gemeinsames Stylesheet (Light-first + Dark-Toggle)
+│   └── main.js                 Theme-Toggle, Mobile-Nav, Scroll-Reveal
+│
+├── data/
+│   ├── publications.json       125 Einträge — Quelle für alles Publikationsbezogene
+│   └── posts.json              generiert aus content/posts/
+│
+├── content/posts/*.md          5 Blogbeiträge als Markdown (Quelldateien)
+│
+├── research/index.html         5 Forschungslinien ausführlich
+├── projects/index.html         19 Projekte, Fördertabelle, Detailblöcke
+├── publications/index.html     Filterbare Liste (Jahr, Typ, Thema, Volltextsuche)
+├── cv/index.html               CV inkl. Service, Gremien, Standardisierung
+├── teaching/index.html         Lehrportfolio und Betreuung
+├── blog/index.html             Übersicht mit Tag-Filter
+├── tags/index.html             Weiterleitung alter /tags/#slug-Links
+├── impressum/index.html        Impressum + Datenschutz (Gerüst, siehe unten)
+│
+├── publication/<id>/index.html 125 generierte Detailseiten mit BibTeX
+├── posts/JJJJ/MM/<slug>/       5 generierte Beitragsseiten
+└── tools/
+    ├── build_publication_pages.py
+    └── build_posts.py
+```
+
+Beide Generatoren brauchen nur Python 3 und die Standardbibliothek. Nach inhaltlichen Änderungen:
+
+```bash
+python3 tools/build_publication_pages.py
+python3 tools/build_posts.py
+```
+
+**Fehlt noch, muss von dir ergänzt werden:**
+
+- `images/profile.png` — Portrait (empfohlen: zusätzlich `profile.webp`, ~800 px)
+- `images/og-card.png` — Social-Preview, 1200 × 630 px
+- `files/cv.pdf` — der CV-Download ist der primäre Call-to-Action im Hero
+- `CNAME` — Inhalt: `voigt-antons.de`
+
+---
+
+## Publikationen pflegen
+
+Alle Publikationen liegen in **`data/publications.json`**. Die Übersichtsseite lädt die Datei
+zur Laufzeit; die Detailseiten werden daraus generiert.
+
+Ein Eintrag:
+
+```json
+{
+  "id": "2026-06-01-C102",
+  "y": 2026,
+  "t": "conference",
+  "ti": "Experiencing the Path: Comparing Visual Cues …",
+  "a": "Henning, J., Vona, F., Hinzmann, S., Amer, M. & Voigt-Antons, J.-N.",
+  "v": "18th International Conference on Quality of Multimedia Experience (QoMEX 2026), Cardiff, UK",
+  "tp": "xr",
+  "d": "https://doi.org/10.1145/…",
+  "n": "Best Paper Award"
+}
+```
+
+| Feld | Bedeutung | Werte |
+|---|---|---|
+| `id` | URL-Slug, entspricht dem alten Jekyll-Schema | `JJJJ-MM-TT-<Typ><Nr>` |
+| `t` | Publikationstyp | `journal`, `conference`, `chapter`, `book`, `standard` |
+| `tp` | Forschungslinie | `xr`, `qoe`, `psychophysiology`, `digital-health` |
+| `d` | DOI oder Paper-URL | optional |
+| `n` | Auszeichnung, „Forthcoming" o. Ä. | optional |
+
+Nach jeder Änderung:
+
+```bash
+python3 tools/build_publication_pages.py
+```
+
+Das Skript schreibt `/publication/<id>/index.html` neu — inklusive automatisch erzeugtem BibTeX,
+Schema.org-Metadaten und Vor/Zurück-Navigation. Es braucht nur die Standardbibliothek.
+
+### Wichtig: die alten Publikations-URLs bleiben erhalten
+
+Deine bisherigen Detailseiten (`/publication/2024-10-01-C78`) sind in Papers zitiert, von Scholar
+verlinkt und indexiert. Das Generator-Skript reproduziert exakt dieses URL-Schema — deshalb gibt es
+die Detailseiten überhaupt, statt nur eine Liste.
+
+### Datenstand
+
+`data/publications.json` enthält **125 von 223** Einträgen: vollständig 2020–2026 plus vier ältere
+Schlüsselarbeiten. Mehr war von der bestehenden Seite nicht auslesbar — die Publikationsseite wird
+serverseitig abgeschnitten ausgeliefert. Die restlichen Einträge vor 2020 exportierst du am besten
+einmalig aus deinem BibTeX und hängst sie an das `items`-Array an.
+
+Aufteilung der erfassten Einträge: 83 Conference · 28 Journal · 10 Standardisierung · 3 Buchkapitel · 1 Buch.
+
+### Ein Hinweis zu den Themen-Tags
+
+Ich habe die `tp`-Werte von deiner alten Seite übernommen, ohne sie zu korrigieren. Ein paar wirken
+falsch zugeordnet — etwa die GPS-Mobilitätsstudien (`2022-01-20-OJ4`, `2021-10-08-OC24`,
+`2022-08-06-OC29`) und `2023-11-01-OC35` (Beziehungsarbeit in partizipativer Forschung), die alle
+unter `xr` laufen, inhaltlich aber `digital-health` sind. Das wollte ich nicht stillschweigend
+ändern.
+
+---
+
+## Blog
+
+Alle fünf bestehenden Beiträge sind übernommen und liegen als Markdown in `content/posts/`:
+
+```
+content/posts/
+├── 2026-02-25-human-centered-xr-metrics.md
+├── 2026-03-30-ar-navigation.md
+├── 2026-04-08-mmve-2026.md
+├── 2026-04-14-chi-2026.md
+└── 2026-04-22-ariadne.md
+```
+
+Neuen Beitrag anlegen: Datei mit Front Matter in `content/posts/` ablegen, dann
+
+```bash
+python3 tools/build_posts.py
+```
+
+Das Skript erzeugt `/posts/<JJJJ>/<MM>/<slug>/index.html` — **wieder exakt dein altes URL-Schema** —
+und schreibt `data/posts.json` neu, aus der die Blog-Übersicht lädt.
+
+Front Matter:
+
+```yaml
+---
+title: "Titel (in Anführungszeichen, wenn er einen Doppelpunkt enthält)"
+date: 2026-08-01
+slug: url-segment
+tags: [extended reality, quality of experience]
+summary: Ein Satz für Übersicht und Meta-Description.
+---
+```
+
+Der Markdown-Parser ist bewusst minimal: Überschriften (`##`, `###`), Absätze, Aufzählungen,
+nummerierte Listen, Links, **fett**, *kursiv*. Mehr brauchen deine Beiträge nicht, und so bleibt
+das Skript ohne externe Abhängigkeiten.
+
+Interne Links zu Papers schreibst du als `/publication/<id>` — die Detailseiten existieren.
+
+**Tag-Filter:** Die Blog-Übersicht filtert per Klick nach Tag (`?tag=…`). Deine alten Tag-Links
+(`/tags/#ariadne`) leiten über `tags/index.html` automatisch dorthin um.
+
+---
+
+## Deployment auf GitHub Pages
+
+```bash
+git init
+git add .
+git commit -m "Relaunch"
+git branch -M main
+git remote add origin git@github.com:jantons/voigt-antons.de.git
+git push -u origin main
+
+echo "voigt-antons.de" > CNAME
+git add CNAME && git commit -m "Add CNAME" && git push
+```
+
+Dann **Settings → Pages → Source: Deploy from a branch → `main` / `root`**, Custom Domain eintragen,
+„Enforce HTTPS" aktivieren.
+
+DNS beim Registrar:
+
+| Typ | Name | Wert |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | jantons.github.io |
+
+Die Datei `.nojekyll` ist bereits vorhanden und nötig — sonst ignoriert GitHub Pages Ordner, die mit
+`_` beginnen, und verarbeitet die Seiten unnötig durch Jekyll.
+
+### Lokal testen
+
+Die Publikations- und Blogseiten laden JSON per `fetch`. Über `file://` blockiert das die
+Same-Origin-Policy. Deshalb lokal immer über einen Server öffnen:
+
+```bash
+python3 -m http.server 8000
+# http://localhost:8000
+```
+
+---
+
+## Design
+
+- **Light-first**, Dark über den Toggle rechts oben; die Wahl wird in `localStorage` gemerkt.
+- Akzentfarbe **Violett** `#5645f5` statt des üblichen Akademiker-Blaus, Teal `#0d9488` für
+  Venue-Badges. Beide Werte stehen als CSS-Variablen ganz oben in `assets/style.css` — ein
+  Zeilentausch färbt die ganze Site um.
+- **Inter** für Fließtext, **JetBrains Mono** für Zahlen, Labels und Tags.
+- Reduzierte Bewegung wird respektiert (`prefers-reduced-motion`).
+- Die CV-Seite hat ein eigenes Print-Stylesheet — `Strg/Cmd+P` ergibt ein brauchbares PDF.
+
+---
+
+## Offene Punkte
+
+1. **Google Fonts selbst hosten.** Aktuell laden Inter und JetBrains Mono von Googles Servern, das
+   überträgt IP-Adressen in die USA. Für eine deutsche Professorenseite ist das ein vermeidbares
+   DSGVO-Risiko. Dateien nach `assets/fonts/` legen, `@font-face` in `style.css` ergänzen, die drei
+   `<link>`-Zeilen in allen Seiten entfernen.
+2. **Impressum und Datenschutz vervollständigen.** `impressum/index.html` ist ein Gerüst mit
+   Platzhaltern in eckigen Klammern und muss rechtlich geprüft werden.
+3. **Bibliometrie-Datum.** Die Zahlen im Hero (2.983 Zitationen, h-Index 29) tragen das Datum
+   27. Juli 2026. Halbjährlich aktualisieren — veraltete Zitationszahlen fallen negativ auf.
+4. **Restliche Publikationen** aus BibTeX ergänzen (siehe oben).
+5. **Zweisprachigkeit.** Falls die Seite auch deutschen Berufungsverfahren dienen soll, wäre eine
+   deutsche Fassung der Startseite unter `/de/` sinnvoll.
+
+---
+
+## Zur Zielsetzung
+
+Die Seite arbeitet auf zwei Ebenen, ohne dass eine die andere stört:
+
+- **Bewerbungen** — Kennzahlenleiste und „Track record" auf der Startseite liefern in unter
+  30 Sekunden, was eine Berufungskommission prüft: Drittmittel, Publikationsleistung, Lehre,
+  Betreuung, Leitungserfahrung, Standardisierung, Auszeichnungen. Der CV-Download ist der
+  prominenteste Button der Seite.
+- **Kollaborationen** — Forschungslinien, laufende Projekte und die Collaborate-Sektion nennen
+  konkrete Andockpunkte statt einer allgemeinen Kontaktadresse.
+
+Nachwuchsgewinnung ist bewusst nicht Teil dieser Seite und wird an
+[immersive-reality-lab.de](https://immersive-reality-lab.de) verwiesen.

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications on XR, QoE &amp; Human-Centered Computing — Jan-Niklas Voigt-Antons</title>
+<meta name="description" content="223 publications on Extended Reality, Quality of Experience, psychophysiology and digital health. Filter by year, type and topic.">
+<link rel="canonical" href="https://voigt-antons.de/publications/">
+<meta property="og:title" content="Publications on XR, QoE &amp; Human-Centered Computing">
+<meta property="og:description" content="Filterable list of publications across ACM CHI, IEEE VR, ISMAR, VRST, QoMEX and clinical venues.">
+<meta property="og:image" content="https://voigt-antons.de/images/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="bgfx"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav>
+  <div class="nav-in">
+    <a href="/" class="brand">voigt-antons<span>.de</span></a>
+    <div class="nav-links">
+      <a href="/research/">Research</a>
+      <a href="/projects/">Projects</a>
+      <a href="/publications/" aria-current="page">Publications</a>
+      <a href="/cv/">CV</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="nav-tools">
+      <button class="icon-btn" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <button class="icon-btn" id="themeToggle" aria-label="Switch to dark theme">◐</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/research/">Research</a>
+    <a href="/projects/">Projects</a>
+    <a href="/publications/">Publications</a>
+    <a href="/cv/">CV</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main id="main">
+<header class="page-head">
+  <div class="wrap">
+    <div class="crumbs"><a href="/">Home</a> / Publications</div>
+    <div class="eyebrow"><i class="dot"></i>223 publications · 2,983 citations · h-index 29</div>
+    <h1>Publications on XR, QoE &amp; human-centered computing</h1>
+    <p class="lede">
+      2 monographs and edited volumes · 5 book chapters · 43 peer-reviewed journal articles ·
+      156 peer-reviewed conference papers · 17 contributions to international standardization.
+    </p>
+    <div class="ids" style="margin-top:22px">
+      <a class="id-chip" href="https://scholar.google.com/citations?user=IFIaOZsAAAAJ">Google Scholar ↗</a>
+      <a class="id-chip" href="https://dblp.org/pid/39/10762">DBLP ↗</a>
+      <a class="id-chip" href="https://dl.acm.org/profile/99659317387">ACM DL ↗</a>
+      <a class="id-chip" href="https://orcid.org/0000-0002-2786-9262">ORCID ↗</a>
+      <a class="id-chip" href="https://www.scopus.com/authid/detail.uri?authorId=57194940462">Scopus ↗</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="filters" role="search">
+      <div class="f-group">
+        <label for="fYear">Year</label>
+        <select id="fYear"><option value="">All years</option></select>
+      </div>
+      <div class="f-group">
+        <label for="fType">Type</label>
+        <select id="fType">
+          <option value="">All types</option>
+          <option value="journal">Journal article</option>
+          <option value="conference">Conference paper</option>
+          <option value="chapter">Book chapter</option>
+          <option value="book">Book / edited volume</option>
+          <option value="standard">Standardization</option>
+        </select>
+      </div>
+      <div class="f-group">
+        <label for="fTopic">Topic</label>
+        <select id="fTopic">
+          <option value="">All topics</option>
+          <option value="xr">XR &amp; Spatial Interaction</option>
+          <option value="qoe">Quality of Experience</option>
+          <option value="psychophysiology">Psychophysiology</option>
+          <option value="digital-health">Digital Health &amp; Learning</option>
+        </select>
+      </div>
+      <div class="f-group grow">
+        <label for="fSearch">Search title, author or venue</label>
+        <input type="search" id="fSearch" placeholder="e.g. eye tracking, Kojić, ISMAR…" autocomplete="off">
+      </div>
+      <button class="btn btn-2 f-reset" id="fReset" type="button">Reset</button>
+    </div>
+
+    <p class="result-count" id="count">Loading…</p>
+    <div class="pubs" id="list"></div>
+
+    <div class="note">
+      <b>About this list.</b> The entries shown cover 2020–2026 plus selected earlier work and are
+      maintained in <code>/data/publications.json</code>. Remaining pre-2020 entries are being
+      migrated from BibTeX; in the meantime the complete record is available on
+      <a class="inline-link" href="https://scholar.google.com/citations?user=IFIaOZsAAAAJ">Google Scholar</a>
+      and <a class="inline-link" href="https://dblp.org/pid/39/10762">DBLP</a>.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="font-size:14px;margin-bottom:6px">Prof. Dr.-Ing. Jan-Niklas Voigt-Antons</div>
+        <div class="foot-col">Professor of Computer Science (Immersive Media)<br>Hamm-Lippstadt University of Applied Sciences</div>
+        <div class="ids">
+          <a class="id-chip" href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ">Google Scholar</a>
+          <a class="id-chip" href="https://orcid.org/0000-0002-2786-9262">ORCID</a>
+          <a class="id-chip" href="https://dblp.org/pid/39/10762">DBLP</a>
+          <a class="id-chip" href="https://www.scopus.com/authid/detail.uri?authorId=57194940462">Scopus</a>
+          <a class="id-chip" href="https://dl.acm.org/profile/99659317387">ACM DL</a>
+          <a class="id-chip" href="https://github.com/jantons">GitHub</a>
+          <a class="id-chip" href="https://www.linkedin.com/in/jnvoigtantons">LinkedIn</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <div class="fh">Elsewhere</div>
+        <a href="https://immersive-reality-lab.de">Immersive Reality Lab ↗</a><br>
+        <a href="https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons">HSHL profile ↗</a><br>
+        <a href="/teaching/">Teaching</a> · <a href="/cv/">CV</a> · <a href="/blog/">Blog</a><br>
+        <a class="inline-link" href="mailto:jan-niklas@voigt-antons.de">jan-niklas@voigt-antons.de</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 · <a href="/impressum/">Legal Notice</a> · <a href="/impressum/#privacy">Privacy</a></div>
+  </div>
+</footer>
+
+<script src="/assets/main.js" defer></script>
+<script>
+(function () {
+  'use strict';
+  var LABEL = { journal:'JOURNAL', conference:'CONFERENCE', chapter:'CHAPTER', book:'BOOK', standard:'STANDARD' };
+  var CLS   = { standard:'venue t-standard', book:'venue t-book', chapter:'venue t-book' };
+  var TOPIC = { xr:'XR & Spatial Interaction', qoe:'Quality of Experience',
+                psychophysiology:'Psychophysiology', 'digital-health':'Digital Health & Learning' };
+
+  var listEl = document.getElementById('list');
+  var countEl = document.getElementById('count');
+  var fYear = document.getElementById('fYear');
+  var fType = document.getElementById('fType');
+  var fTopic = document.getElementById('fTopic');
+  var fSearch = document.getElementById('fSearch');
+  var items = [];
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function render(rows) {
+    if (!rows.length) {
+      listEl.innerHTML = '<p class="empty">No publications match these filters.</p>';
+      countEl.textContent = '0 publications';
+      return;
+    }
+    countEl.textContent = rows.length + (rows.length === 1 ? ' publication' : ' publications');
+    listEl.innerHTML = rows.map(function (p) {
+      var links = ['<a href="/publication/' + esc(p.id) + '">Details</a>'];
+      if (p.d) links.push('<a href="' + esc(p.d) + '" rel="noopener">DOI / paper ↗</a>');
+      links.push('<a href="/publication/' + esc(p.id) + '#bibtex">BibTeX</a>');
+      return '<article class="pub">' +
+        '<span class="pub-year">' + esc(p.y) + '</span>' +
+        '<span>' +
+          '<span class="pub-title"><a href="/publication/' + esc(p.id) + '">' + esc(p.ti) + '</a></span>' +
+          '<span class="pub-authors">' + esc(p.a) + '</span>' +
+          '<span class="pub-meta">' + esc(p.v) +
+            (p.n ? ' · <strong>' + esc(p.n) + '</strong>' : '') +
+            (TOPIC[p.tp] ? ' · ' + esc(TOPIC[p.tp]) : '') +
+          '</span>' +
+          '<span class="pub-links">' + links.join('') + '</span>' +
+        '</span>' +
+        '<span class="' + (CLS[p.t] || 'venue') + '">' + (LABEL[p.t] || 'OTHER') + '</span>' +
+      '</article>';
+    }).join('');
+  }
+
+  function apply() {
+    var y = fYear.value, t = fType.value, tp = fTopic.value;
+    var q = fSearch.value.trim().toLowerCase();
+    render(items.filter(function (p) {
+      if (y && String(p.y) !== y) return false;
+      if (t && p.t !== t) return false;
+      if (tp && p.tp !== tp) return false;
+      if (q) {
+        var hay = (p.ti + ' ' + p.a + ' ' + p.v).toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    }));
+    var qs = [];
+    if (y) qs.push('year=' + y);
+    if (t) qs.push('type=' + t);
+    if (tp) qs.push('topic=' + tp);
+    history.replaceState(null, '', qs.length ? '?' + qs.join('&') : location.pathname);
+  }
+
+  [fYear, fType, fTopic].forEach(function (el) { el.addEventListener('change', apply); });
+  fSearch.addEventListener('input', apply);
+  document.getElementById('fReset').addEventListener('click', function () {
+    fYear.value = ''; fType.value = ''; fTopic.value = ''; fSearch.value = ''; apply();
+  });
+
+  fetch('/data/publications.json')
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) {
+      items = data.items.slice().sort(function (a, b) {
+        return b.id < a.id ? -1 : b.id > a.id ? 1 : 0;
+      });
+      var years = [];
+      items.forEach(function (p) { if (years.indexOf(p.y) === -1) years.push(p.y); });
+      years.sort(function (a, b) { return b - a; });
+      fYear.innerHTML = '<option value="">All years</option>' +
+        years.map(function (y) { return '<option value="' + y + '">' + y + '</option>'; }).join('');
+
+      var params = new URLSearchParams(location.search);
+      if (params.get('year')) fYear.value = params.get('year');
+      if (params.get('type')) fType.value = params.get('type');
+      if (params.get('topic')) fTopic.value = params.get('topic');
+      apply();
+    })
+    .catch(function () {
+      countEl.textContent = '';
+      listEl.innerHTML = '<p class="empty">The publication list could not be loaded. ' +
+        'Please try again, or view the complete record on ' +
+        '<a class="inline-link" href="https://scholar.google.com/citations?user=IFIaOZsAAAAJ">Google Scholar</a>.</p>';
+    });
+})();
+</script>
+</body>
+</html>

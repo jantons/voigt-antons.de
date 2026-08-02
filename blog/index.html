@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes — Jan-Niklas Voigt-Antons</title>
+<meta name="description" content="Notes on XR research, measurement methods, standardization and lab life.">
+<link rel="canonical" href="https://voigt-antons.de/blog/">
+<meta property="og:title" content="Notes — Jan-Niklas Voigt-Antons">
+<meta property="og:description" content="Notes on XR research, measurement methods, standardization and lab life.">
+<meta property="og:image" content="https://voigt-antons.de/images/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="bgfx"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav>
+  <div class="nav-in">
+    <a href="/" class="brand">voigt-antons<span>.de</span></a>
+    <div class="nav-links">
+      <a href="/research/">Research</a>
+      <a href="/projects/">Projects</a>
+      <a href="/publications/">Publications</a>
+      <a href="/cv/">CV</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+    </div>
+    <div class="nav-tools">
+      <button class="icon-btn" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <button class="icon-btn" id="themeToggle" aria-label="Switch to dark theme">◐</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/research/">Research</a>
+    <a href="/projects/">Projects</a>
+    <a href="/publications/">Publications</a>
+    <a href="/cv/">CV</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main id="main">
+<header class="page-head">
+  <div class="wrap">
+    <div class="crumbs"><a href="/">Home</a> / Blog</div>
+    <div class="eyebrow"><i class="dot"></i>Notes</div>
+    <h1>Notes from the lab</h1>
+    <p class="lede">
+      Occasional writing on measurement methods, XR research practice, standardization work and
+      what happens when a study leaves the lab.
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tagbar" id="tagbar" role="group" aria-label="Filter by tag"></div>
+    <div class="posts" id="posts"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="font-size:14px;margin-bottom:6px">Prof. Dr.-Ing. Jan-Niklas Voigt-Antons</div>
+        <div class="foot-col">Professor of Computer Science (Immersive Media)<br>Hamm-Lippstadt University of Applied Sciences</div>
+        <div class="ids">
+          <a class="id-chip" href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ">Google Scholar</a>
+          <a class="id-chip" href="https://orcid.org/0000-0002-2786-9262">ORCID</a>
+          <a class="id-chip" href="https://dblp.org/pid/39/10762">DBLP</a>
+          <a class="id-chip" href="https://github.com/jantons">GitHub</a>
+          <a class="id-chip" href="https://www.linkedin.com/in/jnvoigtantons">LinkedIn</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <div class="fh">Elsewhere</div>
+        <a href="https://immersive-reality-lab.de">Immersive Reality Lab ↗</a><br>
+        <a href="https://www.hshl.de/personen/prof-dr-ing-jan-niklas-voigt-antons">HSHL profile ↗</a><br>
+        <a href="/teaching/">Teaching</a> · <a href="/cv/">CV</a> · <a href="/blog/">Blog</a><br>
+        <a class="inline-link" href="mailto:jan-niklas@voigt-antons.de">jan-niklas@voigt-antons.de</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 · <a href="/impressum/">Legal Notice</a> · <a href="/impressum/#privacy">Privacy</a></div>
+  </div>
+</footer>
+
+<script src="/assets/main.js" defer></script>
+<script>
+(function () {
+  'use strict';
+  var el = document.getElementById('posts');
+  var bar = document.getElementById('tagbar');
+  var posts = [], active = '';
+
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+  function empty() {
+    el.innerHTML = '<p class="empty">No posts published yet. Recent work is announced on ' +
+      '<a class="inline-link" href="https://www.linkedin.com/in/jnvoigtantons">LinkedIn</a> ' +
+      'and listed under <a class="inline-link" href="/publications/">publications</a>.</p>';
+  }
+
+  function render() {
+    var rows = active ? posts.filter(function (p) {
+      return (p.tags || []).indexOf(active) !== -1;
+    }) : posts;
+    el.innerHTML = rows.map(function (p) {
+      var d = new Date(p.date + 'T00:00:00');
+      var label = isNaN(d) ? esc(p.date)
+        : d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+      return '<a class="post" href="' + esc(p.url) + '">' +
+        '<time datetime="' + esc(p.date) + '">' + label + '</time>' +
+        '<div><h3>' + esc(p.title) + '</h3><p>' + esc(p.summary) + '</p>' +
+        ((p.tags && p.tags.length)
+          ? '<div class="tags" style="margin-top:10px">' +
+            p.tags.map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('') +
+            '</div>' : '') +
+        '</div></a>';
+    }).join('');
+    Array.prototype.forEach.call(bar.children, function (b) {
+      b.setAttribute('aria-pressed', b.dataset.tag === active ? 'true' : 'false');
+    });
+  }
+
+  function buildTagbar() {
+    var all = [];
+    posts.forEach(function (p) {
+      (p.tags || []).forEach(function (t) { if (all.indexOf(t) === -1) all.push(t); });
+    });
+    all.sort(function (a, b) { return a.toLowerCase() < b.toLowerCase() ? -1 : 1; });
+    bar.innerHTML = ['<button class="tagbtn" data-tag="" aria-pressed="true">All posts</button>']
+      .concat(all.map(function (t) {
+        return '<button class="tagbtn" data-tag="' + esc(t) + '" aria-pressed="false">' + esc(t) + '</button>';
+      })).join('');
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest('.tagbtn');
+      if (!b) return;
+      active = b.dataset.tag;
+      history.replaceState(null, '', active ? '?tag=' + encodeURIComponent(active) : location.pathname);
+      render();
+    });
+  }
+
+  fetch('/data/posts.json')
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) {
+      posts = (data.posts || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+      if (!posts.length) return empty();
+      buildTagbar();
+      var q = new URLSearchParams(location.search).get('tag');
+      if (q) active = q;
+      render();
+    })
+    .catch(empty);
+})();
+</script>
+</body>
+</html>

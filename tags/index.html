@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tags — Jan-Niklas Voigt-Antons</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://voigt-antons.de/blog/">
+<script>
+/* The previous site linked tags as /tags/#slug. Forward those to the blog
+   index, which filters by ?tag= — keeps old links alive. */
+(function () {
+  var h = decodeURIComponent(location.hash.replace(/^#/, '')).replace(/-/g, ' ');
+  location.replace('/blog/' + (h ? '?tag=' + encodeURIComponent(h) : ''));
+})();
+</script>
+<meta http-equiv="refresh" content="0; url=/blog/">
+</head>
+<body>
+<p style="font-family:system-ui;padding:40px">Redirecting to <a href="/blog/">the blog</a>&hellip;</p>
+</body>
+</html>

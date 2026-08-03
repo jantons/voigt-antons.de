@@ -147,7 +147,9 @@ def check_cv_pdf():
     compares it against the sources as they are now.
     """
     for pdf_name, stamp_name in (("files/cv.pdf", "files/cv.build.json"),
-                                 ("files/cv-de.pdf", "files/cv-de.build.json")):
+                                 ("files/cv-de.pdf", "files/cv-de.build.json"),
+                                 ("files/publications.pdf", "files/records.build.json"),
+                                 ("files/funding.pdf", "files/records.build.json")):
         pdf, stamp_path = ROOT / pdf_name, ROOT / stamp_name
         if not pdf.exists():
             continue
@@ -175,7 +177,7 @@ def check_cv_pdf():
 
         if digest.hexdigest()[:16] != stamp.get("fingerprint"):
             problems.append("%s is out of date — %s changed since it was built on %s. "
-                            "Run tools/build_cv_pdf.py --all."
+                            "Run tools/build_cv_pdf.py --all or tools/build_record_pdfs.py --all."
                             % (pdf_name, ", ".join(stamp.get("sources", [])),
                                stamp.get("built", "?")))
 

@@ -58,7 +58,8 @@ TRANSLATED_PATHS = sorted(PAGES.values(), key=len, reverse=True)
 # for the rest of the visit. They get a switch to /de/ — and an accessible label
 # that says so, rather than the usual "this page in German", which would be a
 # promise the site cannot keep.
-ENGLISH_ONLY = ("publications/index.html", "blog/index.html", "404.html")
+ENGLISH_ONLY = ("publications/index.html", "blog/index.html", "404.html",
+                "downloads/index.html")
 BACK_TO_GERMAN = "Zur deutschen Startseite — diese Seite gibt es nur auf Englisch"
 
 # impressum/index.html deliberately has none: it is already German, and the
@@ -159,7 +160,7 @@ def build_german(english, path, table, missing):
     # A German label pointing at an English page is a language change, and
     # saying so is what hreflang is for. Screen readers announce it; without it
     # the switch is silent.
-    for target in ("/publications/", "/blog/", "/impressum/"):
+    for target in ("/publications/", "/blog/", "/impressum/", "/downloads/"):
         html = re.sub(r'<a href="%s"(?![^>]*hreflang)' % re.escape(target),
                       '<a href="%s" hreflang="%s"'
                       % (target, "de" if target == "/impressum/" else "en"), html)

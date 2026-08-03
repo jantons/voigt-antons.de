@@ -18,7 +18,8 @@ BASE = "https://voigt-antons.de"
 # Pages that should not appear in search results.
 EXCLUDE = {"/impressum/", "/tags/", "/404.html"}
 
-STATIC = ["/", "/research/", "/projects/", "/publications/", "/cv/", "/teaching/", "/blog/"]
+STATIC = ["/", "/research/", "/projects/", "/publications/", "/cv/", "/teaching/",
+          "/blog/", "/downloads/"]
 
 # The German versions are separate URLs and belong in the sitemap. Each entry
 # carries xhtml:link alternates, because a sitemap that lists /de/ without

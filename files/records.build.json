@@ -1,0 +1,17 @@
+{
+ "note": "Fingerprint of the files the record PDFs were generated from. tools/check_site.py reports them as stale when the sources move. Rebuild with tools/build_record_pdfs.py --all.",
+ "sources": [
+  "data/publications.json",
+  "data/projects.json",
+  "data/i18n.json",
+  "tools/build_record_pdfs.py"
+ ],
+ "outputs": [
+  "files/funding-de.pdf",
+  "files/funding.pdf",
+  "files/publications-de.pdf",
+  "files/publications.pdf"
+ ],
+ "fingerprint": "834a097e0122b827",
+ "built": "2026-08-03"
+}

@@ -34,14 +34,41 @@ INLINE = {"a", "em", "strong", "b", "i", "span", "code", "br", "sup", "sub",
 # German page would keep its "Skip to content", "Home" and "Get in touch".
 CLASSES = ("skip", "btn", "more", "crumbs", "eyebrow", "tag", "role", "fh",
            "foot-col", "copy", "empty", "lede", "sec-sub", "metric", "note",
-           "metrics-note")
+           "metrics-note", "cv-nav")
 
 BLOCK_RE = re.compile(
     r"<(%s)(\s[^>]*)?>(.*?)</\1>" % "|".join(BLOCK), re.S)
 
-CLASS_RE = re.compile(
-    r'<(a|div|span)(\s[^>]*class="[^"]*\b(?:%s)\b[^"]*"[^>]*)>(.*?)</\1>'
-    % "|".join(CLASSES), re.S)
+CLASS_OPEN = re.compile(
+    r'<(a|div|span|aside)(\s[^>]*class="[^"]*\b(?:%s)\b[^"]*"[^>]*)>' % "|".join(CLASSES))
+TAG = re.compile(r"<(/?)(a|div|span|aside)\b[^>]*>")
+
+
+def class_elements(html):
+    """Outermost class-matched elements, with the *correct* closing tag.
+
+    A non-greedy regex cannot do this. For
+    <div class="foot-col"><div class="fh">Elsewhere</div>…</div>
+    it stops at the first </div>, so the outer match ends mid-element and the
+    inner one is never seen at all. "Elsewhere" shipped untranslated while the
+    generator reported full coverage — a silent gap, which is the one thing this
+    design is supposed to prevent. Hence an explicit depth count.
+    """
+    pos = 0
+    while True:
+        m = CLASS_OPEN.search(html, pos)
+        if not m:
+            return
+        tag, depth, scan = m.group(1), 1, m.end()
+        while depth:
+            t = TAG.search(html, scan)
+            if not t:
+                return
+            scan = t.end()
+            if t.group(2) == tag:
+                depth += -1 if t.group(1) else 1
+        yield m.start(), m.end(), t.start(), scan, tag, m.group(2)
+        pos = scan
 
 # Attributes carrying prose.
 ATTR_RE = re.compile(
@@ -71,13 +98,28 @@ def normalise(text):
     return " ".join(text.split())
 
 
+def _leaves(html):
+    """Yield the innermost translatable fragments, descending into containers."""
+    for m in BLOCK_RE.finditer(html):
+        inner = m.group(3)
+        if _has_block(inner):
+            for nested in _leaves(inner):
+                yield nested
+        else:
+            yield inner
+    for _, open_end, close_start, _, _, _ in class_elements(html):
+        inner = html[open_end:close_start]
+        if _has_block(inner):
+            for nested in _leaves(inner):
+                yield nested
+        else:
+            yield inner
+
+
 def units(html):
     """Yield every translatable string in the page, in document order."""
     seen = set()
-    for m in list(BLOCK_RE.finditer(html)) + list(CLASS_RE.finditer(html)):
-        inner = m.group(3)
-        if _has_block(inner):
-            continue
+    for inner in _leaves(html):
         if VERBATIM.search(inner):
             continue
         text = normalise(inner)
@@ -95,9 +137,36 @@ def units(html):
 def translate(html, table, missing=None):
     """Return the page with every known unit replaced by its translation."""
 
+    def render(inner):
+        """Translate a fragment, descending into anything still nested."""
+        if _has_block(inner):
+            return translate_classes(BLOCK_RE.sub(block_sub, inner))
+        if VERBATIM.search(inner):
+            return inner
+        key = normalise(inner)
+        if not HAS_LETTER.search(key):
+            return inner
+        if key in table:
+            return table[key]
+        if missing is not None:
+            missing.add(key)
+        return inner
+
+    def translate_classes(text):
+        out, cursor = [], 0
+        for open_start, open_end, close_start, close_end, _, _ in class_elements(text):
+            out.append(text[cursor:open_end])
+            out.append(render(text[open_end:close_start]))
+            out.append(text[close_start:close_end])
+            cursor = close_end
+        out.append(text[cursor:])
+        return "".join(out)
+
     def block_sub(m):
         tag, attrs, inner = m.group(1), m.group(2) or "", m.group(3)
-        if _has_block(inner) or VERBATIM.search(inner):
+        if _has_block(inner):
+            return "<%s%s>%s</%s>" % (tag, attrs, render(inner), tag)
+        if VERBATIM.search(inner):
             return m.group(0)
         key = normalise(inner)
         if not HAS_LETTER.search(key):
@@ -121,5 +190,5 @@ def translate(html, table, missing=None):
         return m.group(0)
 
     html = BLOCK_RE.sub(block_sub, html)
-    html = CLASS_RE.sub(block_sub, html)
+    html = translate_classes(html)
     return ATTR_RE.sub(attr_sub, html)

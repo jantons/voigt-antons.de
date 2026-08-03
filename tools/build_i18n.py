@@ -58,6 +58,8 @@ ALT_END = "<!-- END i18n-alt -->"
 SWITCH_RE = re.compile(r'\s*<a class="icon-btn lang-switch"[^>]*>[^<]*</a>')
 
 NAV_LABEL = {
+    "/teaching/": "Lehre",
+    "#contact": "Kontakt",
     "/research/": "Forschung",
     "/projects/": "Projekte",
     "/publications/": "Publikationen",
@@ -135,7 +137,8 @@ def build_german(english, path, table, missing):
         english_label = target.strip("/#").replace("contact", "Contact").capitalize()
         html = re.sub(r'(<a href="(?:/de)?%s"[^>]*>)[^<]+(</a>)' % re.escape(target),
                       lambda m, g=german: m.group(1) + g + m.group(2), html)
-    html = re.sub(r'(<a href="/de/" class="brand">)', r'\1', html)
+    for english, german in (("HSHL profile ↗", "HSHL-Profil ↗"),):
+        html = html.replace(">%s<" % english, ">%s<" % german)
     return html
 
 

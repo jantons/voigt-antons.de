@@ -248,6 +248,18 @@ Ein Eintrag:
 | `d` | DOI oder Paper-URL | optional |
 | `n` | Auszeichnung, „In press" o. Ä. | optional |
 
+### Zwei bewusste Abweichungen, die keine Fehler sind
+
+Beide sind geprüft und bestätigt — nicht „korrigieren", wenn sie beim nächsten Durchsehen
+auffallen:
+
+- **`[J39]` trägt „In press".** Korrekt, die Arbeit ist angenommen und noch nicht erschienen.
+  Beim Erscheinen den Vermerk `n` entfernen und den DOI in `d` eintragen. Bis dahin taucht der
+  Eintrag bewusst nicht in der Publikationsauswahl des CV-PDF auf.
+- **`[OJ6]` hat als einziger Eintrag einen deutschen Titel.** Ebenfalls korrekt: das ist der
+  Titel, unter dem die Arbeit erschienen ist. Publikationstitel werden nirgends übersetzt,
+  auch nicht in der deutschen Fassung der Seite — die zitierfähige Form bleibt, wie sie ist.
+
 ### Warum `id` und `ref` getrennt sind
 
 Die Nummern im Publikationsverzeichnis verschieben sich, sobald du mittendrin etwas einfügst:

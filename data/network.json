@@ -1,0 +1,76 @@
+{
+ "meta": {
+  "note": "International collaboration, from the application documents of July 2026. The country count on the site is derived from this list, never typed — that is what went wrong with '226 publications'.",
+  "updated": "2026-08-03",
+  "basis": "Joint publications, research proposals and project partnerships."
+ },
+ "countries": [
+  "Australia",
+  "Austria",
+  "Belgium",
+  "Brazil",
+  "Canada",
+  "Croatia",
+  "Denmark",
+  "Finland",
+  "Greece",
+  "Italy",
+  "Lebanon",
+  "Netherlands",
+  "Norway",
+  "Portugal",
+  "Spain",
+  "Sweden",
+  "Switzerland",
+  "United Kingdom",
+  "United States"
+ ],
+ "partners": [
+  {
+   "institution": "Politecnico di Milano",
+   "country": "IT",
+   "subject": "Social acceptability and interactivity in AR/VR; joint publications and supervision"
+  },
+  {
+   "institution": "University of Technology Sydney",
+   "country": "AU",
+   "subject": "Affect recognition in VR, virtual health assistants, digital twins; binational cotutelle doctorate (A. Pinilla, 2022)"
+  },
+  {
+   "institution": "American University of Beirut",
+   "country": "LB",
+   "subject": "Horizon Europe project on digital twins for extended reality"
+  },
+  {
+   "institution": "NTNU Trondheim",
+   "country": "NO",
+   "subject": "Quality of Experience, immersive media experience, QUALINET"
+  },
+  {
+   "institution": "University of Zagreb",
+   "country": "HR",
+   "subject": "ITU-T standardization of interactive VR test methods"
+  },
+  {
+   "institution": "University of Toronto",
+   "country": "CA",
+   "subject": "Randomised controlled trial on aphasia training (JMIR)"
+  },
+  {
+   "institution": "University of Bremen / St. Gallen",
+   "country": "DE/CH",
+   "subject": "Pseudo-haptics and vibrotactile feedback in VR (ACM CHI 2024)"
+  },
+  {
+   "institution": "Queen's University Belfast",
+   "country": "UK",
+   "subject": "Policy work on immersive technologies"
+  }
+ ],
+ "research_stay": {
+  "institution": "INRS Montreal",
+  "country": "CA",
+  "year": 2012,
+  "subject": "Perception experiments using EEG"
+ }
+}

@@ -1,0 +1,91 @@
+{
+ "meta": {
+  "note": "Doctoral supervision and international network, taken from the application documents of July 2026. Single source for /teaching/ and the CV; the counts on the site are derived from these lists, never typed.",
+  "updated": "2026-08-03",
+  "theses": {
+   "master": 35,
+   "bachelor": 70,
+   "since": 2011,
+   "note": "Supervised or examined at HSHL, TU Berlin and internationally, including Politecnico di Milano. Plus 10 project and practical reports; five bachelor procedures as second examiner."
+  }
+ },
+ "ongoing": [
+  {
+   "name": "Navid Ashrafi",
+   "degree": "M.Sc.",
+   "since": 2022,
+   "topic": "Quality of Experience of medical applications with virtual and physical assistants; avatar design and user-centred design",
+   "project": "mia-prom"
+  },
+  {
+   "name": "Julia Schorlemmer",
+   "degree": "M.Sc.",
+   "topic": "Human-computer interaction in extended reality; psychophysiological measurement (EEG, ECG, EDA) combined with user-centred evaluation of stress and cognitive load in adaptive systems"
+  },
+  {
+   "name": "Sina Hinzmann",
+   "degree": "M.Sc.",
+   "topic": "Effects of immersive technologies on users; VR and AR in healthcare and psychotherapy, effectiveness of transfer formats",
+   "project": "virtual-institute",
+   "role": "Coordinator of the VR/AR Virtual Institute"
+  },
+  {
+   "name": "Juliane Henning",
+   "degree": "M.A.",
+   "topic": "Augmented reality navigation and the experience of using it",
+   "project": "ariadne"
+  },
+  {
+   "name": "Noureddine Hfaiedh",
+   "degree": "M.Sc.",
+   "topic": "Artificial intelligence and machine learning for emotion recognition; affective computing in extended reality"
+  }
+ ],
+ "completed": [
+  {
+   "year": 2024,
+   "name": "Maurizio Vergari",
+   "degree": "M.Sc.",
+   "title": "User Experience for Public Usage of Extended Reality",
+   "institution": "TU Berlin, Faculty IV — Electrical Engineering and Computer Science",
+   "role": "Supervision and examination",
+   "examiners": "S. Möller (TU Berlin), P. César (TU Delft / CWI Amsterdam), M. Fiedler (BTH Karlskrona)",
+   "awarded": "Dr.-Ing."
+  },
+  {
+   "year": 2023,
+   "name": "Jakob Johannes Korbel",
+   "degree": "M.Sc.",
+   "title": "3D Model-based Product Design and Distribution: Virtual 3D Assets in the Value Creation Processes of Physical and Virtual Consumer Goods",
+   "institution": "TU Berlin, Faculty VII — Economics and Management",
+   "role": "Supervision and examination",
+   "awarded": "Dr.-Ing.",
+   "note": "Cross-faculty procedure in the economic sciences"
+  },
+  {
+   "year": 2022,
+   "name": "Tanja Kojić",
+   "degree": "M.Sc.",
+   "title": "User Experience for Serious Games in Virtual Reality",
+   "institution": "TU Berlin, Faculty IV — Electrical Engineering and Computer Science",
+   "role": "Supervision and examination",
+   "examiners": "S. Möller (TU Berlin), K. De Moor (NTNU Trondheim), M. Sužnjević (University of Zagreb)",
+   "awarded": "Dr.-Ing."
+  },
+  {
+   "year": 2022,
+   "name": "Andres Pinilla",
+   "degree": "M.Sc.",
+   "title": "Affective Visualization in Virtual Reality Systems",
+   "institution": "Binational cotutelle, University of Technology Sydney (Faculty of Engineering and Information Technology) and TU Berlin (Faculty IV)",
+   "role": "Supervision within the team, with J. Garcia (UTS), S. Möller (TU Berlin) and W. Raffe (UTS)",
+   "awarded": "Doctor of Science"
+  }
+ ],
+ "note_completed": "All four were examined by international committees: one binational cotutelle with Australia, one across faculties in the economic sciences, two with examiners from Norway, Croatia, the Netherlands and Sweden. Every one of the four produced joint publications in peer-reviewed journals and at the field's core conferences.",
+ "further": [
+  "Master's thesis of Roman Kupkovic, TU Berlin 2024",
+  "Master's thesis of Daniele Patti, Politecnico di Milano 2022",
+  "A supervised bachelor's thesis on user experience in virtual reality applications received a special prize in 2024"
+ ]
+}

@@ -119,6 +119,57 @@ def check_fonts(pages):
                             "is missing — run tools/fetch_fonts.py" % url)
 
 
+def check_headline_numbers(items, meta):
+    """Publication and citation figures quoted in prose must match the data.
+
+    The hero on the start page claimed 226 publications long after the list had
+    grown to 234, because that number is typed by hand in four places and the
+    generator never touches it. Nobody notices a headline figure going stale —
+    but a search committee comparing it against the publication list would.
+
+    Lines mentioning Scopus are skipped: those cite a different database with
+    legitimately different numbers.
+    """
+    bib = meta.get("bibliometrics", {})
+    expected = {
+        "publications": len(items),
+        "citations": bib.get("citations"),
+        "h-index": bib.get("h_index"),
+        "i10-index": bib.get("i10_index"),
+    }
+    # <b>234</b><span>publications  and  "234 publications" / "h-index 29"
+    patterns = (
+        (r"<b>([\d,]+)</b>\s*<span>(publications)", 1, 2),
+        (r"\b([\d,]+)\s+(publications|citations)\b", 1, 2),
+        (r"\b(h-index|i10-index)\s+([\d,]+)", 2, 1),
+    )
+
+    for page in sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("*/index.html")):
+        if page.parent.name in ("publication", "posts"):
+            continue
+        # Blank out <script> bodies but keep the line count, so reported line
+        # numbers stay usable. Otherwise the filter UI's "0 publications" empty
+        # state would be read as a stale claim.
+        text = re.sub(r"<script\b[^>]*>.*?</script>",
+                      lambda m: "\n" * m.group(0).count("\n"),
+                      page.read_text(encoding="utf-8"), flags=re.S)
+
+        for lineno, line in enumerate(text.splitlines(), 1):
+            if "Scopus" in line:
+                continue
+            for pattern, num_group, key_group in patterns:
+                for m in re.finditer(pattern, line):
+                    key = m.group(key_group)
+                    want = expected.get(key)
+                    if want is None:
+                        continue
+                    got = int(m.group(num_group).replace(",", ""))
+                    if got != want:
+                        problems.append("%s:%d: says %s %s, data/publications.json "
+                                        "says %s" % (page.relative_to(ROOT), lineno,
+                                                     m.group(num_group), key, want))
+
+
 def check_projects():
     """Funding record: the rendered page must add up to data/projects.json.
 
@@ -321,6 +372,11 @@ def main():
         problems.append("posts.json lists %d posts but content/posts has %d markdown files — "
                         "run tools/build_posts.py" % (len(posts), sources))
 
+    try:
+        meta = json.loads(pubs_path.read_text(encoding="utf-8")).get("meta", {})
+    except (ValueError, OSError):
+        meta = {}
+    check_headline_numbers(items, meta)
     check_placeholders(pages)
     check_fonts(pages)
     projects = check_projects()

@@ -182,6 +182,12 @@ Bibliometrie (Google Scholar, 2. August 2026): 2.987 Zitationen · h-Index 29 ·
 Die Zahlen stehen auf Startseite, Publikationsseite und im CV sowie unter `meta.bibliometrics`
 in `data/publications.json`. Halbjährlich aktualisieren.
 
+`tools/check_site.py` vergleicht jede im Fließtext genannte Zahl zu Publikationen, Zitationen,
+h-Index und i10-Index mit `data/publications.json`. Nötig wurde das, weil im Hero der Startseite
+lange „226 publications" stand, während die Liste längst 234 Einträge hatte — solche Zahlen
+stehen an vier Stellen von Hand und veralten unbemerkt. Zeilen mit „Scopus" bleiben ausgenommen,
+die zitieren bewusst eine andere Datenbank.
+
 Nummernstand: `B1–B2`, `BC1–BC5`, `C1–C105`, `J1–J39`, `OC1–OC58`, `OJ1–OJ6`, `P1–P2`, `S1–S17` —
 alle 234 Einträge nummeriert, alle Reihen lückenlos, keine Doppelvergabe.
 `tools/check_site.py` prüft das bei jedem Lauf.

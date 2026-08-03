@@ -30,7 +30,7 @@ SKIP_DIRS = {".git", ".github", ".idea", ".devcontainer", "node_modules", ".clau
 # the end of every run, because each one is a visible hole: a broken portrait,
 # a share preview that stays blank, and a "Download CV" button that 404s while
 # being the most prominent call to action on an application website.
-ALLOW_MISSING = {"/files/cv.pdf", "/images/profile.png", "/images/og-card.png"}
+ALLOW_MISSING = {"/files/cv.pdf", "/images/profile.png"}
 
 problems = []
 

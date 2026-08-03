@@ -52,6 +52,12 @@ try:
 except ImportError:
     sys.exit("this script needs reportlab:  pip install reportlab")
 
+# Without this, reportlab stamps every file with the current time and a random
+# document id, so two runs over unchanged data produce different bytes — and
+# the workflow would commit four changed binaries on every single push.
+from reportlab import rl_config  # noqa: E402
+rl_config.invariant = 1
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 # Per language: the page it is parsed from, the file it writes, its stamp.

@@ -9,6 +9,9 @@ a project silently missing, an amount that no longer matches. One JSON file
 feeds both the website and, via tools/export_projects_docx.py, the application
 table.
 
+Anything placed by hand between the markers is overwritten on the next run —
+the download button was, once. Additions belong in this template.
+
 The script replaces everything between these markers in projects/index.html:
 
     <!-- BEGIN funding-record -->
@@ -139,6 +142,11 @@ def build(data):
           <li><b>Every</b><span>subproject: proposal written personally, budget managed independently, funded staff led</span></li>
         </ul>
       </div>
+    </div>
+
+    <div class="cta" style="margin:0 0 22px">
+      <a class="btn btn-2 doc-dl" href="/files/funding.pdf">Download the funding record (PDF) ↓</a>
+      <a class="btn btn-2" href="/downloads/">All documents</a>
     </div>
 
     <div class="table-scroll rv">

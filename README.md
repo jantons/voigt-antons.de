@@ -52,13 +52,26 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
     └── export_projects_docx.py Förderverzeichnis als Word-Datei
 ```
 
-Beide Generatoren brauchen nur Python 3 und die Standardbibliothek. Nach inhaltlichen Änderungen:
+Die Seitengeneratoren brauchen nur Python 3 und die Standardbibliothek. Die vier PDF-Dokumente
+brauchen zusätzlich **reportlab** — die Action installiert es selbst, du musst dafür nichts tun.
+
+**Die Reihenfolge ist nicht beliebig:** `build_statement.py` schreibt die Konzeptseite und muss
+deshalb vor `build_i18n.py` laufen; `build_i18n.py` erzeugt `/de/` und muss vor
+`build_cv_pdf.py` laufen, das `de/cv/index.html` für die deutsche Fassung liest;
+`build_record_pdfs.py` schreibt die Liste auf `/downloads/` und läuft zuletzt, wenn jedes
+Dokument existiert, das es auflistet.
+
+Nach inhaltlichen Änderungen:
 
 ```bash
 python3 tools/build_publication_pages.py
 python3 tools/build_posts.py
 python3 tools/build_projects.py
+python3 tools/build_supervision.py
+python3 tools/build_statement.py
 python3 tools/build_i18n.py
+python3 tools/build_cv_pdf.py --all
+python3 tools/build_record_pdfs.py --all
 python3 tools/build_redirects.py
 python3 tools/build_sitemap.py
 ```

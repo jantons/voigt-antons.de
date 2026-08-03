@@ -58,10 +58,20 @@ jobs:
             python3 tools/fetch_fonts.py
           fi
 
-      # build_i18n.py runs after build_projects.py: /projects/ and the start
-      # page contain generated blocks, and the German copies are derived from
-      # the finished English pages. It exits non-zero on an untranslated string.
-      - name: Generate publication and post pages
+      # The page generators need nothing but the standard library. The four PDF
+      # documents need reportlab, and they are generated here rather than by
+      # hand so that editing a JSON file on github.com stays enough — which is
+      # the promise this whole workflow exists for.
+      - name: Install reportlab (PDF documents only)
+        run: pip install --quiet reportlab
+
+      # Order matters and is not alphabetical:
+      #   build_statement writes the statement page, so it must precede i18n
+      #   build_i18n derives /de/, so it must precede build_cv_pdf, which parses
+      #     de/cv/index.html for the German edition
+      #   build_record_pdfs writes the listing on /downloads/, so it runs after
+      #     every document it lists exists
+      - name: Generate pages and documents
         run: |
           python3 tools/build_publication_pages.py
           python3 tools/build_posts.py
@@ -69,6 +79,7 @@ jobs:
           python3 tools/build_supervision.py
           python3 tools/build_statement.py
           python3 tools/build_i18n.py
+          python3 tools/build_cv_pdf.py --all
           python3 tools/build_record_pdfs.py --all
           python3 tools/build_redirects.py
           python3 tools/build_sitemap.py

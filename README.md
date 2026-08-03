@@ -246,8 +246,19 @@ Wird ein Artikel zu `[J36]`, rutschen `[J36]`–`[J38]` eine Position weiter. St
 in der URL, bräuchte **jede** nachfolgende Publikation eine neue Adresse und eine Weiterleitung.
 
 Deshalb: `id` ist ein einmal vergebener, stabiler Schlüssel. `ref` trägt die Nummer aus dem
-Verzeichnis und wird auf Detailseite und in der Liste als `[C102]` angezeigt. Eine
-Renummerierung ändert damit nur `ref` — kein Link bricht, keine Weiterleitung nötig.
+Verzeichnis. Eine Renummerierung ändert damit nur `ref` — kein Link bricht, keine Weiterleitung
+nötig.
+
+**Wo die Nummer erscheint — und wo nicht.** In der Publikationsliste steht sie nicht. Dort
+stand sie in derselben 64 px breiten Spalte wie die Jahreszahl, mit `white-space:nowrap`;
+`2026[C58]` passte nicht hinein und lief in den Titel hinein — auf Laptop und Mobil sichtbar
+überlagert. Wichtiger als der Fehler ist aber, dass sie dort ohnehin nichts beiträgt: es ist
+*deine* Verzeichnisnummer, für Lesende der Seite eine Zahl ohne Bedeutung.
+
+Ihr einziger echter Zweck ist der Abgleich — jemand hält deine Bewerbungsunterlage mit `[C58]`
+in der Hand und sucht dieselbe Arbeit auf der Seite. Das leistet die Volltextsuche, die `ref`
+seit jeher mitdurchsucht; im Suchfeld steht `C58` jetzt als Beispiel. Auf der **Detailseite**
+bleibt die Nummer als Badge sichtbar, auf allen 234.
 
 Praxisbeweis: Beim Nachtragen von `[J36]` sind drei Nummern verrutscht — geändert wurden vier
 `ref`-Werte, sonst nichts. Keine URL, keine Weiterleitung, kein toter Link.

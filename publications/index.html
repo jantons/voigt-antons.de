@@ -92,7 +92,7 @@
       </div>
       <div class="f-group grow">
         <label for="fSearch">Search title, author or venue</label>
-        <input type="search" id="fSearch" placeholder="e.g. eye tracking, Kojić, ISMAR…" autocomplete="off">
+        <input type="search" id="fSearch" placeholder="e.g. eye tracking, Kojić, ISMAR, C58…" autocomplete="off">
       </div>
       <button class="btn btn-2 f-reset" id="fReset" type="button">Reset</button>
     </div>
@@ -172,9 +172,7 @@
       if (p.d) links.push('<a href="' + esc(p.d) + '" rel="noopener">DOI / paper ↗</a>');
       links.push('<a href="/publication/' + esc(p.id) + '#bibtex">BibTeX</a>');
       return '<article class="pub">' +
-        '<span class="pub-year">' + esc(p.y) +
-          (p.ref ? '<span class="pub-ref">[' + esc(p.ref) + ']</span>' : '') +
-        '</span>' +
+        '<span class="pub-year">' + esc(p.y) + '</span>' +
         '<span>' +
           '<span class="pub-title"><a href="/publication/' + esc(p.id) + '">' + esc(p.ti) + '</a></span>' +
           '<span class="pub-authors">' + esc(p.a) + '</span>' +

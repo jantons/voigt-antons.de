@@ -165,12 +165,27 @@ Durchsicht.
 
 **Fehlt noch, muss von dir ergänzt werden:**
 
-- `images/profile.png` — Portrait (empfohlen: zusätzlich `profile.webp`, ~800 px)
-- `images/og-card.png` — Social-Preview, 1200 × 630 px — **erzeugt**, siehe unten
 - `files/cv.pdf` — der CV-Download ist der primäre Call-to-Action im Hero
 
-Diese drei Pfade stehen in `tools/check_site.py` unter `ALLOW_MISSING` und lassen die Prüfung
-deshalb nicht fehlschlagen. Sobald die Dateien im Repo liegen, kannst du sie dort entfernen.
+Dieser Pfad steht in `tools/check_site.py` unter `ALLOW_MISSING` und lässt die Prüfung deshalb
+nicht fehlschlagen. Jeder Lauf nennt ihn aber und zählt die betroffenen Seiten; sobald die Datei
+im Repo liegt, meldet der Check „now present" — dann die Ausnahme entfernen.
+
+**Erledigt:** `images/og-card.png` wird von `tools/build_og_card.py` gezeichnet (siehe unten),
+das Porträt liegt in vier Fassungen vor.
+
+### Porträt
+
+`images/profile.jpg` und `.webp` (500 px) sowie `profile@2x` (1000 px), aus dem Original auf
+500 × 575 beschnitten — dasselbe Seitenverhältnis, das der Hero reserviert, damit beim Laden
+nichts springt. Die Startseite bindet sie über `<picture>` mit `srcset` ein: WebP zuerst, JPEG
+als Rückfallebene, Auflösung nach Displaydichte.
+
+Das spart deutlich: 12 KB statt der 908 KB, die dieselbe Bildhöhe als PNG gekostet hätte.
+Das Porträt ist das größte Element im ersten Bildschirm und bestimmt damit den LCP-Wert.
+
+Neues Foto einsetzen: Original nach `images/` legen und die vier Fassungen erzeugen — der
+Zuschnitt orientiert sich am Verhältnis 500 : 575, oben etwas mehr Luft lassen als unten.
 
 ---
 

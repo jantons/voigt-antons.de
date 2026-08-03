@@ -27,10 +27,9 @@ SKIP_DIRS = {".git", ".github", ".idea", ".devcontainer", "node_modules", ".clau
 
 # Assets the site links to that are not in the repository yet. These do not
 # fail the build — the site is useful without them — but they are reported at
-# the end of every run, because each one is a visible hole: a broken portrait,
-# a share preview that stays blank, and a "Download CV" button that 404s while
-# being the most prominent call to action on an application website.
-ALLOW_MISSING = {"/files/cv.pdf", "/images/profile.png"}
+# the end of every run. What is left is the CV download, which 404s while being
+# the most prominent call to action on an application website.
+ALLOW_MISSING = {"/files/cv.pdf"}
 
 problems = []
 

@@ -29,7 +29,7 @@
   "jobTitle":"Professor of Computer Science (Immersive Media)",
   "email":"mailto:jan-niklas@voigt-antons.de",
   "url":"https://voigt-antons.de/",
-  "image":"https://voigt-antons.de/images/profile.png",
+  "image":"https://voigt-antons.de/images/profile@2x.jpg",
   "affiliation":{"@type":"CollegeOrUniversity","name":"Hamm-Lippstadt University of Applied Sciences"},
   "sameAs":[
     "https://scholar.google.de/citations?user=IFIaOZsAAAAJ",
@@ -97,7 +97,10 @@
         </div>
       </div>
       <figure class="portrait rv in">
-        <img src="/images/profile.png" alt="Portrait of Prof. Dr.-Ing. Jan-Niklas Voigt-Antons" width="500" height="575">
+        <picture>
+          <source type="image/webp" srcset="/images/profile.webp 500w, /images/profile@2x.webp 1000w" sizes="(max-width:900px) 92vw, 500px">
+          <img src="/images/profile.jpg" srcset="/images/profile.jpg 500w, /images/profile@2x.jpg 1000w" sizes="(max-width:900px) 92vw, 500px" alt="Portrait of Prof. Dr.-Ing. Jan-Niklas Voigt-Antons" width="500" height="575" fetchpriority="high" decoding="async">
+        </picture>
         <figcaption>Hamm · Lippstadt · Berlin, Germany</figcaption>
       </figure>
     </div>

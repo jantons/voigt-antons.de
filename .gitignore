@@ -13,3 +13,7 @@ local/
 # Generated Word exports (regenerate: python3 tools/export_projects_docx.py)
 /Drittmittelprojekte_Voigt-Antons_*.docx
 /Funding-record_Voigt-Antons_*.docx
+
+# Python
+__pycache__/
+*.pyc

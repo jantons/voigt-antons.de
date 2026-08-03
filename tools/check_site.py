@@ -286,6 +286,31 @@ def check_headline_numbers(items, meta):
         for lineno, line in enumerate(text.splitlines(), 1):
             if "Scopus" in line:
                 continue
+
+            # A line about the last five years is checked against the recent
+            # figures, not the totals — otherwise stating both would be
+            # impossible, and the recent ones are the more telling half.
+            recent = bib.get("since_2021") or {}
+            if recent and ("since 2021" in line or "seit 2021" in line):
+                want = {"publications": None,
+                        "citations": recent.get("citations"),
+                        "Zitationen": recent.get("citations"),
+                        "h-index": recent.get("h_index"),
+                        "h-Index": recent.get("h_index"),
+                        "i10-index": recent.get("i10_index"),
+                        "i10-Index": recent.get("i10_index")}
+                for pattern, num_group, key_group in patterns:
+                    for m in re.finditer(pattern, line):
+                        target = want.get(m.group(key_group))
+                        if target is None:
+                            continue
+                        got = int(m.group(num_group).replace(",", "").replace(".", ""))
+                        if got != target:
+                            problems.append(
+                                "%s:%d: says %s %s since 2021, data/publications.json "
+                                "says %s" % (page.relative_to(ROOT), lineno,
+                                             m.group(num_group), m.group(key_group), target))
+                continue
             for pattern, num_group, key_group in patterns:
                 for m in re.finditer(pattern, line):
                     key = m.group(key_group)

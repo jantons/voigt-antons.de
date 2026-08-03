@@ -34,7 +34,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── teaching/index.html         Lehrportfolio und Betreuung
 ├── blog/index.html             Übersicht mit Tag-Filter
 ├── tags/index.html             Weiterleitung alter /tags/#slug-Links
-├── impressum/index.html        Impressum + Datenschutz (Gerüst, siehe unten)
+├── impressum/index.html        Impressum + Datenschutz (Anschrift fehlt, siehe unten)
 │
 ├── publication/<id>/index.html 234 generierte Detailseiten mit BibTeX
 ├── posts/JJJJ/MM/<slug>/       5 generierte Beitragsseiten
@@ -76,6 +76,29 @@ Font-Block leer ist oder wenn eine `@font-face`-Regel auf eine fehlende Datei ze
 Neue Schriftversion holen: `assets/fonts/` löschen und pushen — oder lokal
 `python3 tools/fetch_fonts.py`. Beide Familien stehen unter der SIL Open Font License 1.1,
 die das Weiterverbreiten erlaubt; der Lizenztext liegt in `assets/fonts/OFL.txt`.
+
+### Impressum und Datenschutz
+
+`impressum/index.html` ist vollständig ausformuliert — **bis auf die Anschrift**. Dort stehen
+`[Straße und Hausnummer]` und `[PLZ und Ort]`; `tools/check_site.py` bricht ab, solange das so
+ist. Eine Seite mit Platzhalter-Impressum online zu stellen wäre schlimmer als gar keine.
+
+§ 5 DDG verlangt eine *ladungsfähige* Anschrift. Ein Postfach genügt nicht. Wenn du deine
+Privatadresse nicht veröffentlichen willst, ist die HSHL-Dienstanschrift zulässig, solange du
+dort zuverlässig erreichbar bist.
+
+Die Datenschutzerklärung deckt ab: Verantwortlicher, GitHub Pages als Hoster samt
+Server-Logfiles und USA-Transfer (EU-US Data Privacy Framework, Angemessenheitsbeschluss vom
+10.07.2023), selbst gehostete Schriften, `localStorage` für das Farbschema (§ 25 Abs. 2 Nr. 2
+TDDDG, einwilligungsfrei), externe Links, Kontakt per E-Mail und die Betroffenenrechte.
+Ein Cookie-Banner ist nicht nötig — die Seite setzt keine Cookies und lädt nichts von Dritten.
+
+Nachziehen, wenn sich etwas ändert: sobald du Analytics, ein Kontaktformular, eingebettete
+Videos oder Karten ergänzt, ist die Erklärung nicht mehr vollständig.
+
+**Ich bin kein Anwalt** — der Text ist sorgfältig, aber ungeprüft. Für ein privates
+Wissenschaftsangebot ohne Tracking ist das Risiko gering; sicher bist du erst nach anwaltlicher
+Durchsicht.
 
 **Fehlt noch, muss von dir ergänzt werden:**
 

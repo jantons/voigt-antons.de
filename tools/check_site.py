@@ -68,6 +68,20 @@ def resolves(url):
     return target.exists() or (target / "index.html").exists()
 
 
+def check_placeholders(pages):
+    """Nothing marked as "fill this in" may reach the live site.
+
+    The legal notice needs a real, servable address (§ 5 DDG). A page that goes
+    online with a bracketed placeholder is worse than none at all, so it fails
+    the build rather than quietly publishing.
+    """
+    for page in pages:
+        text = page.read_text(encoding="utf-8")
+        for found in set(re.findall(r"\[(?:Anzupassen|Stra&szlig;e|Straße|PLZ|TODO)[^\]]*\]", text)):
+            problems.append("%s: unfilled placeholder %s"
+                            % (page.relative_to(ROOT), found))
+
+
 def check_fonts(pages):
     """No third-party requests, and every declared font file has to exist.
 
@@ -307,6 +321,7 @@ def main():
         problems.append("posts.json lists %d posts but content/posts has %d markdown files — "
                         "run tools/build_posts.py" % (len(posts), sources))
 
+    check_placeholders(pages)
     check_fonts(pages)
     projects = check_projects()
 

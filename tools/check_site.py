@@ -15,6 +15,7 @@ Usage:
 Exit code 1 if anything fails.
 """
 
+import hashlib
 import html.parser
 import json
 import os
@@ -25,11 +26,11 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKIP_DIRS = {".git", ".github", ".idea", ".devcontainer", "node_modules", ".claude"}
 
-# Assets the site links to that are not in the repository yet. These do not
-# fail the build — the site is useful without them — but they are reported at
-# the end of every run. What is left is the CV download, which 404s while being
-# the most prominent call to action on an application website.
-ALLOW_MISSING = {"/files/cv.pdf"}
+# Assets the site links to that are not in the repository yet. Empty at the
+# moment: the portrait, the preview card and the CV are all in place, so every
+# link is checked like any other. Anything parked here is reported at the end
+# of each run rather than silently tolerated.
+ALLOW_MISSING = set()
 
 problems = []
 
@@ -120,6 +121,43 @@ def check_fonts(pages):
         if not (ROOT / url.lstrip("/")).exists():
             problems.append("assets/style.css: @font-face points at %s, which "
                             "is missing — run tools/fetch_fonts.py" % url)
+
+
+def check_cv_pdf():
+    """files/cv.pdf must not be older than what it is derived from.
+
+    The PDF cannot contradict the data by construction — it reads the figures
+    out of the JSON. What it can be is stale: built before a publication was
+    added or a project ended, and then handed to a committee that also opens the
+    website. tools/build_cv_pdf.py leaves a fingerprint of its sources; this
+    compares it against the sources as they are now.
+    """
+    stamp_path = ROOT / "files" / "cv.build.json"
+    pdf = ROOT / "files" / "cv.pdf"
+    if not pdf.exists():
+        return
+    if not stamp_path.exists():
+        problems.append("files/cv.pdf has no build stamp — run tools/build_cv_pdf.py")
+        return
+    try:
+        stamp = json.loads(stamp_path.read_text(encoding="utf-8"))
+    except ValueError as err:
+        problems.append("files/cv.build.json: %s" % err)
+        return
+
+    digest = hashlib.sha256()
+    for name in stamp.get("sources", []):
+        source = ROOT / name
+        if not source.exists():
+            problems.append("files/cv.build.json lists %s, which is gone" % name)
+            return
+        digest.update(name.encode())
+        digest.update(source.read_bytes())
+
+    if digest.hexdigest()[:16] != stamp.get("fingerprint"):
+        problems.append("files/cv.pdf is out of date — %s changed since it was built "
+                        "on %s. Run tools/build_cv_pdf.py."
+                        % (", ".join(stamp.get("sources", [])), stamp.get("built", "?")))
 
 
 def check_i18n():
@@ -440,6 +478,7 @@ def main():
         meta = {}
     check_headline_numbers(items, meta)
     check_placeholders(pages)
+    check_cv_pdf()
     german = check_i18n()
     check_fonts(pages)
     projects = check_projects()

@@ -165,14 +165,34 @@ Durchsicht.
 
 **Fehlt noch, muss von dir ergänzt werden:**
 
-- `files/cv.pdf` — der CV-Download ist der primäre Call-to-Action im Hero
+Nichts mehr — Porträt, Social-Preview und CV liegen alle im Repo, `ALLOW_MISSING` in
+`tools/check_site.py` ist leer. Jeder verlinkte Pfad wird geprüft.
 
-Dieser Pfad steht in `tools/check_site.py` unter `ALLOW_MISSING` und lässt die Prüfung deshalb
-nicht fehlschlagen. Jeder Lauf nennt ihn aber und zählt die betroffenen Seiten; sobald die Datei
-im Repo liegt, meldet der Check „now present" — dann die Ausnahme entfernen.
+### Der CV als PDF
 
-**Erledigt:** `images/og-card.png` wird von `tools/build_og_card.py` gezeichnet (siehe unten),
-das Porträt liegt in vier Fassungen vor.
+`files/cv.pdf`, vier Seiten, erzeugt von `tools/build_cv_pdf.py`:
+
+```bash
+python3 tools/build_cv_pdf.py
+```
+
+**Der Fließtext wird aus `cv/index.html` geparst, die Zahlen kommen aus
+`data/publications.json` und `data/projects.json`.** Du pflegst also weiterhin nur die CV-Seite;
+das PDF zieht nach. Es gibt keine zweite Textfassung, die man zu ändern vergessen könnte — und
+das PDF kann keine anderen Zahlen nennen als die Website, was der Bewerbung vom Juli passiert
+ist (Rollenaufstellung 20 Vorhaben, Gesamtangabe 19, 304 T€ Differenz).
+
+Die Publikationsauswahl folgt einer festen Regel statt Geschmack: erst alles mit Auszeichnung,
+dann die neuesten Zeitschriftenaufsätze, gedeckelt bei 14. Die Regel steht im Dokument, die
+vollständige Liste bleibt auf der Website.
+
+Was so nicht ausgeschlossen ist: ein **veraltetes** PDF. Deshalb legt das Skript
+`files/cv.build.json` mit einem Fingerabdruck seiner Quellen ab, und `tools/check_site.py`
+vergleicht ihn bei jedem Lauf — ändert sich die Datenlage, ohne dass du neu baust, bricht der
+Build mit „files/cv.pdf is out of date" ab.
+
+Braucht **reportlab** (`pip install reportlab`) und gehört bewusst nicht zum CI-Build.
+Gesetzt in Liberation Sans; Inter scheitert am woff2-Format, das reportlab nicht liest.
 
 ### Porträt
 

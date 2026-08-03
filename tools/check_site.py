@@ -86,6 +86,33 @@ def prose_pages():
         yield page
 
 
+def check_conflict_markers():
+    """No merge conflict markers anywhere in the repository.
+
+    A merge left "=======" and ">>>>>>> d2db1925" sitting in the middle of the
+    downloads page, and every other check passed: the markup stayed balanced,
+    the links resolved, the figures matched. Only reading the page found it.
+
+    Cheap to test, and the failure mode is loud — a visitor sees git internals
+    on the page — so it is worth its own check rather than trusting review.
+    """
+    pattern = re.compile(r"^(?:<{7} |={7}$|>{7} )", re.M)
+    for path in sorted(html_files()):
+        if pattern.search(path.read_text(encoding="utf-8")):
+            problems.append("%s: contains merge conflict markers"
+                            % path.relative_to(ROOT))
+    for folder in ("data", "tools", "assets", "content"):
+        for path in sorted((ROOT / folder).rglob("*")):
+            if path.is_file() and path.suffix in (".py", ".json", ".css", ".js", ".md"):
+                try:
+                    text = path.read_text(encoding="utf-8")
+                except (UnicodeDecodeError, OSError):
+                    continue
+                if pattern.search(text):
+                    problems.append("%s: contains merge conflict markers"
+                                    % path.relative_to(ROOT))
+
+
 def check_placeholders(pages):
     """Nothing marked as "fill this in" may reach the live site.
 
@@ -582,6 +609,7 @@ def main():
         meta = {}
     check_headline_numbers(items, meta)
     check_peer_review(items)
+    check_conflict_markers()
     check_placeholders(pages)
     check_cv_pdf()
     german = check_i18n()

@@ -114,9 +114,21 @@ Publikationstitel bleiben unangetastet. Der Generator setzt außerdem `lang`, `c
 wechselseitige `hreflang`-Verweise samt `x-default`, den DE/EN-Umschalter in der Navigation und
 schreibt interne Links auf `/de/...` um, wo es eine deutsche Entsprechung gibt.
 
+**Seiten, die es nur auf Englisch gibt**, bekommen trotzdem einen Umschalter: `/publications/`,
+`/blog/` und `/404.html` führen zurück auf `/de/`. Wer aus der deutschen Navigation heraus auf
+„Publikationen" klickt, fiele sonst still aus dem deutschen Bereich heraus und fände keinen
+markierten Weg zurück. Das Label sagt die Wahrheit statt „diese Seite auf Deutsch" zu versprechen:
+*„Zur deutschen Startseite — diese Seite gibt es nur auf Englisch."* Die Navigationslinks der
+deutschen Seiten tragen dazu `hreflang="en"`, damit Screenreader den Sprachwechsel ansagen.
+
+`/impressum/` bekommt bewusst **keinen**: die Seite ist bereits deutsch, und der Rechtstext ist in
+dieser Sprache bindend. Eine englische Fassung müsste als unverbindlich gekennzeichnet werden —
+stattdessen steht oben ein kurzer englischer Hinweis.
+
 `tools/check_site.py` prüft: jede Kernseite hat ihr deutsches Gegenstück, `lang="de"`, korrekte
 Canonical, wechselseitige hreflang-Paare auf **beiden** Seiten, Umschalter vorhanden, keine leere
-Übersetzung — und die Kennzahlen auch in deutscher Schreibweise („2.987 Zitationen", „h-Index").
+Übersetzung, die drei englischen Seiten haben einen Rückweg nach `/de/` — und die Kennzahlen auch
+in deutscher Schreibweise („2.987 Zitationen", „h-Index").
 
 Neue Seite zweisprachig machen: Pfad in `PAGES` in `tools/build_i18n.py` und in `TRANSLATED` in
 `tools/build_sitemap.py` eintragen, Skript laufen lassen, die gemeldeten Sätze in

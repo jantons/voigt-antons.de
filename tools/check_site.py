@@ -215,6 +215,17 @@ def check_i18n():
                     problems.append("%s: missing hreflang=%s alternate" % (label, lang))
             if 'class="icon-btn lang-switch"' not in text:
                 problems.append("%s: no language switch in the navigation" % label)
+
+    # Pages that exist in English only still need a way back to the German
+    # section — a visitor who followed "Publikationen" from /de/ would otherwise
+    # be stranded in English with no marked route back.
+    for page in ("publications/index.html", "blog/index.html", "404.html"):
+        text = (ROOT / page).read_text(encoding="utf-8")
+        if 'class="icon-btn lang-switch"' not in text:
+            problems.append("%s: no way back to the German section — run "
+                            "tools/build_i18n.py" % page)
+        elif 'href="/de/"' not in text:
+            problems.append("%s: the language switch does not point at /de/" % page)
     return built
 
 

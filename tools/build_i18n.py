@@ -53,6 +53,18 @@ PAGES = {
 # pointing at the English page, which is the only one there is.
 TRANSLATED_PATHS = sorted(PAGES.values(), key=len, reverse=True)
 
+# English-only pages that a German visitor still reaches from the German
+# navigation. Without a way back they silently fall out of the German section
+# for the rest of the visit. They get a switch to /de/ — and an accessible label
+# that says so, rather than the usual "this page in German", which would be a
+# promise the site cannot keep.
+ENGLISH_ONLY = ("publications/index.html", "blog/index.html", "404.html")
+BACK_TO_GERMAN = "Zur deutschen Startseite — diese Seite gibt es nur auf Englisch"
+
+# impressum/index.html deliberately has none: it is already German, and the
+# legal text is binding in that language. An English version would have to be
+# marked non-binding, so the page carries a short English note instead.
+
 ALT_BEGIN = "<!-- BEGIN i18n-alt -->"
 ALT_END = "<!-- END i18n-alt -->"
 SWITCH_RE = re.compile(r'\s*<a class="icon-btn lang-switch"[^>]*>[^<]*</a>')
@@ -143,6 +155,14 @@ def build_german(english, path, table, missing):
     # German visitors get the German CV. Both are generated from their own CV
     # page by tools/build_cv_pdf.py, so the two cannot drift apart.
     html = html.replace('href="/files/cv.pdf"', 'href="/files/cv-de.pdf"')
+
+    # A German label pointing at an English page is a language change, and
+    # saying so is what hreflang is for. Screen readers announce it; without it
+    # the switch is silent.
+    for target in ("/publications/", "/blog/", "/impressum/"):
+        html = re.sub(r'<a href="%s"(?![^>]*hreflang)' % re.escape(target),
+                      '<a href="%s" hreflang="%s"'
+                      % (target, "de" if target == "/impressum/" else "en"), html)
     return html
 
 
@@ -168,7 +188,15 @@ def main():
         target.write_text(build_german(english, path, table, missing), encoding="utf-8")
         written += 1
 
+    for page in ENGLISH_ONLY:
+        path = ROOT / page
+        text = path.read_text(encoding="utf-8")
+        updated = set_switch(text, "/de/", "DE", BACK_TO_GERMAN, "de")
+        if updated != text:
+            path.write_text(updated, encoding="utf-8")
+
     print("wrote %d German pages under /de/" % written)
+    print("language switch present on %d English-only pages" % len(ENGLISH_ONLY))
     if missing:
         print("\n%d string(s) without a translation — add them to data/i18n.json:"
               % len(missing))

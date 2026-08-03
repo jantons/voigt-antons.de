@@ -72,6 +72,20 @@ def resolves(url):
     return target.exists() or (target / "index.html").exists()
 
 
+def prose_pages():
+    """Hand-written and translated pages — everything except the generated ones.
+
+    Was `glob("*/index.html")`, which quietly excluded every German subpage:
+    de/cv/, de/research/ and the rest sit one level deeper. The figures on those
+    pages went unchecked, which is the opposite of what a drift guard is for.
+    """
+    for page in sorted(html_files()):
+        parts = page.relative_to(ROOT).parts
+        if parts[0] in ("publication", "posts"):
+            continue
+        yield page
+
+
 def check_placeholders(pages):
     """Nothing marked as "fill this in" may reach the live site.
 
@@ -261,9 +275,7 @@ def check_headline_numbers(items, meta):
         (r"\b(h-index|i10-index|h-Index|i10-Index)\s+([\d,]+)", 2, 1),
     )
 
-    for page in sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("*/index.html")):
-        if page.parent.name in ("publication", "posts"):
-            continue
+    for page in prose_pages():
         # Blank out <script> bodies but keep the line count, so reported line
         # numbers stay usable. Otherwise the filter UI's "0 publications" empty
         # state would be read as a stale claim.
@@ -285,6 +297,39 @@ def check_headline_numbers(items, meta):
                         problems.append("%s:%d: says %s %s, data/publications.json "
                                         "says %s" % (page.relative_to(ROOT), lineno,
                                                      m.group(num_group), key, want))
+
+
+def check_peer_review(items):
+    """A figure labelled "peer-reviewed" must not include the ones that are not.
+
+    The site claimed "163 peer-reviewed conference papers" while the data has
+    always distinguished them: C1–C105 are the peer-reviewed papers, OC1–OC58
+    the further contributions. The application documents draw that line
+    correctly, the website did not — and overstating peer review is precisely
+    the claim an appointment committee checks.
+
+    The reference prefix carries the distinction, so it can be verified.
+    """
+    counts = {}
+    for item in items:
+        ref = item.get("ref", "")
+        prefix = "".join(c for c in ref if c.isalpha())
+        counts[prefix] = counts.get(prefix, 0) + 1
+
+    expected = {"journal": counts.get("J", 0), "conference": counts.get("C", 0)}
+    for page in prose_pages():
+        text = " ".join(page.read_text(encoding="utf-8").split())
+        for kind, want in expected.items():
+            for stated in re.findall(
+                    r"([\d,]+)\s+(?:peer-reviewed|begutachtete)\s+"
+                    r"(?:%s|%s)" % (kind, "Zeitschriften" if kind == "journal" else "Konferenz"),
+                    text):
+                got = int(stated.replace(",", ""))
+                if got != want:
+                    problems.append(
+                        "%s: claims %d peer-reviewed %s items, but the data has %d "
+                        "(the rest are 'other' entries — O%s)"
+                        % (page.relative_to(ROOT), got, kind, want, kind[0].upper()))
 
 
 def check_projects():
@@ -494,6 +539,7 @@ def main():
     except (ValueError, OSError):
         meta = {}
     check_headline_numbers(items, meta)
+    check_peer_review(items)
     check_placeholders(pages)
     check_cv_pdf()
     german = check_i18n()

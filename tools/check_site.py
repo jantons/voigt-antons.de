@@ -25,7 +25,11 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKIP_DIRS = {".git", ".github", ".idea", ".devcontainer", "node_modules", ".claude"}
 
-# Assets the site links to but that are binary//external to this checker.
+# Assets the site links to that are not in the repository yet. These do not
+# fail the build — the site is useful without them — but they are reported at
+# the end of every run, because each one is a visible hole: a broken portrait,
+# a share preview that stays blank, and a "Download CV" button that 404s while
+# being the most prominent call to action on an application website.
 ALLOW_MISSING = {"/files/cv.pdf", "/images/profile.png", "/images/og-card.png"}
 
 problems = []
@@ -443,6 +447,18 @@ def main():
 
     print("checked %d HTML pages, %d publications, %d posts, %d funded projects, "
           "%d German pages" % (len(pages), len(items), len(posts), projects, german))
+
+    pending = sorted(u for u in ALLOW_MISSING if not resolves(u))
+    resolved = sorted(u for u in ALLOW_MISSING if resolves(u))
+    if pending:
+        print("\nstill missing from the repository (does not fail the build):")
+        for url in pending:
+            print("  - %s — %d page(s) link to it"
+                  % (url, sum(1 for p in pages
+                              if url in p.read_text(encoding="utf-8"))))
+    if resolved:
+        print("\nnow present — remove from ALLOW_MISSING in tools/check_site.py "
+              "so a future typo is caught: %s" % ", ".join(resolved))
 
     if problems:
         print("\n%d problem(s):" % len(problems))

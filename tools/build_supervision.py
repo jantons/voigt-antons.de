@@ -138,7 +138,7 @@ def build_network(net):
             <li>Research stay: {stay_inst}, {stay_country} ({stay_year}) — {stay_subject}</li>
           </ul>
           <h3 style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-2);margin:20px 0 12px">Named partner institutions</h3>
-          <ul class="cv-list">
+          <ul class="cv-list stack">
 {partners}
           </ul>
 <!-- END network -->""".format(

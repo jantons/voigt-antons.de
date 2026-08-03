@@ -113,6 +113,33 @@ def check_conflict_markers():
                                     % path.relative_to(ROOT))
 
 
+def check_label_widths(pages):
+    """A label in .cv-list must fit its 104px column.
+
+    That column holds a year or "since 2021" and sets white-space:nowrap, so
+    anything longer runs straight across the text beside it. Institution names
+    did — "University of Technology Sydney" is three times the width — and the
+    partner list was unreadable until someone looked at it. The same shape of
+    fault put "2026[C58]" through the publication titles.
+
+    Lists whose label is a name use .cv-list.stack, which puts it on its own
+    line; those are exempt. Fourteen characters is what 104px holds at 12.5px
+    in the mono face, with a little room.
+    """
+    limit = 14
+    for page in pages:
+        text = page.read_text(encoding="utf-8")
+        for block in re.finditer(r'<ul class="cv-list(?! stack)[^"]*">(.*?)</ul>',
+                                 text, re.S):
+            for label in re.findall(r"<li><b>([^<]+)</b>", block.group(1)):
+                plain = re.sub(r"&#?\w+;", "x", label)
+                if len(plain) > limit:
+                    problems.append(
+                        "%s: label %r is %d characters and will overrun the "
+                        "104px column — use class=\"cv-list stack\""
+                        % (page.relative_to(ROOT), label[:40], len(plain)))
+
+
 def check_placeholders(pages):
     """Nothing marked as "fill this in" may reach the live site.
 
@@ -610,6 +637,7 @@ def main():
     check_headline_numbers(items, meta)
     check_peer_review(items)
     check_conflict_markers()
+    check_label_widths(pages)
     check_placeholders(pages)
     check_cv_pdf()
     german = check_i18n()

@@ -80,17 +80,15 @@ T = {
         head="Research and teaching statement",
         lines="Three research lines", done="What is done", next="What comes next",
         footer="Jan-Niklas Voigt-Antons · research and teaching statement · %s · voigt-antons.de",
-        note="Written to be read anywhere: this statement carries no reference to a particular "
-             "post or institution. The full version at voigt-antons.de/research/statement/ is "
-             "kept current.",
+        note="The current version of this statement is at "
+             "voigt-antons.de/research/statement/.",
         out="files/statement.pdf"),
     "de": dict(
         title="Forschungs- und Lehrkonzept — Jan-Niklas Voigt-Antons",
         head="Forschungs- und Lehrkonzept",
         lines="Drei Forschungslinien", done="Vorarbeiten", next="Geplante Vorhaben",
         footer="Jan-Niklas Voigt-Antons · Forschungs- und Lehrkonzept · %s · voigt-antons.de",
-        note="Bewusst ortsunabhängig geschrieben: dieses Konzept nennt keine bestimmte Stelle "
-             "und keine bestimmte Hochschule. Die jeweils aktuelle Fassung steht unter "
+        note="Die jeweils aktuelle Fassung dieses Konzepts steht unter "
              "voigt-antons.de/research/statement/.",
         out="files/statement-de.pdf"),
 }

@@ -90,9 +90,8 @@ T = {
     "en": dict(
         pub_title="List of publications — Jan-Niklas Voigt-Antons",
         pub_head="List of publications",
-        pub_lead="All %d publications, grouped by category and ordered by year. Generated from "
-                 "the same file that feeds voigt-antons.de/publications/, where the list can be "
-                 "filtered by year, type and topic.",
+        pub_lead="All %d publications, grouped by category and ordered by year. The list can be "
+                 "filtered by year, type and topic at voigt-antons.de/publications/.",
         bib="Google Scholar, %s: %s citations · h-index %d · i10-index %d. Of these %s "
             "citations · h-index %d since 2021.",
         fund_title="Record of third-party funding — Jan-Niklas Voigt-Antons",
@@ -104,15 +103,13 @@ T = {
         columns=("Period", "Project", "Funder", "Partners", "Role", "Volume"),
         others="Further project involvement without own funding volume",
         footer="Jan-Niklas Voigt-Antons · %s · generated %s from voigt-antons.de",
-        colophon="Generated from data/publications.json and data/projects.json — the files that "
-                 "also feed the website, so the two cannot disagree.",
     ),
     "de": dict(
         pub_title="Publikationsverzeichnis — Jan-Niklas Voigt-Antons",
         pub_head="Publikationsverzeichnis",
-        pub_lead="Alle %d Publikationen, nach Kategorien gruppiert und nach Jahr sortiert. "
-                 "Erzeugt aus derselben Datei, die voigt-antons.de/publications/ speist — dort "
-                 "lässt sich die Liste nach Jahr, Typ und Thema filtern.",
+        pub_lead="Alle %d Publikationen, nach Kategorien gruppiert und nach Jahr sortiert. Unter "
+                 "voigt-antons.de/publications/ lässt sich die Liste nach Jahr, Typ und Thema "
+                 "filtern.",
         bib="Google Scholar, %s: %s Zitationen · h-Index %d · i10-Index %d. Davon %s "
             "Zitationen · h-Index %d seit 2021.",
         fund_title="Verzeichnis der Drittmittelprojekte — Jan-Niklas Voigt-Antons",
@@ -125,8 +122,6 @@ T = {
         columns=("Laufzeit", "Vorhaben", "Geldgeber", "Partner", "Rolle", "Volumen"),
         others="Weitere Projektbeteiligungen ohne eigenes Fördervolumen",
         footer="Jan-Niklas Voigt-Antons · %s · erzeugt am %s aus voigt-antons.de",
-        colophon="Erzeugt aus data/publications.json und data/projects.json — denselben Dateien, "
-                 "die auch die Website speisen; beide können sich daher nicht widersprechen.",
     ),
 }
 
@@ -238,7 +233,6 @@ def build_publications(lang):
                 S["entry"]))
             written += 1
 
-    story.append(Paragraph(tr["colophon"], S["note"]))
     frame_doc(out, tr["pub_title"], lang, tr["pub_head"]).build(story)
     return out, written
 
@@ -333,7 +327,6 @@ def build_funding(lang):
                 % (html.escape(o["short"]), html.escape(o["name"]), o["from"], o["to"],
                    html.escape(o["funder"]), html.escape(o["role_label"])), S["entry"]))
 
-    story.append(Paragraph(tr["colophon"], S["note"]))
     frame_doc(out, tr["fund_title"], lang, tr["fund_head"]).build(story)
     return out, len(projects)
 

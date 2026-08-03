@@ -92,9 +92,6 @@ T = {
         columns=("Period", "Project", "Funder", "Role", "Volume"),
         projects="%d projects",
         footer="Jan-Niklas Voigt-Antons · curriculum vitae · generated %s from voigt-antons.de",
-        colophon="Figures in this document are read from the same files that feed the "
-                 "website (data/publications.json, data/projects.json); the prose is parsed "
-                 "from voigt-antons.de/cv/. Bibliometrics: Google Scholar, %s.",
     ),
     "de": dict(
         title="Lebenslauf — Jan-Niklas Voigt-Antons",
@@ -117,9 +114,6 @@ T = {
         columns=("Laufzeit", "Vorhaben", "Geldgeber", "Rolle", "Volumen"),
         projects="%d Vorhaben",
         footer="Jan-Niklas Voigt-Antons · Lebenslauf · erzeugt am %s aus voigt-antons.de",
-        colophon="Die Zahlen in diesem Dokument stammen aus denselben Dateien wie die "
-                 "Website (data/publications.json, data/projects.json); der Fließtext wird "
-                 "aus voigt-antons.de/de/cv/ geparst. Bibliometrie: Google Scholar, %s.",
     ),
 }
 
@@ -442,7 +436,6 @@ def build(lang):
                html.escape(item["ti"]), html.escape(item.get("v", "")), note),
             S["pub"]))
 
-    story.append(Paragraph(tr["colophon"] % fig["as_of"], S["note"]))
 
     doc.build(story)
     return fig, out

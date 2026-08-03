@@ -1,0 +1,13 @@
+{
+ "note": "Fingerprint of the files files/cv-de.pdf was generated from. tools/check_site.py compares it against the current sources and reports a stale CV. Regenerate with tools/build_cv_pdf.py --all.",
+ "lang": "de",
+ "sources": [
+  "de/cv/index.html",
+  "data/publications.json",
+  "data/projects.json",
+  "data/i18n.json",
+  "tools/build_cv_pdf.py"
+ ],
+ "fingerprint": "ccf56b23d8a9ed4f",
+ "built": "2026-08-03"
+}

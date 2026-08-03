@@ -124,7 +124,7 @@ def check_fonts(pages):
 
 
 def check_cv_pdf():
-    """files/cv.pdf must not be older than what it is derived from.
+    """Neither CV PDF may be older than what it is derived from.
 
     The PDF cannot contradict the data by construction — it reads the figures
     out of the JSON. What it can be is stale: built before a publication was
@@ -132,32 +132,38 @@ def check_cv_pdf():
     website. tools/build_cv_pdf.py leaves a fingerprint of its sources; this
     compares it against the sources as they are now.
     """
-    stamp_path = ROOT / "files" / "cv.build.json"
-    pdf = ROOT / "files" / "cv.pdf"
-    if not pdf.exists():
-        return
-    if not stamp_path.exists():
-        problems.append("files/cv.pdf has no build stamp — run tools/build_cv_pdf.py")
-        return
-    try:
-        stamp = json.loads(stamp_path.read_text(encoding="utf-8"))
-    except ValueError as err:
-        problems.append("files/cv.build.json: %s" % err)
-        return
+    for pdf_name, stamp_name in (("files/cv.pdf", "files/cv.build.json"),
+                                 ("files/cv-de.pdf", "files/cv-de.build.json")):
+        pdf, stamp_path = ROOT / pdf_name, ROOT / stamp_name
+        if not pdf.exists():
+            continue
+        if not stamp_path.exists():
+            problems.append("%s has no build stamp — run tools/build_cv_pdf.py --all"
+                            % pdf_name)
+            continue
+        try:
+            stamp = json.loads(stamp_path.read_text(encoding="utf-8"))
+        except ValueError as err:
+            problems.append("%s: %s" % (stamp_name, err))
+            continue
 
-    digest = hashlib.sha256()
-    for name in stamp.get("sources", []):
-        source = ROOT / name
-        if not source.exists():
-            problems.append("files/cv.build.json lists %s, which is gone" % name)
-            return
-        digest.update(name.encode())
-        digest.update(source.read_bytes())
+        digest, gone = hashlib.sha256(), False
+        for name in stamp.get("sources", []):
+            source = ROOT / name
+            if not source.exists():
+                problems.append("%s lists %s, which is gone" % (stamp_name, name))
+                gone = True
+                break
+            digest.update(name.encode())
+            digest.update(source.read_bytes())
+        if gone:
+            continue
 
-    if digest.hexdigest()[:16] != stamp.get("fingerprint"):
-        problems.append("files/cv.pdf is out of date — %s changed since it was built "
-                        "on %s. Run tools/build_cv_pdf.py."
-                        % (", ".join(stamp.get("sources", [])), stamp.get("built", "?")))
+        if digest.hexdigest()[:16] != stamp.get("fingerprint"):
+            problems.append("%s is out of date — %s changed since it was built on %s. "
+                            "Run tools/build_cv_pdf.py --all."
+                            % (pdf_name, ", ".join(stamp.get("sources", [])),
+                               stamp.get("built", "?")))
 
 
 def check_i18n():

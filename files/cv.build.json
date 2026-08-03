@@ -1,12 +1,13 @@
 {
- "note": "Fingerprint of the files files/cv.pdf was generated from. tools/check_site.py compares it against the current sources and reports a stale CV. Regenerate with tools/build_cv_pdf.py.",
+ "note": "Fingerprint of the files files/cv.pdf was generated from. tools/check_site.py compares it against the current sources and reports a stale CV. Regenerate with tools/build_cv_pdf.py --all.",
+ "lang": "en",
  "sources": [
   "cv/index.html",
   "data/publications.json",
   "data/projects.json",
+  "data/i18n.json",
   "tools/build_cv_pdf.py"
  ],
- "fingerprint": "bde26aa3cf005383",
- "built": "2026-08-03",
- "pages_note": "figures are read from the data files, never typed"
+ "fingerprint": "d4e9913687581bdd",
+ "built": "2026-08-03"
 }

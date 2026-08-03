@@ -21,10 +21,15 @@ list of 234 stays on the website.
 Requires reportlab (pip install reportlab). Not part of the CI build — the CV
 is a deliverable, regenerated when its sources move.
 
+The German edition is not a second document: it is parsed out of de/cv/index.html,
+which tools/build_i18n.py already generates. One CV page to maintain, two PDFs.
+
 Usage:
-    python3 tools/build_cv_pdf.py
+    python3 tools/build_cv_pdf.py              # files/cv.pdf
+    python3 tools/build_cv_pdf.py --lang de    # files/cv-de.pdf
 """
 
+import argparse
 import datetime
 import hashlib
 import html
@@ -48,14 +53,71 @@ except ImportError:
     sys.exit("this script needs reportlab:  pip install reportlab")
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-OUT = ROOT / "files" / "cv.pdf"
-STAMP = ROOT / "files" / "cv.build.json"
 
-# Everything the PDF is derived from. check_site.py hashes these and compares
-# against the stamp, so a CV built before the data moved is caught — the one
-# failure this design cannot rule out by construction.
-SOURCES = ("cv/index.html", "data/publications.json", "data/projects.json",
-           "tools/build_cv_pdf.py")
+# Per language: the page it is parsed from, the file it writes, its stamp.
+EDITIONS = {
+    "en": dict(page="cv/index.html", out="files/cv.pdf",
+               stamp="files/cv.build.json"),
+    "de": dict(page="de/cv/index.html", out="files/cv-de.pdf",
+               stamp="files/cv-de.build.json"),
+}
+
+# Chrome that belongs to the document rather than to the page. Everything else
+# — headings, entries, section order — comes from the parsed page, so the German
+# edition inherits every translation without a second copy of the content.
+T = {
+    "en": dict(
+        title="Curriculum Vitae — Jan-Niklas Voigt-Antons",
+        role="Professor of Computer Science (Immersive Media) &nbsp;·&nbsp; "
+             "Hamm-Lippstadt University of Applied Sciences<br/>"
+             "Director, Immersive Reality Lab &nbsp;·&nbsp; "
+             "Guest Researcher, Technische Universität Berlin",
+        place="Hamm · Lippstadt · Berlin, Germany",
+        lead="I study how virtual and augmented reality systems can be built so they "
+             "actually work for people. My work pairs EEG, eye tracking and physiological "
+             "sensing with XR deployments in hospitals, public space and safety-critical "
+             "training — measuring what questionnaires cannot capture.",
+        figures=("third-party funding", "publications", "citations, h-index %d",
+                 "co-developer"),
+        selected="SELECTED PUBLICATIONS",
+        rule="Chosen by a fixed rule rather than by preference: every publication carrying "
+             "an award, then the most recent journal articles. The complete list of %d — "
+             "with filters by year, type and topic — is at voigt-antons.de/publications/.",
+        columns=("Period", "Project", "Funder", "Role", "Volume"),
+        projects="%d projects",
+        footer="Jan-Niklas Voigt-Antons · curriculum vitae · generated %s from voigt-antons.de",
+        colophon="Figures in this document are read from the same files that feed the "
+                 "website (data/publications.json, data/projects.json); the prose is parsed "
+                 "from voigt-antons.de/cv/. Bibliometrics: Google Scholar, %s.",
+    ),
+    "de": dict(
+        title="Lebenslauf — Jan-Niklas Voigt-Antons",
+        role="Professor für Informatik (Immersive Medien) &nbsp;·&nbsp; "
+             "Hochschule Hamm-Lippstadt<br/>"
+             "Leiter des Immersive Reality Lab &nbsp;·&nbsp; "
+             "Gastwissenschaftler, Technische Universität Berlin",
+        place="Hamm · Lippstadt · Berlin",
+        lead="Ich erforsche, wie sich Virtual- und Augmented-Reality-Systeme so bauen "
+             "lassen, dass sie für Menschen wirklich funktionieren. Dafür verbinde ich EEG, "
+             "Eye-Tracking und physiologische Messung mit XR-Einsätzen in Kliniken, im "
+             "öffentlichen Raum und in sicherheitskritischer Ausbildung — und erfasse, was "
+             "Fragebögen nicht abbilden.",
+        figures=("Drittmittel", "Publikationen", "Zitationen, h-Index %d", "Mitautor"),
+        selected="AUSGEWÄHLTE PUBLIKATIONEN",
+        rule="Nach einer festen Regel ausgewählt, nicht nach Geschmack: zuerst alle "
+             "ausgezeichneten Arbeiten, dann die neuesten Zeitschriftenaufsätze. Die "
+             "vollständige Liste aller %d — mit Filtern nach Jahr, Typ und Thema — steht "
+             "auf voigt-antons.de/publications/.",
+        columns=("Laufzeit", "Vorhaben", "Geldgeber", "Rolle", "Volumen"),
+        projects="%d Vorhaben",
+        footer="Jan-Niklas Voigt-Antons · Lebenslauf · erzeugt am %s aus voigt-antons.de",
+        colophon="Die Zahlen in diesem Dokument stammen aus denselben Dateien wie die "
+                 "Website (data/publications.json, data/projects.json); der Fließtext wird "
+                 "aus voigt-antons.de/de/cv/ geparst. Bibliometrie: Google Scholar, %s.",
+    ),
+}
+
+ROLE_KEYS = ("Sole applicant", "Consortium coordinator", "Subproject lead", "Co-applicant")
 
 ACCENT = colors.HexColor("#5645f5")
 FG = colors.HexColor("#0b0d13")
@@ -114,16 +176,17 @@ def strip(fragment):
     return " ".join(t.split())
 
 
-def cv_sections():
-    """Parse cv/index.html into [(heading, [(label, text), ...]), ...]."""
-    page = (ROOT / "cv" / "index.html").read_text(encoding="utf-8")
+def cv_sections(page_path):
+    """Parse the CV page into [(heading, [(label, text), ...]), ...]."""
+    page = (ROOT / page_path).read_text(encoding="utf-8")
     page = re.sub(r"<nav>.*?</nav>|<footer>.*?</footer>|<script.*?</script>",
                   "", page, flags=re.S)
 
     sections = []
     for m in re.finditer(r"<h2>(.*?)</h2>(.*?)(?=<h2>|\Z)", page, re.S):
         heading = html.unescape(strip(m.group(1)))
-        if heading in ("External profiles", "CV sections"):
+        if heading in ("External profiles", "Externe Profile",
+                       "CV sections", "Abschnitte"):
             continue
         entries = []
         for chunk in re.finditer(r"<h3[^>]*>(.*?)</h3>|<li[^>]*>(.*?)</li>",
@@ -142,6 +205,16 @@ def cv_sections():
     return sections
 
 
+def num(value, lang, decimals=0):
+    """German writes 4,609 for the decimal and 2.987 for the thousand."""
+    text = ("%%.%df" % decimals) % value if decimals else format(int(value), ",")
+    if decimals:
+        text = format(round(value, decimals), ",.%df" % decimals)
+    if lang == "de":
+        text = text.replace(",", "\x00").replace(".", ",").replace("\x00", ".")
+    return text
+
+
 def data_figures():
     pubs = json.loads((ROOT / "data" / "publications.json").read_text(encoding="utf-8"))
     proj = json.loads((ROOT / "data" / "projects.json").read_text(encoding="utf-8"))
@@ -150,11 +223,19 @@ def data_figures():
     led = sum(p["volume"] for p in proj["projects"]
               if p["role"] in proj["meta"]["self_led_roles"])
     return pubs, proj, dict(
-        funding="%.3f" % (total / 1000.0), led="%.3f" % (led / 1000.0),
+        funding=total / 1000.0, led=led / 1000.0,
         projects=len(proj["projects"]), publications=len(pubs["items"]),
-        citations=format(bib["citations"], ","), h=bib["h_index"],
+        citations=bib["citations"], h=bib["h_index"],
         i10=bib["i10_index"], as_of=bib["as_of"],
     )
+
+
+def role_labels(lang):
+    """Reuse data/i18n.json rather than translating the same four words twice."""
+    if lang == "en":
+        return {k: k for k in ROLE_KEYS}
+    table = json.loads((ROOT / "data" / "i18n.json").read_text(encoding="utf-8"))["de"]
+    return {k: table.get(k, k) for k in ROLE_KEYS}
 
 
 def selected(pubs):
@@ -235,11 +316,11 @@ def entry_table(entries, width):
     return t
 
 
-def funding_table(proj, width):
-    rows = [[Paragraph("<b>Period</b>", S["label"]), Paragraph("<b>Project</b>", S["label"]),
-             Paragraph("<b>Funder</b>", S["label"]), Paragraph("<b>Role</b>", S["label"]),
-             Paragraph("<b>Volume</b>", S["label"])]]
+def funding_table(proj, width, lang):
+    tr = T[lang]
+    rows = [[Paragraph("<b>%s</b>" % c, S["label"]) for c in tr["columns"]]]
     roles = proj["meta"]["roles"]
+    labels = role_labels(lang)
     for p in sorted(proj["projects"], key=lambda p: (-p["from"], -p["to"], p["name"])):
         period = (str(p["from"]) if p["from"] == p["to"]
                   else "%d–%d" % (p["from"], p["to"]))
@@ -247,14 +328,16 @@ def funding_table(proj, width):
             Paragraph(period, S["label"]),
             Paragraph(html.escape(p["short"]), S["cell"]),
             Paragraph(html.escape(p["funder"].split("(")[0].strip()), S["cell"]),
-            Paragraph(html.escape(roles[p["role"]].split(" — ")[0]), S["cell"]),
-            Paragraph("€%sk" % format(p["volume"], ","), S["label"]),
+            Paragraph(html.escape(labels[roles[p["role"]].split(" — ")[0]]), S["cell"]),
+            Paragraph("%s T€" % num(p["volume"], lang) if lang == "de"
+                      else "€%sk" % format(p["volume"], ","), S["label"]),
         ])
     total = sum(p["volume"] for p in proj["projects"])
     rows.append([Paragraph("", S["label"]),
-                 Paragraph("<b>%d projects</b>" % len(proj["projects"]), S["cell"]),
+                 Paragraph("<b>%s</b>" % (tr["projects"] % len(proj["projects"])), S["cell"]),
                  Paragraph("", S["cell"]), Paragraph("", S["cell"]),
-                 Paragraph("<b>€%sk</b>" % format(total, ","), S["label"])])
+                 Paragraph("<b>%s</b>" % ("%s T€" % num(total, lang) if lang == "de"
+                                          else "€%sk" % format(total, ",")), S["label"])])
 
     t = Table(rows, colWidths=[17 * mm, 47 * mm, 43 * mm, 33 * mm,
                                width - 140 * mm], repeatRows=1)
@@ -271,52 +354,54 @@ def funding_table(proj, width):
     return t
 
 
-def header_footer(canvas, doc, fig):
+def header_footer(canvas, doc, lang):
     canvas.saveState()
     canvas.setFillColor(ACCENT)
     canvas.rect(0, 0, 3.2 * mm, PAGE_H, stroke=0, fill=1)
     canvas.setFont(F["mono"], 7)
     canvas.setFillColor(FG3)
-    canvas.drawString(MARGIN, 11 * mm,
-                      "Jan-Niklas Voigt-Antons · curriculum vitae · "
-                      "generated %s from voigt-antons.de" % datetime.date.today())
+    stamp = (datetime.date.today().strftime("%d.%m.%Y") if lang == "de"
+             else datetime.date.today().isoformat())
+    canvas.drawString(MARGIN, 11 * mm, T[lang]["footer"] % stamp)
     canvas.drawRightString(PAGE_W - MARGIN, 11 * mm, "%d" % doc.page)
     canvas.restoreState()
 
 
-def build():
+def build(lang):
+    tr = T[lang]
+    edition = EDITIONS[lang]
+    out = ROOT / edition["out"]
     pubs, proj, fig = data_figures()
     width = PAGE_W - 2 * MARGIN
 
-    doc = BaseDocTemplate(str(OUT), pagesize=A4,
+    out.parent.mkdir(parents=True, exist_ok=True)
+    doc = BaseDocTemplate(str(out), pagesize=A4,
                           leftMargin=MARGIN, rightMargin=MARGIN,
                           topMargin=15 * mm, bottomMargin=18 * mm,
-                          title="Curriculum Vitae — Jan-Niklas Voigt-Antons",
-                          author="Jan-Niklas Voigt-Antons",
-                          subject="Academic CV")
+                          title=tr["title"], author="Jan-Niklas Voigt-Antons",
+                          subject=tr["title"], lang=lang)
     frame = Frame(MARGIN, 18 * mm, width, PAGE_H - 33 * mm, id="body",
                   leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
     doc.addPageTemplates([PageTemplate(id="page", frames=[frame],
-                                       onPage=lambda c, d: header_footer(c, d, fig))])
+                                       onPage=lambda c, d: header_footer(c, d, lang))])
 
     story = [
         Paragraph("Prof. Dr.-Ing. Jan-Niklas Voigt-Antons", S["h1"]),
-        Paragraph("Professor of Computer Science (Immersive Media) &nbsp;·&nbsp; "
-                  "Hamm-Lippstadt University of Applied Sciences<br/>"
-                  "Director, Immersive Reality Lab &nbsp;·&nbsp; "
-                  "Guest Researcher, Technische Universität Berlin", S["role"]),
+        Paragraph(tr["role"], S["role"]),
         Spacer(1, 5),
         Paragraph("jan-niklas@voigt-antons.de &nbsp;·&nbsp; voigt-antons.de "
-                  "&nbsp;·&nbsp; ORCID 0000-0002-2786-9262 &nbsp;·&nbsp; "
-                  "Hamm · Lippstadt · Berlin, Germany", S["contact"]),
+                  "&nbsp;·&nbsp; ORCID 0000-0002-2786-9262 &nbsp;·&nbsp; %s"
+                  % tr["place"], S["contact"]),
         Spacer(1, 9),
     ]
 
+    money = ("%s Mio. €" % num(fig["funding"], lang, 3) if lang == "de"
+             else "€%s M" % num(fig["funding"], lang, 3))
     figures = [
-        ("€%s M" % fig["funding"], "third-party funding"),
-        ("%d" % fig["publications"], "publications"),
-        ("%s" % fig["citations"], "citations, h-index %d" % fig["h"]),
-        ("ITU-T P.812", "co-developer"),
+        (money, tr["figures"][0]),
+        (num(fig["publications"], lang), tr["figures"][1]),
+        (num(fig["citations"], lang), tr["figures"][2] % fig["h"]),
+        ("ITU-T P.812", tr["figures"][3]),
     ]
     cells = [[Paragraph("<b>%s</b>" % v, ParagraphStyle(
         "k", fontName=F["mono-bold"], fontSize=11, leading=14, textColor=FG))
@@ -332,24 +417,16 @@ def build():
     ]))
     story += [strip_t, Spacer(1, 10)]
 
-    story.append(Paragraph(
-        "I study how virtual and augmented reality systems can be built so they actually "
-        "work for people. My work pairs EEG, eye tracking and physiological sensing with XR "
-        "deployments in hospitals, public space and safety-critical training — measuring what "
-        "questionnaires cannot capture.", S["lead"]))
+    story.append(Paragraph(tr["lead"], S["lead"]))
 
-    for heading, entries in cv_sections():
+    for heading, entries in cv_sections(edition["page"]):
         story.append(Paragraph(heading.upper(), S["h2"]))
         story.append(entry_table(entries, width))
-        if heading == "Third-party funding":
-            story += [Spacer(1, 5), funding_table(proj, width)]
+        if heading in ("Third-party funding", "Drittmittel"):
+            story += [Spacer(1, 5), funding_table(proj, width, lang)]
 
-    story.append(Paragraph("SELECTED PUBLICATIONS", S["h2"]))
-    story.append(Paragraph(
-        "Chosen by a fixed rule rather than by preference: every publication carrying an "
-        "award, then the most recent journal articles. The complete list of %d — with "
-        "filters by year, type and topic — is at voigt-antons.de/publications/."
-        % fig["publications"], S["body"]))
+    story.append(Paragraph(tr["selected"], S["h2"]))
+    story.append(Paragraph(tr["rule"] % fig["publications"], S["body"]))
     story.append(Spacer(1, 5))
     for item in selected(pubs):
         note = (" <i>— %s</i>" % html.escape(item["n"])) if item.get("n") else ""
@@ -359,42 +436,53 @@ def build():
                html.escape(item["ti"]), html.escape(item.get("v", "")), note),
             S["pub"]))
 
-    story.append(Paragraph(
-        "Figures in this document are read from the same files that feed the website "
-        "(data/publications.json, data/projects.json); the prose is parsed from "
-        "voigt-antons.de/cv/. Bibliometrics: Google Scholar, %s." % fig["as_of"],
-        S["note"]))
+    story.append(Paragraph(tr["colophon"] % fig["as_of"], S["note"]))
 
-    OUT.parent.mkdir(parents=True, exist_ok=True)
     doc.build(story)
-    return fig
+    return fig, out
 
 
-def fingerprint():
+def sources(lang):
+    return (EDITIONS[lang]["page"], "data/publications.json", "data/projects.json",
+            "data/i18n.json", "tools/build_cv_pdf.py")
+
+
+def fingerprint(lang):
     h = hashlib.sha256()
-    for name in SOURCES:
+    for name in sources(lang):
         h.update(name.encode())
         h.update((ROOT / name).read_bytes())
     return h.hexdigest()[:16]
 
 
 def main():
-    fig = build()
-    STAMP.write_text(json.dumps({
-        "note": "Fingerprint of the files files/cv.pdf was generated from. "
-                "tools/check_site.py compares it against the current sources and "
-                "reports a stale CV. Regenerate with tools/build_cv_pdf.py.",
-        "sources": list(SOURCES),
-        "fingerprint": fingerprint(),
-        "built": datetime.date.today().isoformat(),
-        "pages_note": "figures are read from the data files, never typed",
-    }, indent=1) + "\n", encoding="utf-8")
-    print("wrote %s (%.0f KB)" % (OUT.relative_to(ROOT), OUT.stat().st_size / 1024.0))
-    print("figures: €%s M across %d projects · %s publications · %s citations · h-index %d"
-          % (fig["funding"], fig["projects"], fig["publications"], fig["citations"],
-             fig["h"]))
-    print("prose parsed from cv/index.html — edit the page, not this script")
-    print("stamped %s" % STAMP.relative_to(ROOT))
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--lang", choices=sorted(EDITIONS), default="en")
+    ap.add_argument("--all", action="store_true", help="build every edition")
+    args = ap.parse_args()
+
+    for lang in (sorted(EDITIONS) if args.all else [args.lang]):
+        fig, out = build(lang)
+        stamp = ROOT / EDITIONS[lang]["stamp"]
+        stamp.write_text(json.dumps({
+            "note": "Fingerprint of the files %s was generated from. "
+                    "tools/check_site.py compares it against the current sources and "
+                    "reports a stale CV. Regenerate with tools/build_cv_pdf.py --all."
+                    % EDITIONS[lang]["out"],
+            "lang": lang,
+            "sources": list(sources(lang)),
+            "fingerprint": fingerprint(lang),
+            "built": datetime.date.today().isoformat(),
+        }, indent=1) + "\n", encoding="utf-8")
+
+        print("wrote %s (%.0f KB, %s)"
+              % (out.relative_to(ROOT), out.stat().st_size / 1024.0, lang))
+        print("   %s Mio. € · %d %s · %s %s · h-index %d"
+              % (num(fig["funding"], lang, 3), fig["publications"],
+                 T[lang]["figures"][1], num(fig["citations"], lang),
+                 T[lang]["figures"][2].split(",")[0], fig["h"]))
+        print("   prose parsed from %s — edit the page, not this script"
+              % EDITIONS[lang]["page"])
 
 
 if __name__ == "__main__":

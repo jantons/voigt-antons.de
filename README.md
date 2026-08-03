@@ -170,11 +170,20 @@ Nichts mehr — Porträt, Social-Preview und CV liegen alle im Repo, `ALLOW_MISS
 
 ### Der CV als PDF
 
-`files/cv.pdf`, vier Seiten, erzeugt von `tools/build_cv_pdf.py`:
+Zwei Fassungen, je vier Seiten: `files/cv.pdf` (englisch) und `files/cv-de.pdf` (deutsch).
 
 ```bash
-python3 tools/build_cv_pdf.py
+python3 tools/build_cv_pdf.py --all
 ```
+
+Die deutsche Fassung ist **kein zweites Dokument**, sondern wird aus `de/cv/index.html` geparst
+— der Seite, die `build_i18n.py` ohnehin erzeugt. Eine gepflegte CV-Seite, zwei PDFs. Die
+deutschen Seiten verlinken automatisch auf `cv-de.pdf`, die englischen auf `cv.pdf`.
+
+Sprachabhängig sind nur die Dokumentbestandteile, die nicht auf der Seite stehen — Titelzeile,
+Kennzahlenbeschriftungen, Tabellenköpfe, Fußzeile — sowie die Zahlenschreibweise
+(`4,609 Mio. €` und `2.987` statt `€4.609 M` und `2,987`). Die vier Rollenbezeichnungen der
+Fördertabelle kommen aus `data/i18n.json`, damit sie nicht zweimal übersetzt werden.
 
 **Der Fließtext wird aus `cv/index.html` geparst, die Zahlen kommen aus
 `data/publications.json` und `data/projects.json`.** Du pflegst also weiterhin nur die CV-Seite;
@@ -187,9 +196,9 @@ dann die neuesten Zeitschriftenaufsätze, gedeckelt bei 14. Die Regel steht im D
 vollständige Liste bleibt auf der Website.
 
 Was so nicht ausgeschlossen ist: ein **veraltetes** PDF. Deshalb legt das Skript
-`files/cv.build.json` mit einem Fingerabdruck seiner Quellen ab, und `tools/check_site.py`
-vergleicht ihn bei jedem Lauf — ändert sich die Datenlage, ohne dass du neu baust, bricht der
-Build mit „files/cv.pdf is out of date" ab.
+neben jedem PDF einen Fingerabdruck seiner Quellen ab (`cv.build.json`, `cv-de.build.json`),
+und `tools/check_site.py` vergleicht beide bei jedem Lauf — ändert sich die Datenlage, ohne dass
+du neu baust, bricht der Build mit „files/cv-de.pdf is out of date" ab.
 
 Braucht **reportlab** (`pip install reportlab`) und gehört bewusst nicht zum CI-Build.
 Gesetzt in Liberation Sans; Inter scheitert am woff2-Format, das reportlab nicht liest.

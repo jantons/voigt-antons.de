@@ -34,7 +34,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── teaching/index.html         Lehrportfolio und Betreuung
 ├── blog/index.html             Übersicht mit Tag-Filter
 ├── tags/index.html             Weiterleitung alter /tags/#slug-Links
-├── impressum/index.html        Impressum + Datenschutz (Anschrift fehlt, siehe unten)
+├── impressum/index.html        Impressum + Datenschutz (vollständig)
 │
 ├── publication/<id>/index.html 234 generierte Detailseiten mit BibTeX
 ├── posts/JJJJ/MM/<slug>/       5 generierte Beitragsseiten
@@ -79,13 +79,12 @@ die das Weiterverbreiten erlaubt; der Lizenztext liegt in `assets/fonts/OFL.txt`
 
 ### Impressum und Datenschutz
 
-`impressum/index.html` ist vollständig ausformuliert — **bis auf die Anschrift**. Dort stehen
-`[Straße und Hausnummer]` und `[PLZ und Ort]`; `tools/check_site.py` bricht ab, solange das so
-ist. Eine Seite mit Platzhalter-Impressum online zu stellen wäre schlimmer als gar keine.
+`impressum/index.html` ist vollständig, Anschrift eingetragen und bestätigt.
 
-§ 5 DDG verlangt eine *ladungsfähige* Anschrift. Ein Postfach genügt nicht. Wenn du deine
-Privatadresse nicht veröffentlichen willst, ist die HSHL-Dienstanschrift zulässig, solange du
-dort zuverlässig erreichbar bist.
+`tools/check_site.py` bricht ab, sobald irgendwo ein Platzhalter in eckigen Klammern steht
+(`[Anzupassen…]`, `[Straße…]`, `[PLZ…]`, `[TODO…]`). Eine Seite mit Platzhalter-Impressum online
+zu stellen wäre schlimmer als gar keine. § 5 DDG verlangt eine *ladungsfähige* Anschrift —
+ein Postfach genügt nicht.
 
 Die Datenschutzerklärung deckt ab: Verantwortlicher, GitHub Pages als Hoster samt
 Server-Logfiles und USA-Transfer (EU-US Data Privacy Framework, Angemessenheitsbeschluss vom

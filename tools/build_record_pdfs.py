@@ -349,6 +349,9 @@ CARDS = [
     ("files/funding.pdf", "files/funding-de.pdf", "Record of third-party funding",
      "All %(projects)d funded projects with period, funder, partners, role and awarded "
      "volume, and the totals by role."),
+    ("files/statement.pdf", "files/statement-de.pdf", "Research and teaching statement",
+     "Three research lines with preliminary work and planned projects, a funding strategy "
+     "for five years, how I teach and supervise, and how I would build a laboratory."),
 ]
 
 

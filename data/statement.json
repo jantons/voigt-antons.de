@@ -1,0 +1,213 @@
+{
+ "meta": {
+  "note": "Research and teaching statement, written to be read anywhere. Derived from the application of July 2026 but stripped of everything specific to one advertised post: no chair, no reference number, no named institutes or neighbouring professorships. What remains is the substance — three research lines, a teaching approach, a funding strategy and a build-up plan — which is what a reader wants from a public statement anyway.",
+  "updated": "2026-08-03",
+  "source": "03_Forschungs_Lehrkonzept_Voigt-Antons.pdf, generalised"
+ },
+ "lead": {
+  "en": "Media systems are becoming spatial, multimodal and generative. That shifts the central question of media informatics: it is no longer enough to show that a system works — it has to be shown that people understand it, trust it appropriately and can use it safely. My work answers that question constructively and empirically at once: I build interactive media systems and develop the methods by which their effect can be measured reproducibly.",
+  "de": "Mediensysteme werden räumlich, multimodal und generativ. Damit verschiebt sich die zentrale Frage der Medieninformatik: Es genügt nicht mehr zu zeigen, dass ein System funktioniert — es muss gezeigt werden, dass Menschen es verstehen, ihm angemessen vertrauen und es sicher nutzen können. Meine Arbeit beantwortet diese Frage konstruktiv und empirisch zugleich: Ich baue interaktive Mediensysteme und entwickle die Verfahren, mit denen sich ihre Wirkung reproduzierbar messen lässt."
+ },
+ "thread": {
+  "en": "The thread runs through everything I have done. From the neural correlates of perceived speech quality, through Quality of Experience in networks and games, to today's XR, digital twin and agent systems, I have worked on the same question: how the subjective experience of technical media can be made objectifiable. That these methods went through ITU-T into international standardization (P.812, P.IntVR, G.1035) is the evidence that they carry beyond my own group.",
+  "de": "Der rote Faden zieht sich durch alles, was ich bisher getan habe. Von den neuronalen Korrelaten wahrgenommener Sprachqualität über Quality of Experience in Netzen und Spielen bis zu heutigen XR-, Digital-Twin- und Agentensystemen habe ich an derselben Frage gearbeitet: wie sich das subjektive Erleben technischer Medien objektivierbar machen lässt. Dass diese Verfahren über die ITU-T bis in die internationale Normung gelangt sind (P.812, P.IntVR, G.1035), belegt, dass sie über die eigene Arbeitsgruppe hinaus tragen."
+ },
+ "lines": [
+  {
+   "id": "spatial",
+   "letter": "A",
+   "title": {
+    "en": "Spatial and multimodal interaction",
+    "de": "Räumliche und multimodale Interaktion"
+   },
+   "question": {
+    "en": "How do people perceive, navigate and collaborate in mixed-reality environments?",
+    "de": "Wie nehmen Menschen in Mixed-Reality-Umgebungen wahr, wie navigieren sie, wie arbeiten sie zusammen?"
+   },
+   "done": {
+    "en": "Spatial audio in AR navigation (IEEE VR 2026); collaborative AR under spatial misalignment and latency (QoMEX 2024/2025); passthrough quality of mixed-reality devices; hand versus controller interaction; social acceptability of mobile XR in public; mixed reality at the workplace and in public space (IEEE ISMAR 2024).",
+    "de": "Räumliches Audio in der AR-Navigation (IEEE VR 2026); kollaborative AR unter räumlicher Fehlausrichtung und Latenz (QoMEX 2024/2025); Passthrough-Qualität von Mixed-Reality-Geräten; Hand- gegen Controller-Interaktion; soziale Akzeptanz mobiler XR im öffentlichen Raum; Mixed Reality am Arbeitsplatz und im öffentlichen Raum (IEEE ISMAR 2024)."
+   },
+   "next": {
+    "en": "Models and metrics for spatial coordination in shared mixed-reality spaces; interaction that adapts to attentional state and ambient conditions; and the transfer of laboratory findings to field conditions — a problem I most recently addressed under the title <em>Too Immersive for the Field?</em>, on safety risks in XR field studies.",
+    "de": "Modelle und Metriken für räumliche Koordination in geteilten Mixed-Reality-Räumen; Interaktion, die sich an Aufmerksamkeitszustand und Umgebungsbedingungen anpasst; und die Übertragbarkeit von Laborergebnissen in Feldbedingungen — ein Problem, das ich zuletzt unter dem Titel <em>Too Immersive for the Field?</em> mit Blick auf Sicherheitsrisiken in XR-Feldstudien bearbeitet habe."
+   }
+  },
+  {
+   "id": "generative",
+   "letter": "B",
+   "title": {
+    "en": "Generative AI in media contexts",
+    "de": "Generative KI im Medienkontext"
+   },
+   "question": {
+    "en": "Generative methods produce media content, conversational partners and whole environments. The decisive question is not whether that succeeds, but under what conditions people can judge the result appropriately.",
+    "de": "Generative Verfahren erzeugen Medieninhalte, Gesprächspartner und ganze Umgebungen. Die entscheidende Frage ist nicht, ob das gelingt, sondern unter welchen Bedingungen Menschen das Ergebnis angemessen einordnen."
+   },
+   "done": {
+    "en": "Photorealistic, AI-driven MetaHuman avatars for training situations (IEEE ISMAR 2024); emotion-adaptive virtual health assistants and their effect on social presence and trust; avatar design and size as factors in the user experience; GAN-based synthetic time-series data (Diversity and Societal Impact Award 2023); a scenario-based interview study on the explainability of medical AI.",
+    "de": "Photorealistische, KI-gesteuerte MetaHuman-Avatare für Trainingssituationen (IEEE ISMAR 2024); emotionsadaptive virtuelle Gesundheitsassistenten und ihre Wirkung auf soziale Präsenz und Vertrauen; Avatargestaltung und -größe als Einflussfaktoren auf die Nutzungserfahrung; GAN-basierte synthetische Zeitreihendaten (Diversity and Societal Impact Award 2023); eine szenariobasierte Interviewstudie zur Erklärbarkeit medizinischer KI."
+   },
+   "next": {
+    "en": "Calibrated trust in generative media systems; design means that make the reliability and provenance of content perceivable rather than hiding them; multimodal detectability of synthetic media; and generative tools for authoring XR content, which addresses the largest bottleneck immersive applications currently have.",
+    "de": "Kalibriertes Vertrauen in generative Mediensysteme; Gestaltungsmittel, die Zuverlässigkeit und Herkunft von Inhalten wahrnehmbar machen, statt sie zu verbergen; multimodale Erkennbarkeit synthetischer Medien; und generative Werkzeuge zur Erstellung von XR-Inhalten, die den derzeit größten Engpass immersiver Anwendungen adressieren."
+   }
+  },
+  {
+   "id": "evaluation",
+   "letter": "C",
+   "title": {
+    "en": "Evaluation methodology as the methodological core",
+    "de": "Evaluationsmethodik als methodischer Kern"
+   },
+   "question": {
+    "en": "This line is the core, and the one most useful to everyone else. It covers behavioural, psychophysiological and model-based methods: gaze, heart rate, EEG, interaction traces and subjective scales, brought together into defensible statements about quality, workload, presence, trust and safety.",
+    "de": "Diese Linie ist der Kern — und die für alle anderen nützlichste. Sie umfasst verhaltensbasierte, psychophysiologische und modellgestützte Verfahren: Blickbewegungen, Herzrate, EEG, Interaktionsspuren und subjektive Skalen, zusammengeführt zu belastbaren Aussagen über Qualität, Belastung, Präsenz, Vertrauen und Sicherheit."
+   },
+   "done": {
+    "en": "Instruments developed and validated: pictographic scales for rapid affect capture in VR, questionnaires administered inside virtual environments, the Storytime dataset — and parts of this carried into ITU-T recommendations.",
+    "de": "Entwickelte und validierte Instrumente: piktografische Skalen zur schnellen Affekterfassung in VR, Fragebögen in virtuellen Umgebungen, das Storytime-Datenset — Teile davon in ITU-T-Empfehlungen überführt."
+   },
+   "next": {
+    "en": "An open, documented repository of methods and data for the user-side assessment of media systems, usable by other groups; standards-conformant test procedures for generative and collaborative systems; and reproducibility in XR research, an unsolved problem in the field that my standardization experience is the right instrument for.",
+    "de": "Ein offenes, dokumentiertes Methoden- und Datenrepositorium für die nutzerseitige Bewertung von Mediensystemen, das andere Gruppen mitnutzen können; normkonforme Testverfahren für generative und kollaborative Systeme; und Reproduzierbarkeit in der XR-Forschung, ein im Fach ungelöstes Problem, für das meine Normungserfahrung das passende Werkzeug ist."
+   }
+  }
+ ],
+ "funding_strategy": {
+  "title": {
+   "en": "Funding strategy",
+   "de": "Drittmittelstrategie"
+  },
+  "intro": {
+   "en": "I arrive with running, transferable projects and a plan for the first five years.",
+   "de": "Ich trete mit laufenden, übertragbaren Vorhaben an und mit einem Plan für die ersten fünf Jahre."
+  },
+  "phases": [
+   {
+    "span": {
+     "en": "Years 1–2 · Groundwork",
+     "de": "Jahre 1–2 · Grundlegung"
+    },
+    "text": {
+     "en": "Continuation of the running EU and state projects on adaptive XR safety training; a first DFG individual grant on evaluation methodology for generative and collaborative media systems; participation in local interdisciplinary centre proposals.",
+     "de": "Fortführung der laufenden EU- und Landesvorhaben zu adaptiven XR-Sicherheitstrainings; erste DFG-Sachbeihilfe zur Evaluationsmethodik generativer und kollaborativer Mediensysteme; Beteiligung an Anträgen der interdisziplinären Zentren vor Ort."
+    }
+   },
+   {
+    "span": {
+     "en": "Years 2–4 · Broadening",
+     "de": "Jahre 2–4 · Verbreiterung"
+    },
+    "text": {
+     "en": "Horizon Europe participation in Cluster 4 on the basis of the existing digital-twin consortia; a BMBF collaborative project on human-technology interaction; transfer projects with regional companies.",
+     "de": "Horizon-Europe-Beteiligung in Cluster 4 auf Basis der bestehenden Digital-Twin-Konsortien; BMBF-Verbundvorhaben zur Mensch-Technik-Interaktion; Transferprojekte mit regionalen Unternehmen."
+    }
+   },
+   {
+    "span": {
+     "en": "Years 3–5 · Consolidation",
+     "de": "Jahre 3–5 · Verstetigung"
+    },
+    "text": {
+     "en": "Preparation of a DFG research training group or research unit on trustworthy immersive systems, together with local partners; expansion of international consortium work.",
+     "de": "Vorbereitung eines DFG-Graduiertenkollegs oder einer DFG-Forschungsgruppe zu vertrauenswürdigen immersiven Systemen gemeinsam mit Partnern vor Ort; Ausbau der internationalen Konsortialarbeit."
+    }
+   }
+  ],
+  "candid": {
+   "en": "Expanding the DFG side is a deliberate priority. My funding history so far is strongly European, ministry-shaped and application-oriented. At a university the basic-research line belongs alongside it; for the first two proposals the question and the preliminary work already exist.",
+   "de": "Der Ausbau der DFG-Seite ist ein bewusster Schwerpunkt. Meine bisherige Förderhistorie ist stark europäisch ausgerichtet, ministeriell geprägt und anwendungsnah. An einer Universität gehört die grundlagenorientierte Linie zwingend dazu; für die ersten beiden Anträge liegen Fragestellung und Vorarbeiten bereits vor."
+  }
+ },
+ "teaching": {
+  "title": {
+   "en": "How I teach",
+   "de": "Mein Lehrverständnis"
+  },
+  "core": {
+   "en": "Media informatics is not learned by listening. Students have to design an interactive system, build it, test it on people, and then bear and explain the gap between what they expected and what they observed. That three-step — construct, measure, revise — is the core of my teaching. It is also why I do not hive empirical methods off into a separate methods module but put them inside the development projects.",
+   "de": "Medieninformatik wird nicht durch Zuhören gelernt. Studierende müssen ein interaktives System entwerfen, es bauen, es an Menschen testen und die Diskrepanz zwischen eigener Erwartung und beobachtetem Verhalten aushalten und erklären können. Dieser Dreischritt — konstruieren, messen, revidieren — ist der Kern meiner Lehre. Er ist zugleich der Grund, warum ich empirische Methoden nicht in ein separates Methodenmodul auslagere, sondern in die Entwicklungsprojekte einbeziehe."
+  },
+  "principles": [
+   {
+    "en": "Foundations and specialisation must not stand side by side unconnected. Someone who learns in the first semester why an interface fails understands in the fifth why an architectural decision rescues it.",
+    "de": "Grundlagen und Vertiefung dürfen nicht unverbunden nebeneinanderstehen. Wer im ersten Semester lernt, warum eine Schnittstelle scheitert, versteht im fünften, warum eine Architekturentscheidung sie rettet."
+   },
+   {
+    "en": "Students should be able to question their own results. A user study that refutes your own hypothesis is the most valuable teaching experience of the whole degree.",
+    "de": "Studierende sollen ihre eigenen Ergebnisse in Frage stellen können. Eine Nutzerstudie, die die eigene Hypothese widerlegt, ist die wertvollste Lehrerfahrung des gesamten Studiums."
+   },
+   {
+    "en": "I teach the introductory courses gladly. They are not a burden but the point at which it is decided whether students can carry the specialisation later.",
+    "de": "Die Grundlagenlehre übernehme ich ausdrücklich gern. Sie ist keine Last, sondern die Stelle, an der sich entscheidet, ob Studierende in der Vertiefung tragen können."
+   }
+  ],
+  "methods": [
+   {
+    "title": {
+     "en": "Project-based learning with real clients",
+     "de": "Projektbasiertes Lernen mit realen Auftraggebern"
+    },
+    "text": {
+     "en": "Student projects run on genuine problems from companies, clinics and local government, drawn from my existing partner networks.",
+     "de": "Studierendenprojekte laufen an echten Problemstellungen aus Unternehmen, Kliniken und Kommunen, aus meinen bestehenden Partnernetzwerken."
+    }
+   },
+   {
+    "title": {
+     "en": "Research-led learning",
+     "de": "Forschendes Lernen"
+    },
+    "text": {
+     "en": "At the Berlin University Alliance I led a student research group on user-centred tourist augmented reality across two semesters — an open question carried through to publication. I would offer that format again.",
+     "de": "An der Berlin University Alliance habe ich über zwei Semester eine studentische Forschungsgruppe zu nutzerorientierter touristischer Augmented Reality geleitet — eine offene Forschungsfrage bis zur Publikation. Dieses Format würde ich wieder anbieten."
+    }
+   },
+   {
+    "title": {
+     "en": "Immersive formats, with evidence",
+     "de": "Immersive Lehrformate mit Evidenz"
+    },
+    "text": {
+     "en": "I use VR and AR in teaching and study their effect at the same time, among other things in language learning and in examination situations under VR conditions.",
+     "de": "Ich setze VR und AR in der Lehre ein und untersuche zugleich ihre Wirkung, unter anderem beim Sprachenlernen und in Prüfungssituationen unter VR-Bedingungen."
+    }
+   },
+   {
+    "title": {
+     "en": "Generative AI, admitted and reflected",
+     "de": "Generative KI — offen und reflektiert"
+    },
+    "text": {
+     "en": "I explicitly admit AI tools in projects, but require students to document their use and to check the results.",
+     "de": "KI-Werkzeuge lasse ich in Projekten ausdrücklich zu, verlange aber, dass Studierende ihren Einsatz dokumentieren und die Ergebnisse prüfen."
+    }
+   },
+   {
+    "title": {
+     "en": "Evaluating my own teaching",
+     "de": "Evaluation der eigenen Lehre"
+    },
+    "text": {
+     "en": "In 2026 I published a modular questionnaire for the audience-specific evaluation of course and transfer formats, and apply it to my own.",
+     "de": "2026 habe ich einen modularen Fragebogen zur zielgruppenspezifischen Evaluation von Veranstaltungs- und Transferformaten veröffentlicht und wende ihn auf meine eigenen Formate an."
+    }
+   }
+  ],
+  "supervision": {
+   "en": "In supervision I work with clear milestones, documented expectations and regular, concrete feedback. Theses are carried through to publication where possible. For doctoral researchers: early first authorship, conference presence from the first year, a stay abroad with one of my international partners, and a realistic schedule. Supervising doctoral researchers is the most important task of a professorship.",
+   "de": "In der Betreuung arbeite ich mit klaren Meilensteinen, dokumentierten Erwartungen und regelmäßigem, konkretem Feedback. Abschlussarbeiten führe ich, wo möglich, zur Veröffentlichung. Für Promovierende gilt: frühe Erstautorschaft, Konferenzpräsenz ab dem ersten Jahr, ein Auslandsaufenthalt bei einem meiner internationalen Partner und ein realistischer Zeitplan. Die Betreuung Promovierender sehe ich als die wichtigste Aufgabe einer Professur."
+  }
+ },
+ "infrastructure": {
+  "title": {
+   "en": "Infrastructure",
+   "de": "Infrastruktur"
+  },
+  "text": {
+   "en": "I have built laboratory infrastructure for immersive research from scratch twice, most recently the Body Interaction Lab. A comparable laboratory would be modular: mixed-reality devices, motion and eye tracking, physiological measurement, a reconfigurable study room and a mobile unit for field studies with regional partners. I would run it expressly as shared infrastructure of the faculty, not as property of the chair.",
+   "de": "Laborinfrastruktur für immersive Forschung habe ich zweimal von Grund auf aufgebaut, zuletzt das Body Interaction Lab. Ein entsprechendes Labor wäre modular ausgelegt: Mixed-Reality-Geräte, Motion- und Eye-Tracking, physiologische Messtechnik, ein rekonfigurierbarer Studienraum sowie eine mobile Einheit für Feldstudien mit regionalen Partnern. Ich würde es ausdrücklich als geteilte Infrastruktur der Fakultät betreiben, nicht als Lehrstuhlbesitz."
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "note": "Fingerprint of the sources of files/statement.pdf. check_site.py reports a stale statement. Rebuild with tools/build_statement.py.",
+ "sources": [
+  "data/statement.json",
+  "tools/build_statement.py"
+ ],
+ "fingerprint": "ef3b6e993a672c27",
+ "built": "2026-08-03"
+}

@@ -46,6 +46,7 @@ PAGES = {
     "projects/index.html": "/projects/",
     "cv/index.html": "/cv/",
     "teaching/index.html": "/teaching/",
+    "research/statement/index.html": "/research/statement/",
 }
 
 # Paths that exist in both languages, longest first so /projects/ is matched
@@ -167,8 +168,40 @@ def build_german(english, path, table, missing):
     return html
 
 
+def bilingual_pairs(node, out):
+    """Harvest en/de pairs from a data file that already holds both languages.
+
+    data/statement.json stores each passage in both languages side by side, so
+    copying those sentences into data/i18n.json a second time would be exactly
+    the duplication this repository keeps removing. Composite strings the page
+    assembles — "<b>Years 1–2 · Groundwork</b><span>…</span>" — are registered
+    too, in the same shapes the templates build.
+    """
+    if isinstance(node, dict):
+        if "en" in node and "de" in node and isinstance(node["en"], str):
+            out[node["en"]] = node["de"]
+        for value in node.values():
+            bilingual_pairs(value, out)
+        # The two composite shapes the statement page renders.
+        if {"span", "text"} <= set(node):
+            out["<b>%s</b><span>%s</span>" % (node["span"]["en"], node["text"]["en"])] = \
+                "<b>%s</b><span>%s</span>" % (node["span"]["de"], node["text"]["de"])
+        if {"letter", "title"} <= set(node):
+            out["%s — %s" % (node["letter"], node["title"]["en"])] = \
+                "%s — %s" % (node["letter"], node["title"]["de"])
+    elif isinstance(node, list):
+        for item in node:
+            bilingual_pairs(item, out)
+    return out
+
+
 def main():
     table = json.loads(DATA.read_text(encoding="utf-8"))["de"]
+    statement = ROOT / "data" / "statement.json"
+    if statement.exists():
+        derived = bilingual_pairs(json.loads(statement.read_text(encoding="utf-8")), {})
+        for key, value in derived.items():
+            table.setdefault(key, value)
     missing = set()
     written = 0
 

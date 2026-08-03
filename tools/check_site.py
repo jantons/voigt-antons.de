@@ -149,7 +149,8 @@ def check_cv_pdf():
     for pdf_name, stamp_name in (("files/cv.pdf", "files/cv.build.json"),
                                  ("files/cv-de.pdf", "files/cv-de.build.json"),
                                  ("files/publications.pdf", "files/records.build.json"),
-                                 ("files/funding.pdf", "files/records.build.json")):
+                                 ("files/funding.pdf", "files/records.build.json"),
+                                 ("files/statement.pdf", "files/statement.build.json")):
         pdf, stamp_path = ROOT / pdf_name, ROOT / stamp_name
         if not pdf.exists():
             continue
@@ -205,9 +206,13 @@ def check_i18n():
     for key in empty[:5]:
         problems.append("data/i18n.json: empty translation for %r" % key[:60])
 
+    # Kept in step with PAGES in tools/build_i18n.py — the statement page was
+    # generated but unchecked until it was added here, and a check that lags the
+    # generator is worth little.
     pairs = [("index.html", "/"), ("research/index.html", "/research/"),
              ("projects/index.html", "/projects/"), ("cv/index.html", "/cv/"),
-             ("teaching/index.html", "/teaching/")]
+             ("teaching/index.html", "/teaching/"),
+             ("research/statement/index.html", "/research/statement/")]
     built = 0
     for page, path in pairs:
         german = ROOT / "de" / page

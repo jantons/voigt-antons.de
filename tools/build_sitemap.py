@@ -19,7 +19,7 @@ BASE = "https://voigt-antons.de"
 EXCLUDE = {"/impressum/", "/tags/", "/404.html"}
 
 STATIC = ["/", "/research/", "/projects/", "/publications/", "/cv/", "/teaching/",
-          "/blog/", "/downloads/"]
+          "/blog/", "/downloads/", "/research/statement/"]
 
 # The German versions are separate URLs and belong in the sitemap. Each entry
 # carries xhtml:link alternates, because a sitemap that lists /de/ without

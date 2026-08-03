@@ -180,6 +180,49 @@ Durchsicht.
 Nichts mehr — Porträt, Social-Preview und CV liegen alle im Repo, `ALLOW_MISSING` in
 `tools/check_site.py` ist leer. Jeder verlinkte Pfad wird geprüft.
 
+### Fünf Dokumente, alle erzeugt
+
+Unter `/downloads/` liegen drei Dokumente in je zwei Sprachen:
+
+| Datei | Inhalt | Quelle |
+|---|---|---|
+| `cv.pdf` · `cv-de.pdf` | Lebenslauf, 5 Seiten | `cv/index.html` + JSON |
+| `publications.pdf` · `-de` | alle 234 Publikationen nach Kategorien, 13 Seiten | `data/publications.json` |
+| `funding.pdf` · `-de` | alle 22 Vorhaben mit Partnern und Rollensummen, 2 Seiten | `data/projects.json` |
+| `statement.pdf` · `-de` | Forschungs- und Lehrkonzept, 3 Seiten | `data/statement.json` |
+
+```bash
+python3 tools/build_cv_pdf.py --all
+python3 tools/build_record_pdfs.py --all     # schreibt auch die Downloads-Seite
+python3 tools/build_statement.py
+```
+
+**Erzeugt statt hochgeladen** — aus demselben Grund, den die Bewerbungsunterlage vom Juli 2026
+vorführt: ihre Rollenaufstellung zählt 6+3+9+2 = 20 Vorhaben, die Summenzeile sagt 19, und die
+Projekttabelle bleibt 304 T€ unter ihrer eigenen Summe, weil PflegeTab in den Summen steckt, aber
+in der Tabelle fehlt. Gezählte Zahlen können das nicht.
+
+Die Dokumente nennen bewusst **keine Kennziffer einer Ausschreibung, keine Privatanschrift und
+keine Telefonnummer**. Sie sind zum Verlinken gedacht, nicht als Dossier — ein Dossier verrät der
+nächsten Kommission, wo man sich sonst beworben hat.
+
+`/downloads/` listet, was tatsächlich existiert, mit echter Seitenzahl und Dateigröße; ein neues
+Dokument kann dort nicht vergessen werden. `check_site.py` meldet jedes PDF als veraltet, sobald
+seine Quellen sich bewegen.
+
+### Das Forschungs- und Lehrkonzept
+
+`data/statement.json` hält **beide Sprachen nebeneinander**. `tools/build_statement.py` erzeugt
+daraus die Seite `/research/statement/` und beide PDFs; `build_i18n.py` erntet die Sprachpaare
+direkt aus der JSON, statt sie ein zweites Mal in `data/i18n.json` zu verlangen.
+
+Der Text stammt aus der Wuppertal-Bewerbung, ist aber von allem befreit, was zu jener Stelle
+gehörte: keine Hochschule, keine Kennziffer, keine benannten Nachbarlehrstühle oder lokalen
+Zentren. Übrig bleibt, was überall gilt — drei Forschungslinien mit Vorarbeiten und geplanten
+Vorhaben, ein Lehrverständnis, eine Drittmittelstrategie und der Aufbauplan. Auch der Abschnitt
+„Wo ich schwächer bin" zur bisher europäisch geprägten Förderhistorie ist geblieben; er ist das
+Glaubwürdigste am ganzen Dokument.
+
 ### Der CV als PDF
 
 Zwei Fassungen, je vier Seiten: `files/cv.pdf` (englisch) und `files/cv-de.pdf` (deutsch).

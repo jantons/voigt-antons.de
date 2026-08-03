@@ -67,6 +67,7 @@ jobs:
           python3 tools/build_posts.py
           python3 tools/build_projects.py
           python3 tools/build_supervision.py
+          python3 tools/build_statement.py
           python3 tools/build_i18n.py
           python3 tools/build_record_pdfs.py --all
           python3 tools/build_redirects.py

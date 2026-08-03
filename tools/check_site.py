@@ -119,6 +119,58 @@ def check_fonts(pages):
                             "is missing — run tools/fetch_fonts.py" % url)
 
 
+def check_i18n():
+    """The German version must stay complete and reciprocally linked.
+
+    Two ways this could rot: a new English core page without a German
+    counterpart, and hreflang links that point somewhere the other page does not
+    point back to. Search engines treat a one-sided hreflang as no hreflang, so
+    the German page would compete with the English one instead of complementing
+    it.
+    """
+    data_path = ROOT / "data" / "i18n.json"
+    if not data_path.exists():
+        return 0
+
+    try:
+        table = json.loads(data_path.read_text(encoding="utf-8"))["de"]
+    except (ValueError, KeyError) as err:
+        problems.append("data/i18n.json: %s" % err)
+        return 0
+
+    empty = [k for k, v in table.items() if not str(v).strip()]
+    for key in empty[:5]:
+        problems.append("data/i18n.json: empty translation for %r" % key[:60])
+
+    pairs = [("index.html", "/"), ("research/index.html", "/research/"),
+             ("projects/index.html", "/projects/"), ("cv/index.html", "/cv/"),
+             ("teaching/index.html", "/teaching/")]
+    built = 0
+    for page, path in pairs:
+        german = ROOT / "de" / page
+        if not german.exists():
+            problems.append("de/%s is missing — run tools/build_i18n.py" % page)
+            continue
+        built += 1
+        gt = german.read_text(encoding="utf-8")
+        et = (ROOT / page).read_text(encoding="utf-8")
+
+        if 'lang="de"' not in gt.split("\n")[1]:
+            problems.append("de/%s: <html> does not declare lang=\"de\"" % page)
+        if 'href="https://voigt-antons.de/de%s"' % path not in gt:
+            problems.append("de/%s: canonical does not point at /de%s" % (page, path))
+
+        for text, label in ((et, page), (gt, "de/" + page)):
+            for lang, href in (("en", path), ("de", "/de" + path)):
+                link = '<link rel="alternate" hreflang="%s" href="https://voigt-antons.de%s">' \
+                       % (lang, href)
+                if link not in text:
+                    problems.append("%s: missing hreflang=%s alternate" % (label, lang))
+            if 'class="icon-btn lang-switch"' not in text:
+                problems.append("%s: no language switch in the navigation" % label)
+    return built
+
+
 def check_headline_numbers(items, meta):
     """Publication and citation figures quoted in prose must match the data.
 
@@ -136,12 +188,19 @@ def check_headline_numbers(items, meta):
         "citations": bib.get("citations"),
         "h-index": bib.get("h_index"),
         "i10-index": bib.get("i10_index"),
+        # The German pages repeat the same figures in their own words.
+        "Publikationen": len(items),
+        "Zitationen": bib.get("citations"),
+        "h-Index": bib.get("h_index"),
+        "i10-Index": bib.get("i10_index"),
     }
     # <b>234</b><span>publications  and  "234 publications" / "h-index 29"
     patterns = (
         (r"<b>([\d,]+)</b>\s*<span>(publications)", 1, 2),
+        (r"<b>([\d.]+)</b>\s*<span>(Publikationen|Zitationen)", 1, 2),
         (r"\b([\d,]+)\s+(publications|citations)\b", 1, 2),
-        (r"\b(h-index|i10-index)\s+([\d,]+)", 2, 1),
+        (r"\b([\d.]+)\s+(Publikationen|Zitationen)\b", 1, 2),
+        (r"\b(h-index|i10-index|h-Index|i10-Index)\s+([\d,]+)", 2, 1),
     )
 
     for page in sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("*/index.html")):
@@ -163,7 +222,7 @@ def check_headline_numbers(items, meta):
                     want = expected.get(key)
                     if want is None:
                         continue
-                    got = int(m.group(num_group).replace(",", ""))
+                    got = int(m.group(num_group).replace(",", "").replace(".", ""))
                     if got != want:
                         problems.append("%s:%d: says %s %s, data/publications.json "
                                         "says %s" % (page.relative_to(ROOT), lineno,
@@ -378,11 +437,12 @@ def main():
         meta = {}
     check_headline_numbers(items, meta)
     check_placeholders(pages)
+    german = check_i18n()
     check_fonts(pages)
     projects = check_projects()
 
-    print("checked %d HTML pages, %d publications, %d posts, %d funded projects"
-          % (len(pages), len(items), len(posts), projects))
+    print("checked %d HTML pages, %d publications, %d posts, %d funded projects, "
+          "%d German pages" % (len(pages), len(items), len(posts), projects, german))
 
     if problems:
         print("\n%d problem(s):" % len(problems))

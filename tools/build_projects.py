@@ -33,6 +33,18 @@ BEGIN = "<!-- BEGIN funding-record -->"
 END = "<!-- END funding-record -->"
 BEGIN_ONGOING = "<!-- BEGIN ongoing-projects -->"
 END_ONGOING = "<!-- END ongoing-projects -->"
+BEGIN_HOME = "<!-- BEGIN home-projects -->"
+END_HOME = "<!-- END home-projects -->"
+
+HOME = ROOT / "index.html"
+
+# Project pages worth linking to directly from the start page.
+HOMEPAGE_LINK = {
+    "didymos-xr": "https://didymos-xr.eu/",
+    "mia-prom": "https://mia-prom.de",
+    "virtual-institute": "https://digitalise-swf.de",
+    "xrwise": "https://xrevent-creator.de",
+}
 
 # Projects with a hand-written detail block further down /projects/.
 ANCHORS = {"didymos-xr", "mia-prom", "virtual-institute", "digiontrack", "ariadne",
@@ -204,6 +216,40 @@ def build_ongoing(data):
                 until=max([p["to"] for p in running] + [o["to"] for o in extra]))
 
 
+def build_home(data):
+    """The 'Current projects' cards on the start page.
+
+    These used to be hand-written, and went stale exactly as you would expect:
+    the start page still advertised DIDYMOS-XR, MIA-PROM and ARiadne as current
+    months after they had ended, while ITT, INFUSE and Silent Bed Monitor —
+    running — were missing. Now the same derived rule feeds both pages.
+    """
+    e = html.escape
+    running = sorted((p for p in data["projects"] + data.get("without_own_volume", [])
+                      if is_ongoing(p)),
+                     key=lambda p: (-p["from"], -p["to"], p["name"]))
+    cards = []
+    for p in running:
+        role = (p["role_label"] if "role_label" in p
+                else data["meta"]["roles"][p["role"]].split(" — ")[0])
+        cards.append(
+            '      <a class="pcard rv" href="%s">\n'
+            '        <div class="pyear">%s · %s</div>\n'
+            '        <h4>%s</h4>\n'
+            '        <p>%s</p>\n'
+            '        <span class="role">%s</span>\n'
+            '      </a>'
+            % (HOMEPAGE_LINK.get(p["id"], "/projects/#" + e(p["id"])),
+               period(p), e(p.get("funder_short") or p["funder"].split("(")[0].strip()),
+               e(p["short"]), e(p.get("blurb", "")), e(role)))
+
+    return """{begin}
+    <div class="proj">
+{cards}
+    </div>
+{end}""".format(begin=BEGIN_HOME, end=END_HOME, cards="\n".join(cards))
+
+
 def replace_block(text, begin, end, new, path):
     if begin not in text or end not in text:
         sys.exit("markers %s / %s not found in %s" % (begin, end, path))
@@ -216,6 +262,10 @@ def main():
     text = replace_block(text, BEGIN_ONGOING, END_ONGOING, build_ongoing(data), PAGE)
     text = replace_block(text, BEGIN, END, build(data), PAGE)
     PAGE.write_text(text, encoding="utf-8")
+
+    home = HOME.read_text(encoding="utf-8")
+    HOME.write_text(replace_block(home, BEGIN_HOME, END_HOME, build_home(data), HOME),
+                    encoding="utf-8")
 
     n = len(data["projects"])
     v = sum(p["volume"] for p in data["projects"])

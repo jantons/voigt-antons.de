@@ -22,6 +22,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── data/
 │   ├── publications.json       234 Einträge — Quelle für alles Publikationsbezogene
 │   ├── projects.json           22 Drittmittelvorhaben — Quelle für Seite UND Bewerbung
+│   ├── i18n.json               deutsche Übersetzungen, Schlüssel = englischer Satz
 │   ├── posts.json              generiert aus content/posts/
 │   └── redirects.json          alte → neue Publikations-URLs
 │
@@ -35,6 +36,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── blog/index.html             Übersicht mit Tag-Filter
 ├── tags/index.html             Weiterleitung alter /tags/#slug-Links
 ├── impressum/index.html        Impressum + Datenschutz (vollständig)
+├── de/                         deutsche Fassung der fünf Kernseiten (generiert)
 │
 ├── publication/<id>/index.html 234 generierte Detailseiten mit BibTeX
 ├── posts/JJJJ/MM/<slug>/       5 generierte Beitragsseiten
@@ -42,6 +44,8 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
     ├── build_publication_pages.py
     ├── build_posts.py
     ├── build_projects.py       Fördertabelle aus data/projects.json
+    ├── build_i18n.py           deutsche Seiten unter /de/
+    ├── i18n_lib.py            Textextraktion für build_i18n.py
     ├── build_redirects.py
     ├── build_sitemap.py
     ├── check_site.py
@@ -54,9 +58,47 @@ Beide Generatoren brauchen nur Python 3 und die Standardbibliothek. Nach inhaltl
 python3 tools/build_publication_pages.py
 python3 tools/build_posts.py
 python3 tools/build_projects.py
+python3 tools/build_i18n.py
 python3 tools/build_redirects.py
 python3 tools/build_sitemap.py
 ```
+
+### Zweisprachigkeit
+
+Fünf Kernseiten gibt es auf Deutsch: `/de/`, `/de/research/`, `/de/projects/`, `/de/cv/`,
+`/de/teaching/`. Publikationsliste, die 234 Detailseiten und der Blog bleiben englisch —
+Titel, Venues und Abstracts sind es ohnehin, und eine übersetzte Literaturangabe wäre
+unbrauchbar zum Zitieren.
+
+**Die deutschen Seiten sind nichts, was du bearbeitest.** Sie werden bei jedem Lauf aus der
+englischen Seite plus `data/i18n.json` neu erzeugt. Du pflegst also weiterhin nur die englische
+Fassung.
+
+Der Schlüssel in `data/i18n.json` ist **der englische Satz selbst**:
+
+```json
+"What sets this work apart": "Was diese Arbeit auszeichnet"
+```
+
+Das ist die ganze Idee. Änderst du den englischen Satz, ändert sich sein Schlüssel — und
+`build_i18n.py` meldet ihn als unübersetzt und bricht ab, statt still eine deutsche Seite
+auszuliefern, die noch das Alte behauptet. Genau diese Sorte Drift ist hier schon zweimal
+aufgetreten: ein Absatz, der auf zwei Seiten stand und auseinanderlief, und eine Kennzahl, die
+an vier Stellen von Hand stand und veraltete.
+
+Übersetzt werden Blockelemente (`<p>`, `<li>`, Überschriften) sowie `<a>`, `<div>` und `<span>`
+mit bestimmten Klassen (Buttons, Breadcrumbs, Tags, Fußzeile) und Metadaten-Attribute.
+Publikationstitel bleiben unangetastet. Der Generator setzt außerdem `lang`, `canonical`,
+wechselseitige `hreflang`-Verweise samt `x-default`, den DE/EN-Umschalter in der Navigation und
+schreibt interne Links auf `/de/...` um, wo es eine deutsche Entsprechung gibt.
+
+`tools/check_site.py` prüft: jede Kernseite hat ihr deutsches Gegenstück, `lang="de"`, korrekte
+Canonical, wechselseitige hreflang-Paare auf **beiden** Seiten, Umschalter vorhanden, keine leere
+Übersetzung — und die Kennzahlen auch in deutscher Schreibweise („2.987 Zitationen", „h-Index").
+
+Neue Seite zweisprachig machen: Pfad in `PAGES` in `tools/build_i18n.py` und in `TRANSLATED` in
+`tools/build_sitemap.py` eintragen, Skript laufen lassen, die gemeldeten Sätze in
+`data/i18n.json` ergänzen.
 
 ### Schriften kommen von dieser Domain, nicht von Google
 

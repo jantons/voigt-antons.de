@@ -58,11 +58,15 @@ jobs:
             python3 tools/fetch_fonts.py
           fi
 
+      # build_i18n.py runs after build_projects.py: /projects/ and the start
+      # page contain generated blocks, and the German copies are derived from
+      # the finished English pages. It exits non-zero on an untranslated string.
       - name: Generate publication and post pages
         run: |
           python3 tools/build_publication_pages.py
           python3 tools/build_posts.py
           python3 tools/build_projects.py
+          python3 tools/build_i18n.py
           python3 tools/build_redirects.py
           python3 tools/build_sitemap.py
 

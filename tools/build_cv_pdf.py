@@ -148,6 +148,10 @@ def register_fonts():
             names[key] = key
         else:
             names[key] = FALLBACK[key]
+    if names["sans"] != "sans":
+        print("note: Liberation not installed — falling back to Helvetica, which "
+              "changes the metrics and the file size. Install fonts-liberation "
+              "for the intended output.")
     if names["sans"] == "sans":
         # Without this, <b> and <i> in a Paragraph silently render as regular
         # text: reportlab maps the tags through the family, not the font name.

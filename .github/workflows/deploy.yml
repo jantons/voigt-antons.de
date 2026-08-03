@@ -59,11 +59,18 @@ jobs:
           fi
 
       # The page generators need nothing but the standard library. The four PDF
-      # documents need reportlab, and they are generated here rather than by
-      # hand so that editing a JSON file on github.com stays enough — which is
-      # the promise this whole workflow exists for.
-      - name: Install reportlab (PDF documents only)
-        run: pip install --quiet reportlab
+      # documents need reportlab and the typefaces they are set in, and they are
+      # generated here rather than by hand so that editing a JSON file on
+      # github.com stays enough — the promise this workflow exists for. Without
+      # the fonts the scripts fall back to the PDF base-14 Helvetica: the files
+      # come out at 18 KB instead of 109 KB with different metrics, so every CI
+      # run and every local run would flip them back and forth — and a visitor
+      # would download a document in a different typeface than the one tested.
+      - name: Install reportlab and the document typefaces
+        run: |
+          pip install --quiet reportlab
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends fonts-liberation
 
       # Order matters and is not alphabetical:
       #   build_statement writes the statement page, so it must precede i18n

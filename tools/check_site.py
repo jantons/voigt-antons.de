@@ -237,6 +237,16 @@ def check_i18n():
             if 'class="icon-btn lang-switch"' not in text:
                 problems.append("%s: no language switch in the navigation" % label)
 
+            # A German page offering the English PDF is the kind of thing
+            # nobody notices until a committee downloads it.
+            for m in re.finditer(r'<a[^>]*class="[^"]*\bdoc-dl\b[^"]*"[^>]*'
+                                 r'href="(/files/[a-z-]+\.pdf)"', text):
+                german_page = label.startswith("de/")
+                german_file = m.group(1).endswith("-de.pdf")
+                if german_page != german_file:
+                    problems.append("%s: download button points at %s"
+                                    % (label, m.group(1)))
+
     # Pages that exist in English only still need a way back to the German
     # section — a visitor who followed "Publikationen" from /de/ would otherwise
     # be stranded in English with no marked route back.

@@ -154,9 +154,13 @@ def build_german(english, path, table, missing):
     for english, german in (("HSHL profile ↗", "HSHL-Profil ↗"),):
         html = html.replace(">%s<" % english, ">%s<" % german)
 
-    # German visitors get the German CV. Both are generated from their own CV
-    # page by tools/build_cv_pdf.py, so the two cannot drift apart.
-    html = html.replace('href="/files/cv.pdf"', 'href="/files/cv-de.pdf"')
+    # Documents follow the page language — but only where the markup asks for
+    # it. A blunt replace of every /files/*.pdf would also have flipped the
+    # explicitly English link on the statement page, which offers both editions
+    # side by side. Opting in with class="doc-dl" keeps that distinction.
+    html = re.sub(
+        r'(<a[^>]*class="[^"]*\bdoc-dl\b[^"]*"[^>]*href="/files/)([a-z-]+)(\.pdf")',
+        lambda m: m.group(1) + m.group(2) + "-de" + m.group(3), html)
 
     # A German label pointing at an English page is a language change, and
     # saying so is what hreflang is for. Screen readers announce it; without it

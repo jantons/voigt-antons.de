@@ -63,6 +63,28 @@ python3 tools/build_redirects.py
 python3 tools/build_sitemap.py
 ```
 
+### Social-Preview-Karte
+
+`images/og-card.png` ist das Bild, das erscheint, wenn jemand einen Link auf diese Seite bei
+LinkedIn, Slack, Mastodon oder in einer Mail teilt. **251 Seiten zeigen darauf** — ohne die Datei
+rendert jeder geteilte Link als graue Fläche.
+
+```bash
+python3 tools/build_og_card.py            # hell, schreibt images/og-card.png
+python3 tools/build_og_card.py --dark     # dunkle Variante
+```
+
+Die Zahlen auf der Karte werden aus `data/publications.json` und `data/projects.json` gelesen,
+nie eingetippt. Die Karte kann also nicht eine andere Publikationszahl behaupten als die Seite,
+an der sie hängt — genau der Fehler, den die Startseite mit „226 publications" hatte. Nach einer
+Aktualisierung der Bibliometrie das Skript einmal laufen lassen.
+
+Zwei Abhängigkeiten, die der Rest des Repos nicht hat: **Pillow** ist Pflicht
+(`pip install Pillow`). **fontTools und brotli** sind optional — mit ihnen zeichnet das Skript in
+Inter aus `assets/fonts/`, ohne sie in der nächstbesten Grotesk des Systems. Es sagt beim Lauf,
+welche Schrift es genommen hat. Das Skript gehört bewusst **nicht** zum CI-Build; die Karte ist
+ein einmaliges Asset, das committet wird.
+
 ### Zweisprachigkeit
 
 Fünf Kernseiten gibt es auf Deutsch: `/de/`, `/de/research/`, `/de/projects/`, `/de/cv/`,
@@ -144,7 +166,7 @@ Durchsicht.
 **Fehlt noch, muss von dir ergänzt werden:**
 
 - `images/profile.png` — Portrait (empfohlen: zusätzlich `profile.webp`, ~800 px)
-- `images/og-card.png` — Social-Preview, 1200 × 630 px
+- `images/og-card.png` — Social-Preview, 1200 × 630 px — **erzeugt**, siehe unten
 - `files/cv.pdf` — der CV-Download ist der primäre Call-to-Action im Hero
 
 Diese drei Pfade stehen in `tools/check_site.py` unter `ALLOW_MISSING` und lassen die Prüfung

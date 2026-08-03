@@ -191,9 +191,6 @@ def page(post, prev_post, next_post):
 <meta property="og:image" content="https://voigt-antons.de/images/og-card.png">
 <meta property="og:url" content="https://voigt-antons.de{url}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">{schema}</script>
 </head>

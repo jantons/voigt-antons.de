@@ -46,6 +46,18 @@ jobs:
         with:
           python-version: '3.12'
 
+      # Inter and JetBrains Mono are served from this domain, never from Google.
+      # The download runs only when the files are actually absent — normally
+      # they are committed and this step does nothing. Delete assets/fonts/ to
+      # force a refresh after a new font release.
+      - name: Fetch self-hosted fonts (only if missing)
+        run: |
+          if ls assets/fonts/*.woff2 >/dev/null 2>&1; then
+            echo "Fonts already in the repository — nothing to download."
+          else
+            python3 tools/fetch_fonts.py
+          fi
+
       - name: Generate publication and post pages
         run: |
           python3 tools/build_publication_pages.py

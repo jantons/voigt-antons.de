@@ -68,6 +68,43 @@ def resolves(url):
     return target.exists() or (target / "index.html").exists()
 
 
+def check_fonts(pages):
+    """No third-party requests, and every declared font file has to exist.
+
+    A <link> to fonts.googleapis.com sends every visitor's IP address to Google
+    before the page renders — the practice a German court found unlawful in
+    LG München I, 3 O 17493/20. The fonts are therefore served from this domain,
+    and this check keeps them that way: a generator template that quietly grows
+    the old <link> back would otherwise ship on 250 pages unnoticed.
+    """
+    for page in pages:
+        text = page.read_text(encoding="utf-8")
+        for host in ("fonts.googleapis.com", "fonts.gstatic.com"):
+            if host in text:
+                problems.append("%s: links to %s — fonts are self-hosted, see "
+                                "tools/fetch_fonts.py" % (page.relative_to(ROOT), host))
+
+    css_path = ROOT / "assets" / "style.css"
+    if not css_path.exists():
+        return
+    css = css_path.read_text(encoding="utf-8")
+
+    block = re.search(r"/\* BEGIN fonts \*/(.*?)/\* END fonts \*/", css, re.S)
+    if not block:
+        problems.append("assets/style.css: the /* BEGIN fonts */ block is gone")
+        return
+    if "@font-face" not in block.group(1):
+        problems.append("assets/style.css: no @font-face rules — run "
+                        "tools/fetch_fonts.py, otherwise the site silently "
+                        "falls back to system fonts")
+        return
+
+    for url in re.findall(r"url\((/assets/fonts/[^)]+)\)", block.group(1)):
+        if not (ROOT / url.lstrip("/")).exists():
+            problems.append("assets/style.css: @font-face points at %s, which "
+                            "is missing — run tools/fetch_fonts.py" % url)
+
+
 def check_projects():
     """Funding record: the rendered page must add up to data/projects.json.
 
@@ -270,6 +307,7 @@ def main():
         problems.append("posts.json lists %d posts but content/posts has %d markdown files — "
                         "run tools/build_posts.py" % (len(posts), sources))
 
+    check_fonts(pages)
     projects = check_projects()
 
     print("checked %d HTML pages, %d publications, %d posts, %d funded projects"

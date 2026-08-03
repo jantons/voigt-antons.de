@@ -58,6 +58,25 @@ python3 tools/build_redirects.py
 python3 tools/build_sitemap.py
 ```
 
+### Schriften kommen von dieser Domain, nicht von Google
+
+`assets/fonts/*.woff2` enthält Inter und JetBrains Mono; die `@font-face`-Regeln stehen in
+`assets/style.css` zwischen `/* BEGIN fonts */` und `/* END fonts */` und werden von
+`tools/fetch_fonts.py` erzeugt.
+
+Grund: ein `<link>` auf `fonts.googleapis.com` lässt den Browser jedes Besuchers Google
+kontaktieren, bevor die Seite rendert, und überträgt dabei dessen IP-Adresse. Das LG München I
+hat genau das für rechtswidrig erklärt (3 O 17493/20, 20.01.2022). Die Seite stellt jetzt
+**keine einzige Anfrage an Dritte** — das vereinfacht auch die Datenschutzerklärung.
+
+Du musst dafür nichts tun: fehlen die Dateien, lädt die GitHub Action sie einmalig und committet
+sie. `tools/check_site.py` bricht ab, wenn eine Seite wieder auf Google verlinkt, wenn der
+Font-Block leer ist oder wenn eine `@font-face`-Regel auf eine fehlende Datei zeigt.
+
+Neue Schriftversion holen: `assets/fonts/` löschen und pushen — oder lokal
+`python3 tools/fetch_fonts.py`. Beide Familien stehen unter der SIL Open Font License 1.1,
+die das Weiterverbreiten erlaubt; der Lizenztext liegt in `assets/fonts/OFL.txt`.
+
 **Fehlt noch, muss von dir ergänzt werden:**
 
 - `images/profile.png` — Portrait (empfohlen: zusätzlich `profile.webp`, ~800 px)

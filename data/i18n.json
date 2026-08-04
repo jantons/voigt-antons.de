@@ -57,7 +57,6 @@
   "<b>2015–21</b><span>Senior Research Scientist, TU Berlin</span>": "<b>2015–21</b><span>Senior Research Scientist, TU Berlin</span>",
   "<b>2009–14</b><span>Research Scientist, Telekom Innovation Laboratories</span>": "<b>2009–14</b><span>Research Scientist, Telekom Innovation Laboratories</span>",
   "<b>Dr.-Ing.</b><span>TU Berlin 2014, magna cum laude — dissertation published by Springer</span>": "<b>Dr.-Ing.</b><span>TU Berlin 2014, magna cum laude — Dissertation bei Springer erschienen</span>",
-  "<b>Dipl.-Psych.</b><span>TU Darmstadt 2008, sehr gut</span>": "<b>Dipl.-Psych.</b><span>TU Darmstadt 2008, sehr gut</span>",
   "Current projects": "Aktuelle Projekte",
   "Selection from 22 funded projects. Full funding table with partners and outputs on the projects page.": "Auswahl aus 22 geförderten Vorhaben. Vollständige Fördertabelle mit Partnern und Ergebnissen auf der Projektseite.",
   "Dynamic and responsible digital twins for extended reality, with 13 European partners.": "Dynamische und verantwortungsvolle digitale Zwillinge für Extended Reality, mit 13 europäischen Partnern.",
@@ -231,7 +230,6 @@
   "<b>2009–2014</b><span>Research Scientist, Telekom Innovation Laboratories</span>": "<b>2009–2014</b><span>Research Scientist, Telekom Innovation Laboratories</span>",
   "Education": "Ausbildung",
   "<b>2014</b><span><strong>Dr.-Ing.</strong> (Doctor of Engineering), Technische Universität Berlin, Faculty IV — Electrical Engineering and Computer Science, <em>magna cum laude</em>.<br>Dissertation: <em>Neural Correlates of Quality Perception for Complex Speech Signals</em>, published as a monograph by Springer.</span>": "<b>2014</b><span><strong>Dr.-Ing.</strong>, Technische Universität Berlin, Fakultät IV — Elektrotechnik und Informatik, <em>magna cum laude</em>.<br>Dissertation: <em>Neural Correlates of Quality Perception for Complex Speech Signals</em>, als Monografie bei Springer erschienen.</span>",
-  "<b>2008</b><span><strong>Diplom-Psychologe</strong> (Psychology), Technische Universität Darmstadt, overall grade <em>sehr gut</em>.</span>": "<b>2008</b><span><strong>Diplom-Psychologe</strong>, Technische Universität Darmstadt, Gesamtnote <em>sehr gut</em>.</span>",
   "<b>2025</b><span><strong>Best Paper Award</strong>, MMVE Workshop @ ACM MMSys</span>": "<b>2025</b><span><strong>Best Paper Award</strong>, MMVE Workshop @ ACM MMSys</span>",
   "<b>2024</b><span><strong>Key Innovator</strong>, Innovation Radar of the European Commission — two innovations in XR digital twins</span>": "<b>2024</b><span><strong>Key Innovator</strong>, Innovation Radar der Europäischen Kommission — zwei Innovationen zu digitalen Zwillingen in XR</span>",
   "<b>2024</b><span>Special Prize, Sustainability Award of Volksbank Beckum-Lippstadt (for a supervised Bachelor's thesis)</span>": "<b>2024</b><span>Sonderpreis des Nachhaltigkeitspreises der Volksbank Beckum-Lippstadt (für eine betreute Bachelorarbeit)</span>",
@@ -516,6 +514,8 @@
   "Simulated videotelephony clips for research on quality perception — recorded material for experiments in which participants rate audiovisual quality under controlled degradations.": "Simulierte Videotelefonie-Clips für die Forschung zur Qualitätswahrnehmung — aufgezeichnetes Material für Experimente, in denen Versuchspersonen audiovisuelle Qualität unter kontrollierten Störungen beurteilen.",
   "Cite as": "Zitieren als",
   "The STAGA-Dataset": "The STAGA-Dataset",
-  "Stop and trip annotated GPS and accelerometer data from everyday life — labelled mobility traces for developing and benchmarking methods that tell movement apart from standing still.": "GPS- und Beschleunigungsdaten aus dem Alltag, annotiert nach Aufenthalt und Weg — gelabelte Bewegungsspuren, um Verfahren zu entwickeln und zu vergleichen, die Bewegung von Aufenthalt unterscheiden."
+  "Stop and trip annotated GPS and accelerometer data from everyday life — labelled mobility traces for developing and benchmarking methods that tell movement apart from standing still.": "GPS- und Beschleunigungsdaten aus dem Alltag, annotiert nach Aufenthalt und Weg — gelabelte Bewegungsspuren, um Verfahren zu entwickeln und zu vergleichen, die Bewegung von Aufenthalt unterscheiden.",
+  "<b>Dipl.-Psych.</b><span>TU Darmstadt 2008, <em>sehr gut</em> (very good)</span>": "<b>Dipl.-Psych.</b><span>TU Darmstadt 2008, <em>sehr gut</em></span>",
+  "<b>2008</b><span><strong>Diplom-Psychologe</strong> (Psychology), Technische Universität Darmstadt, overall grade <em>sehr gut</em> — very good, the highest overall grade awarded in the German Diplom.</span>": "<b>2008</b><span><strong>Diplom-Psychologe</strong>, Technische Universität Darmstadt, Gesamtnote <em>sehr gut</em>.</span>"
  }
 }

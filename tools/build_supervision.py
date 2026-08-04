@@ -98,6 +98,7 @@ def build_doctoral(sup):
         <ul>
 {rows}
         </ul>
+        <p class="metrics-note" style="margin-top:14px">{presenting}</p>
       </div>
       <div class="tr-item rv">
         <h3>Theses</h3>
@@ -128,7 +129,8 @@ def build_doctoral(sup):
         master=theses["master"], bachelor=theses["bachelor"], since=theses["since"],
         theses_note=html.escape(theses["note"]),
         note_completed=html.escape(sup["note_completed"]),
-        note_alumni=html.escape(sup.get("note_alumni", "")))
+        note_alumni=html.escape(sup.get("note_alumni", "")),
+        presenting=html.escape(sup.get("note_presenting", "")))
 
 
 def build_network(net):

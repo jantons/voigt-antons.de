@@ -136,6 +136,39 @@ def check_section_numbers(pages):
                    " ".join("%02d" % n for n in range(1, len(numbers) + 1))))
 
 
+def check_cross_page_anchors(pages):
+    """A fragment on another page has to exist there too.
+
+    Same-page anchors were checked from the start; links like
+    /cv/#bibliometrics or /projects/#didymos-xr were not, because the link
+    check drops everything after the "#". They fail quietly: the page loads,
+    the browser simply stays at the top, and nobody notices that the reader was
+    aimed at a section that has since been renamed. The figures on the start
+    page each point at the page that documents them, so there are now several.
+    """
+    id_cache = {}
+
+    def ids_of(url):
+        if url not in id_cache:
+            target = ROOT / url.lstrip("/")
+            if target.is_dir() or url.endswith("/"):
+                target = target / "index.html"
+            id_cache[url] = (set(re.findall(r'id="([^"]+)"',
+                                            target.read_text(encoding="utf-8")))
+                             if target.exists() else None)
+        return id_cache[url]
+
+    for page in pages:
+        text = page.read_text(encoding="utf-8")
+        for url, frag in set(re.findall(r'(?:href|src)="(/[^"#?]*)#([^"]+)"', text)):
+            if url in ALLOW_MISSING:
+                continue
+            ids = ids_of(url)
+            if ids is not None and frag not in ids:
+                problems.append("%s: link to %s#%s — that page has no id %r"
+                                % (page.relative_to(ROOT), url, frag, frag))
+
+
 def check_label_widths(pages):
     """A label in .cv-list must fit its 104px column.
 
@@ -661,6 +694,7 @@ def main():
     check_peer_review(items)
     check_conflict_markers()
     check_section_numbers(pages)
+    check_cross_page_anchors(pages)
     check_label_widths(pages)
     check_placeholders(pages)
     check_cv_pdf()

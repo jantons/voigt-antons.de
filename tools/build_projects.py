@@ -124,7 +124,7 @@ def build(data):
     return """{begin}
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><h2>Full funding record</h2></div>
+    <div class="sec-head" id="funding-record"><span class="sec-num">02</span><h2>Full funding record</h2></div>
     <p class="sec-sub">All {n_all} funded projects with period, funder, role and awarded volume.
     This record is kept current; application documents reflect the state at their date of
     submission.</p>

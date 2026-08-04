@@ -113,6 +113,29 @@ def check_conflict_markers():
                                     % path.relative_to(ROOT))
 
 
+def check_section_numbers(pages):
+    """Section numbers must read 01, 02, 03 … in the order the sections appear.
+
+    The teaching page read 01, 03, 02: a section was inserted above another and
+    kept the number it would have had below it. Nothing else notices — the
+    markup is valid, the anchors resolve — but a reader counts.
+
+    The rule is equality with 1..n, not "ascending". Ascending passes 01, 03, 03
+    and 01, 02, 04, which are the two mistakes an editor actually makes when
+    moving a section: duplicating a number, or leaving a hole behind.
+    """
+    for page in pages:
+        text = page.read_text(encoding="utf-8")
+        numbers = [int(n) for n in
+                   re.findall(r'<span class="sec-num">(\d+)</span>', text)]
+        if numbers and numbers != list(range(1, len(numbers) + 1)):
+            problems.append(
+                "%s: section numbers read %s — expected %s"
+                % (page.relative_to(ROOT),
+                   " ".join("%02d" % n for n in numbers),
+                   " ".join("%02d" % n for n in range(1, len(numbers) + 1))))
+
+
 def check_label_widths(pages):
     """A label in .cv-list must fit its 104px column.
 
@@ -637,6 +660,7 @@ def main():
     check_headline_numbers(items, meta)
     check_peer_review(items)
     check_conflict_markers()
+    check_section_numbers(pages)
     check_label_widths(pages)
     check_placeholders(pages)
     check_cv_pdf()

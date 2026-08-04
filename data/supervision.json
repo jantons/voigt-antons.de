@@ -50,7 +50,8 @@
    "institution": "TU Berlin, Faculty IV — Electrical Engineering and Computer Science",
    "role": "Supervision and examination",
    "examiners": "S. Möller (TU Berlin), P. César (TU Delft / CWI Amsterdam), M. Fiedler (BTH Karlskrona)",
-   "awarded": "Dr.-Ing."
+   "awarded": "Dr.-Ing.",
+   "now": "Postdoctoral researcher, TU Berlin"
   },
   {
    "year": 2023,
@@ -60,7 +61,8 @@
    "institution": "TU Berlin, Faculty VII — Economics and Management",
    "role": "Supervision and examination",
    "awarded": "Dr.-Ing.",
-   "note": "Cross-faculty procedure in the economic sciences"
+   "note": "Cross-faculty procedure in the economic sciences",
+   "now": "Postdoctoral researcher, TU Berlin"
   },
   {
    "year": 2022,
@@ -70,7 +72,8 @@
    "institution": "TU Berlin, Faculty IV — Electrical Engineering and Computer Science",
    "role": "Supervision and examination",
    "examiners": "S. Möller (TU Berlin), K. De Moor (NTNU Trondheim), M. Sužnjević (University of Zagreb)",
-   "awarded": "Dr.-Ing."
+   "awarded": "Dr.-Ing.",
+   "now": "Postdoctoral researcher, TU Berlin"
   },
   {
    "year": 2022,
@@ -79,12 +82,14 @@
    "title": "Affective Visualization in Virtual Reality Systems",
    "institution": "Binational cotutelle, University of Technology Sydney (Faculty of Engineering and Information Technology) and TU Berlin (Faculty IV)",
    "role": "Supervision within the team, with J. Garcia (UTS), S. Möller (TU Berlin) and W. Raffe (UTS)",
-   "awarded": "Doctor of Science"
+   "awarded": "Doctor of Science",
+   "now": "Industry, Colombia"
   }
  ],
  "note_completed": "All four were examined by international committees: one binational cotutelle with Australia, one across faculties in the economic sciences, two with examiners from Norway, Croatia, the Netherlands and Sweden. Every one of the four produced joint publications in peer-reviewed journals and at the field's core conferences.",
  "further": [
   "Master's thesis of Roman Kupkovic, TU Berlin 2024",
   "Master's thesis of Daniele Patti, Politecnico di Milano 2022"
- ]
+ ],
+ "note_alumni": "Where they went afterwards: three continue in research as postdoctoral researchers, one moved into industry."
 }

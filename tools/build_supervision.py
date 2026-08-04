@@ -73,10 +73,19 @@ def build_doctoral(sup):
             detail.append("further examiners: " + e(person["examiners"]))
         if person.get("note"):
             detail.append(e(person["note"]))
+        # Where someone went after the defence says more about supervision
+        # than the title of the thesis does: a committee reading a CV wants to
+        # know whether the people who finish here can carry on.
+        after = (" <strong>Now:</strong> %s." % e(person["now"])
+                 if person.get("now") else "")
+        # "Dr.-Ing." already ends in a full stop; a template that adds one
+        # unconditionally produces "Dr.-Ing..".
+        awarded = e(person["awarded"])
         done.append(
-            '          <li><b>%d</b><span><strong>%s</strong>, %s — <em>%s</em>. %s. %s</span></li>'
+            '          <li><b>%d</b><span><strong>%s</strong>, %s — <em>%s</em>. %s. %s%s%s</span></li>'
             % (person["year"], e(person["name"]), e(person["degree"]),
-               e(person["title"]), " · ".join(detail), e(person["awarded"])))
+               e(person["title"]), " · ".join(detail), awarded,
+               "" if awarded.endswith(".") else ".", after))
 
     further = "".join("<li>%s</li>" % e(x) for x in sup["further"])
 
@@ -112,13 +121,14 @@ def build_doctoral(sup):
     <ul class="cv-list">
 {done}
     </ul>
-    <p class="metrics-note" style="margin-top:12px">{note_completed}</p>
+    <p class="metrics-note" style="margin-top:12px">{note_completed} {note_alumni}</p>
 <!-- END doctoral -->""".format(
         n_ongoing=WORDS.get(len(ongoing), len(ongoing)),
         rows="\n".join(rows), done="\n".join(done), further=further,
         master=theses["master"], bachelor=theses["bachelor"], since=theses["since"],
         theses_note=html.escape(theses["note"]),
-        note_completed=html.escape(sup["note_completed"]))
+        note_completed=html.escape(sup["note_completed"]),
+        note_alumni=html.escape(sup.get("note_alumni", "")))
 
 
 def build_network(net):

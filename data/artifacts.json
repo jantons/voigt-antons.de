@@ -2,7 +2,7 @@
  "meta": {
   "updated": "2026-08-04",
   "note": "Reusable research artefacts — data, instruments, software — that someone else can download and cite. Kept separate from data/publications.json because a paper describes a result and an artefact is one: the paper is the citation, the repository is the thing. Rendered into /research/ by tools/build_artifacts.py, which also feeds the Dataset markup written by tools/build_jsonld.py.",
-  "unverified": "The OSF page could not be read from the build environment, so the licence and any DOI minted by OSF itself are not recorded here. Add them once checked; the entry deliberately cites the paper's DOI, which is the citation the authors ask for."
+  "unverified": "The OSF pages could not be read from the build environment, so licences and any DOIs minted by OSF itself are not recorded here. Add them once checked; each entry deliberately cites the paper's DOI, which is the citation the authors ask for."
  },
  "artifacts": [
   {
@@ -14,8 +14,31 @@
    "url": "https://osf.io/cyb8w",
    "repository": "OSF",
    "paper": "2022-10-04-C67",
-   "keywords": ["quality of experience", "videotelephony", "audiovisual quality",
-                "subjective testing", "speech quality"]
+   "keywords": [
+    "quality of experience",
+    "videotelephony",
+    "audiovisual quality",
+    "subjective testing",
+    "speech quality"
+   ]
+  },
+  {
+   "id": "staga",
+   "kind": "Dataset",
+   "name": "The STAGA-Dataset",
+   "year": 2022,
+   "summary": "Stop and trip annotated GPS and accelerometer data from everyday life — labelled mobility traces for developing and benchmarking methods that tell movement apart from standing still.",
+   "url": "https://osf.io/34sft",
+   "repository": "OSF",
+   "paper": "2022-08-06-OC29",
+   "keywords": [
+    "mobility",
+    "GPS",
+    "accelerometer",
+    "stop and trip classification",
+    "human activity recognition",
+    "digital health"
+   ]
   }
  ]
 }

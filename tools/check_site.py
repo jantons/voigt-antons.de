@@ -169,6 +169,81 @@ def check_cross_page_anchors(pages):
                                 % (page.relative_to(ROOT), url, frag, frag))
 
 
+def check_structured_data(pages):
+    """The entity graph has to hold together.
+
+    Every page's JSON-LD refers to one Person, https://voigt-antons.de/#person.
+    A reference is only worth something if something defines it, and a
+    definition is only worth something if it is the same everywhere: two pages
+    describing "#person" differently would merge into one contradictory node,
+    which is worse than two honest strangers.
+
+    So: every page carries a block, every @id referenced on a page is either
+    defined on that page or is the person node, and the person node is
+    byte-identical wherever it appears in a given language.
+    """
+    person_id = "https://voigt-antons.de/#person"
+    # Pages that carry no entity on purpose: a tag index, the error page and
+    # the legal notice, which is the one page robots.txt keeps out anyway.
+    exempt = {("tags", "index.html"), ("404.html",), ("impressum", "index.html"),
+              ("de", "impressum", "index.html")}
+
+    defined, referenced, seen_person = {}, [], {}
+
+    for page in pages:
+        rel = page.relative_to(ROOT)
+        text = page.read_text(encoding="utf-8")
+        blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>',
+                            text, re.S)
+        if not blocks:
+            # A page that asks not to be indexed has nothing to say to a
+            # knowledge graph. The redirect stubs left behind by renamed
+            # publication ids are all of this kind, and listing them by name
+            # would mean editing this check every time one is added.
+            noindex = re.search(r'<meta name="robots" content="[^"]*noindex', text)
+            if rel.parts not in exempt and not noindex:
+                problems.append("%s: no structured data — run tools/build_jsonld.py"
+                                % rel)
+            continue
+
+        for raw in blocks:
+            try:
+                data = json.loads(raw)
+            except ValueError:
+                continue                      # already reported by the JSON-LD check
+            nodes = [n for n in data.get("@graph", [data]) if isinstance(n, dict)]
+
+            for node in nodes:
+                if node.get("@id"):
+                    defined.setdefault(node["@id"], rel)
+            referenced += [(rel, r) for r in
+                           set(re.findall(r'"@id"\s*:\s*"([^"]+)"', raw))]
+
+            for node in nodes:
+                if node.get("@id") == person_id and node.get("@type") == "Person":
+                    lang = "de" if rel.parts[0] == "de" else "en"
+                    key = json.dumps(node, sort_keys=True, ensure_ascii=False)
+                    if lang not in seen_person:
+                        seen_person[lang] = (rel, key)
+                    elif seen_person[lang][1] != key:
+                        problems.append(
+                            "%s: describes %s differently from %s — one entity "
+                            "cannot have two descriptions"
+                            % (rel, person_id, seen_person[lang][0]))
+
+    # References resolve across the site, not within one page: that is the
+    # point of the design. The person is defined on the main pages and pointed
+    # at from 234 publication pages; requiring a local definition would have
+    # meant repeating the whole entity on every one of them.
+    for rel, ref in sorted(set(referenced)):
+        if ref not in defined:
+            problems.append("%s: refers to %s but no page defines it" % (rel, ref))
+
+    for lang in ("en", "de"):
+        if lang not in seen_person:
+            problems.append("no %s page defines %s" % (lang, person_id))
+
+
 def check_label_widths(pages):
     """A label in .cv-list must fit its 104px column.
 
@@ -695,6 +770,7 @@ def main():
     check_conflict_markers()
     check_section_numbers(pages)
     check_cross_page_anchors(pages)
+    check_structured_data(pages)
     check_label_widths(pages)
     check_placeholders(pages)
     check_cv_pdf()

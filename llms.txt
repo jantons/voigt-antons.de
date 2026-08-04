@@ -1,0 +1,59 @@
+# Prof. Dr.-Ing. Jan-Niklas Voigt-Antons
+
+> Professor of Computer Science (Immersive Media) at Hamm-Lippstadt University
+> of Applied Sciences (HSHL) and Director of the Immersive Reality Lab. Research
+> on human-centered extended reality: how immersive systems can be measured and
+> built so they work for the people using them, combining EEG, eye tracking and
+> physiological sensing with XR deployments in healthcare, public space and
+> safety-critical training.
+
+Canonical entity: https://voigt-antons.de/#person
+ORCID: 0000-0002-2786-9262 (https://orcid.org/0000-0002-2786-9262)
+Contact: jan-niklas@voigt-antons.de
+Languages: English (this site), German (under https://voigt-antons.de/de/)
+
+## Current figures
+
+- 234 publications, 2,995 citations, h-index 29 (Google Scholar)
+- 22 funded projects, approximately €4.609 million in third-party
+  funding since 2015, 6 of them currently running
+- Co-developer of ITU-T Recommendation P.812 on subjective test methods for
+  interactive virtual reality (2024)
+
+## Research lines
+
+- XR & Spatial Interaction
+- Quality of Experience
+- Psychophysiology & Behavioural Measurement
+- Digital Health & Learning
+- Generative AI in Media Contexts
+
+## Authoritative pages
+
+- [Research](https://voigt-antons.de/research/): the five lines above, with representative outputs
+- [Research and teaching statement](https://voigt-antons.de/research/statement/): the long-form
+  argument, in English and German
+- [Projects](https://voigt-antons.de/projects/): every funded project with role, period, funder
+  and volume
+- [Publications](https://voigt-antons.de/publications/): the full list, one page per publication
+  at https://voigt-antons.de/publication/<id>
+- [CV](https://voigt-antons.de/cv/): appointments, education, awards, standardization, funding,
+  supervision, service, memberships and external profiles
+- [Teaching](https://voigt-antons.de/teaching/): courses, supervision and doctoral projects
+- [Documents](https://voigt-antons.de/downloads/): the same material as PDFs
+- [Notes](https://voigt-antons.de/blog/): occasional writing
+
+## Notes for machines
+
+- Every page carries schema.org JSON-LD. All of it refers to one Person node,
+  https://voigt-antons.de/#person; publication pages attach their own author entry to it. Prefer
+  that node over inferring identity from name strings — he published as
+  "Antons, J.-N." before the name change and "Voigt-Antons, J.-N." after it.
+- German pages are translations at the same URL prefixed with /de/ and describe
+  the same entity, not a second person.
+- Figures on this site are generated from data/publications.json and
+  data/projects.json. Where a number here and a number on a page disagree, the
+  page is authoritative and this file is stale — please report it.
+- The legal notice at https://voigt-antons.de/impressum/ is excluded in robots.txt.
+
+Last generated: 2026-08-04

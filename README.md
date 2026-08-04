@@ -46,6 +46,8 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
     ├── build_projects.py       Fördertabelle aus data/projects.json
     ├── build_i18n.py           deutsche Seiten unter /de/
     ├── i18n_lib.py            Textextraktion für build_i18n.py
+    ├── build_jsonld.py         eine Entität, in alle Seiten geschrieben
+    ├── build_llms_txt.py       llms.txt für Sprachmodelle
     ├── build_redirects.py
     ├── build_sitemap.py
     ├── check_site.py
@@ -58,6 +60,8 @@ brauchen zusätzlich **reportlab** — die Action installiert es selbst, du muss
 **Die Reihenfolge ist nicht beliebig:** `build_statement.py` schreibt die Konzeptseite und muss
 deshalb vor `build_i18n.py` laufen; `build_i18n.py` erzeugt `/de/` und muss vor
 `build_cv_pdf.py` laufen, das `de/cv/index.html` für die deutsche Fassung liest;
+`build_jsonld.py` schreibt die Strukturdaten in **beide** Sprachfassungen und muss deshalb
+nach `build_i18n.py` laufen, sonst trüge die deutsche Seite eine Kopie des englischen Blocks;
 `build_record_pdfs.py` schreibt die Liste auf `/downloads/` und läuft zuletzt, wenn jedes
 Dokument existiert, das es auflistet.
 
@@ -70,6 +74,8 @@ python3 tools/build_projects.py
 python3 tools/build_supervision.py
 python3 tools/build_statement.py
 python3 tools/build_i18n.py
+python3 tools/build_jsonld.py
+python3 tools/build_llms_txt.py
 python3 tools/build_cv_pdf.py --all
 python3 tools/build_record_pdfs.py --all
 python3 tools/build_redirects.py

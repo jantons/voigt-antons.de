@@ -87,7 +87,7 @@ FOOTER = """<footer>
         <div class="brand" style="font-size:14px;margin-bottom:6px">Prof. Dr.-Ing. Jan-Niklas Voigt-Antons</div>
         <div class="foot-col">Professor of Computer Science (Immersive Media)<br>Hamm-Lippstadt University of Applied Sciences</div>
         <div class="ids">
-          <a class="id-chip" href="https://scholar.google.de/citations?user=IFIaOZsAAAAJ">Google Scholar</a>
+          <a class="id-chip" href="https://scholar.google.com/citations?user=IFIaOZsAAAAJ">Google Scholar</a>
           <a class="id-chip" href="https://orcid.org/0000-0002-2786-9262">ORCID</a>
           <a class="id-chip" href="https://dblp.org/pid/39/10762">DBLP</a>
           <a class="id-chip" href="https://dl.acm.org/profile/99659317387">ACM DL</a>
@@ -108,6 +108,29 @@ FOOTER = """<footer>
 _AUTHOR_SPLIT = re.compile(r",\s+(?=[A-ZÀ-ÖØ-Þ][a-zà-öø-ÿ'’])")
 
 
+# The site owner as he appears in his own bibliography. He published under
+# "Antons" until the name change and under "Voigt-Antons" after it, so a paper
+# from 2012 and one from 2025 name two strings and one person.
+OWN_NAMES = ("Voigt-Antons, J.-N.", "Antons, J.-N.", "Voigt-Antons, J.N.",
+             "Antons, J.N.")
+PERSON_ID = "https://voigt-antons.de/#person"
+
+
+def author_node(name):
+    """One author, tied to the canonical entity when it is him.
+
+    Without the @id every publication page introduces a fresh, anonymous
+    Person; 234 pages produce 234 strangers who happen to share a name. The
+    @id is what makes them one node with 234 papers attached — which is the
+    whole reason this markup is worth having.
+    """
+    node = {"@type": "Person", "name": name}
+    if name in OWN_NAMES:
+        node["@id"] = PERSON_ID
+        node["url"] = "https://voigt-antons.de/"
+    return node
+
+
 def split_authors(s):
     """Split 'Kaeder, J., Vergari, M. & Möller, S.' into surname-first names.
 
@@ -122,6 +145,13 @@ def split_authors(s):
     for a in parts:
         a = re.sub(r"\s*\((?:Eds?\.|Hrsg\.)\)\s*$", "", a)
         a = re.sub(r"\s+et\s+al\.?\s*$", "", a).strip().strip(",")
+        # Notation that belongs to the citation, not to the name: a trailing
+        # "*" marks equal contribution, "..." stands for the authors a journal
+        # style leaves out. Both were ending up inside the name, so the same
+        # person appeared as "Voigt-Antons, J.-N.", "Voigt-Antons, J.-N.*" and
+        # "Voigt-Antons, J.-N., ..." — three people, to anything reading it.
+        a = re.sub(r"[*†‡]+$", "", a).strip()
+        a = re.sub(r",?\s*\.\.\.$", "", a).strip().strip(",")
         if a and a.lower() not in ("et al.", "et al"):
             out.append(a)
     return out
@@ -185,7 +215,7 @@ def page(p, prev_item, next_item):
         "@type": "ScholarlyArticle",
         "headline": p["ti"],
         "datePublished": str(p["y"]),
-        "author": [{"@type": "Person", "name": n} for n in split_authors(p["a"])],
+        "author": [author_node(n) for n in split_authors(p["a"])],
         "isPartOf": p["v"],
     }
     if p.get("d"):

@@ -76,6 +76,11 @@ jobs:
       #   build_statement writes the statement page, so it must precede i18n
       #   build_i18n derives /de/, so it must precede build_cv_pdf, which parses
       #     de/cv/index.html for the German edition
+      #   build_jsonld writes the entity into both language versions, so it has
+      #     to run after build_i18n has created them — otherwise the German
+      #     pages would carry a copy of the English block
+      #   build_llms_txt quotes figures off the finished pages, so it runs last
+      #     of the page generators
       #   build_record_pdfs writes the listing on /downloads/, so it runs after
       #     every document it lists exists
       - name: Generate pages and documents
@@ -86,6 +91,8 @@ jobs:
           python3 tools/build_supervision.py
           python3 tools/build_statement.py
           python3 tools/build_i18n.py
+          python3 tools/build_jsonld.py
+          python3 tools/build_llms_txt.py
           python3 tools/build_cv_pdf.py --all
           python3 tools/build_record_pdfs.py --all
           python3 tools/build_redirects.py

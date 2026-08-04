@@ -33,6 +33,7 @@ import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import i18n_lib  # noqa: E402
 from i18n_lib import translate  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -172,6 +173,11 @@ def build_german(english, path, table, missing):
     return html
 
 
+
+def unit(li):
+    """The <li> body, which is what i18n_lib uses as the key."""
+    return i18n_lib.normalise(re.sub(r"^\s*<li>|</li>\s*$", "", li.strip()))
+
 def bilingual_pairs(node, out):
     """Harvest en/de pairs from a data file that already holds both languages.
 
@@ -206,6 +212,23 @@ def main():
         derived = bilingual_pairs(json.loads(statement.read_text(encoding="utf-8")), {})
         for key, value in derived.items():
             table.setdefault(key, value)
+
+    # The talks block is rendered by tools/build_talks.py, so its German version
+    # comes from that same function rather than from hand-written translations
+    # in data/i18n.json. Ten entries typed twice would disagree on the first one
+    # that gains a city.
+    talks = ROOT / "data" / "talks.json"
+    if talks.exists():
+        import build_talks
+        data = json.loads(talks.read_text(encoding="utf-8"))
+        for talk in data["talks"]:
+            table.setdefault(unit(build_talks.line(talk, "en")),
+                             unit(build_talks.line(talk, "de")))
+        invited = [x for x in data["talks"] if x["kind"] in build_talks.INVITED]
+        table.setdefault(build_talks.lead(invited, "en"),
+                         build_talks.lead(invited, "de"))
+        for key in build_talks.HEAD.values():
+            table.setdefault(key["en"], key["de"])
     missing = set()
     written = 0
 

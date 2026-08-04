@@ -272,6 +272,39 @@ def check_pdf_fonts():
                 "fallback. %s" % (path.relative_to(ROOT), describe()))
 
 
+def check_talks():
+    """A talk entry has to say what it was, where, and when.
+
+    The line this block replaced read "Invited talks at industry events,
+    universities and international venues" — no year, no place, no title.
+    Vagueness in a CV reads as padding, so an entry that cannot name its kind
+    and its location does not belong on the page at all.
+
+    "missing" is the working note left on an entry while the facts are still
+    being gathered; anything still carrying one must not reach a reader.
+    """
+    path = ROOT / "data" / "talks.json"
+    if not path.exists():
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    for talk in data["talks"]:
+        if talk.get("missing"):
+            problems.append("data/talks.json: %s is still missing %s"
+                            % (talk["id"], ", ".join(talk["missing"])))
+        for field in ("date", "kind", "title", "event"):
+            if not talk.get(field):
+                problems.append("data/talks.json: %s has no %s"
+                                % (talk["id"], field))
+        if not talk.get("city"):
+            problems.append("data/talks.json: %s has no city — use \"online\" if "
+                            "it was remote" % talk["id"])
+        if talk.get("kind") not in ("keynote", "invited", "panel", "tutorial",
+                                    "visit", "own-event"):
+            problems.append("data/talks.json: %s has kind %r, which is not one of "
+                            "the kinds meta.kinds describes"
+                            % (talk["id"], talk.get("kind")))
+
+
 def check_label_widths(pages):
     """A label in .cv-list must fit its 104px column.
 
@@ -800,6 +833,7 @@ def main():
     check_cross_page_anchors(pages)
     check_structured_data(pages)
     check_pdf_fonts()
+    check_talks()
     check_label_widths(pages)
     check_placeholders(pages)
     check_cv_pdf()

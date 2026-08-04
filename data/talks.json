@@ -14,23 +14,6 @@
  },
  "talks": [
   {
-   "id": "delfi-edtech-ki-workshop",
-   "date": null,
-   "kind": null,
-   "title": "Umgang mit ethischen Fragen bei der Entwicklung von KI in EdTech-Anwendungen",
-   "title_en": "Handling ethical questions in the development of AI for educational technology",
-   "event": "Workshop „Rahmenbedingungen für Künstliche Intelligenz in EdTech“, DELFI — Fachtagung Bildungstechnologien der Gesellschaft für Informatik",
-   "city": null,
-   "country": "DE",
-   "note": "Check whether you spoke at this workshop or organised it — if you convened it, it belongs with the chair roles under Community & editorial, not here.",
-   "missing": [
-    "date",
-    "kind",
-    "city",
-    "speaker or organiser?"
-   ]
-  },
-  {
    "id": "2026-05-16-belfast-horizon-scanning",
    "date": "2026-05-16",
    "kind": "invited",
@@ -50,34 +33,25 @@
   {
    "id": "2025-11-19-smart-systems",
    "date": "2025-11-19",
-   "kind": null,
+   "kind": "invited",
    "title": "Affektives Potenzial immersiver XR: Konversationen mit Robotern und Navigation",
    "title_en": "The affective potential of immersive XR: conversations with robots, and navigation",
    "event": "Smart Systems Conference",
-   "city": null,
-   "country": null,
-   "missing": [
-    "kind",
-    "city",
-    "country",
-    "confirm title_en"
-   ]
+   "city": "Dortmund",
+   "country": "DE",
+   "missing": []
   },
   {
    "id": "2025-10-28-metaverse-meets-health",
    "date": "2025-10-28",
-   "kind": null,
+   "kind": "invited",
    "title": "MIA-PROM — Multimodal Assistant system for collecting Patient-Reported Outcome Measures",
    "title_en": null,
    "event": "Forschungssymposium „Metaverse meets Health“",
-   "city": null,
-   "country": null,
+   "city": "Hagen",
+   "country": "DE",
    "project": "mia-prom",
-   "missing": [
-    "kind",
-    "city",
-    "country"
-   ]
+   "missing": []
   },
   {
    "id": "2025-04-16-brandes-visit",
@@ -86,13 +60,10 @@
    "title": "Virtuelles Institut für VR/AR",
    "title_en": "Virtual Institute for VR/AR",
    "event": "Besuch von Ina Brandes, Ministerin für Kultur und Wissenschaft des Landes Nordrhein-Westfalen",
-   "city": null,
+   "city": "Lippstadt",
    "country": "DE",
    "project": "virtual-institute",
-   "missing": [
-    "city",
-    "confirm placement"
-   ]
+   "missing": []
   },
   {
    "id": "2023-12-13-stadtlabor-soest",
@@ -115,12 +86,10 @@
    "title": "Nutzer*innenzentrierte Entwicklung von Chatbots: zur Optimierung von Systemen auf menschliche Bedürfnisse",
    "title_en": "User-centred development of chatbots: fitting systems to human needs",
    "event": "Treffen der NExTcommunity Chatbot, NExT e.V. — Netzwerk: Experten für die digitale Transformation der Verwaltung",
-   "city": null,
+   "city": "online",
    "country": "DE",
    "note": "NExT e.V. is a network of German public authorities; the Chatbot community of practice is made up of public administration staff. Another audience outside computer science — this one inside government.",
-   "missing": [
-    "city or online?"
-   ]
+   "missing": []
   },
   {
    "id": "2023-04-19-digitalise-swf-kickoff",
@@ -129,13 +98,11 @@
    "title": "Virtuelles Institut Augmented Reality / Virtual Reality in der Produktentwicklung",
    "title_en": "Virtual Institute for Augmented and Virtual Reality in product development",
    "event": "Auftaktveranstaltung „Digitalise_SWF“",
-   "city": null,
+   "city": "Lippstadt",
    "country": "DE",
    "project": "virtual-institute",
    "note": "His own project's launch event — presenting the institute he heads. Real visibility, but not an external invitation, and a CV that files it as one invites the question.",
-   "missing": [
-    "city"
-   ]
+   "missing": []
   },
   {
    "id": "2023-03-24-care-regio",
@@ -144,29 +111,39 @@
    "audience": "practitioners",
    "title": "Gebrauchstauglichkeit digitaler Assistenzsysteme durch Nutzer*innenzentrierung — Projektbeispiele mit verschiedenen Perspektiven",
    "title_en": "Usability of digital assistance systems through user-centred design — project examples from several perspectives",
-   "event": "CARE REGIO — „Pflege im Aufbruch“",
-   "city": null,
+   "event": "7. Ambient Medicine® Forum „CARE REGIO — Pflege im Aufbruch“",
+   "city": "Kempten (Allgäu)",
    "country": "DE",
    "note": "CARE REGIO is a Bavarian care-digitalisation consortium led by Kempten UAS and funded by the Bavarian health ministry — an invitation from another field and another Land, to an audience of care practitioners.",
-   "missing": [
-    "city"
-   ]
+   "missing": [],
+   "venue": "Margaretha- und Josephinen-Stift"
   },
   {
    "id": "2022-04-02-bgpn",
    "date": "2022-04-02",
-   "kind": null,
+   "kind": "keynote",
    "title": "Nutzung von Sprach- und Textparametern für die Personalisierung von digitalen Gesundheitsmaßnahmen",
    "title_en": "Using speech and text parameters to personalise digital health interventions",
    "event": "Frühjahrstagung der Berliner Gesellschaft für Psychiatrie und Neurologie (BGPN)",
    "city": "Berlin",
    "country": "DE",
    "note": "A medical society, not a computer science venue — worth keeping visible as such.",
-   "missing": [
-    "kind",
-    "confirm society name order",
-    "confirm title_en"
-   ]
+   "missing": [],
+   "audience": "medical society"
+  },
+  {
+   "id": "2022-delfi-edtech-ki",
+   "date": "2022",
+   "kind": "keynote",
+   "title": "Umgang mit ethischen Fragen bei der Entwicklung von KI in EdTech-Anwendungen",
+   "title_en": "Handling ethical questions in the development of AI for educational technology",
+   "event": "Workshop „Rahmenbedingungen für Künstliche Intelligenz in EdTech“, DELFI — Fachtagung Bildungstechnologien der Gesellschaft für Informatik",
+   "city": "Karlsruhe",
+   "country": "DE",
+   "note": "Keynote of the workshop, not of the DELFI conference — stated that way on purpose. Writing \"Keynote, DELFI 2022\" would claim the conference keynote, and the difference is exactly what a committee checks first.",
+   "missing": [],
+   "audience": "research community",
+   "scope": "workshop"
   }
  ]
 }

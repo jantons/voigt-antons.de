@@ -99,6 +99,7 @@ jobs:
           python3 tools/build_projects.py
           python3 tools/build_supervision.py
           python3 tools/build_artifacts.py
+          python3 tools/build_talks.py
           python3 tools/build_statement.py
           python3 tools/build_i18n.py
           python3 tools/build_jsonld.py

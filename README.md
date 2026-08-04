@@ -47,6 +47,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
     ├── build_i18n.py           deutsche Seiten unter /de/
     ├── i18n_lib.py            Textextraktion für build_i18n.py
     ├── build_artifacts.py      nachnutzbare Daten und Instrumente auf /research/
+    ├── build_talks.py          Vorträge und Keynotes im Lebenslauf
     ├── pdf_fonts.py            findet die Liberation-Schriften für die PDFs
     ├── build_jsonld.py         eine Entität, in alle Seiten geschrieben
     ├── build_llms_txt.py       llms.txt für Sprachmodelle
@@ -75,6 +76,7 @@ python3 tools/build_posts.py
 python3 tools/build_projects.py
 python3 tools/build_supervision.py
 python3 tools/build_artifacts.py
+python3 tools/build_talks.py
 python3 tools/build_statement.py
 python3 tools/build_i18n.py
 python3 tools/build_jsonld.py

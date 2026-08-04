@@ -19,15 +19,15 @@
   },
   "bibliometrics": {
    "source": "Google Scholar",
-   "as_of": "2026-08-02",
-   "citations": 2987,
+   "as_of": "2026-08-04",
+   "citations": 2995,
    "h_index": 29,
    "i10_index": 83,
    "since_2021": {
-    "citations": 2044,
+    "citations": 2055,
     "h_index": 23,
     "i10_index": 62,
-    "note": "Roughly two thirds of all citations fall in the last five years. From the application documents, Google Scholar as of 27 July 2026; refresh together with the totals."
+    "note": "Roughly two thirds of all citations fall in the last five years. Google Scholar, same date as the totals."
    },
    "scopus": {
     "citations": 1662,

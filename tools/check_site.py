@@ -244,6 +244,34 @@ def check_structured_data(pages):
             problems.append("no %s page defines %s" % (lang, person_id))
 
 
+def check_pdf_fonts():
+    """The documents must actually be set in the typeface they were designed in.
+
+    Every PDF generator falls back to the PDF base-14 Helvetica when the
+    Liberation fonts are missing. That fallback is deliberate — better a
+    readable document than none — but it was silent, and the paths were
+    hard-coded to a directory the CI runner did not have. So the site served
+    six documents in a typeface nobody had ever reviewed, at a third of the
+    file size, and nothing said a word.
+
+    Reading the font names out of the finished file is the only honest test:
+    it checks the artefact rather than the intention, and it fails on the
+    machine that built it, not on the reader's screen.
+    """
+    sys.path.insert(0, str(ROOT / "tools"))
+    from pdf_fonts import EMBEDDED_MARKER, describe
+
+    documents = sorted((ROOT / "files").glob("*.pdf"))
+    if not documents:
+        problems.append("files/ holds no PDF — run the document generators")
+        return
+    for path in documents:
+        if EMBEDDED_MARKER not in path.read_bytes():
+            problems.append(
+                "%s embeds no Liberation font — it was built with the Helvetica "
+                "fallback. %s" % (path.relative_to(ROOT), describe()))
+
+
 def check_label_widths(pages):
     """A label in .cv-list must fit its 104px column.
 
@@ -771,6 +799,7 @@ def main():
     check_section_numbers(pages)
     check_cross_page_anchors(pages)
     check_structured_data(pages)
+    check_pdf_fonts()
     check_label_widths(pages)
     check_placeholders(pages)
     check_cv_pdf()

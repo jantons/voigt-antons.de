@@ -66,11 +66,20 @@ jobs:
       # come out at 18 KB instead of 109 KB with different metrics, so every CI
       # run and every local run would flip them back and forth — and a visitor
       # would download a document in a different typeface than the one tested.
+      #
+      # Both packages, because they install to different directories:
+      # fonts-liberation writes to .../truetype/liberation/ and fonts-liberation2
+      # to .../truetype/liberation2/. Installing only the first while the
+      # generators looked only in the second is how this went wrong once —
+      # silently, for a week. tools/pdf_fonts.py now searches both, and
+      # check_site.py reads the font names back out of the finished PDFs.
       - name: Install reportlab and the document typefaces
         run: |
           pip install --quiet reportlab
           sudo apt-get update -qq
-          sudo apt-get install -y -qq --no-install-recommends fonts-liberation
+          sudo apt-get install -y -qq --no-install-recommends \
+            fonts-liberation fonts-liberation2
+          python3 tools/pdf_fonts.py
 
       # Order matters and is not alphabetical:
       #   build_statement writes the statement page, so it must precede i18n

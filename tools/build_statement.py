@@ -86,16 +86,10 @@ FG = colors.HexColor("#0b0d13")
 FG2 = colors.HexColor("#3f4654")
 FG3 = colors.HexColor("#7b8391")
 
-FONTS = {
-    "sans": "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf",
-    "sans-bold": "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
-    "sans-italic": "/usr/share/fonts/truetype/liberation2/LiberationSans-Italic.ttf",
-    "mono": "/usr/share/fonts/truetype/liberation2/LiberationMono-Regular.ttf",
-    "mono-bold": "/usr/share/fonts/truetype/liberation2/LiberationMono-Bold.ttf",
-}
-FALLBACK = {"sans": "Helvetica", "sans-bold": "Helvetica-Bold",
-            "sans-italic": "Helvetica-Oblique", "mono": "Courier",
-            "mono-bold": "Courier-Bold"}
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from pdf_fonts import resolve as _resolve_fonts, FALLBACK  # noqa: E402
+
+FONTS = _resolve_fonts()
 
 T = {
     "en": dict(
@@ -119,8 +113,9 @@ T = {
 
 def register_fonts():
     names = {}
-    for key, path in FONTS.items():
-        if pathlib.Path(path).exists():
+    for key in FALLBACK:
+        path = FONTS.get(key)
+        if path:
             pdfmetrics.registerFont(TTFont(key, path))
             names[key] = key
         else:

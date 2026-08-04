@@ -31,6 +31,7 @@ import hashlib
 import html
 import json
 import pathlib
+import re
 import sys
 
 try:
@@ -53,6 +54,28 @@ from reportlab import rl_config  # noqa: E402
 rl_config.invariant = 1
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+SITE = "https://voigt-antons.de"
+
+
+def for_pdf(text):
+    """The same sentence, rendered for a page and for print.
+
+    data/statement.json holds one bilingual text that feeds both the HTML page
+    and the PDF. reportlab's mini-HTML accepts <a href> but rejects a class
+    attribute outright — the build died the moment a sentence gained a link —
+    and a root-relative href means nothing in a document someone has
+    downloaded. Links are therefore stripped of styling and made absolute here,
+    rather than kept out of the prose to please the PDF writer.
+    """
+    text = re.sub(r'(<a\b[^>]*?)\s+class="[^"]*"', r"\1", text)
+    return re.sub(r'(<a[^>]*\bhref=")(/)', r"\1" + SITE + r"\2", text)
+
+
+def P(text, style):
+    return Paragraph(for_pdf(text), style)
+
+
 DATA = ROOT / "data" / "statement.json"
 PAGE = ROOT / "research" / "statement" / "index.html"
 
@@ -157,42 +180,42 @@ def pdf(lang, data):
                   leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
     doc.addPageTemplates([PageTemplate(id="p", frames=[frame], onPage=chrome)])
 
-    story = [Paragraph(tr["head"], S["h1"]), Spacer(1, 7),
-             Paragraph(data["lead"][lang], S["lead"]),
-             Paragraph(data["thread"][lang], S["body"])]
+    story = [P(tr["head"], S["h1"]), Spacer(1, 7),
+             P(data["lead"][lang], S["lead"]),
+             P(data["thread"][lang], S["body"])]
 
-    story.append(Paragraph(tr["lines"].upper(), S["h2"]))
+    story.append(P(tr["lines"].upper(), S["h2"]))
     for line in data["lines"]:
-        story.append(Paragraph("%s — %s" % (line["letter"], line["title"][lang]), S["h3"]))
-        story.append(Paragraph(line["question"][lang], S["body"]))
-        story.append(Paragraph(tr["done"].upper(), S["label"]))
-        story.append(Paragraph(line["done"][lang], S["body"]))
-        story.append(Paragraph(tr["next"].upper(), S["label"]))
-        story.append(Paragraph(line["next"][lang], S["body"]))
+        story.append(P("%s — %s" % (line["letter"], line["title"][lang]), S["h3"]))
+        story.append(P(line["question"][lang], S["body"]))
+        story.append(P(tr["done"].upper(), S["label"]))
+        story.append(P(line["done"][lang], S["body"]))
+        story.append(P(tr["next"].upper(), S["label"]))
+        story.append(P(line["next"][lang], S["body"]))
 
     fund = data["funding_strategy"]
-    story.append(Paragraph(fund["title"][lang].upper(), S["h2"]))
-    story.append(Paragraph(fund["intro"][lang], S["body"]))
+    story.append(P(fund["title"][lang].upper(), S["h2"]))
+    story.append(P(fund["intro"][lang], S["body"]))
     for phase in fund["phases"]:
-        story.append(Paragraph(phase["span"][lang], S["label"]))
-        story.append(Paragraph(phase["text"][lang], S["body"]))
-    story.append(Paragraph(fund["candid"][lang], S["body"]))
+        story.append(P(phase["span"][lang], S["label"]))
+        story.append(P(phase["text"][lang], S["body"]))
+    story.append(P(fund["candid"][lang], S["body"]))
 
     teach = data["teaching"]
-    story.append(Paragraph(teach["title"][lang].upper(), S["h2"]))
-    story.append(Paragraph(teach["core"][lang], S["body"]))
+    story.append(P(teach["title"][lang].upper(), S["h2"]))
+    story.append(P(teach["core"][lang], S["body"]))
     for principle in teach["principles"]:
-        story.append(Paragraph("— " + principle[lang], S["body"]))
+        story.append(P("— " + principle[lang], S["body"]))
     for method in teach["methods"]:
-        story.append(Paragraph(method["title"][lang], S["h3"]))
-        story.append(Paragraph(method["text"][lang], S["body"]))
-    story.append(Paragraph(teach["supervision"][lang], S["body"]))
+        story.append(P(method["title"][lang], S["h3"]))
+        story.append(P(method["text"][lang], S["body"]))
+    story.append(P(teach["supervision"][lang], S["body"]))
 
     infra = data["infrastructure"]
-    story.append(Paragraph(infra["title"][lang].upper(), S["h2"]))
-    story.append(Paragraph(infra["text"][lang], S["body"]))
+    story.append(P(infra["title"][lang].upper(), S["h2"]))
+    story.append(P(infra["text"][lang], S["body"]))
 
-    story.append(Paragraph(tr["note"], S["note"]))
+    story.append(P(tr["note"], S["note"]))
     doc.build(story)
     return out
 

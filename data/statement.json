@@ -65,8 +65,8 @@
     "de": "Diese Linie ist der Kern — und die für alle anderen nützlichste. Sie umfasst verhaltensbasierte, psychophysiologische und modellgestützte Verfahren: Blickbewegungen, Herzrate, EEG, Interaktionsspuren und subjektive Skalen, zusammengeführt zu belastbaren Aussagen über Qualität, Belastung, Präsenz, Vertrauen und Sicherheit."
    },
    "done": {
-    "en": "Instruments developed and validated: pictographic scales for rapid affect capture in VR, questionnaires administered inside virtual environments, the Storytime dataset — and parts of this carried into ITU-T recommendations.",
-    "de": "Entwickelte und validierte Instrumente: piktografische Skalen zur schnellen Affekterfassung in VR, Fragebögen in virtuellen Umgebungen, das Storytime-Datenset — Teile davon in ITU-T-Empfehlungen überführt."
+    "en": "Instruments developed and validated: pictographic scales for rapid affect capture in VR, questionnaires administered inside virtual environments, <a class=\"inline-link\" href=\"/research/#artifact-storytime\">the Storytime dataset</a> — and parts of this carried into ITU-T recommendations.",
+    "de": "Entwickelte und validierte Instrumente: piktografische Skalen zur schnellen Affekterfassung in VR, Fragebögen in virtuellen Umgebungen, das <a class=\"inline-link\" href=\"/research/#artifact-storytime\">Storytime-Datenset</a> — Teile davon in ITU-T-Empfehlungen überführt."
    },
    "next": {
     "en": "An open, documented repository of methods and data for the user-side assessment of media systems, usable by other groups; standards-conformant test procedures for generative and collaborative systems; and reproducibility in XR research, an unsolved problem in the field that my standardization experience is the right instrument for.",

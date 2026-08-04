@@ -1,0 +1,21 @@
+{
+ "meta": {
+  "updated": "2026-08-04",
+  "note": "Reusable research artefacts — data, instruments, software — that someone else can download and cite. Kept separate from data/publications.json because a paper describes a result and an artefact is one: the paper is the citation, the repository is the thing. Rendered into /research/ by tools/build_artifacts.py, which also feeds the Dataset markup written by tools/build_jsonld.py.",
+  "unverified": "The OSF page could not be read from the build environment, so the licence and any DOI minted by OSF itself are not recorded here. Add them once checked; the entry deliberately cites the paper's DOI, which is the citation the authors ask for."
+ },
+ "artifacts": [
+  {
+   "id": "storytime",
+   "kind": "Dataset",
+   "name": "The Storytime Dataset",
+   "year": 2022,
+   "summary": "Simulated videotelephony clips for research on quality perception — recorded material for experiments in which participants rate audiovisual quality under controlled degradations.",
+   "url": "https://osf.io/cyb8w",
+   "repository": "OSF",
+   "paper": "2022-10-04-C67",
+   "keywords": ["quality of experience", "videotelephony", "audiovisual quality",
+                "subjective testing", "speech quality"]
+  }
+ ]
+}

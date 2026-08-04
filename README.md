@@ -46,6 +46,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
     ├── build_projects.py       Fördertabelle aus data/projects.json
     ├── build_i18n.py           deutsche Seiten unter /de/
     ├── i18n_lib.py            Textextraktion für build_i18n.py
+    ├── build_artifacts.py      nachnutzbare Daten und Instrumente auf /research/
     ├── build_jsonld.py         eine Entität, in alle Seiten geschrieben
     ├── build_llms_txt.py       llms.txt für Sprachmodelle
     ├── build_redirects.py
@@ -72,6 +73,7 @@ python3 tools/build_publication_pages.py
 python3 tools/build_posts.py
 python3 tools/build_projects.py
 python3 tools/build_supervision.py
+python3 tools/build_artifacts.py
 python3 tools/build_statement.py
 python3 tools/build_i18n.py
 python3 tools/build_jsonld.py

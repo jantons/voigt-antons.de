@@ -259,6 +259,51 @@ def breadcrumb(base, trail, lang):
     }
 
 
+def artifact_nodes(lang):
+    """Datasets and software, as their own entities.
+
+    Google indexes datasets separately from pages, and a Dataset node is the
+    only way a repository entry, the paper that documents it and the person who
+    made it end up connected. Read from the same file that renders the visible
+    list, so the two cannot describe different things.
+    """
+    path = ROOT / "data" / "artifacts.json"
+    if not path.exists():
+        return []
+    pubs = {p["id"]: p for p in json.loads(
+        (ROOT / "data" / "publications.json").read_text(encoding="utf-8"))["items"]}
+    nodes = []
+    for art in json.loads(path.read_text(encoding="utf-8"))["artifacts"]:
+        node = {
+            "@type": art["kind"],
+            "@id": "%s/research/#artifact-%s" % (SITE, art["id"]),
+            "name": art["name"],
+            "description": art["summary"],
+            "url": art["url"],
+            "datePublished": str(art["year"]),
+            "creator": {"@id": PERSON},
+            "includedInDataCatalog": {"@type": "DataCatalog",
+                                      "name": art["repository"]},
+        }
+        if art.get("keywords"):
+            node["keywords"] = art["keywords"]
+        # The paper that documents the data is the citation its authors ask
+        # for. Without this edge the dataset and the paper describing it sit in
+        # the graph as unrelated things.
+        pub = pubs.get(art.get("paper"))
+        if pub:
+            node["citation"] = {
+                "@type": "ScholarlyArticle",
+                "name": pub["ti"],
+                "datePublished": str(pub["y"]),
+                "url": "%s/publication/%s" % (SITE, pub["id"]),
+            }
+            if pub.get("d"):
+                node["citation"]["sameAs"] = pub["d"]
+        nodes.append(node)
+    return nodes
+
+
 def graph_for(path, kind, trail, person, lang):
     url = SITE + ("/de" + path if lang == "de" and path != "/" else path)
     if lang == "de" and path == "/":
@@ -286,6 +331,8 @@ def graph_for(path, kind, trail, person, lang):
             "url": SITE + "/", "name": "Jan-Niklas Voigt-Antons",
             "inLanguage": ["en", "de"], "publisher": {"@id": PERSON}})
         nodes += org_nodes()
+    if path == "/research/":
+        nodes += artifact_nodes(lang)
     nodes.append(person)
     return {"@context": "https://schema.org", "@graph": nodes}
 

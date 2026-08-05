@@ -228,8 +228,14 @@ def main():
         for key in build_press.T.values():
             if "%d" not in key["en"]:
                 table.setdefault(key["en"], key["de"])
-        for bio in json.loads(press.read_text(encoding="utf-8"))["bios"]:
+        data = json.loads(press.read_text(encoding="utf-8"))
+        for bio in data["bios"]:
             table.setdefault(build_press.label(bio, "en"), build_press.label(bio, "de"))
+        # Headlines and mastheads are names: the German page carries them
+        # unchanged, so each line maps to itself.
+        for item in data.get("coverage", []):
+            line = build_press.coverage_line(item)
+            table.setdefault(line, line)
 
     talks = ROOT / "data" / "talks.json"
     if talks.exists():

@@ -2,7 +2,8 @@
  "meta": {
   "updated": "2026-08-05",
   "note": "Material conference organisers, journalists and hosts ask for by email, so that they do not have to. Biographies come in three lengths because that is what the three requests are: a programme line, a session page, a press release. Both languages sit side by side and tools/build_i18n.py harvests the pairs, the same way it does for data/statement.json.",
-  "rule": "Every figure here must also stand somewhere else on this site. A press page that rounds up is the one page nobody forgives."
+  "rule": "Every figure here must also stand somewhere else on this site. A press page that rounds up is the one page nobody forgives.",
+  "copyright": "Only outlet, date and headline are published — the articles themselves belong to their publishers and are not hosted here. Links go to the outlet where a public one exists; the print pieces are cited, not reproduced."
  },
  "naming": {
   "full": "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons",
@@ -59,5 +60,52 @@
    "de": "Frei verwendbar für Berichterstattung über seine Arbeit und für Veranstaltungsprogramme. Bitte nicht beschneiden und die Farbgebung nicht verändern."
   }
  },
- "coverage": []
+ "coverage": [
+  {
+   "date": "2026-04-11",
+   "outlet": "Der Patriot",
+   "title": "Barrierefrei durch die City",
+   "subject": "ARiadne — AR navigation with SWcode",
+   "confirm": "headline read from a multi-column scan; check it against the paper"
+  },
+  {
+   "date": "2025-08-31",
+   "outlet": "Management & Krankenhaus",
+   "title": "Gesundheitsversorgung besser machen: KI-Assistenz statt Fragebogen-Kästchen",
+   "subject": "MIA-PROM"
+  },
+  {
+   "date": "2025-08-16",
+   "outlet": "Der Patriot",
+   "title": "Damit die Schiene nicht mehr bricht",
+   "subject": "DigiOnTrack — predictive maintenance on the railway"
+  },
+  {
+   "date": "2024-10-10",
+   "outlet": "wa.de",
+   "title": "Das bessere Google Maps: Professor will die „Navigation revolutionieren“",
+   "url": "https://www.wa.de/hamm/",
+   "subject": "ARiadne",
+   "confirm": "exact article URL, the PDF only shows the section"
+  },
+  {
+   "date": "2023-10-18",
+   "outlet": "Der Patriot",
+   "title": "Ina Brandes sieht bei HSHL-Besuch praxisnahe Projekte und Demo-Modell für Wissenschafts-Truck",
+   "subject": "visit of the NRW science minister",
+   "confirm": "this is the standfirst; the headline above it was not readable"
+  },
+  {
+   "date": "2023-03-02",
+   "outlet": "Der Patriot",
+   "title": "HSHL baut digitalen Zwilling von Etteln",
+   "subject": "digital twin"
+  },
+  {
+   "date": "2023-02-17",
+   "outlet": "Der Patriot",
+   "title": "Was virtuelle Welten alles können",
+   "subject": "the Cave Lab"
+  }
+ ]
 }

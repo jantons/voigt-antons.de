@@ -66,6 +66,21 @@ def label(bio, lang):
                         T["words"][lang] % len(bio["text"][lang].split()))
 
 
+
+def coverage_line(item):
+    """One press item. Identical in both languages on purpose.
+
+    A headline and a masthead are names. Translating "Damit die Schiene nicht
+    mehr bricht" would produce a sentence that appears in no newspaper and can
+    be found in no archive, which is the opposite of what a citation is for.
+    """
+    title = html.escape(item["title"])
+    if item.get("url"):
+        title = '<a class="inline-link" href="%s">%s</a>' % (html.escape(item["url"]), title)
+    return "<b>%s</b><span>%s — %s</span>" % (html.escape(str(item["date"])[:4]),
+                                              html.escape(item["outlet"]), title)
+
+
 def build(data, lang="en"):
     e = html.escape
     out = [BEGIN, H3 % ("4px", T["bios"][lang])]
@@ -105,11 +120,7 @@ def build(data, lang="en"):
         out.append(H3 % ("30px", T["coverage"][lang]))
         out.append('    <ul class="cv-list stack">')
         for item in data["coverage"]:
-            title = e(item["title"])
-            if item.get("url"):
-                title = '<a class="inline-link" href="%s">%s</a>' % (e(item["url"]), title)
-            out.append("      <li><b>%s</b><span>%s — %s</span></li>"
-                       % (e(str(item["date"])[:4]), e(item["outlet"]), title))
+            out.append("      <li>%s</li>" % coverage_line(item))
         out.append("    </ul>")
 
     out.append(H3 % ("30px", T["contact"][lang]))

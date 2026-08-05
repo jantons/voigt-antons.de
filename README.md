@@ -48,6 +48,7 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
     ├── i18n_lib.py            Textextraktion für build_i18n.py
     ├── build_artifacts.py      nachnutzbare Daten und Instrumente auf /research/
     ├── build_talks.py          Vorträge und Keynotes im Lebenslauf
+    ├── build_press.py          Presse- und Vortragsmaterial auf /press/
     ├── pdf_fonts.py            findet die Liberation-Schriften für die PDFs
     ├── build_jsonld.py         eine Entität, in alle Seiten geschrieben
     ├── build_llms_txt.py       llms.txt für Sprachmodelle
@@ -68,6 +69,8 @@ nach `build_i18n.py` laufen, sonst trüge die deutsche Seite eine Kopie des engl
 `build_record_pdfs.py` schreibt die Liste auf `/downloads/` und läuft zuletzt, wenn jedes
 Dokument existiert, das es auflistet.
 
+**Vor jedem Push:** `git pull --rebase`. Die Action committet die generierten Seiten zurück, also liegt nach deinem letzten Push meist ein Commit von `github-actions[bot]` auf dem Branch. Ohne Rebase lehnt GitHub den nächsten Push als non-fast-forward ab.
+
 Nach inhaltlichen Änderungen:
 
 ```bash
@@ -77,6 +80,7 @@ python3 tools/build_projects.py
 python3 tools/build_supervision.py
 python3 tools/build_artifacts.py
 python3 tools/build_talks.py
+python3 tools/build_press.py
 python3 tools/build_statement.py
 python3 tools/build_i18n.py
 python3 tools/build_jsonld.py

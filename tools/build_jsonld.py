@@ -76,6 +76,7 @@ PAGES = {
     "downloads/index.html": ("/downloads/", "CollectionPage",
                              [("Documents", "/downloads/")]),
     "blog/index.html": ("/blog/", "CollectionPage", [("Notes", "/blog/")]),
+    "press/index.html": ("/press/", "WebPage", [("Press", "/press/")]),
 }
 
 # German equivalents of the breadcrumb labels. The German pages are the same
@@ -84,7 +85,8 @@ PAGES = {
 DE_LABELS = {"CV": "Lebenslauf", "Research": "Forschung", "Statement": "Konzept",
              "Projects": "Projekte", "Teaching": "Lehre",
              "Publications": "Publikationen", "Documents": "Dokumente",
-             "Notes": "Notizen", "Home": "Start"}
+             "Notes": "Notizen", "Home": "Start",
+             "Press": "Presse"}
 
 problems = []
 

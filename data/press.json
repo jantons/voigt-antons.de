@@ -1,0 +1,63 @@
+{
+ "meta": {
+  "updated": "2026-08-05",
+  "note": "Material conference organisers, journalists and hosts ask for by email, so that they do not have to. Biographies come in three lengths because that is what the three requests are: a programme line, a session page, a press release. Both languages sit side by side and tools/build_i18n.py harvests the pairs, the same way it does for data/statement.json.",
+  "rule": "Every figure here must also stand somewhere else on this site. A press page that rounds up is the one page nobody forgives."
+ },
+ "naming": {
+  "full": "Prof. Dr.-Ing. Jan-Niklas Voigt-Antons",
+  "short": "Jan-Niklas Voigt-Antons",
+  "role": {
+   "en": "Professor of Computer Science (Immersive Media), Hamm-Lippstadt University of Applied Sciences",
+   "de": "Professor für Informatik (Immersive Medien), Hochschule Hamm-Lippstadt"
+  },
+  "note": {
+   "en": "The surname is hyphenated and both parts are capitalised. He published as “Antons” before the name change and as “Voigt-Antons” after it.",
+   "de": "Der Nachname wird mit Bindestrich geschrieben, beide Teile groß. Vor der Namensänderung erschienen Veröffentlichungen unter „Antons“, danach unter „Voigt-Antons“."
+  }
+ },
+ "bios": [
+  {
+   "id": "short",
+   "label": {
+    "en": "Short — for a programme line",
+    "de": "Kurz — für die Programmzeile"
+   },
+   "text": {
+    "en": "Jan-Niklas Voigt-Antons is Professor of Computer Science (Immersive Media) at Hamm-Lippstadt University of Applied Sciences and Director of the Immersive Reality Lab. He studies how virtual and augmented reality systems can be measured and built so that they work for the people using them.",
+    "de": "Jan-Niklas Voigt-Antons ist Professor für Informatik (Immersive Medien) an der Hochschule Hamm-Lippstadt und leitet das Immersive Reality Lab. Er erforscht, wie sich Systeme der virtuellen und erweiterten Realität so messen und bauen lassen, dass sie für die Menschen funktionieren, die sie benutzen."
+   }
+  },
+  {
+   "id": "medium",
+   "label": {
+    "en": "Medium — for a session page",
+    "de": "Mittel — für die Sessionseite"
+   },
+   "text": {
+    "en": "Jan-Niklas Voigt-Antons is Professor of Computer Science (Immersive Media) at Hamm-Lippstadt University of Applied Sciences and Director of the Immersive Reality Lab. Trained as a psychologist and as an engineer, he pairs EEG, eye tracking and physiological sensing with extended reality deployed in hospitals, public space and safety-critical training — measuring what questionnaires cannot capture. He co-developed ITU-T Recommendation P.812 on subjective test methods for interactive virtual reality, has led more than twenty funded projects, and was previously a senior research scientist at TU Berlin and at Telekom Innovation Laboratories.",
+    "de": "Jan-Niklas Voigt-Antons ist Professor für Informatik (Immersive Medien) an der Hochschule Hamm-Lippstadt und leitet das Immersive Reality Lab. Als Psychologe und Ingenieur ausgebildet, verbindet er EEG, Eyetracking und physiologische Messung mit Extended Reality im Krankenhaus, im öffentlichen Raum und in sicherheitskritischer Ausbildung — und misst, was Fragebögen nicht erfassen. Er ist Mitautor der ITU-T-Empfehlung P.812 zu subjektiven Testmethoden für interaktive virtuelle Realität, hat über zwanzig geförderte Vorhaben geleitet und war zuvor Senior Research Scientist an der TU Berlin und in den Telekom Innovation Laboratories."
+   }
+  },
+  {
+   "id": "long",
+   "label": {
+    "en": "Long — for a press release",
+    "de": "Lang — für die Pressemitteilung"
+   },
+   "text": {
+    "en": "Jan-Niklas Voigt-Antons is Professor of Computer Science (Immersive Media) at Hamm-Lippstadt University of Applied Sciences, where he directs the Immersive Reality Lab, and a guest researcher at TU Berlin. His route into the field was unusual: vocational training in data technology, then a Diplom in psychology, then a doctorate in engineering. That combination defines the work. He asks how immersive and interactive systems can be designed and evaluated so that they improve experience quality, task performance and trust — and answers it by pairing EEG, eye tracking and physiological sensing with systems deployed outside the laboratory, in hospitals, in public space and in safety-critical training. His five research lines run from spatial interaction and Quality of Experience through psychophysiological measurement to digital health, learning and generative AI in media contexts. He co-developed ITU-T Recommendation P.812 on subjective test methods for interactive virtual reality and has contributed to standardization at ITU-T, MPEG and DIN. He has raised third-party funding continuously since 2015, supervises doctoral researchers in projects of their own, and is regularly asked to speak outside computer science — by medical societies, care providers, public administrations and, most recently, a United Kingdom government foresight programme on immersive technologies.",
+    "de": "Jan-Niklas Voigt-Antons ist Professor für Informatik (Immersive Medien) an der Hochschule Hamm-Lippstadt, wo er das Immersive Reality Lab leitet, und Gastforscher an der TU Berlin. Sein Weg in das Fach war ungewöhnlich: Ausbildung in Datentechnik, dann Diplom in Psychologie, dann Promotion in den Ingenieurwissenschaften. Diese Verbindung prägt die Arbeit. Er fragt, wie sich immersive und interaktive Systeme so gestalten und bewerten lassen, dass Erlebnisqualität, Aufgabenleistung und Vertrauen steigen — und beantwortet das, indem er EEG, Eyetracking und physiologische Messung mit Systemen außerhalb des Labors verbindet: im Krankenhaus, im öffentlichen Raum, in sicherheitskritischer Ausbildung. Seine fünf Forschungslinien reichen von räumlicher Interaktion und Quality of Experience über psychophysiologische Messung bis zu Digital Health, Lernen und generativer KI in Medienkontexten. Er ist Mitautor der ITU-T-Empfehlung P.812 zu subjektiven Testmethoden für interaktive virtuelle Realität und hat an Normung bei ITU-T, MPEG und DIN mitgewirkt. Seit 2015 wirbt er durchgehend Drittmittel ein, betreut Promovierende in eigenen Vorhaben und wird regelmäßig außerhalb der Informatik um Vorträge gebeten — von medizinischen Fachgesellschaften, aus der Pflege, aus der öffentlichen Verwaltung und zuletzt von einem Foresight-Programm der britischen Regierung zu immersiven Technologien."
+   }
+  }
+ ],
+ "portrait": {
+  "file": "/images/profile@2x.jpg",
+  "credit": null,
+  "note": {
+   "en": "Free to use for coverage of his work and for event programmes. Please do not crop the frame away or alter the colour.",
+   "de": "Frei verwendbar für Berichterstattung über seine Arbeit und für Veranstaltungsprogramme. Bitte nicht beschneiden und die Farbgebung nicht verändern."
+  }
+ },
+ "coverage": []
+}

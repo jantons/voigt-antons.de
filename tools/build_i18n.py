@@ -48,6 +48,7 @@ PAGES = {
     "cv/index.html": "/cv/",
     "teaching/index.html": "/teaching/",
     "research/statement/index.html": "/research/statement/",
+    "press/index.html": "/press/",
 }
 
 # Paths that exist in both languages, longest first so /projects/ is matched
@@ -217,6 +218,19 @@ def main():
     # comes from that same function rather than from hand-written translations
     # in data/i18n.json. Ten entries typed twice would disagree on the first one
     # that gains a city.
+    # The press kit holds both languages side by side, like the statement, so
+    # the pairs are harvested rather than retyped. Its headings live in
+    # build_press.T for the same reason the talks lines live in build_talks.
+    press = ROOT / "data" / "press.json"
+    if press.exists():
+        import build_press
+        bilingual_pairs(json.loads(press.read_text(encoding="utf-8")), table)
+        for key in build_press.T.values():
+            if "%d" not in key["en"]:
+                table.setdefault(key["en"], key["de"])
+        for bio in json.loads(press.read_text(encoding="utf-8"))["bios"]:
+            table.setdefault(build_press.label(bio, "en"), build_press.label(bio, "de"))
+
     talks = ROOT / "data" / "talks.json"
     if talks.exists():
         import build_talks

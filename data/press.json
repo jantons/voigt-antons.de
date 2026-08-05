@@ -181,6 +181,17 @@
    "outlet": "Hochschule Hamm-Lippstadt",
    "title": "Wie Künstliche Intelligenz den Datenschutz verbessert",
    "reason": "His own institution's press release. It is the origin of the Patriot article listed above, not a second piece of coverage. Counting a release you helped write as press attention is the cheapest way to make a list untrustworthy."
+  },
+  {
+   "what": "Fifteen further links, all institutional or partner communication",
+   "breakdown": [
+    "twelve press releases from Hamm-Lippstadt University itself, one of them given twice — project starts, the conference hosting, his own appointment",
+    "one release from Fachhochschule Südwestfalen, a partner university",
+    "one blog post by PTS Training Service after a visit to the lab, which closes by advertising the company's own VR courses",
+    "one entry on presse-service.de, a distribution service that reprints releases"
+   ],
+   "reason": "None of these is a newsroom deciding the work was worth reporting. They are the institutions involved describing their own activity, which is a different claim and a much weaker one. Adding fifteen of them beside fourteen articles would double the length of the list and halve what it is worth.",
+   "better_use": "They belong on /projects/ as source links: an official announcement per project lets anyone verify that the project exists and who funded it. data/projects.json has no url field yet."
   }
  ]
 }

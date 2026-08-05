@@ -81,12 +81,27 @@
    "subject": "DigiOnTrack — predictive maintenance on the railway"
   },
   {
+   "date": "2024-10-28",
+   "outlet": "Südwestfalen Magazin",
+   "title": "Projekt aus Südwestfalen: Dank „Augmented Reality“ besser ans Ziel kommen",
+   "subject": "ARiadne, with a direct quotation",
+   "source": "Carries „Quelle: Hochschule Hamm-Lippstadt“ — the outlet ran the university's release rather than reporting independently. Kept because a reader who opens it finds him quoted, but that is worth knowing when weighing the list."
+  },
+  {
    "date": "2024-10-10",
    "outlet": "wa.de",
    "title": "Das bessere Google Maps: Professor will die „Navigation revolutionieren“",
    "url": "https://www.wa.de/hamm/",
    "subject": "ARiadne",
    "confirm": "exact article URL, the PDF only shows the section"
+  },
+  {
+   "date": "2023-12",
+   "outlet": "Welt am Sonntag — Sonderveröffentlichung „Südwestfalen“",
+   "title": "Südwestfalen: NRWs Industrieregion Nummer 1",
+   "subject": "DigiOnTrack, quoted at length and captioned „Projektleiter DigiOnTrack“",
+   "source": "A paid regional marketing supplement, which the booklet states about itself. The masthead is named in full so nobody reads it as editorial coverage by Welt am Sonntag — that difference is the whole reason to spell it out.",
+   "confirm": "exact issue date"
   },
   {
    "date": "2023-11-21",
@@ -124,6 +139,14 @@
    "teaser": "Trailed on page one as „Finale auf dem Rathausplatz“, with the photograph of children wearing VR headsets"
   },
   {
+   "date": "2023-06",
+   "date_is": "shortly after the HSHL release of 22 June 2023; the printed date is still open",
+   "outlet": "Der Patriot",
+   "title": "Mit künstlicher Intelligenz Daten schützen",
+   "subject": "Work with TU Berlin and DFKI on synthetic data, presented at QoMEX 2023 in Ghent; Navid Ashrafi received the Diversity and Societal Impact Award",
+   "confirm": "publication date"
+  },
+  {
    "date": "2023-04-20",
    "outlet": "Der Patriot",
    "section": "Wirtschaft Lokal",
@@ -152,6 +175,12 @@
    "title": "Die Zukunft vor Augen: 40 Vorträge am FSG",
    "byline": "Birte Schönhense",
    "reason": "A careers day at a Rüthen grammar school with forty talks, one of them from the Computer Visualistics and Design programme, given by Sina Hinzmann and the student Melina Ogait. He is not named in it. The rule this list lives by is that anyone who opens a cited article finds him in it — one that fails the test makes the other seven look weaker, which costs more than the ninth line is worth."
+  },
+  {
+   "date": "2023-06-22",
+   "outlet": "Hochschule Hamm-Lippstadt",
+   "title": "Wie Künstliche Intelligenz den Datenschutz verbessert",
+   "reason": "His own institution's press release. It is the origin of the Patriot article listed above, not a second piece of coverage. Counting a release you helped write as press attention is the cheapest way to make a list untrustworthy."
   }
  ]
 }

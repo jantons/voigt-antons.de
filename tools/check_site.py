@@ -305,6 +305,33 @@ def check_talks():
                             % (talk["id"], talk.get("kind")))
 
 
+def check_chronology(pages):
+    """Dated lists must run newest first, the way a CV is read.
+
+    Inserting an entry next to the right neighbour is easy to get wrong by one
+    line, and the result — 2023, 2021, 2022, 2019 — is invisible to every other
+    check here: the markup is fine, the years are all real. Only a reader
+    notices, and by then it is printed.
+
+    The year taken is the first four-digit number in the label, so "since 2026",
+    "2025–2027" and "2019" all compare on the year they start.
+    """
+    for page in pages:
+        text = page.read_text(encoding="utf-8")
+        for block in re.finditer(r'<ul class="cv-list[^"]*">(.*?)</ul>', text, re.S):
+            years = []
+            for label in re.findall(r"<li><b>(.*?)</b>", block.group(1), re.S):
+                found = re.search(r"\d{4}", label)
+                if not found:
+                    years = []          # a list keyed by something else entirely
+                    break
+                years.append(int(found.group()))
+            if years and years != sorted(years, reverse=True):
+                problems.append(
+                    "%s: a dated list runs %s — newest first, please"
+                    % (page.relative_to(ROOT), ", ".join(str(y) for y in years)))
+
+
 def check_label_widths(pages):
     """A label in .cv-list must fit its 104px column.
 
@@ -834,6 +861,7 @@ def main():
     check_structured_data(pages)
     check_pdf_fonts()
     check_talks()
+    check_chronology(pages)
     check_label_widths(pages)
     check_placeholders(pages)
     check_cv_pdf()

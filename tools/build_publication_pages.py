@@ -220,6 +220,20 @@ def page(p, prev_item, next_item):
     }
     if p.get("d"):
         schema["url"] = p["d"]
+    if p.get("ab"):
+        schema["abstract"] = p["ab"]
+
+    # The abstract goes above the record, because it is the reason somebody
+    # opened the page. 222 of 234 entries have one; the block is omitted rather
+    # than left empty for the rest, since an empty "Abstract" heading reads as a
+    # paper with nothing to say.
+    abstract = ""
+    if p.get("ab"):
+        abstract = (
+            '\n    <div class="cv-block rv" style="margin-bottom:36px">'
+            '\n      <h2>Abstract</h2>'
+            '\n      <p style="max-width:70ch">%s</p>'
+            '\n    </div>\n' % e(p["ab"]))
 
     return """<!DOCTYPE html>
 <html lang="en" data-theme="light">
@@ -253,7 +267,7 @@ def page(p, prev_item, next_item):
 </header>
 
 <section>
-  <div class="wrap" style="max-width:820px;margin-left:0">
+  <div class="wrap" style="max-width:820px;margin-left:0">{abstract}
     <div class="tr-item rv">
       <h3>Record</h3>
       <ul>{meta}</ul>
@@ -279,7 +293,8 @@ def page(p, prev_item, next_item):
 </html>
 """.format(
         title=e(p["ti"]),
-        desc=e((p["a"][:80] + " — " + p["v"])[:180]),
+        desc=e((p["ab"][:180] if p.get("ab")
+                else (p["a"][:80] + " — " + p["v"]))[:180]),
         pid=e(p["id"]),
         year=e(str(p["y"])),
         badge=label,
@@ -290,6 +305,7 @@ def page(p, prev_item, next_item):
         venue=e(p["v"]),
         links="".join(links),
         meta="".join("<li><b>%s</b><span>%s</span></li>" % r for r in meta_rows),
+        abstract=abstract,
         bib=e(bibtex(p)),
         schema=json.dumps(schema, ensure_ascii=False),
         nav=NAV,

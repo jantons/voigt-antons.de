@@ -36,6 +36,26 @@
     "indexed": 155,
     "author_id": "57194940462"
    }
+  },
+  "abstracts": {
+   "source": "immersive-reality-lab.de (assets/data/reference.js), imported 2026-08-06",
+   "count": 222,
+   "matched_by": "DOI first, then title similarity of at least 0.92; never by reference number. The two numbering schemes disagree for 56 entries, so matching on [C84] and the like would have attached a plausible abstract to the wrong paper - the one kind of error nobody would catch by reading.",
+   "not_covered": [
+    "C105",
+    "C63",
+    "C64",
+    "J37",
+    "J39",
+    "OC25",
+    "OC45",
+    "OC52",
+    "OC58",
+    "OJ6",
+    "P1",
+    "P2"
+   ],
+   "note": "Abstracts are shown as supplied by the lab site. Where a publisher holds the abstract, the DOI link next to it is the authoritative version."
   }
  },
  "items": [
@@ -67,7 +87,8 @@
    "ti": "Experiencing the Path: Comparing Visual Cues for User Experience and Performance in Outdoor Augmented Reality Navigation",
    "a": "Henning, J., Vona, F., Hinzmann, S., Amer, M. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 18th International Conference on Quality of Multimedia Experience (QoMEX 2026), Cardiff, UK",
-   "tp": "xr"
+   "tp": "xr",
+   "ab": "Outdoor navigation is a prominent use case for Augmented Reality, yet empirical evidence on how to design visual cues to effectively guide users to a destination in real-world environments remains limited. This paper presents a comparative evaluation of five visual guidance cues for pedestrian AR navigation. In a controlled outdoor study, 30 participants completed a destination-oriented navigation task under five visual cue conditions using a within-subjects design. The cues differed in how they visually conveyed direction and spatial guidance toward the target location. We examined user experience, task cognitive load, and perceived guidance quality, assessed through standardized instruments and custom questions. The results reveal that familiar cues, such as a path-following line, feel modern and engaging in AR while supporting high navigation performance, whereas dynamic or gamified cues increase workload and reduce efficiency."
   },
   {
    "id": "2026-06-01-C101",
@@ -77,7 +98,8 @@
    "ti": "How Close Is Too Close? Exploring the Impact of Avatar Proximity on User Experience in Collaborative Augmented and Virtual Reality",
    "a": "Vona, F., Amer, M., Abdellatif, O., Stern, M., Moreira, C. P., Jorge, J. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 18th International Conference on Quality of Multimedia Experience (QoMEX 2026), Cardiff, UK",
-   "tp": "xr"
+   "tp": "xr",
+   "ab": "Interpersonal distance is a cornerstone of proxemics, yet little is known about how established spatial norms translate into immersive collaborative environments. This paper presents a controlled within-subjects study involving 22 participants that investigates the effects of avatar proximity across Virtual Reality and Augmented Reality. Three interpersonal distances (0 cm, 45 cm, and 120 cm) were systematically compared. Participants performed collaborative puzzle-solving tasks under each condition. We assessed perceived workload (NASA-TLX), spatial presence (IPQ), user experience (UEQ-S), and cybersickness (CSQ-VR). Results indicate a medium-dependent asymmetry in proxemic perception. In VR, the borderline intimate-personal distance (45 cm) significantly increased mental and temporal workload, while also enhancing involvement. In contrast, the same distance in AR was perceived as comfortable and socially engaging, without increased cognitive demand. Overall user experience remained largely stable across conditions in both media. These findings provide exploratory yet actionable evidence that proxemic effects in XR are medium-sensitive rather than universal. The results suggest that interpersonal distance cannot be transferred directly between VR and AR design contexts and highlight the need for medium-specific spatial design guidelines for collaborative immersive systems."
   },
   {
    "id": "2026-04-01-vde-medizintechnik",
@@ -99,7 +121,8 @@
    "a": "Schorlemmer, J., Saad, A., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the workshop XR for Challenging Environments: Enabling Human Performance and Agency under Stress at CHI 2026, Barcelona, Spain",
    "tp": "psychophysiology",
-   "d": "https://xr4ce-chi26.tech-experience.at/papers/XR4CE_paper_8.pdf"
+   "d": "https://xr4ce-chi26.tech-experience.at/papers/XR4CE_paper_8.pdf",
+   "ab": "Extended Reality (XR) technologies are increasingly explored for training in safety-critical domains. However, many XR design paradigms implicitly assume that seamlessness, immersion, and automation are inherently beneficial. This assumption is not necessarily applicable in high-stakes training contexts where simulated environments intersect with physiological limits. This paper examines fast-jet pilot training as an extreme but revealing case of mission-critical XR. We show how inadequate physiological sensing, opaque adaptation, or misleading feedback can silently undermine training validity rather than enhance performance. To mitigate these risks, we introduce an adaptive resilience layer for mission-critical XR training systems, prioritizing physiology-aware calibration, transparent uncertainty signaling, conservative adaptation, and situated feedback. These principles are essential for safeguarding the validity, calibrated trust, and human agency under stress. Although illustrated through XR-based g-force training for the Anti-G Straining Maneuver (AGSM), the insights derived from this case extend beyond simulation-based training and are relevant to XR systems that support professionals in both training and live operational contexts."
   },
   {
    "id": "2026-04-01-C98",
@@ -109,7 +132,8 @@
    "ti": "Understanding Cross-Cultural User Experience in Virtual Reality Across Presence, Emotion, and Interaction",
    "a": "Nguyen Thi, T.-T. S., Veragi, M., Möller, S., Voigt-Antons, J.-N. & Kojić, T.",
    "v": "Paper presented at the 1st ACM CHI 2026 Workshop on Shaping Future Human Connection: Social Augmentation through XR Technologies (SAXR 2026), Barcelona, Spain",
-   "tp": "xr"
+   "tp": "xr",
+   "ab": "Virtual reality (VR) is increasingly used across domains such as education, training, and cultural applications, highlighting the need for inclusive user experience (UX) design for diverse global audiences. However, cross-cultural differences in UX within immersive environments remain underexplored. This work investigates how users from Eastern, Western, and mixed cultural backgrounds perceive culturally themed VR experiences. A mixed-method user study (N = 25) was conducted using two VR experience types: culturally themed 360° videos and interactive roleplay conversations with AI avatars. User experience, presence, and emotional responses were measured using UEQ-S, IPQ, and SAM questionnaires, complemented by qualitative feedback. Results indicate that cultural background significantly influences hedonic experience and emotional responses. While pragmatic quality showed limited cultural variation, significant interaction effects were observed for hedonic quality across video types. Presence measures showed smaller cultural differences overall, but emotional responses, particularly dominance and arousal, varied significantly between cultural groups. These findings highlight the importance of considering cultural background when designing VR experiences. Incorporating culturally adaptive interaction and narrative elements may support more inclusive and engaging immersive systems for global user populations."
   },
   {
    "id": "2026-04-01-C100",
@@ -120,7 +144,8 @@
    "a": "Saad, A. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the workshop XR for Challenging Environments: Enabling Human Performance and Agency under Stress at CHI 2026, Barcelona, Spain",
    "tp": "xr",
-   "d": "https://xr4ce-chi26.tech-experience.at/papers/XR4CE_paper_15.pdf"
+   "d": "https://xr4ce-chi26.tech-experience.at/papers/XR4CE_paper_15.pdf",
+   "ab": "Training professionals for challenging environments requires more than immersive simulation. Safety-critical contexts combine environmental unpredictability, spatial constraints, physiological load, and collaborative complexity in ways that fundamentally shape learning and performance. Using wind turbine maintenance as a representative case, this position paper explores how Extended Reality (XR) systems can support training and operational preparedness in such environments. We argue that integrating XR with digital twins, physiological sensing, and adaptive scenario control enables controlled risk exposure and context-aware feedback while supporting collaborative coordination. Building on this use case, we outline design directions for smart XR environments that dynamically adapt to user state and environmental conditions. We further position these environments as experimental platforms for investigating key challenges in mission-critical XR systems, including trust calibration under stress, resilience by design in volatile contexts, and situated explainability through embodied feedback. These directions contribute toward a research agenda for trustworthy XR systems in challenging environments."
   },
   {
    "id": "2026-03-01-OC54",
@@ -130,7 +155,8 @@
    "ti": "A Modular Multimodal Dialog Architecture for Digital PROM Collection",
    "a": "Hillmann, S., Harnisch, P., Schuhmann, D., Ashrafi, N. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the Conference on Electronic Speech Signal Processing 2026 (ESSV 2026). Eichstätt, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "This paper presents a modular multimodal dialog architecture designed to support the digital collection of Patient-Reported Outcome Measures (PROMs). The architecture integrates speech, touch, and visual interaction components and emphasizes extensibility, robustness, and adaptability to different user groups and clinical contexts. The work discusses design requirements, system components, and interaction flow, aiming to facilitate reliable and user-centered PROM acquisition in healthcare applications."
   },
   {
    "id": "2026-03-01-C97",
@@ -140,7 +166,8 @@
    "ti": "Evaluating the Impact of Distractions and Spatial Constraints in Public XR",
    "a": "Shumeliuk, A., Warsinke, M., Kojic, T., Möller, S., Voigt-Antons, J.-N. & Vergari, M.",
    "v": "Paper presented at 2nd IEEE VR Workshop on Social Interaction and Collaboration in eXtended Reality (SIC-XR 2026), Daegu, Korea",
-   "tp": "xr"
+   "tp": "xr",
+   "ab": "This paper investigates how environmental distractions and spatial constraints influence user experience and interaction performance in public extended reality (XR) settings. The study examines behavioral and subjective responses under varying real-world conditions to better understand usability challenges outside controlled laboratory environments. The findings contribute to the design of XR systems that are resilient to contextual disturbances in public spaces."
   },
   {
    "id": "2026-02-01-J35",
@@ -151,7 +178,8 @@
    "a": "Peperkorn, N. L., Ohse, J., Fox, J., Limberg, S., Hadžić, B., Rätsch, M., Voigt-Antons, J.-N., Witthöft, M. & Shiban, Y.",
    "v": "Scientific Reports, 16, 6144",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1038/s41598-026-39641-x"
+   "d": "https://doi.org/10.1038/s41598-026-39641-x",
+   "ab": "This randomized parallel trial investigates the effects of avatar-based cognitive therapy on symptoms of social anxiety disorder, focusing on changes in dysfunctional beliefs and self-esteem. The study examines whether modifications in maladaptive cognitions and self-related evaluations mediate therapeutic outcomes. Results provide insights into the psychological mechanisms underlying immersive, avatar-mediated therapeutic interventions and their potential for treating social anxiety symptoms."
   },
   {
    "id": "2026-01-15-J34",
@@ -162,7 +190,8 @@
    "a": "Hinzmann, S., Bestgen, A.-K., Schorlemmer, J., Beierlein, C., Kolbe, J. & Voigt-Antons, J.-N.",
    "v": "Virtual Worlds, 5(1), 10",
    "tp": "qoe",
-   "d": "https://doi.org/10.3390/virtualworlds5010010"
+   "d": "https://doi.org/10.3390/virtualworlds5010010",
+   "ab": "This article introduces and validates a modular questionnaire designed to assess transfer effects in higher education across different event formats and target groups. The instrument enables context-sensitive evaluation of learning outcomes, perceived applicability, and knowledge transfer. Findings support its reliability and applicability for comparing traditional, hybrid, and virtual educational settings."
   },
   {
    "id": "2026-01-02-J36",
@@ -196,7 +225,8 @@
    "a": "Henning, J., Hinzmann, S., Vona, F., Amer, M. & Voigt-Antons, J.-N.",
    "v": "IEEE Transactions on Visualization and Computer Graphics, pp. 1–8",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/TVCG.2026.3679912"
+   "d": "https://doi.org/10.1109/TVCG.2026.3679912",
+   "ab": "Spatialized audio cues in Augmented Reality (AR) provide an alternative to visually dominated navigation systems, yet little is known about how device type and cue design jointly shape user experience and performance. This study presents a within-subject experiment comparing artificial versus nature sounds across two AR platforms: a smartphone and a mixed-reality headset. Thirty-four participants completed audio-only outdoor navigation tasks, with 27 included in the final analysis. Subjective measures (UEQ, NASA TLX, custom items) and objective metrics (completion time, path efficiency) were collected. Results showed that nature sounds were rated significantly higher in efficiency, pleasantness, and overall navigation experience compared to artificial sounds, while device type had limited influence on subjective ratings. Participants with prior AR audio navigation experience completed tasks faster, suggesting training benefits. These findings highlight the importance of cue design and user adaptation for future AR navigation systems."
   },
   {
    "id": "2026-01-01-J36",
@@ -207,7 +237,8 @@
    "a": "Ashrafi, N., Graf, P., Marquardt, M., Harnisch, P., Hillmann, S., Ploner, N., Compagna, D., Cirit, E., Papst, L. & Voigt-Antons, J.-N.",
    "v": "Virtual Worlds, 5(1), 15",
    "tp": "digital-health",
-   "d": "https://doi.org/10.3390/virtualworlds5010015"
+   "d": "https://doi.org/10.3390/virtualworlds5010015",
+   "ab": "The collection of patient-reported outcome measures (PROMs) is a key measurement tool for patient-centred care. At the same time, collecting these measures poses obstacles for many patients, leading to these groups being underrepresented in the data. We have therefore developed a multimodal, AI-driven assistance system to support patients in collecting these data. The interface of the system comprised a digital tablet containing the PROM questionnaire items and the assistant in three forms of embodiment: A virtual avatar, a physical avatar, and a voice-only agent. To evaluate the users' experience and ratings of the system, two separate studies were implemented in two rehabilitation centers with 195 patients. A mixed within–between RCT was conducted at an outpatient clinic, where patients completed PROMs both with and without an assistant, and a between-subject design at an inpatient clinic comparing routine PC-based care with avatar- and robot-assisted PROM administration. Our results suggest a preference for the non-assisted tablet-only condition in Clinic A, whereas, in Clinic B, both agent conditions were preferred over routine care. We have further analyzed aspects such as trust and social presence in this study to gain a more thorough understanding of the users' experience. Our analysis shows a higher trust rating for the voice-only assistant, whereas the robot, virtual avatar, and the voice-only conditions were perceived as more socially present. The impact of demographic factors and affinity for technology on the user ratings was also thoroughly studied. Our findings shed light on the role of agent embodiment in PROM assistance and contribute to the future design and evaluation of effective, engaging, and trustworthy systems for data collection in healthcare settings."
   },
   {
    "id": "2026-01-01-J33",
@@ -218,7 +249,8 @@
    "a": "Da Silva, D. A., Da Silva, A. S., Lima, D. D., Da Costa, J. P., De Melo, L. O., Miranda, C., Santos, G. A., Vinel, A., Mendes, P., Verhoeven, S., Voigt-Antons, J.-N. & De Freitas, E. P.",
    "v": "IEEE Access",
    "tp": "qoe",
-   "d": "https://doi.org/10.1109/ACCESS.2026.3660577"
+   "d": "https://doi.org/10.1109/ACCESS.2026.3660577",
+   "ab": "This paper proposes a spoofer detection framework for vehicle-to-everything (V2X) communication systems. The approach combines tensor-based direction-of-arrival (DoA) estimation with YOLO-based object detection to identify inconsistencies between perceived and communicated vehicle positions. Experimental evaluation demonstrates the framework’s potential to enhance robustness and security in connected transportation environments."
   },
   {
    "id": "2025-11-01-C96",
@@ -229,7 +261,8 @@
    "a": "Vona, F., Amer, M., Abdellatif, O., Hallmann, M., Warsinke, M., Mihaita, A.-S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 31st ACM Symposium on Virtual Reality Software and Technology (VRST 2025), Montreal, Canada",
    "tp": "qoe",
-   "d": "https://doi.org/10.1145/3756884.3766010"
+   "d": "https://doi.org/10.1145/3756884.3766010",
+   "ab": "Controlling Unmanned Aerial Vehicles (UAVs) is a cognitively demanding task, with accidents often arising from insufficient situational awareness, inadequate training, and bad user experiences. Providing more intuitive and immersive visual feedback—particularly through Digital Twin technologies—offers new opportunities to enhance pilot awareness and the overall experience quality. In this study, we investigate how different virtual points of view (POVs) influence user experience and performance during UAV piloting in Virtual Reality (VR), utilizing a digital twin that faithfully replicates the real-world flight environment. We developed a VR application that enables participants to control a physical DJI Mini 4 Pro drone while immersed in a digital twin with four distinct camera perspectives: Baseline View (static external), First Person View, Chase View, and Third Person View. Nineteen participants completed a series of ring-based obstacle courses from each perspective. In addition to objective flight data, we collected standardized subjective assessments of user experience, presence, workload, cybersickness, and situational awareness. Quantitative analyses revealed that the First Person View was associated with significantly higher mental demand and effort, greater trajectory deviation, but smoother control inputs compared to the Third Person and Chase perspectives. Complementing these findings, preference data indicated that the Third Person View was most consistently favored, whereas the First Person View elicited polarized reactions."
   },
   {
    "id": "2025-10-01-OC52",
@@ -240,7 +273,8 @@
    "a": "Marquardt, M., Ashrafi, N., Balcerek, M., Compagna, D., Graf, P., Harnisch, P., Hillmann, S., Köllner, V., Papst, L., Voigt-Antons, J.-N., Zöllick, J. & Fischer, F.",
    "v": "Paper presented at the 11th Annual PROMIS International Conference (PROMIS 2025). Milwaukee, Wisconsin USA",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1016/j.apro.2025.100283"
+   "d": "https://doi.org/10.1016/j.apro.2025.100283",
+   "ab": "We compare three assistance modalities—social robot, embodied avatar, and disembodied voice—for administering PROMIS questionnaires in clinical settings. Outcomes include completion time, missing data, user trust, workload, and perceived empathy across diverse patient groups. Findings highlight trade-offs between efficiency and engagement and inform the selection of assistance for equitable, high-quality PROM capture."
   },
   {
    "id": "2025-09-01-OC51",
@@ -250,7 +284,8 @@
    "ti": "Nutzererfahrung von Kindern und Jugendlichen mit einem multimodalen, interaktiven System zur digitalen Erfassung von patient-reported outcomes",
    "a": "Marquardt, M., Ashrafi, N., Compagna, D., Giolo, S., Graf, P., Harnisch, P., Hillmann, S., Voigt-Antons, J.-N. & Balcerek, M.",
    "v": "Poster presented at the Kongresses für Kinder- und Jugendmedizin (KKJ 2025). Leipzig, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "This poster reports on the usability and acceptance of a multimodal, interactive system for digitally capturing patient-reported outcomes among children and adolescents. Through iterative testing in pediatric contexts, we evaluate age-appropriate interaction (voice, touch, avatar guidance), comprehension, engagement, and burden. Insights translate into design recommendations for inclusive PROM workflows in child and adolescent medicine."
   },
   {
    "id": "2025-09-01-J32",
@@ -261,7 +296,8 @@
    "a": "Antoun, M., Elhajj, I. H., Papadopoulos, P. K., Rizk, A., Islam, T., Huerta, I., Toledo, L., Arvanitis, G., Moustakas, K., Jevtić, A., Agustí, I., Vona, F., Voigt-Antons, J.-N., Warsinke, M., Bailer, W., Thallinger, G., Howkins, B., Poder, I., Ruess, M. & Asmar, D.",
    "v": "Scientific Reports, 15, 34539",
    "tp": "qoe",
-   "d": "https://doi.org/10.1038/s41598-025-17855-9"
+   "d": "https://doi.org/10.1038/s41598-025-17855-9",
+   "ab": "Digital twins are living digital surrogates of objects and processes from the world around us and serve many purposes in situations where a physical model cannot be used. Digital twins can be considered to still be in their nascent phase, be it in the variety of application domains or in the science of creating and manipulating them. The DIDYMOS-XR project uses digital twins to create large-scale (city-wide) and long-term eXtended Reality (XR) applications. In this paper, we propose three use cases—city planning, city maintenance, and city tourism—along with an industrial use case for manufacturing environments, demonstrated through evaluation sites in Germany and Spain. The paper introduces cutting-edge solutions in the creation, simulation, and manipulation of DTs, including advancements in 3D scene reconstruction, data enhancement, data compression, sensor fusion, localization, rendering, and scene understanding. Additionally, we address the ethical and privacy challenges of digital twin systems and propose strategies for mitigating these issues. This work offers a comprehensive framework for creating semantically rich, scalable, and interactive digital twins, providing valuable insights for diverse applications in urban planning, maintenance, tourism, and industrial optimization."
   },
   {
    "id": "2025-09-01-C95",
@@ -272,7 +308,8 @@
    "a": "Hinzmann, S., Vona, F., Henning, J., Amer, M., Abdellatif, O., Kojic, T. & Voigt-Antons, J.-N.",
    "v": "Poster presented at the 17th International Conference on Quality of Multimedia Experience (QoMEX 2025), Madrid, Spain",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX65720.2025.11219995"
+   "d": "https://doi.org/10.1109/QoMEX65720.2025.11219995",
+   "ab": "This poster explores how different types of audio navigation cues in augmented reality affect users’ experience and perceived usefulness. The study evaluates spatialized sound, verbal instructions, and symbolic audio cues, analyzing their impact on navigation performance, cognitive workload, and overall user satisfaction."
   },
   {
    "id": "2025-09-01-C94",
@@ -283,7 +320,8 @@
    "a": "Kojic, T., Kirchner, N., Vergari, M., Warsinke, M., Möller, S., Voigt-Antons, J.-N.",
    "v": "Poster presented at the 17th International Conference on Quality of Multimedia Experience (QoMEX 2025), Madrid, Spain",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX65720.2025.11219977"
+   "d": "https://doi.org/10.1109/QoMEX65720.2025.11219977",
+   "ab": "This work investigates how exposure to simulated heights in extended reality influences user experience. It examines psychological and physiological responses such as presence, stress, and discomfort, providing insights into design considerations for XR applications involving verticality or height simulation."
   },
   {
    "id": "2025-09-01-C93",
@@ -294,7 +332,8 @@
    "a": "Vona, F., Kuhlencord, K., Fox, J., Kojic, T., Shiban, Y. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the first workshop on Designing Safe and Effective Intelligent Virtual Agents (IVAs) for Health Care: Risks, Benefits, and Best Practices (DESIGN IVA HC 2025), Berlin, Germany",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1145/3742886.3756697"
+   "d": "https://doi.org/10.1145/3742886.3756697",
+   "ab": "This paper synthesizes the current state of research on augmented reality interventions for stress and anxiety disorders. It reviews therapeutic applications, technical approaches, and user outcomes, highlighting both promising directions and existing gaps in evidence-based AR therapies."
   },
   {
    "id": "2025-09-01-C92",
@@ -305,7 +344,8 @@
    "a": "Ashrafi, N., Schorlemmer, J., Vona, F., Kojic, T., Hillmann, S., Braytee, A., Wang, Y.-K., Kocaballi, B., Moreira, C. P., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the first workshop on Designing Safe and Effective Intelligent Virtual Agents (IVAs) for Health Care: Risks, Benefits, and Best Practices (DESIGN IVA HC 2025), Berlin, Germany",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1145/3742886.3756698"
+   "d": "https://doi.org/10.1145/3742886.3756698",
+   "ab": "This contribution presents the design of emotionally adaptive virtual health assistants that aim to improve users’ sense of social presence and trust. The system adapts communication style and emotional expressions dynamically, with the goal of increasing user engagement and acceptance in healthcare contexts."
   },
   {
    "id": "2025-09-01-C91",
@@ -316,7 +356,8 @@
    "a": "Stern, M., Vergari, M., Schorlemmer, J., Vona, F., Grieshammer, D. K. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 17th International Conference on Quality of Multimedia Experience (QoMEX 2025), Madrid, Spain",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX65720.2025.11219982"
+   "d": "https://doi.org/10.1109/QoMEX65720.2025.11219982",
+   "ab": "This study analyzes how spatial misalignment and time delay affect the perception of collaborative presence in augmented reality applications. Results indicate that both factors significantly impact user coordination and perceived realism, offering valuable implications for the design of multi-user AR systems."
   },
   {
    "id": "2025-09-01-C90",
@@ -327,7 +368,8 @@
    "a": "Ashrafi, N., Vona, F., Hinzmann, S. L., Henning, J., Vergari, M., Warsinke, M., Moreira, C. P. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 17th International Conference on Quality of Multimedia Experience (QoMEX 2025), Madrid, Spain",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1109/QoMEX65720.2025.11219980"
+   "d": "https://doi.org/10.1109/QoMEX65720.2025.11219980",
+   "ab": "This paper investigates how avatar size influences user experience in healthcare-related virtual environments. By testing different avatar scales, the study explores effects on presence, empathy, and task performance, offering design guidelines for XR healthcare applications."
   },
   {
    "id": "2025-08-01-OC53",
@@ -338,7 +380,8 @@
    "a": "Kojic, T., Srebot, S., Vergari, M., Moslavac, M., Warsinke, M., Möller, S., Skorin-Kapov, L., Voigt-Antons, J.-N.",
    "v": "Paper presented at the Mensch und Computer 2025 (MuC 2025). Chemnitz, Germany",
    "tp": "xr",
-   "d": "https://doi.org/10.18420/muc2025-mci-ws13-231"
+   "d": "https://doi.org/10.18420/muc2025-mci-ws13-231",
+   "ab": "This work surveys safety risks that arise when conducting XR user studies beyond the lab, including reduced situational awareness, bystander exposure, and environment-induced hazards. We propose a practical risk taxonomy and mitigation toolkit—covering protocol design, wearable safety, geofencing, supervision, and debriefing—and illustrate its use with pilot field deployments. The paper aims to support ethics reviews and standardize reporting of safety measures in XR research."
   },
   {
    "id": "2025-06-15-adaptive-health-assistants",
@@ -359,7 +402,8 @@
    "a": "Kojić, T., Vergari, M., Benta, G.-M., Krupinski, J., Warsinke, M., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2025). Gothenburg, Sweden",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-031-93715-6_9"
+   "d": "https://doi.org/10.1007/978-3-031-93715-6_9",
+   "ab": "We present a framework for adopting VR/AR in public-sector language education, synthesizing evidence from pilot deployments and teacher workshops. The paper outlines benefits for immersion, motivation, and situated practice, alongside barriers such as device logistics, accessibility, assessment alignment, and teacher training. Practical guidelines are provided for curriculum integration and sustainable scaling."
   },
   {
    "id": "2025-06-01-OC49",
@@ -370,7 +414,8 @@
    "a": "Vona, F., Kaulard, P., Schorlemmer, J., Stemann, J., Fischer, S. & Voigt-Antons, J.-N.",
    "v": "Poster presented at the International Conference on Human-Computer Interaction (HCII 2025). Gothenburg, Sweden",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-031-94168-9_39"
+   "d": "https://doi.org/10.1007/978-3-031-94168-9_39",
+   "ab": "We compare gaze behavior and product selection strategies between physical supermarket shelves and their VR twins. Using head-mounted and desktop eye tracking (Tobii Pro 3) and integrated VR eye tracking (Meta Quest Pro), we analyze fixation patterns, dwell time, and choice latency. Results discuss ecological validity of VR shopping studies and conditions under which VR approximates in-store behavior."
   },
   {
    "id": "2025-06-01-OC48",
@@ -381,7 +426,8 @@
    "a": "Hallmann, M., Stern, M., Franke, U., Ostertag, T., da Costa, J. P. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2025). Gothenburg, Sweden",
    "tp": "qoe",
-   "d": "https://doi.org/10.1007/978-3-031-92689-1_13"
+   "d": "https://doi.org/10.1007/978-3-031-92689-1_13",
+   "ab": "We present a UX-driven redesign of industrial labeling tools for predictive maintenance datasets. Through contextual inquiry with domain experts, we identify pain points in annotation flow, error recovery, and metadata capture, and evaluate prototypes that reduce time-on-task and labeling errors. Results inform design patterns for scalable, operator-friendly annotation in industrial contexts."
   },
   {
    "id": "2025-06-01-OC47",
@@ -392,7 +438,8 @@
    "a": "Voigt-Antons, J.-N., Ceranic, M. & Vona, F.",
    "v": "Poster presented at the International Conference on Human-Computer Interaction (HCII 2025). Gothenburg, Sweden",
    "tp": "qoe",
-   "d": "https://doi.org/10.1007/978-3-032-12767-9_7"
+   "d": "https://doi.org/10.1007/978-3-032-12767-9_7",
+   "ab": "E-cargo bikes are becoming more popular than motorized vehicles as cities grow and people look for greener modes of transportation. This is especially true for anyone who has to move goods or kids. The potential of e-cargo bikes to encourage the use of ecologically friendly modes of transportation in urban and rural areas is examined in this study. Using a qualitative, interview-based methodology, we investigate adoption-related perceptions, barriers, and facilitators among urban users. Participants include caregivers, small business owners, and people who need frequent mobility. The results show that city dwellers enjoy better infrastructure but still have trouble finding places to store their bicycles and negotiating traffic. People who live in rural areas face difficulties because of their isolation and the lack of bike-friendly roads. To provide insights into policy and customized design approaches, this study looks at infrastructure, psychological factors, and local norms."
   },
   {
    "id": "2025-06-01-OC46",
@@ -403,7 +450,8 @@
    "a": "Vona, F., Stern, M., Ashrafi, N., Schorlemmer, J., Stemann, J. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2025). Gothenburg, Sweden",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-031-93715-6_16"
+   "d": "https://doi.org/10.1007/978-3-031-93715-6_16",
+   "ab": "We evaluate a VR training program for sales conversations using a CAVE setup and avatar-mediated role-play. Compared to baseline materials, trainees show improved confidence, conversational structure, and handling of objections, with strong perceived presence and feedback usefulness. We discuss cost–benefit considerations and guidance for deploying VR sales training at scale."
   },
   {
    "id": "2025-06-01-OC45",
@@ -414,7 +462,8 @@
    "a": "Vona, F., Romanyuk, E., Hinzmann, S., Schorlemmer, J., Ashrafi, N. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2025). Gothenburg, Sweden",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-031-93835-1_24"
+   "d": "https://doi.org/10.1007/978-3-031-93835-1_24",
+   "ab": "This paper studies asymmetric collaboration patterns in VR—e.g., complementary abilities, information asymmetry, and device heterogeneity—and their impact on presence, workload, fairness, and enjoyment. Through controlled playtests, we identify design levers that balance challenge and coordination demands while minimizing frustration. The results yield actionable recommendations for crafting satisfying asymmetric co-op experiences."
   },
   {
    "id": "2025-06-01-OC44",
@@ -425,7 +474,8 @@
    "a": "Ashrafi, N., Graf, P., Marquardt, M., Vona, F., Schorlemmer, J. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2025). Gothenburg, Sweden",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1007/978-3-031-93508-4_11"
+   "d": "https://doi.org/10.1007/978-3-031-93508-4_11",
+   "ab": "We investigate how visual attributes of avatars—such as realism, stylization, gender presentation, and attire—shape user preferences and perceived trust in health-related interactions. In a rating study with diverse participants, we compare multiple avatar designs for telehealth triage, coaching, and data collection scenarios. Results highlight design trade-offs between relatability, professionalism, and privacy, and provide guidelines for selecting avatar styles that foster comfort and adherence."
   },
   {
    "id": "2025-06-01-C89",
@@ -436,7 +486,8 @@
    "a": "Warsinke, M., Vona, F., Kojic, T., Möller, S., Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on eXtended Reality (XR Salento 2025), Otranto (Lecce), Italy",
    "tp": "qoe",
-   "d": "https://doi.org/10.1007/978-3-031-97769-5_3"
+   "d": "https://doi.org/10.1007/978-3-031-97769-5_3",
+   "ab": "This paper presents a user study on digital twins applied to extended reality tourism. The research evaluates differences in experience across user groups, focusing on immersion, accessibility, and perceived authenticity of virtual tourism applications."
   },
   {
    "id": "2025-03-01-C88",
@@ -448,7 +499,8 @@
    "v": "Paper presented at the international workshop on IMmersive Mixed and Virtual Environment Systems (MMVE 2025), Stellenbosch, South Africa",
    "tp": "xr",
    "d": "https://doi.org/10.1145/3712677.3720459",
-   "n": "Workshop Best Paper Award, MMVE 2025"
+   "n": "Workshop Best Paper Award, MMVE 2025",
+   "ab": "This paper explores multimodal interaction in XR environments, focusing on hand tracking, voice input, and passthrough techniques. It discusses how these modalities shape user experience, usability, and workload, offering insights into future XR interface design."
   },
   {
    "id": "2025-03-01-C87",
@@ -459,7 +511,8 @@
    "a": "Kojic, T., Vergari, M., Warsinke, M., Möller, S., Voigt-Antons, J.-N.",
    "v": "Paper presented at the workshop Social Interaction and Collaboration in eXtended Reality (SIC-XR 2025), Saint-Malo, France",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/VRW66409.2025.00114"
+   "d": "https://doi.org/10.1109/VRW66409.2025.00114",
+   "ab": "This study investigates the role of interactivity in mobile XR applications, examining how different levels of interaction affect user experience and social acceptance. Results highlight design strategies for fostering engagement and comfort in social XR contexts."
   },
   {
    "id": "2025-03-01-C86",
@@ -470,7 +523,8 @@
    "a": "Vona, F., Schorlemmer, J., Hinzmann, S., Stemann, J., Fischer, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2025), Saint-Malo, France",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/VRW66409.2025.00396"
+   "d": "https://doi.org/10.1109/VRW66409.2025.00396",
+   "ab": "This work compares natural hand tracking with controller-based interaction in VR shopping environments. The study assesses usability, task performance, and user satisfaction, highlighting trade-offs between intuitiveness and precision across interaction methods."
   },
   {
    "id": "2025-03-01-C85",
@@ -481,7 +535,8 @@
    "a": "Vona, F., Schorlemmer, J., Stern, M., Ashrafi, N., Kojić, T., Vergari, M. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2025), Saint-Malo, France",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/VRW66409.2025.00362"
+   "d": "https://doi.org/10.1109/VRW66409.2025.00362",
+   "ab": "We compare pass-through video quality across contemporary mixed reality headsets during realistic everyday tasks. Using task performance, workload, and user-reported clarity, depth perception, color fidelity, and latency, we quantify how device pipelines affect perceived safety, comfort, and presence. Results highlight significant cross-device differences and provide practical guidelines for selecting and evaluating MR devices for real-world use."
   },
   {
    "id": "2025-01-15-BC5",
@@ -492,7 +547,8 @@
    "a": "Obergrießer, S., Schütz, S., Voigt-Antons, J.-N., Ashrafi, N., Shiban, Y., Ohse, J., Peperkorn, N.-L.",
    "v": "In C. Heese, C., Schütz, S. & Obergrießer, S. (Eds.), Die Nachhaltigkeitsziele der UN im Spiegel der Wissenschaft. SDG - Forschung, Konzepte, Lösungsansätze zur Nachhaltigkeit. Springer",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1007/978-3-658-43334-5_11"
+   "d": "https://doi.org/10.1007/978-3-658-43334-5_11",
+   "ab": "This chapter highlights approaches for developing health apps that are both user-centered and sustainable. It emphasizes the importance of involving end users in the design process to ensure usability, acceptance, and long-term relevance. By integrating user perspectives with principles of sustainable development, the work provides guidance on how digital health solutions can better align with the UN Sustainable Development Goals."
   },
   {
    "id": "2025-01-01-OJ6",
@@ -513,7 +569,8 @@
    "a": "Kim, E., Laird, L., Wilson, C., Steward, S., Mildner, P., Möller, S., Schatz, R., Spang, R. P., Voigt-Antons, J.-N. & Rochon, E.",
    "v": "JMIR mHealth and uHealth, 13(1), e67711",
    "tp": "digital-health",
-   "d": "https://doi.org/10.2196/67711"
+   "d": "https://doi.org/10.2196/67711",
+   "ab": "This virtual randomized controlled trial evaluated the effectiveness of a mobile information technology–based intervention designed to improve naming ability in individuals with post-stroke aphasia. The study examined both linguistic outcomes and user engagement, demonstrating that digital interventions can be a feasible and accessible complement to traditional speech therapy. Results highlight the potential of mobile health solutions in supporting stroke rehabilitation and language recovery."
   },
   {
    "id": "2025-01-01-C84",
@@ -524,7 +581,8 @@
    "a": "Vona, F., Warsinke, M., Kojic, T., Voigt-Antons, J.-N. & Möller, S.",
    "v": "Paper presented at the 7th International Conference on Artificial Intelligence & extended and Virtual Reality (IEEE AIxVR 2025), Lisbon, Portugal",
    "tp": "qoe",
-   "d": "https://doi.org/10.1109/AIxVR63409.2025.00028"
+   "d": "https://doi.org/10.1109/AIxVR63409.2025.00028",
+   "ab": "This work proposes a user-centric evaluation toolkit for XR digital twin applications that combines task analytics, heuristic inspection, presence and UX scales, workload measures, and think-aloud protocols. We demonstrate the approach on representative digital twin scenarios and derive actionable metrics and thresholds. The framework supports iterative design and benchmarking across domains such as industry, mobility, and tourism."
   },
   {
    "id": "2024-12-01-C83",
@@ -535,7 +593,8 @@
    "a": "Motowilowa, J., Vergari, M., Kojic, T., Warsinke, M., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 26th IEEE International Symposium on Multimedia (IMS 2024), Tokyo, Japan",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/ISM63611.2024.00052"
+   "d": "https://doi.org/10.1109/ISM63611.2024.00052",
+   "ab": "We investigate how AR-based table arrangement and dynamic lighting control shape dining-related user experience in a simulated restaurant. In a controlled study, participants customized table setups and ambient light, then rated aesthetics, comfort, and decision confidence. Personalizable AR overlays improved perceived atmosphere and engagement, informing design guidelines for hospitality and retail XR applications."
   },
   {
    "id": "2024-11-01-J30",
@@ -546,7 +605,8 @@
    "a": "Supplieth, J., Lech, S., O’Sullivan, J. L., Spang, R. P., Voigt-Antons, J.-N. & Schuster, J.",
    "v": "JMIR Hum Factors,11,e59865",
    "tp": "digital-health",
-   "d": "https://doi.org/10.2196/59865"
+   "d": "https://doi.org/10.2196/59865",
+   "ab": "The management of dementia poses challenges for patients, families, caregivers, and healthcare providers. Although digital applications can offer support, dementia-friendly options remain limited. This study highlights the importance of incorporating diverse perspectives—including those of general practitioners and family caregivers—into the development of supportive healthcare applications. Using a qualitative approach with interviews and an expert workshop, the research applied Kuckartz’s content analysis method supported by MAXQDA. The findings emphasize the need for multidisciplinary collaboration and iterative, feedback-driven design to create effective digital tools for dementia care."
   },
   {
    "id": "2024-10-16-BC4",
@@ -557,7 +617,8 @@
    "a": "Hillmann, S., Ashrafi, N., Graf, P., Harnisch, P. L., Jansen, E., Marquard, M. & Voigt-Antons, J.-N.",
    "v": "In Herrmann, W. J., Leser, U., Möller, S., Voigt-Antons, J.-N., Gellert, P. (Eds.) (2024). The digitalization of healthcare for older adults. - Digitalization as an answer to substantial challenges in our healthcare system. Berlin: Berlin Universities Publishing",
    "tp": "digital-health",
-   "d": "https://doi.org/10.14279/depositonce-20425"
+   "d": "https://doi.org/10.14279/depositonce-20425",
+   "ab": "This paper presents an innovative approach to improve the collection of patient-reported outcome measures in clinical settings through a multimodal interactive assistance system. The system addresses both technical and organizational challenges, while ensuring user-friendliness with features like voice input to ease the cognitive burden on patients. Developed through a participatory process with significant input from a patient advisory board."
   },
   {
    "id": "2024-10-16-BC3",
@@ -568,7 +629,8 @@
    "a": "Vona, F., Ashrafi, N., Ceranic, M. & Voigt-Antons, J.-N.",
    "v": "In Herrmann, W. J., Leser, U., Möller, S., Voigt-Antons, J.-N., Gellert, P. (Eds.) (2024). The digitalization of healthcare for older adults. - Digitalization as an answer to substantial challenges in our healthcare system. Berlin: Berlin Universities Publishing",
    "tp": "digital-health",
-   "d": "https://doi.org/10.14279/depositonce-20424"
+   "d": "https://doi.org/10.14279/depositonce-20424",
+   "ab": "Immersive technologies such as virtual reality (VR) and augmented reality (AR) have significant potential in the therapeutic field. They can support older people, individuals with cognitive disorders and other types of conditions such as fluency disorders or phobias. This article presents three examples of VR applications with three different objectives and end users. The first example is a VR system for assessing mild cognitive impairment in older people. The second example presents a VR system used to train people with fluency disorders. The third example presents a VR system for exposure therapy for patients with canine phobia."
   },
   {
    "id": "2024-10-16-B2",
@@ -580,7 +642,8 @@
    "v": "Berlin: Berlin Universities Publishing",
    "tp": "digital-health",
    "d": "https://doi.org/10.14279/depositonce-20351",
-   "n": "Edited volume"
+   "n": "Edited volume",
+   "ab": "Demographic change poses substantial challenges for our healthcare system and its ability to sustain good healthcare for older adults. Digitalization is one answer to this challenge. In this collection, we present different projects and approaches tackling the digitalization of healthcare for older adults based on a workshop conducted in Berlin in July 2023."
   },
   {
    "id": "2024-10-10-C82",
@@ -591,7 +654,8 @@
    "a": "Vergari, M., Kojic, T., Wardah, W., Warsinke, M., Voigt-Antons, J.-N., Möller, S. & Spang, R.",
    "v": "Paper presented at the 30th ACM Symposium on Virtual Reality Software and Technology (VRST 2024), Trier, Germany",
    "tp": "xr",
-   "d": "https://doi.org/10.1145/3641825.3689526"
+   "d": "https://doi.org/10.1145/3641825.3689526",
+   "ab": "This paper examines the social acceptability and privacy perceptions of outward-facing eye representations (e.g., EyeSight) on XR devices. Through a mixed-methods study with bystanders and wearers, we analyze trust, approachability, and distraction, and identify risks of misinterpreting gaze cues. We propose design recommendations—transparency cues, contextual signaling, and control options—to foster socially appropriate XR interactions."
   },
   {
    "id": "2024-10-10-C79",
@@ -602,7 +666,8 @@
    "a": "Ashrafi, N., Hinzmann, S. L., Vona, F., Graf, P., Harnisch, P., Marquardt, M. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 30th ACM Symposium on Virtual Reality Software and Technology (VRST 2024), Trier, Germany",
    "tp": "xr",
-   "d": "https://doi.org/10.1145/3641825.3689700"
+   "d": "https://doi.org/10.1145/3641825.3689700",
+   "ab": "This study compares single- and dual-display configurations for virtually embodied conversational systems. We analyze task performance, workload, and social presence while controlling for display placement and content distribution. Dual displays can improve information availability but may raise cognitive load; we discuss layout strategies that balance awareness, legibility, and user comfort."
   },
   {
    "id": "2024-10-01-C78",
@@ -613,7 +678,8 @@
    "a": "Kaeder, J., Vergari, M., Biener, V., Kojic, T., Grubert, J., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 23rd IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2024), Greater Seattle Area, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/ISMAR62088.2024.00089"
+   "d": "https://doi.org/10.1109/ISMAR62088.2024.00089",
+   "ab": "We evaluate how different MR display layouts influence perceived safety, productivity, and social acceptability during public use. Through task scenarios and bystander observations, compact anchored layouts improved situational awareness while wide, occluding layouts reduced comfort and social acceptance. We provide layout recommendations for public-space MR work practices."
   },
   {
    "id": "2024-09-15-mobility-resources-gps",
@@ -633,7 +699,8 @@
    "ti": "What importance does outpatient care have for mobility in rural areas? Results from a GPS study among persons aged 75 and older",
    "a": "Haeger, C., Mümken, S., Spang, R. P., Brauer, M., Voigt-Antons, J.-N. & Gellert, P.",
    "v": "Paper presented at the 23. Deutscher Kongress für Versorgungsforschung 2024. Potsdam, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "This contribution analyzes GPS-based mobility patterns of rural residents aged 75+ to examine how outpatient care availability relates to out-of-home activity. We quantify trip frequency, distances, and destinations and model associations with local care infrastructure. Findings suggest that accessible outpatient services can enable broader mobility and social participation, informing regional planning and age-friendly care models."
   },
   {
    "id": "2024-08-01-C81",
@@ -644,7 +711,8 @@
    "a": "Warsinke, M., Kojic, T., Vergari, M. & Voigt-Antons, J.-N. & Möller, S.",
    "v": "Paper presented at the 23rd IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2024), Greater Seattle Area, USA",
    "tp": "qoe",
-   "d": "https://doi.org/10.1109/ISMAR-Adjunct64951.2024.00166"
+   "d": "https://doi.org/10.1109/ISMAR-Adjunct64951.2024.00166",
+   "ab": "We study how controlled degradations of latency, bitrate, and packet loss in cloud-rendered VR affect user experience. Behavioral metrics and self-reports show that network impairments reduce presence and enjoyment while increasing cybersickness and negative affect. We discuss threshold regions and provide recommendations for adaptive streaming strategies to preserve VR gaming quality under fluctuating networks."
   },
   {
    "id": "2024-08-01-C80",
@@ -655,7 +723,8 @@
    "a": "Ashrafi, N., Vona, F., Ringsdorf, C., Vergari, M., Schorlemmer, J., Marquardt, M., & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 23rd IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2024), Greater Seattle Area, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/ISMAR-Adjunct64951.2024.00083"
+   "d": "https://doi.org/10.1109/ISMAR-Adjunct64951.2024.00083",
+   "ab": "We present an immersive interview-training system that uses photorealistic, AI-driven metahuman avatars to simulate challenging interviewer behaviors. In a formative study, participants reported higher engagement and self-efficacy compared to non-immersive practice, while noting potential uncanny-valley effects. We outline design trade-offs between realism, responsiveness, and user comfort for coaching applications."
   },
   {
    "id": "2024-07-01-J29",
@@ -666,7 +735,8 @@
    "a": "Haeger, C., Mümken, S. A., Spang, R. P., Brauer, M., Voigt-Antons, J.-N. & Gellert, P.",
    "v": "Bundesgesundheitsblatt – Gesundheitsforschung – Gesundheitsschutz, 67(8), 921–930",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1007/s00103-024-03917-2"
+   "d": "https://doi.org/10.1007/s00103-024-03917-2",
+   "ab": "This study investigated the out-of-home mobility of individuals aged 75 and older in rural areas using GPS tracking. The results provide insights into mobility patterns, barriers, and the influence of health and environmental factors, highlighting implications for promoting active aging and independence."
   },
   {
    "id": "2024-06-01-OC42",
@@ -677,7 +747,8 @@
    "a": "Stern, M., Hallmann, M., Vona, F., Franke, U., Ostertag, T., Schlüter, B. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2024). Washington DC, USA",
    "tp": "qoe",
-   "d": "https://doi.org/10.1007/978-3-031-78531-3_30"
+   "d": "https://doi.org/10.1007/978-3-031-78531-3_30",
+   "ab": "We present a modular backend architecture for predictive maintenance that streamlines data ingestion, labeling, and model deployment while supporting human-in-the-loop workflows. The system integrates scalable storage, message queues, and inference services with UI components for anomaly review. Benchmarks from an industrial pilot show reduced latency, improved data quality, and faster iteration on AI models."
   },
   {
    "id": "2024-06-01-OC41",
@@ -688,7 +759,8 @@
    "a": "Hallmann, M., Stern, M., Vona, F., Franke, U., Ostertag, T., Schlüter, B. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2024). Washington DC, USA",
    "tp": "qoe",
-   "d": "https://doi.org/10.1007/978-3-031-76821-7_4"
+   "d": "https://doi.org/10.1007/978-3-031-76821-7_4",
+   "ab": "This paper reports a UX overhaul of industrial labeling tools used to curate maintenance datasets. Through contextual interviews and iterative prototyping, we address pain points in task routing, annotation consistency, and error handling. A comparative study shows meaningful reductions in time-on-task and inter-annotator variance, yielding practical design patterns for reliable annotation at scale."
   },
   {
    "id": "2024-06-01-OC40",
@@ -699,7 +771,8 @@
    "a": "Kojić, T., Vergari, M., Dovhalevska, A., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2024). Washington DC, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-031-61953-3_14"
+   "d": "https://doi.org/10.1007/978-3-031-61953-3_14",
+   "ab": "We explore academic integrity risks when assessments are delivered via VR and other computer-mediated environments. In scenario-based experiments, we examine opportunities and deterrents for dishonest behavior, and evaluate interface and proctoring strategies that balance fairness with student experience. The results inform policy and design recommendations for secure, acceptable remote testing."
   },
   {
    "id": "2024-06-01-OC39",
@@ -710,7 +783,8 @@
    "a": "Vergari, M., Kojić, T., Möller, S., Voigt-Antons, J.-N., Abboud, O. & Xiao, X.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2024). Washington DC, USA",
    "tp": "qoe",
-   "d": "https://doi.org/10.1007/978-3-031-61044-8_8"
+   "d": "https://doi.org/10.1007/978-3-031-61044-8_8",
+   "ab": "We propose a content delivery approach for XR applications that leverages network-based asset bundles and adaptive prefetching. Across heterogeneous devices and networks, our method reduces load times and stalls while preserving visual fidelity. User studies demonstrate improved perceived responsiveness and task flow in interactive XR scenarios."
   },
   {
    "id": "2024-06-01-OC38",
@@ -721,7 +795,8 @@
    "a": "Vergari, M., Kojić, T., Warsinke, M., Möller, S., Voigt-Antons, J.-N., Xiao, X. & Abboud, O.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2024). Washington DC, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-031-61041-7_19"
+   "d": "https://doi.org/10.1007/978-3-031-61041-7_19",
+   "ab": "This study disentangles the effects of geometric detail and interaction richness on user experience in XR. Through factorial experiments, we measure presence, workload, performance, and cybersickness across combinations of mesh complexity and interaction depth. Findings guide resource allocation decisions: when to invest in fidelity versus interactive affordances for maximal UX gain."
   },
   {
    "id": "2024-06-01-OC37",
@@ -732,7 +807,8 @@
    "a": "Ashrafi, N., Neuhaus, V., Vona, F., Peric, N., Shiban, Y., & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2024). Washington DC, USA",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1007/978-3-031-60428-7_1"
+   "d": "https://doi.org/10.1007/978-3-031-60428-7_1",
+   "ab": "We examine how a virtual helper’s external features—face realism, attire, and age cues—affect user trust, compliance, and perceived empathy in a therapy-support tool. In controlled tasks, participants interact with varied agent appearances while we capture subjective and behavioral outcomes. Results inform appearance choices that respect clinical expectations without undermining accessibility or comfort."
   },
   {
    "id": "2024-05-11-C74",
@@ -743,7 +819,8 @@
    "a": "Stellmacher, C., Pujianto, F. I., Kojic, T., Voigt-Antons, J.-N. & Schöning, J.",
    "v": "Paper presented at the annual conference on Computer-Human Interaction (CHI 2024), Honolulu, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.1145/3613904.3642552"
+   "d": "https://doi.org/10.1145/3613904.3642552",
+   "ab": "This paper presents a technique that combines visual gain manipulation (pseudo-haptics) with lightweight vibrotactile cues to convey dynamic weight changes of virtual objects. In controlled tasks, participants perceived heavier or lighter objects consistent with visual–tactile manipulation and adapted their movement strategies accordingly. The approach improves realism and task performance without specialized force-feedback hardware, offering a practical path for scalable VR haptics."
   },
   {
    "id": "2024-04-25-C77",
@@ -754,7 +831,8 @@
    "a": "Vona, F., Hinzmann, S. L., Stern, M., Ćeranić, M., Grieshammer, D. K. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 16th International Conference on Quality of Multimedia Experience (QoMEX 2024), Karlshamn, Sweden",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2404.09174"
+   "d": "https://doi.org/10.48550/arXiv.2404.09174",
+   "ab": "We study how spatial misalignment and temporal delay between shared virtual objects affect collaborative presence and team performance in AR. Increasing offsets degraded coordination quality, trust, and usability ratings. We discuss tolerance bounds for alignment and latency and propose calibration and synchronization strategies for co-located AR."
   },
   {
    "id": "2024-04-25-C76",
@@ -765,7 +843,8 @@
    "a": "Warsinke, M., Kojic, T., Vergari, M., Spang, R. O., Voigt-Antons, J.-N. & Möller, S.",
    "v": "Paper presented at the 16th International Conference on Quality of Multimedia Experience (QoMEX 2024), Karlshamn, Sweden",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2404.16487"
+   "d": "https://doi.org/10.48550/arXiv.2404.16487",
+   "ab": "We compare continuous in-VR affect ratings with retrospective post-experience reports in a fully remote VR study. Continuous ratings capture temporal dynamics but add interaction overhead; retrospective ratings reduce burden at the cost of temporal precision. Correlations and divergences are analyzed to provide guidance on selecting emotion measurement strategies for remote XR evaluations."
   },
   {
    "id": "2024-04-25-C75",
@@ -776,7 +855,8 @@
    "a": "Cocchia, L., Vergari, M., Kojic, T., Vona, F., Möller, S., Garzotto, F. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 16th International Conference on Quality of Multimedia Experience (QoMEX 2024), Karlshamn, Sweden",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2404.16479"
+   "d": "https://doi.org/10.48550/arXiv.2404.16479",
+   "ab": "We investigate how contextual factors shape the experience of an AR game by manipulating the social environment (alone, with friends, around bystanders) and the primary interaction focus (task-oriented vs. socially oriented play). Using standardized UX, presence, and social acceptability scales with observational notes, we show that co-present others and socially focused interactions can increase enjoyment and engagement but may reduce perceived appropriateness in public settings. We derive design guidelines for balancing playability with bystander comfort."
   },
   {
    "id": "2024-04-15-C73",
@@ -787,7 +867,8 @@
    "a": "Kojić, T., Vergari, M., Knuth, S., Warsinke, M., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 16th International Workshop on Immersive Mixed and Virtual Environment Systems (MMVE ’24), Bari, Italy",
    "tp": "xr",
-   "d": "https://doi.org/10.1145/3652212.3652222"
+   "d": "https://doi.org/10.1145/3652212.3652222",
+   "ab": "We systematically compare natural hand tracking and controller-based input across short and extended play sessions. Measures include task efficiency, error rates, workload, presence, enjoyment, and simulator sickness. Results indicate that hand tracking enhances perceived naturalness and social presence but can reduce precision in time-critical actions; longer sessions amplify fatigue effects for both methods. We provide recommendations for input selection and session design."
   },
   {
    "id": "2024-03-15-J28",
@@ -798,7 +879,8 @@
    "a": "Marquardt, M., Graf, P., Jansen, E., Hillmann, S., & Voigt-Antons, J.-N.",
    "v": "Journal for Technology Assessment in Theory and Practice, 33(1), 41-47",
    "tp": "digital-health",
-   "d": "https://doi.org/10.14512/tatup.33.1.41"
+   "d": "https://doi.org/10.14512/tatup.33.1.41",
+   "ab": "This article examines explainability requirements for artificial intelligence in medicine through a scenario-based interview study. Findings highlight that situational context, system functionality, and user trust are critical factors influencing acceptance and the effective use of AI systems in healthcare."
   },
   {
    "id": "2024-03-14-C72",
@@ -809,7 +891,8 @@
    "a": "Kojić, T., Vergari, M., Podratz, M., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2024), Orlando, FL, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2403.09879"
+   "d": "https://doi.org/10.48550/arXiv.2403.09879",
+   "ab": "We evaluate how XR modality and avatar embodiment levels (e.g., low vs. high agency and realism) affect user experience during well-being activities such as guided breathing and light movement. Higher embodiment increased engagement, social presence, and adherence intentions, while overly realistic agents occasionally raised discomfort. The study outlines design trade-offs for supportive, calming XR coaching systems."
   },
   {
    "id": "2024-03-14-C71",
@@ -820,7 +903,8 @@
    "a": "Koleva, K. G., Vergari, M., Kojić, T., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2024), Orlando, FL, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2403.09883"
+   "d": "https://doi.org/10.48550/arXiv.2403.09883",
+   "ab": "This study manipulates an AR agent’s personality traits and conversational style (e.g., warmth, dominance, proactivity) to examine effects on social presence, trust, and perceived usefulness. Findings show that agent behaviors aligned with user preferences and task context improve UX and acceptance, while mismatched dominance or intrusiveness can harm perceived rapport. We suggest adaptive agent policies for AR interactions."
   },
   {
    "id": "2023-12-01-J27",
@@ -831,7 +915,8 @@
    "a": "Lech, S., Gellert, P., Spang, R., Voigt-Antons, J.-N., Huscher, D., O'Sullivan, J. L., Schuster, J.",
    "v": "International Journal of Geriatric Psychiatry. 38, 12, e6035",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1002/gps.6035"
+   "d": "https://doi.org/10.1002/gps.6035",
+   "ab": "This cluster randomized controlled trial evaluated the effectiveness of a tablet-based intervention for people with dementia in primary care. The study found improvements in guideline adherence, patient activation, and care processes, supporting the potential of digital tools in dementia care."
   },
   {
    "id": "2023-11-01-OC35",
@@ -841,7 +926,8 @@
    "ti": "Beziehungsarbeit in partizipativen Forschungskontexten – Lösung oder Folgeproblem?",
    "a": "Graf, P., Marquardt, M. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the Second conference on networking and strengthening participation in science (PatWiss 2023). Chemnitz, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "Der Beitrag diskutiert die Rolle von Beziehungsarbeit in partizipativen Forschungsprojekten: als notwendige Voraussetzung gelingender Kooperation, aber auch als potenzielle Quelle von Mehraufwand und Rollenkonflikten. Anhand von Fallbeispielen werden Spannungsfelder zwischen wissenschaftlichen Zielen, Machtasymmetrien und Erwartungsmanagement aufgezeigt. Abschließend werden praxisnahe Empfehlungen für transparente, faire und nachhaltige Zusammenarbeit formuliert."
   },
   {
    "id": "2023-10-01-S17",
@@ -852,7 +938,8 @@
    "a": "Vona, F., El Asmar, B., Elhajj, I., Bailer, W., Thallinger, G., Curcio, I., Voigt-Antons, J.-N.",
    "v": "Contribution presented to the ISO/IEC JTC 1/SC 29/WG 2 N 324 as M65744, Hannover, Germany",
    "tp": "qoe",
-   "d": "https://www.iso.org/committee/45316.html"
+   "d": "https://www.iso.org/committee/45316.html",
+   "ab": "The contribution surveys metaverse use cases—collaborative work, live events, education, and cultural heritage—and maps them to existing and emerging MPEG tools (immersive media, point clouds, neural compression, metadata). Gaps are identified in interoperability, identity, and QoE signalling, motivating standardization directions and cross-WG coordination."
   },
   {
    "id": "2023-09-06-S16",
@@ -863,7 +950,8 @@
    "a": "Kojić, T., Vergari, M., Vlahović, S., Skorin-Kapov, L., Voigt-Antons, J.-N., & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 0174 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T22-SG12-C-0174/en"
+   "d": "https://www.itu.int/md/T22-SG12-C-0174/en",
+   "ab": "This document proposes measurement procedures and task designs for subjective assessment of interactive VR, covering interaction paradigms, session control, randomization, and data quality checks. It specifies reporting formats and anchors to ensure comparability across labs and application domains."
   },
   {
    "id": "2023-09-06-S15",
@@ -874,7 +962,8 @@
    "a": "Kojić, T., Vergari, M., Vlahović, S., Skorin-Kapov, L., Voigt-Antons, J.-N., & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 0173 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T22-SG12-C-0173/en"
+   "d": "https://www.itu.int/md/T22-SG12-C-0173/en",
+   "ab": "We detail recommended equipment setups (HMDs, tracking, audio), environmental constraints, and safety considerations for VR tests. The text also defines participant screening, training, and sickness monitoring, aiming to standardize subject eligibility and minimize bias in QoE studies."
   },
   {
    "id": "2023-09-06-S14",
@@ -885,7 +974,8 @@
    "a": "Kojić, T., Vergari, M., Vlahović, S., Skorin-Kapov, L., Voigt-Antons, J.-N., & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 0171 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T22-SG12-C-0171/en"
+   "d": "https://www.itu.int/md/T22-SG12-C-0171/en",
+   "ab": "This part addresses social acceptability and ecological validity in VR QoE testing. It outlines experimental designs (within/between-subjects), task typologies, environmental controls, and procedures for documenting context factors (public/private use, co-presence) that influence user judgments."
   },
   {
    "id": "2023-08-01-OJ5",
@@ -896,7 +986,8 @@
    "a": "Lopes, P., Voigt-Antons, J.-N., Garcia, J., & Melhart, D.",
    "v": "Front. Virtual Real. 4:1235004",
    "tp": "xr",
-   "d": "https://doi.org/10.3389/frvir.2023.1235004"
+   "d": "https://doi.org/10.3389/frvir.2023.1235004",
+   "ab": "This editorial introduces the research topic on user states in XR for games, outlining current challenges in measuring emotion, engagement, presence, and cybersickness across VR/AR platforms. It summarizes the featured contributions and highlights methodological advances and open problems for real-time, user-adaptive interactive systems."
   },
   {
    "id": "2023-07-21-OC36",
@@ -907,7 +998,8 @@
    "a": "McWilliams, G., Phillips, D., McEvoy, B., Phillips, E., Lydon, D., Chang, J.-R., Martinez-del-Rincon, J., Quinn, W., Voigt-Antons, J.-N., Harrington, C., Lee, L. H., Crooks, N., Alcorn, M. & Johnson, C.",
    "v": "Report for the UK Department for Culture, Media & Sport, commissioned through UKRI under the DCMS Science and Analysis R&D Programme. Queen's University Belfast",
    "tp": "xr",
-   "d": "https://pureadmin.qub.ac.uk/ws/portalfiles/portal/528553024/Metaverse_report_final.pdf"
+   "d": "https://pureadmin.qub.ac.uk/ws/portalfiles/portal/528553024/Metaverse_report_final.pdf",
+   "ab": "This paper summarizes UK policy dialogues on immersive technologies, spanning safety, privacy, accessibility, and economic opportunity. Drawing on workshops with industry, academia, and civil society, we identify priority areas for regulation and public service adoption. The work outlines actionable pathways for responsible metaverse development and cross-sector collaboration."
   },
   {
    "id": "2023-07-18-C70",
@@ -918,7 +1010,8 @@
    "a": "Vergari, M., Kojic, T., Bertges, N., Vona, F., Voigt-Antons, J.-N. & Möller, S.",
    "v": "Paper presented at the 15th International Conference on Quality of Multimedia Experience (QoMEX 2023), Ghent, Belgium",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX58391.2023.10178675"
+   "d": "https://doi.org/10.1109/QoMEX58391.2023.10178675",
+   "ab": "We present an AR application for in-situ assessment of perceived safety in public spaces. In a field study, users annotated locations while the app captured contextual cues (e.g., lighting, crowding, visibility). Analyses reveal how AR prompts shape attention and reporting behavior, and identify environmental factors linked to safety perceptions. We discuss design implications for urban planning and wayfinding."
   },
   {
    "id": "2023-07-18-C69",
@@ -930,7 +1023,8 @@
    "v": "Paper presented at the 15th International Conference on Quality of Multimedia Experience (QoMEX 2023), Ghent, Belgium",
    "tp": "digital-health",
    "d": "https://doi.org/10.1109/QoMEX58391.2023.10178496",
-   "n": "Diversity and Societal Impact Award, QoMEX 2023"
+   "n": "Diversity and Societal Impact Award, QoMEX 2023",
+   "ab": "We introduce a GAN-based pipeline for generating realistic, privacy-preserving medical time-series to support model development when access to sensitive data is limited. Using fidelity, utility, and privacy metrics, we demonstrate that synthetic records can retain clinically meaningful patterns while mitigating re-identification risk. We discuss deployment considerations and ethical safeguards."
   },
   {
    "id": "2023-07-18-C68",
@@ -941,7 +1035,8 @@
    "a": "Kojic, T., Vergari, M., Vona, F., Voigt-Antons, J.-N. & Möller, S.",
    "v": "Paper presented at the 15th International Conference on Quality of Multimedia Experience (QoMEX 2023), Ghent, Belgium",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX58391.2023.10178532"
+   "d": "https://doi.org/10.1109/QoMEX58391.2023.10178532",
+   "ab": "We examine how ambient noise conditions affect presence, performance, workload, and cybersickness during VR tasks. Comparing quiet, moderate, and noisy soundscapes with and without spatialized audio, we find that noise degrades immersion and increases effort, while appropriate audio design mitigates some negative effects. The results inform audio strategies for VR use in real-world environments."
   },
   {
    "id": "2023-07-09-OC33",
@@ -952,7 +1047,8 @@
    "a": "Kojić, T., Luebbing, L., Voigt-Antons, J.-N. & Möller, S.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2023). Copenhagen, Denmark",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-031-35634-6_25"
+   "d": "https://doi.org/10.1007/978-3-031-35634-6_25",
+   "ab": "This paper explores integrating Self-Assessment Manikin (SAM) ratings directly into AR scenes on mobile devices. We compare spatial placements, scale, anchoring, and occlusion handling for rapid in-situ affect reporting during interaction. Results show that world-anchored, minimally occlusive SAM widgets reduce response time and cognitive load while preserving rating reliability, yielding practical UI patterns for emotion capture in AR."
   },
   {
    "id": "2023-07-01-OC34",
@@ -963,7 +1059,8 @@
    "a": "Vona, F., Ceranic, M., Rybnikova, I., & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2023). Copenhagen, Denmark",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2403.10312"
+   "d": "https://doi.org/10.48550/arXiv.2403.10312",
+   "ab": "We present the design and validation of immersive simulations for leadership training in a CAVE environment. Following a user-centered process with interviews, scenario co-creation, and iterative prototyping, we implemented branching social situations and multimodal feedback. A formative usability study (think-aloud, SUS, presence and workload ratings) indicates high acceptance, strong perceived realism, and clear design guidelines for balancing authenticity with simulator comfort."
   },
   {
    "id": "2023-05-04-J26",
@@ -974,7 +1071,8 @@
    "a": "Kojić, T., Spang. R. P., Vergari, M., Meier, L., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Quality and User Experience. 8, 3",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/s41233-023-00056-5"
+   "d": "https://doi.org/10.1007/s41233-023-00056-5",
+   "ab": "This study investigates how age, gender, and prior VR experience influence user experience in VR-based exergames. Results show significant differences in engagement, usability, and comfort, underscoring the need for inclusive design to ensure accessibility and enjoyment for diverse user groups."
   },
   {
    "id": "2023-03-02-J25",
@@ -985,7 +1083,8 @@
    "a": "Spang. R. P., Haeger, C., Mümken, S.A., Brauer, M., Voigt-Antons, J.-N., & Gellert, P.",
    "v": "JMIR Rehabilitation and Assistive Technologies. 10:e42258",
    "tp": "digital-health",
-   "d": "https://doi.org/10.2196/42258"
+   "d": "https://doi.org/10.2196/42258",
+   "ab": "This paper presents the development and validation of a smartphone GPS-based system for assessing mobility in health research. Accuracy tests and usability evaluations indicate that the system provides reliable mobility data and is well-accepted by older adult participants."
   },
   {
    "id": "2023-03-01-OC32",
@@ -996,7 +1095,8 @@
    "a": "Voigt-Antons, J.-N., Sun, Z., Vergari, M., Ashrafi, N., Vona, F., & Kojić, T.",
    "v": "Paper presented at the annual congress of the Deutsche Gesellschaft für Akustik (DAGA 2023), Hamburg, Germany",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2404.16473"
+   "d": "https://doi.org/10.48550/arXiv.2404.16473",
+   "ab": "We evaluate spatialized audio cues for AR-supported outdoor navigation compared to non-spatial audio and visual-only guidance. Field trials assess route efficiency, situational awareness, workload, and perceived safety. Spatial audio improves turn compliance and reduces visual dependency without increasing distraction, supporting hybrid cue designs for hands-free navigation in real environments."
   },
   {
    "id": "2023-01-05-J24",
@@ -1007,7 +1107,8 @@
    "a": "Pinilla, A., Voigt-Antons, J.-N., Garcia, J. A., Raffe, W. & Möller, S.",
    "v": "Front. Virtual Real. 3:964754",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.3389/frvir.2022.964754"
+   "d": "https://doi.org/10.3389/frvir.2022.964754",
+   "ab": "This article introduces a method for detecting affective states in real time within virtual reality environments. Combining EEG signals with a three-dimensional model of affect, the study demonstrates the feasibility of emotion recognition to enhance adaptive VR systems."
   },
   {
    "id": "2022-12-20-OC31",
@@ -1018,7 +1119,8 @@
    "a": "Lech, S., O´Sullivan, J. L., Spang, R. P., Voigt-Antons, J.-N., Gellert, P. & Nordheim, J.",
    "v": "Paper presented at the GSA Annual Scientific Meeting",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1093/geroni/igac059.1829"
+   "d": "https://doi.org/10.1093/geroni/igac059.1829",
+   "ab": "This presentation reports primary care outcomes from a cluster-randomized trial evaluating adherence to dementia care guidelines. We analyze documentation quality, referral patterns, and patient-reported outcomes under guideline-oriented support versus usual care. Findings suggest that structured guideline implementation improves key process measures and may facilitate earlier interventions along the care pathway."
   },
   {
    "id": "2022-11-24-OC28",
@@ -1029,7 +1131,8 @@
    "a": "Burkert, P., Schaufler, B. & Voigt-Antons, J.-N.",
    "v": "Poster presented at the International Conference on Human-Computer Interaction (HCII 2022). Virtual event",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-031-19679-9_75"
+   "d": "https://doi.org/10.1007/978-3-031-19679-9_75",
+   "ab": "ColorTable is an interactive setup that modulates table lighting to study crossmodal effects on flavor perception. In controlled tastings, we vary ambient light hues and intensities during food consumption and collect hedonic and sensory ratings. Results show systematic shifts in perceived sweetness and freshness, highlighting design opportunities for experiential dining and assistive nutrition contexts."
   },
   {
    "id": "2022-10-04-C67",
@@ -1040,7 +1143,8 @@
    "a": "Spang, R. P., Voigt-Antons, J.-N. & Möller, S.",
    "v": "Paper presented at the 14th International Conference on Quality of Multimedia Experience (QoMEX 2022), Lippstadt, Germany",
    "tp": "qoe",
-   "d": "https://doi.org/10.1109/QoMEX55416.2022.9900888"
+   "d": "https://doi.org/10.1109/QoMEX55416.2022.9900888",
+   "ab": "We release Storytime, a dataset of controlled videotelephony clips with scripted conversational content and systematically varied network and encoding conditions. The corpus is designed for Quality of Experience studies, enabling reproducible analysis of perceived quality, attention, and affect. We describe generation procedures, annotations, and baseline results to facilitate benchmarking."
   },
   {
    "id": "2022-10-04-C66",
@@ -1051,7 +1155,8 @@
    "a": "Vergari, M., Spang, R. P., Kojić, T., Hesse, B., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 14th International Conference on Quality of Multimedia Experience (QoMEX 2022), Lippstadt, Germany",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX55416.2022.9900887"
+   "d": "https://doi.org/10.1109/QoMEX55416.2022.9900887",
+   "ab": "We study proxemics in AR by measuring comfort boundaries when virtual characters and objects approach users in different trajectories and speeds. Results show asymmetries in tolerated distances and highlight how occlusion and spatial anchoring influence perceived intrusiveness. The findings inform placement rules for AR content that respects users’ personal space."
   },
   {
    "id": "2022-09-15-mobility-support-75plus",
@@ -1072,7 +1177,8 @@
    "a": "Spang, R. P., Pieper, K., Oesterle, B., Brauer, M., Haeger, C., Mümken, S., Gellert, P. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the Free and Open Source Software for Geospatial (FOSS4G 2022). Firenze, Italy",
    "tp": "digital-health",
-   "d": "https://doi.org/10.5194/isprs-archives-XLVIII-4-W1-2022-435-2022"
+   "d": "https://doi.org/10.5194/isprs-archives-XLVIII-4-W1-2022-435-2022",
+   "ab": "We propose a robust pipeline for classifying stops and trips from noisy real-world GPS and accelerometer data. By combining density-based clustering, temporal smoothing, and sensor-fusion heuristics, the approach improves segmentation stability across heterogeneous devices and sampling rates. Open-source tools and benchmarks on daily-life datasets demonstrate higher precision/recall and practical defaults for mobility research."
   },
   {
    "id": "2022-08-06-OC29",
@@ -1083,7 +1189,8 @@
    "a": "Spang, R. P., Pieper, K., Oesterle, B., Brauer, M., Haeger, C., Mümken, S., Gellert, P. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the Free and Open Source Software for Geospatial (FOSS4G 2022). Firenze, Italy",
    "tp": "digital-health",
-   "d": "https://doi.org/10.5194/isprs-archives-XLVIII-4-W1-2022-443-2022"
+   "d": "https://doi.org/10.5194/isprs-archives-XLVIII-4-W1-2022-443-2022",
+   "ab": "We introduce STAGA, a curated dataset of everyday mobility with synchronized GPS and accelerometer streams and expert annotations for stops and trips. The corpus covers diverse contexts, devices, and sampling regimes to support method development and benchmarking. We describe collection, labeling protocols, and baseline models, and provide open access for reproducible mobility analytics."
   },
   {
    "id": "2022-06-16-OC27",
@@ -1094,7 +1201,8 @@
    "a": "Spang, R. P., Machačík, P., Pieper, K., Vergari, M. & Voigt-Antons, J.-N.",
    "v": "Poster presented at the International Conference on Human-Computer Interaction. Virtual event",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1007/978-3-031-06394-7_56"
+   "d": "https://doi.org/10.1007/978-3-031-06394-7_56",
+   "ab": "We reverse-engineer a commercial smartwatch stress metric by relating device outputs to concurrently recorded physiological signals. Using controlled tasks and free-living data, we examine contributions from HRV features and movement artifacts and compare against validated stress scales. The analysis clarifies construct coverage and limitations, offering guidance for research use of consumer stress indicators."
   },
   {
    "id": "2022-06-16-OC25",
@@ -1105,7 +1213,8 @@
    "a": "Kojić, T., Vergari, M., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction. Virtual event",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-031-05939-1_13"
+   "d": "https://doi.org/10.1007/978-3-031-05939-1_13",
+   "ab": "Virtual Reality (VR) technology is mostly used in gaming, videos, engineering applications, and training simulators. One thing which is shared among all of them is the necessity to display text. Text reading experience is not always in focus for VR systems because of limited hardware capabilities, lack of standardization, user interface (UI) design flaws, and physical design of Head-Mounted Displays (HMDs). With this paper, key variables from the UI design side were researched that can improve text reading user experience in VR. Therefore four important points for reading in VR application were selected to be focused on: 1) Difference in canvas type (flat/curved), 2) Contrast on virtual scene (light/dark), 3) Number of columns in layout (1 column/2 column/3 column) 4) Text distance from the subject (1.5 m/6.5 m). For a user study a VR app for Oculus Quest was developed, enabling the possibility to display text while varying some of the features important for readability in VR. This user experiment has shown parameters that are important for text reading experience in VR. Specifically, subjects performed very well when the text was on a 6.5-meter distance from the subject with font size 22pt, on a flat canvas with one column layout. When it comes to physiological variables, the conditions measurements were behaving similarly, as all of the selected parameters were in line with the design guidelines. Therefore, selection on final settings should be more oriented towards user experience and preferences."
   },
   {
    "id": "2022-05-29-OC26",
@@ -1116,7 +1225,8 @@
    "a": "Vergari, M., Kojić, T., Hillmann, S., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction. Virtual event",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-031-06015-1_10"
+   "d": "https://doi.org/10.1007/978-3-031-06015-1_10",
+   "ab": "We investigate game mechanics to enhance engagement with public art and heritage objects through mobile AR. A comparative field study tests points, quests, and cooperative tasks against a non-gamified baseline while tracking dwell time, learning, and social acceptability. Gamification increases exploration and recall without undermining site etiquette, suggesting design levers for cultural AR experiences."
   },
   {
    "id": "2022-05-25-S13",
@@ -1127,7 +1237,8 @@
    "a": "Kojić, T., Voigt-Antons, J.-N., & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 0060 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T22-SG12-C-0060/en"
+   "d": "https://www.itu.int/md/T22-SG12-C-0060/en",
+   "ab": "We define a taxonomy of VR QoE aspects—presence, usability, comfort, cybersickness, aesthetics, task performance—and propose candidate scales and behavioral/physiological correlates. The document motivates harmonized metrics and reporting to enable cross-study comparability."
   },
   {
    "id": "2022-03-01-vde-digitalisierung-gesundheitswesen",
@@ -1149,7 +1260,8 @@
    "a": "Haeger, C., Mümken, S.A., O‘Sullivan, J.L., Spang, R.P., Voigt-Antons, J.-N., Stockburger, M., Dräger, D. & Gellert, P.",
    "v": "BMC Geriatr 22, 65",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1186/s12877-021-02739-0"
+   "d": "https://doi.org/10.1186/s12877-021-02739-0",
+   "ab": "This protocol describes MOBILE, a randomized controlled trial aiming to improve out-of-home mobility among adults aged 75+ living in rural areas. The intervention combines individualized counseling with digital monitoring (e.g., GPS-based mobility measures) and evaluates effects on mobility behavior, quality of life, and health-related outcomes."
   },
   {
    "id": "2022-01-01-J23",
@@ -1160,7 +1272,8 @@
    "a": "O'Sullivan, J. L., Lech, S., Gellert, P., Grittner, U., Voigt-Antons, J.-N., Möller, S., Kuhlmey, A., & Nordheim, J.",
    "v": "International psychogeriatrics, 34(2), 129–141",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1017/S1041610221000818"
+   "d": "https://doi.org/10.1017/S1041610221000818",
+   "ab": "This cluster-randomized controlled trial evaluated the use of a tablet-based intervention to activate nursing home residents with dementia. Results indicate positive effects on resident engagement and activity levels, suggesting that digital interventions can support psychosocial care in dementia settings."
   },
   {
    "id": "2021-12-18-J22",
@@ -1171,7 +1284,8 @@
    "a": "Lech, S., O’Sullivan, J.L., Drewelies, J., Herrmann, W., Spang, R., Voigt-Antons, J.-N., Nordheim, J., & Gellert, P.",
    "v": "BMC Geriatr, 21, 717",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1186/s12877-021-02650-8"
+   "d": "https://doi.org/10.1186/s12877-021-02650-8",
+   "ab": "This cross-sectional study examined guideline adherence in dementia care within primary care practices as part of the DemTab project. The findings reveal gaps in adherence, particularly in diagnostics and care planning, underscoring the need for improved implementation strategies."
   },
   {
    "id": "2021-11-01-J21",
@@ -1182,7 +1296,8 @@
    "a": "Pieper, K., Spang, R. P., Prietz, P., Möller, S., Paajanen, E., Vaalgamaa, M. & Voigt-Antons, J.-N.",
    "v": "Front. Neurosci. 15:771533",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.3389/fnins.2021.771533"
+   "d": "https://doi.org/10.3389/fnins.2021.771533",
+   "ab": "This study assessed the cognitive workload associated with environmental noise and the use of noise-cancellation technologies. Combining EEG data with subjective measures, the research provides insights into how auditory environments affect attention and performance."
   },
   {
    "id": "2021-10-08-OC24",
@@ -1193,7 +1308,8 @@
    "a": "Mümken, S., Spang, R. P., Voigt-Antons, J.-N., Ackermann, C., Dräger, D. & Gellert, P.",
    "v": "Paper presented at 20. Deutschen Kongress für Versorgungsforschung (20. DKVF DIGITAL). Weimar, Germany, online",
    "tp": "digital-health",
-   "d": "https://doi.org/10.3205/21dkvf414"
+   "d": "https://doi.org/10.3205/21dkvf414",
+   "ab": "We demonstrate how longitudinal, passively collected GPS traces can be used to evaluate an intervention aiming to increase out-of-home mobility among older adults. From raw trajectories we derive interpretable indicators (e.g., time spent out of home, trip frequency, visited-area diversity) and assess their sensitivity to change over time. The approach proves feasible and privacy-preserving, and it complements survey-based outcomes with objective mobility behavior."
   },
   {
    "id": "2021-09-29-S12",
@@ -1204,7 +1320,8 @@
    "a": "Kojić, T., Voigt-Antons, J.-N., & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 602 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T17-SG12-C-0602/en"
+   "d": "https://www.itu.int/md/T17-SG12-C-0602/en",
+   "ab": "This initial proposal frames the scope and structure of a new recommendation for subjective evaluation of interactive VR. It summarizes use cases, identifies key QoE dimensions, and sketches methodological building blocks to be elaborated in subsequent contributions."
   },
   {
    "id": "2021-09-29-S11",
@@ -1215,7 +1332,8 @@
    "a": "Kojić, T., Voigt-Antons, J.-N., & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 605 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T17-SG12-C-0605/en"
+   "d": "https://www.itu.int/md/T17-SG12-C-0605/en",
+   "ab": "We propose updates to the human interface factors section of G.1035 to reflect modern interactive media and XR use cases. Revisions include user task models, perceptual constraints, and guidance on capturing user-centric performance and comfort indicators under variable network conditions."
   },
   {
    "id": "2021-08-01-J20",
@@ -1226,7 +1344,8 @@
    "a": "Pinilla, A., Garcia, J. A., Raffe, W., Voigt-Antons, J.-N., Spang, R. & Möller, S.",
    "v": "Front. Virtual Real. 2:630731",
    "tp": "xr",
-   "d": "https://doi.org/10.3389/frvir.2021.630731"
+   "d": "https://doi.org/10.3389/frvir.2021.630731",
+   "ab": "This integrative review examines approaches to visualizing emotions in virtual reality. The paper synthesizes findings across disciplines, highlighting methods, applications, and challenges in leveraging emotion visualization to enrich VR experiences."
   },
   {
    "id": "2021-07-03-OC23",
@@ -1237,7 +1356,8 @@
    "a": "Kojić, T., Vergari, M., Thangaraj, R., Braune, M. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction. Washington DC, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.1007/978-3-030-78642-7_36"
+   "d": "https://doi.org/10.1007/978-3-030-78642-7_36",
+   "ab": "We investigate how alternative VR visualization designs for continuous data streams affect comprehension, workload, and presence. Through a controlled study, we compare spatial placement (egocentric vs. exocentric), encoding (shape/size/animation), and temporal buffering on monitoring tasks. Results reveal trade-offs between immersion and readability and yield practical guidelines for instrument panels in analytic and training scenarios."
   },
   {
    "id": "2021-07-03-OC22",
@@ -1248,7 +1368,8 @@
    "a": "Voigt-Antons, J.-N., Devaikin, P. & Kojić, T.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction. Washington DC, USA",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1007/978-3-030-78462-1_49"
+   "d": "https://doi.org/10.1007/978-3-030-78462-1_49",
+   "ab": "This work examines whether emotions experienced during interaction can be inferred from whole-body kinematics. Using pose and velocity features captured from motion sensors, we train classifiers to distinguish arousal and valence states validated by self-reports. The models reach robust performance across tasks, indicating the potential of movement-based affect sensing for interactive systems and XR experiences."
   },
   {
    "id": "2021-07-03-OC21",
@@ -1259,7 +1380,8 @@
    "a": "Burghart, M., O´Sullivan, J. L., Spang, R. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction. Washington DC, USA",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1007/978-3-030-78111-8_13"
+   "d": "https://doi.org/10.1007/978-3-030-78111-8_13",
+   "ab": "We report a participatory design process for DemSelf, a mobile app supporting self-administered touch-based cognitive screening. Patients, caregivers, and clinicians co-created task flows, feedback, and accessibility features through workshops and iterative prototyping. Usability testing indicates high acceptance and clear requirements for guidance, transparency, and follow-up in self-screening contexts."
   },
   {
    "id": "2021-07-03-OC20",
@@ -1270,7 +1392,8 @@
    "a": "Ganser, K., Kojić, T. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction. Washington DC, USA",
    "tp": "qoe",
-   "d": "https://doi.org/10.1007/978-3-030-78645-8_29"
+   "d": "https://doi.org/10.1007/978-3-030-78645-8_29",
+   "ab": "We evaluate UX factors of in-vehicle connected services such as navigation, media, and telematics. Through scenario-based driving simulations and surveys, we analyze perceived usefulness, trust, workload, and distraction for different interaction modalities. Findings highlight the importance of reliability, glanceable UI, and progressive disclosure, leading to design recommendations for safer connected experiences."
   },
   {
    "id": "2021-05-21-OJ2",
@@ -1281,7 +1404,8 @@
    "a": "Kim, E., Laird, L., Wilson, C., Bieg, T., Mildner, P., Möller, S., Schatz, R., Schwarz, S., Spang, R., Voigt-Antons, J.-N., & Rochon, E.",
    "v": "JMIR Research Protocols, 10(7):e30621",
    "tp": "digital-health",
-   "d": "https://doi.org/10.2196/30621"
+   "d": "https://doi.org/10.2196/30621",
+   "ab": "This protocol details a virtual randomized controlled trial evaluating a mobile IT-supported intervention for naming rehabilitation in post-stroke aphasia. It outlines remote recruitment, tele-assessment, adherence monitoring, and primary outcomes on language performance, aiming to demonstrate feasibility and clinical benefit in a fully virtual design."
   },
   {
    "id": "2021-05-10-C65",
@@ -1292,7 +1416,8 @@
    "a": "Voigt-Antons, J.-N., Spang, R., Kojić, T., Meier, L., Vergari, M. & Möller, S.",
    "v": "Paper presented at the IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2021), Lisbon, Portugal",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/VR50410.2021.00094"
+   "d": "https://doi.org/10.1109/VR50410.2021.00094",
+   "ab": "We examine whether tailored virtual environments can reliably induce distinct emotional states and how these states manifest in both subjective ratings and cardiac measures. Participants experienced calming, positive, and mildly stressful VR scenes while we recorded self-reports (valence/arousal scales) and heart-rate–derived metrics. Results show consistent shifts in affect with scene type and meaningful correlations between subjective arousal and heart-rate parameters, supporting VR as a controllable stimulus for affective research and training."
   },
   {
    "id": "2021-05-10-C64",
@@ -1304,7 +1429,8 @@
    "v": "Paper presented at the IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2021), Lisbon, Portugal",
    "tp": "xr",
    "d": "https://doi.org/10.1109/VR50410.2021.00096",
-   "n": "Conference Paper Honorable Mention, IEEE VR 2021"
+   "n": "Conference Paper Honorable Mention, IEEE VR 2021",
+   "ab": "This study manipulates interaction richness (low vs. high interactivity) and social context (alone, co-present peers, public bystanders) to explore trade-offs between presence, enjoyment, performance, and perceived social acceptability in VR. High interactivity generally improved engagement and perceived competence but, in public contexts, increased self-consciousness and acceptability concerns. We derive design implications for calibrating interaction demands to situational norms and bystander expectations."
   },
   {
    "id": "2021-04-22-S9",
@@ -1315,7 +1441,8 @@
    "a": "Kojić, T., Voigt-Antons, J.-N., & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 562 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T17-SG12-C-0562/en"
+   "d": "https://www.itu.int/md/T17-SG12-C-0562/en",
+   "ab": "The contribution refines the treatment of human influencing factors in Rec. G.1035 by distinguishing static (e.g., demographics, abilities) from dynamic (e.g., fatigue, affect, adaptation) user characteristics. It proposes measurement and reporting guidance to better capture these factors’ impact on perceived quality and performance in contemporary interactive media scenarios."
   },
   {
    "id": "2021-04-22-S10",
@@ -1326,7 +1453,8 @@
    "a": "Kojić, T., Voigt-Antons, J.-N., & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 548 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T17-SG12-C-0548/en"
+   "d": "https://www.itu.int/md/T17-SG12-C-0548/en",
+   "ab": "This proposal initiates a new ITU-T work item to standardize subjective evaluation methods for interactive virtual reality (VR) applications. It outlines the motivation, scope, and core Quality of Experience (QoE) dimensions, and sketches a modular framework covering task design, participant management, instrumentation, and reporting to ensure reproducible and comparable VR studies."
   },
   {
    "id": "2021-04-01-S8",
@@ -1337,7 +1465,8 @@
    "a": "Voigt-Antons, J.-N.",
    "v": "Contribution presented to the DKE Deutsche Kommission Elektrotechnik, Elektronik Informationstechnik in DIN und VDE, Frankfurt am Main, Germany",
    "tp": "qoe",
-   "d": "https://www.dke.de/de/normen-standards/dokument?id=7170726&type=dke%7Cdokument"
+   "d": "https://www.dke.de/de/normen-standards/dokument?id=7170726&type=dke%7Cdokument",
+   "ab": "This contribution supports a VDE application guideline on foundational aspects of digital qualification in healthcare. It describes competency profiles, training formats, and evaluation criteria for digital tools and processes, emphasizing usability, data protection, and patient safety as cross-cutting requirements for successful adoption."
   },
   {
    "id": "2021-04-01-J19",
@@ -1348,7 +1477,8 @@
    "a": "Shahal, A., Spang, R., Minge, M., Trahms, C. & Voigt-Antons, J.-N.",
    "v": "Behaviour & Information Technology",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1080/0144929X.2021.1906322"
+   "d": "https://doi.org/10.1080/0144929X.2021.1906322",
+   "ab": "This article explores the design and evaluation of user-specific touch interfaces as a response to challenges posed by aging populations. Results suggest that personalized interfaces can improve usability and accessibility for older adults, offering a promising path for inclusive technology design."
   },
   {
    "id": "2021-02-01-OC19",
@@ -1358,7 +1488,8 @@
    "ti": "Ambulante Versorgung von Menschen mit Demenz in Berlin und Umgebung - Querschnittsdaten aus der DemTab-Studie",
    "a": "Lech, S., O’Sullivan, J. L., Voigt-Antons, J.-N., Greinacher, R., Gellert, P., Kuhlmey, A. & Nordheim, J.",
    "v": "Abstract presented at the 2. Charité-Versorgungsforschungskongress. Berlin, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "We present cross-sectional findings on outpatient care for people with dementia in Berlin and surrounding areas derived from the DemTab project. Descriptive analyses cover guideline adherence, care coordination, and patient/caregiver needs. The results reveal improvement potential in documentation and networking and motivate digital support to strengthen primary care pathways."
   },
   {
    "id": "2021-01-01-OJ3",
@@ -1369,7 +1500,8 @@
    "a": "Voigt-Antons, J.-N. & Kojić, T.",
    "v": "ACM SIGMM Records, 13(4), Article 7, (2021)",
    "tp": "xr",
-   "d": "https://doi.org/10.1145/3578508.3578515"
+   "d": "https://doi.org/10.1145/3578508.3578515",
+   "ab": "This article revisits the concept of immersive multimedia experience, proposing refinements to existing definitions and dimensions such as presence, agency, embodiment, and social acceptability. It calls for integrative evaluation frameworks that combine user-reported, behavioral, and physiological indicators across XR systems."
   },
   {
    "id": "2020-12-01-C63",
@@ -1380,7 +1512,8 @@
    "a": "Kojić, T., Ashipala, S., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 2020 IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR), Utrecht, Netherlands",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/AIVR50618.2020.00018"
+   "d": "https://doi.org/10.1109/AIVR50618.2020.00018",
+   "ab": "We prototype VR visualizations for balance sheets and income statements to test whether spatialized layouts and embodied interaction aid comprehension. In a within-subjects evaluation, VR supported pattern discovery and comparative reasoning, but dense scenes elevated cognitive load and errors without careful hierarchy and labeling. We provide guidelines for data density, interaction granularity, and viewpoint control when bringing financial analytics into immersive spaces."
   },
   {
    "id": "2020-11-24-OJ1",
@@ -1391,7 +1524,8 @@
    "a": "Perkis, A., Timmerer, C., Baraković, S., Husić, J. B., Bech, S., Bosse, S., ... , Voigt-Antons, J.-N., …",
    "v": "arXiv preprint arXiv:2007.07032",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2007.07032"
+   "d": "https://doi.org/10.48550/arXiv.2007.07032",
+   "ab": "The white paper proposes shared terminology and conceptual dimensions for Immersive Media Experience (IMEx), spanning technological factors, user states, and context. It consolidates community perspectives and offers recommendations for interoperable evaluation methods to advance research and standardization in immersive media."
   },
   {
    "id": "2020-11-01-OC18",
@@ -1402,7 +1536,8 @@
    "a": "O’Sullivan, J. L., Lech, S., Voigt-Antons, J.-N., Greinacher, R., Gellert, P., Kuhlmey, A. & Nordheim, J.",
    "v": "Abstract presented at the Online-Symposium des Fachausschuss „Alter und Technik“ der Deutschen Gesellschaft für Gerontologie und Geriatrie (DGGG) \"COVID-19 als <Brennglas>: Was wir aus der Krise zum Thema Altern und Digitalisierung lernen können“, virtual event",
    "tp": "digital-health",
-   "d": "https://innovationsfonds.g-ba.de/projekte/versorgungsforschung/demtab.156"
+   "d": "https://innovationsfonds.g-ba.de/projekte/versorgungsforschung/demtab.156",
+   "ab": "This contribution outlines DemTab, a tablet-based solution to assist guideline-oriented treatment planning, self-management, and communication in outpatient dementia care. We describe core modules, stakeholder involvement, and early feasibility feedback from primary care practices. Initial experiences suggest improved transparency and coordination, alongside requirements for training and data security."
   },
   {
    "id": "2020-11-01-OC17",
@@ -1412,7 +1547,8 @@
    "ti": "12170: User-Centered Design of a Multimodal Training App for People with Aphasia",
    "a": "Schatz, R., Kim, E. S., Bieber, A.-M., Bieg, T., Greinacher, R., Laird, L., Mildner, P., Neureiter, K., Rochon, E., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Proposal accepted at the Annual Convention of the American Speech-Language-Hearing Association, San Diego, CA (Convention canceled)",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "We outline a user-centered design program for a multimodal aphasia training app combining speech, gesture, and visual cues. Co-design with clinicians and persons with aphasia informed task selection, progression, and feedback strategies; formative tests assessed usability and accessibility. The proposed framework targets home-based practice and clinical integration, emphasizing adaptability and motivation."
   },
   {
    "id": "2020-08-20-J18",
@@ -1424,7 +1560,8 @@
    "v": "IEEE Transactions on Network and Service Management, vol. 17, no. 4, pp. 2702-2716",
    "tp": "psychophysiology",
    "d": "https://doi.org/10.1109/TNSM.2020.3018303",
-   "n": "Best Journal Paper Award, IEEE Communications Society (MMTC) 2023"
+   "n": "Best Journal Paper Award, IEEE Communications Society (MMTC) 2023",
+   "ab": "This paper proposes methods for estimating Quality of Experience (QoE) in video streaming by analyzing users’ facial expressions and gaze direction. Experimental results demonstrate that these non-intrusive behavioral cues provide reliable indicators of perceived quality. The study contributes to the development of automatic QoE monitoring systems and received the IEEE ComSoc Multimedia Communications Technical Committee Best Journal Paper Award in 2023."
   },
   {
    "id": "2020-07-10-OC16",
@@ -1435,7 +1572,8 @@
    "a": "Schmitt, E. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (pp. 1-10). Springer, Cham",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1007/978-3-030-50309-3_43"
+   "d": "https://doi.org/10.1007/978-3-030-50309-3_43",
+   "ab": "We propose a lightweight method to infer tap locations on smartphones from inertial sensor data alone. Models trained on accelerometer and gyroscope signals generalize across users and devices and enable input reconstruction in real-world settings. Potential applications include implicit error detection, accessibility aids, and interaction analytics without screen capture."
   },
   {
    "id": "2020-07-10-OC15",
@@ -1446,7 +1584,8 @@
    "a": "Greinacher, R. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (pp. 1–10). Springer, Cham",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1007/978-3-030-49059-1_32"
+   "d": "https://doi.org/10.1007/978-3-030-49059-1_32",
+   "ab": "This paper benchmarks the accuracy of ARKit 2’s camera-based gaze estimation for common interaction distances and lighting settings. We measure angular error, stability, and drift against a reference eye tracker and analyze implications for selection, reading, and attention-aware UI. The results provide practical thresholds and calibration advice for deploying gaze-enabled AR on commodity devices."
   },
   {
    "id": "2020-06-23-C62",
@@ -1457,7 +1596,8 @@
    "a": "Voigt-Antons, J.-N., Lehtonen, E., Palacios, A. & Ali, D.",
    "v": "Paper presented at the 12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX48832.2020.9123125"
+   "d": "https://doi.org/10.1109/QoMEX48832.2020.9123125",
+   "ab": "We compare the affective impact of 360° video presented on a head-mounted display versus a desktop screen. Using standardized self-reports of valence/arousal and behavioral indicators, HMD viewing produced stronger arousal and presence while maintaining comparable valence trends; some participants reported mild discomfort with HMDs. The findings clarify modality effects for emotion induction protocols using omnidirectional video."
   },
   {
    "id": "2020-05-26-hand-tracking-vr",
@@ -1489,7 +1629,8 @@
    "a": "Greinacher, R., Kojić, T., Meier, L., Parameshappa, R., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX48832.2020.9123141"
+   "d": "https://doi.org/10.1109/QoMEX48832.2020.9123141",
+   "ab": "We investigate how adding vibrotactile cues and visual pacing signals to a VR exergame affects respiratory regularity and perceived exertion. Compared to baseline, multimodal feedback improved breathing synchronization with target rhythms, reduced workload, and increased enjoyment. Results support incorporating lightweight haptics and visual guidance to promote safer, more effective exertion in VR fitness."
   },
   {
    "id": "2020-05-01-C60",
@@ -1500,7 +1641,8 @@
    "a": "Krüger, C., Kojić, T., Meier, L., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX48832.2020.9123100"
+   "d": "https://doi.org/10.1109/QoMEX48832.2020.9123100",
+   "ab": "We introduce language-independent pictographic scales designed for quick, in-headset assessment of valence and arousal during VR experiences. Across multiple tasks, the scales showed good reliability and convergent validity against established self-report measures while reducing interruption time. The instruments enable dense sampling of affect without breaking immersion."
   },
   {
    "id": "2020-05-01-C59",
@@ -1511,7 +1653,8 @@
    "a": "Kojić, T., Ali, D., Greinacher, R., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX48832.2020.9123091"
+   "d": "https://doi.org/10.1109/QoMEX48832.2020.9123091",
+   "ab": "We explore readability and comfort for in-headset text by systematically varying viewing distance, character size, and contrast. User performance and subjective fatigue reveal robust regions where comprehension is high and strain is low, alongside configurations that degrade legibility. We summarize practical parameter ranges to guide UI typography in VR applications."
   },
   {
    "id": "2020-02-01-OC14",
@@ -1521,7 +1664,8 @@
    "ti": "DemTab – Tablet-basierte ambulante Versorgung von Menschen mit Demenz: eine cluster-randomisierte kontrollierte Studie",
    "a": "O’Sullivan, J. L., Lech, S., Gellert, P., Voigt-Antons, J.-N., Greinacher, R., Möller, S. Kuhlmey, A. & Nordheim, J.",
    "v": "Paper presented at the IfG Jahrestagung \"Wohnen und Gesundheit im Alter\", Vechta, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "Der Beitrag skizziert Design und Zielsetzung einer cluster-randomisierten Studie zur tabletbasierten Unterstützung der ambulanten Versorgung von Menschen mit Demenz. Beschrieben werden Interventionsmodule (leitlinienbasierte Behandlungsplanung, Symptommonitoring, Kommunikation) sowie Rekrutierung, Randomisierung und primäre/sekundäre Outcomes. Erste Erfahrungen aus der Implementierung deuten auf eine gute Machbarkeit und Akzeptanz bei Hausarztpraxen und Angehörigen hin."
   },
   {
    "id": "2020-01-01-J17",
@@ -1532,7 +1676,8 @@
    "a": "Junge, S., Gellert, P., O’Sullivan, J.L., Möller, S., Voigt-Antons, J.-N., Kuhlmey, A. & Nordheim, J.",
    "v": "Qual Life Res 29, 1721–1730",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1007/s11136-020-02418-4"
+   "d": "https://doi.org/10.1007/s11136-020-02418-4",
+   "ab": "This study validates a shortened eight-item version of the QUALIDEM instrument for assessing quality of life in people with dementia living in nursing homes. The instrument was tested for reliability and sensitivity in intensive longitudinal studies, showing strong potential for use in daily care practice and research."
   },
   {
    "id": "2019-12-01-C58",
@@ -1543,7 +1688,8 @@
    "a": "Kojić, T., Nugyen, L. T. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 1st International Workshop on Bridging the Gap between Semantics and Multimedia Processing (SeMP 2019) at the 21st IEEE International Symposium on Multimedia (ISM 2019), San Diego, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/ISM46123.2019.00068"
+   "d": "https://doi.org/10.1109/ISM46123.2019.00068",
+   "ab": "We evaluate continuous on-screen biofeedback (e.g., performance and physiological indicators) in a VR exergame with respect to motivation, perceived competence, and attentional demand. While constant feedback boosted goal orientation and pace, dense overlays increased visual load for some users. We discuss adaptive feedback strategies that preserve motivation while minimizing distraction."
   },
   {
    "id": "2019-09-01-OC13",
@@ -1553,7 +1699,8 @@
    "ti": "Informations- und Kommunikationstechnologien in der Versorgung von Menschen mit Demenz",
    "a": "O‘Sullivan, J., Nordheim, J., Lech, S., Voigt-Antons, J.-N., Gellert, P., & Kuhlmey, A.",
    "v": "Vortrag auf der Fachtagung der Sektionen III und IV der Deutschen Gesellschaft für Gerontologie und Geriatrie, Berlin, DE",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "Der Vortrag gibt einen Überblick über Potenziale und Herausforderungen digitaler Anwendungen in der Demenzversorgung. Anhand von Praxisbeispielen (Telekonsultation, Tablet-gestützte Selbstmanagement-Tools, digitale Leitlinienunterstützung) werden Nutzen, Akzeptanz, Datenschutzfragen und Implementierungsbedingungen diskutiert. Im Fokus stehen Anforderungen verschiedener Stakeholder und Implikationen für zukünftige Versorgungsmodelle."
   },
   {
    "id": "2019-08-01-C57",
@@ -1564,7 +1711,8 @@
    "a": "Vashisth, G., Mikhailov, M., Voigt-Antons, J.-N. & Roller, R.",
    "v": "Paper presented at the 18th ACL Workshop on Biomedical Natural Language Processing (BioNLP 2019), Florence, Italy",
    "tp": "digital-health",
-   "d": "https://doi.org/10.18653/v1/W19-5037"
+   "d": "https://doi.org/10.18653/v1/W19-5037",
+   "ab": "We train time-sliced word embeddings on biomedical corpora to track how concepts evolve across years. By aligning vector spaces, we quantify semantic drift and highlight case studies where terminology and associations shift (e.g., emerging therapies, reclassified diseases). The approach supports literature monitoring and hypothesis generation in fast-moving domains."
   },
   {
    "id": "2019-06-01-C56",
@@ -1575,7 +1723,8 @@
    "a": "Kojić, T., Schmidt, S., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Poster presented at the 11th International Conference on Quality of Multimedia Experience (QoMEX 2019), Berlin, Germany",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX.2019.8743342"
+   "d": "https://doi.org/10.1109/QoMEX.2019.8743342",
+   "ab": "We study the perceptual consequences of asymmetric latency in competitive VR exergaming. User reports and telemetry show that players often attribute inconsistencies to the opponent, not the network, and that avatar prediction can mask or amplify delay cues depending on movement type. We outline implications for fairness perception and synchronization strategies in social VR."
   },
   {
    "id": "2019-06-01-C55",
@@ -1586,7 +1735,8 @@
    "a": "Kojić, T., Sirotina, U., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 11th International Conference on Quality of Multimedia Experience (QoMEX 2019), Berlin, Germany",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX.2019.8743273"
+   "d": "https://doi.org/10.1109/QoMEX.2019.8743273",
+   "ab": "We investigate how on-screen HUD complexity and spatial placement affect comfort, performance, and enjoyment in VR exergames. In a controlled study varying information density and UI positioning (fixed vs. world-locked; central vs. peripheral), higher complexity increased perceived workload and motion-related discomfort, while peripheral, minimally intrusive overlays preserved immersion and task performance. We provide practical guidelines for balancing feedback richness with legibility and situational awareness during intense movement."
   },
   {
    "id": "2019-06-01-C54",
@@ -1597,7 +1747,8 @@
    "a": "Porcu, S., Uhrig, S., Voigt-Antons, J.-N., Möller, S. & Atzori, L.",
    "v": "Paper presented at the 10th International Conference on Quality of Multimedia Experience (QoMEX 2019), Berlin, Germany",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2019.8743186"
+   "d": "https://doi.org/10.1109/QoMEX.2019.8743186",
+   "ab": "This work examines how degradations in video quality shape viewers’ emotional responses using both subjective ratings and automatic facial expression analysis. Across controlled impairment levels, lower quality increased negative affect and reduced engagement, with facial action units aligning with self-reported valence and arousal trends. Results highlight the value of combined self-report and vision-based signals for continuous QoE monitoring."
   },
   {
    "id": "2019-05-01-OC12",
@@ -1607,7 +1758,8 @@
    "ti": "Tablet-based Outpatient Care of People with Dementia: A Qualitative Feasibility Study",
    "a": "Lech, S., Supplieth J., O‘Sullivan, J. L., Voigt-Antons, J.-N., Gellert, P., Kuhlmey, A. & Nordheim, J.",
    "v": "Poster presented at the International Association of Gerontology and Geriatrics European Region Congress, Gothenburg, SWE",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "We report qualitative findings on the feasibility of a tablet-assisted care concept for community-dwelling people with dementia. Interviews and focus groups with patients, caregivers, and providers highlight perceived benefits (structured planning, improved communication) and barriers (training needs, data protection, workload). The insights inform design requirements and a subsequent controlled evaluation."
   },
   {
    "id": "2019-01-01-J16",
@@ -1619,7 +1771,8 @@
    "v": "Quality and User Experience, 1-13",
    "tp": "digital-health",
    "d": "https://doi.org/10.1007/s41233-019-0028-2",
-   "n": "Shared first authorship"
+   "n": "Shared first authorship",
+   "ab": "This article investigates which gameplay features in tablet-based serious games are most relevant for predicting the quality of life of people with dementia. Using machine learning and gameplay data, the study identifies critical indicators that can guide the design of effective digital interventions. *Shared first authorship."
   },
   {
    "id": "2019-01-01-J15",
@@ -1631,7 +1784,8 @@
    "v": "Quality and User Experience, 1-13",
    "tp": "xr",
    "d": "https://doi.org/10.1007/s41233-019-0029-1",
-   "n": "Shared first authorship"
+   "n": "Shared first authorship",
+   "ab": "This paper examines the reliability of questionnaires embedded directly within virtual environments, focusing on the positioning and design of rating scales. Findings indicate that scale placement and interaction modality influence user responses, providing recommendations for designing valid in-VR evaluation methods. *Shared first authorship."
   },
   {
    "id": "2019-01-01-J14",
@@ -1642,7 +1796,8 @@
    "a": "Lech, S., O’Sullivan, J. L., Gellert, P., Voigt-Antons, J.-N. & Nordheim J.",
    "v": "GeroPsych, 32(3), 135-144",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1024/1662-9647/a000210"
+   "d": "https://doi.org/10.1024/1662-9647/a000210",
+   "ab": "This article outlines the study protocol for the DemTab project, which investigates tablet-based outpatient care for people with dementia. The project aims to improve guideline-based treatment planning, individualized disease management, and communication among care providers using digital tools."
   },
   {
    "id": "2019-01-01-J13",
@@ -1653,7 +1808,8 @@
    "a": "Uhrig, S., Mittag, G., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Journal of Neural Engineering",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1088/1741-2552/ab1673"
+   "d": "https://doi.org/10.1088/1741-2552/ab1673",
+   "ab": "This study demonstrates that the P300 component of event-related potentials can capture context-dependent changes in speech quality, extending beyond purely phonological variations. The findings highlight the relevance of neurophysiological measures for assessing subjective speech quality perception."
   },
   {
    "id": "2019-01-01-J12",
@@ -1664,7 +1820,8 @@
    "a": "Ernsting, C., Stühmann, L.M., Dombrowski, S., Voigt-Antons, J.-N., Kuhlmey, A. & Gellert, P.",
    "v": "JMIR mHealth and uHealth, 7(3):e12179",
    "tp": "digital-health",
-   "d": "https://doi.org/10.2196/12179"
+   "d": "https://doi.org/10.2196/12179",
+   "ab": "This population-based survey explored the prevalence of health app use among individuals with cardiovascular diseases and diabetes, and examined perceived effectiveness. Results show that while usage is relatively common, perceived benefits vary across subgroups, with implications for app design and patient engagement strategies."
   },
   {
    "id": "2019-01-01-J11",
@@ -1675,7 +1832,8 @@
    "a": "Uhrig, S., Mittag, G., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Journal of Neural Engineering, 16(3)",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1088/1741-2552/aaf122"
+   "d": "https://doi.org/10.1088/1741-2552/aaf122",
+   "ab": "This article analyzes neural correlates of distinct speech quality dimensions using EEG. Results show that specific EEG patterns correspond to perceptual dimensions such as clarity and naturalness, providing objective insights into subjective speech quality perception."
   },
   {
    "id": "2019-01-01-J10",
@@ -1686,7 +1844,8 @@
    "a": "Núñez Castellar, E. P., Antons, J.-N., Marinazzo, D. & Van Looy, J.",
    "v": "Psychophysiology, e13347",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1111/psyp.13347"
+   "d": "https://doi.org/10.1111/psyp.13347",
+   "ab": "This study investigates attentional processes during gameplay by combining behavioral measures and event-related potentials (ERPs) using an auditory Oddball paradigm. Results show how specific ERP markers, alongside task performance, can provide objective insights into attentional demands in gaming environments, offering a bridge between cognitive neuroscience and game research."
   },
   {
    "id": "2018-10-01-OC11",
@@ -1696,7 +1855,8 @@
    "ti": "Tablet-based outpatient care for people with dementia: Guideline-based treatment planning, personalized disease management and network-based care",
    "a": "Lech, S., O’Sullivan-Solte, J., Voigt-Antons, J.-N., Gellert, P. & Nordheim, J.",
    "v": "Poster presented at the 14th International Congress of the European Geriatric Medicine Society (EuGMS), Berlin, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "This poster outlines a tablet-supported outpatient care pathway for dementia that integrates guideline prompts, personalized monitoring, and secure communication among providers. We describe the system architecture, planned outcome measures, and stakeholder feedback from early pilots. The approach aims to enhance coordination while maintaining usability for older patients and caregivers."
   },
   {
    "id": "2018-10-01-C53",
@@ -1707,7 +1867,8 @@
    "a": "Arndt, S., Perkis, A. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 1st International Workshop on Multimedia Content Analysis in Sports, Seoul, Korea",
    "tp": "xr",
-   "d": "https://doi.org/10.1145/3265845.3265848"
+   "d": "https://doi.org/10.1145/3265845.3265848",
+   "ab": "We present a VR training setup for indoor rowing that couples immersive river-course visuals with real-time effort feedback to enhance motivation and pacing. Compared to a conventional display, the HMD condition yielded longer time-on-task and improved stroke consistency without increasing perceived exertion. The findings suggest VR can support adherence and performance in endurance workouts when feedback and presence are carefully calibrated."
   },
   {
    "id": "2018-09-01-OC10",
@@ -1717,7 +1878,8 @@
    "ti": "Tabletgestützte ambulante Versorgung von Menschen mit Demenz",
    "a": "Lech, S., Nordheim, J., Gellert, P., O’Sullivan-Solte, J. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the Kongress der Deutschen Gesellschaft für Gerontologie und Geriatrie, Köln, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "Vorgestellt wird ein digitales Versorgungskonzept zur Unterstützung von Hausarztpraxen, Betroffenen und Angehörigen. Die Präsentation beschreibt Funktionsumfang (Assessment, Verlaufsdokumentation, Aufklärung), Erfahrungen aus der Pilotierung sowie Anforderungen an Schulung und Datensicherheit. Erste Rückmeldungen zeigen hohe Relevanz und nennen konkrete Verbesserungsbedarfe für den Praxiseinsatz."
   },
   {
    "id": "2018-06-01-C52",
@@ -1727,7 +1889,8 @@
    "ti": "„OurPuppet“ – Entwicklung einer Mensch-Technik-Interaktion für die Unterstützung informell Pflegender",
    "a": "Dimitrov, T., Kramps, O., Naroska, E., Bolten, T., Demmer, J., Ressel, C., Könen, S., Matthies, O., Habibi, A., Polzehl, T., Voigt-Antons, J.-N., Matip, E.-M., Mertens, J. & Heutelbeck, D.",
    "v": "Paper presented at the 1st cluster conference „Future of Nursing Care“, Oldenburg, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "This contribution introduces “OurPuppet,” a human–technology interaction concept designed to support informal caregivers in routine tasks and emotional engagement. The system combines tangible interaction with assistive prompts and remote supervision features to reduce cognitive load and promote adherence to care routines. Early formative evaluations with caregivers indicated high perceived usefulness and approachable interaction, informing next design iterations."
   },
   {
    "id": "2018-05-01-C51",
@@ -1738,7 +1901,8 @@
    "a": "Kojić, T., Voigt-Antons, J.-N., Schmidt, S., Tetzlaff, L., Kortowski, B., Sirotina, U. & Möller, S.",
    "v": "Poster presented at the 10th International Conference on Quality of Multimedia Experience (QoMEX 2018), Sardinia, Italy",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX.2018.8463370"
+   "d": "https://doi.org/10.1109/QoMEX.2018.8463370",
+   "ab": "We analyze how thematic scene design and in-game voice conversations shape engagement and competitiveness in multiplayer VR exergames. Richer environments and lightweight conversational cues increased social presence and persistence, but excessive chatter occasionally hampered coordination. We outline design balances between social facilitation and task focus to sustain enjoyable physical activity."
   },
   {
    "id": "2018-05-01-C50",
@@ -1749,7 +1913,8 @@
    "a": "Voigt-Antons, J.-N., Hoßfeld, T., Egger-Lampl, S., Schatz, R. & Möller, S.",
    "v": "Poster presented at the 10th International Conference on Quality of Multimedia Experience (QoMEX 2018), Sardinia, Italy",
    "tp": "qoe",
-   "d": "https://doi.org/10.1109/QoMEX.2018.8463383"
+   "d": "https://doi.org/10.1109/QoMEX.2018.8463383",
+   "ab": "This poster explores how classic usability attributes (e.g., efficiency, learnability) interact with network- and content-driven QoE factors during web browsing. Empirical evidence suggests that minor usability frictions can amplify perceived quality degradations under constrained networks, whereas clear information scent and responsive layouts mitigate them. We propose a joint measurement approach and discuss implications for cross-layer optimization."
   },
   {
    "id": "2018-05-01-C49",
@@ -1760,7 +1925,8 @@
    "a": "Uhrig, S., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Poster presented at the 10th International Conference on Quality of Multimedia Experience (QoMEX 2018), Sardinia, Italy",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2018.8463371"
+   "d": "https://doi.org/10.1109/QoMEX.2018.8463371",
+   "ab": "We probe whether distinct speech quality dimensions (e.g., coloration, discontinuity) evoke separable neural signatures measurable with EEG. Using controlled degradations and oddball-style contrasts, we observe differential ERP patterns and scalp distributions aligned with listeners’ perceptual categorization. Findings support the feasibility of mapping component-wise speech quality to neurophysiological markers."
   },
   {
    "id": "2018-05-01-C48",
@@ -1771,7 +1937,8 @@
    "a": "Schmidt, S., Ehrenbrink, P., Weiß, B., Voigt-Antons, J.-N., Kojić, T., Möller, S. & Johnston, A.",
    "v": "Paper presented at the 10th International Conference on Quality of Multimedia Experience (QoMEX 2018), Sardinia, Italy",
    "tp": "xr",
-   "d": "https://doi.org/10.1109/QoMEX.2018.8463389"
+   "d": "https://doi.org/10.1109/QoMEX.2018.8463389",
+   "ab": "We compare minimalistic training spaces to rich, theme-based VR worlds to study how scene design influences motivation and sustained effort in exergames. Themed environments increased enjoyment and voluntary session length without compromising perceived exertion, particularly when environmental feedback was tied to player performance. Design recommendations are distilled for motivating long-term physical activity."
   },
   {
    "id": "2018-05-01-C47",
@@ -1782,7 +1949,8 @@
    "a": "Trahms, C., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 10th International Conference on Quality of Multimedia Experience (QoMEX 2018), Sardinia, Italy",
    "tp": "qoe",
-   "d": "https://doi.org/10.1109/QoMEX.2018.8463419"
+   "d": "https://doi.org/10.1109/QoMEX.2018.8463419",
+   "ab": "This paper investigates whether implicit touch features (e.g., gesture speed, pressure variability, error corrections) predict users’ perceived quality in mobile games. Machine learning models trained on interaction logs achieved promising accuracy in estimating MOS without explicit questionnaires. The approach enables passive, fine-grained QoE monitoring in the wild."
   },
   {
    "id": "2018-05-01-C46",
@@ -1793,7 +1961,8 @@
    "a": "Uhrig, S., Michael, T., Möller, S., Keller, P. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 10th International Conference on Quality of Multimedia Experience (QoMEX 2018), Sardinia, Italy",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2018.8463293"
+   "d": "https://doi.org/10.1109/QoMEX.2018.8463293",
+   "ab": "We study conversational latency in a controlled telephone setup to quantify its impact on perceived quality, dialogue dynamics, and EEG oscillations. Even modest one-way delays disrupted turn-taking and increased cognitive workload, reflected in lower quality ratings and changes in frontal theta/alpha activity. The results provide multi-modal evidence for stringent latency targets in voice services."
   },
   {
    "id": "2018-05-01-C45",
@@ -1804,7 +1973,8 @@
    "a": "Küster, L., Trahms, C. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 10th International Conference on Quality of Multimedia Experience (QoMEX 2018), Sardinia, Italy",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2018.8463375"
+   "d": "https://doi.org/10.1109/QoMEX.2018.8463375",
+   "ab": "This study explores whether unobtrusive features from everyday touchscreen interactions can predict stable personality traits. Using gesture dynamics (e.g., tap timing, swipe kinematics) gathered from mobile tasks, we trained models that achieved meaningful correlations with Big Five dimensions. Results highlight both the promise and ethical considerations of behavior-based personality inference in mobile UX research."
   },
   {
    "id": "2018-01-01-J9",
@@ -1815,7 +1985,8 @@
    "a": "O’Sullivan, J., Gellert, P., Hesse, H., Jordan, L.-M., Möller, S., Voigt-Antons, J.-N. & Nordheim J.",
    "v": "Contemporary Nurse, 54(1), 13-25",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1080/10376178.2017.1421087"
+   "d": "https://doi.org/10.1080/10376178.2017.1421087",
+   "ab": "This mixed-methods study examines healthcare professionals’ perceptions of ICT-based interventions for residents with dementia in nursing homes. Findings reveal both enthusiasm for the potential benefits of ICT and concerns about usability, training needs, and integration into everyday care routines. The study highlights barriers and opportunities for implementing digital tools in dementia care."
   },
   {
    "id": "2017-12-01-C44",
@@ -1825,7 +1996,8 @@
    "ti": "BeST-App: Mobile Applikation eines Spiegeltherapie-Eigentrainings nach Schlaganfall",
    "a": "Schiller, C., Jettkowski, K., Voigt-Antons, J.-N. & Dohle, C.",
    "v": "Poster presented at the 25. Jahrestagung der Deutschen Gesellschaft für Neurorehabilitation e. V. (DGNR). Deutschen Gesellschaft für Neurorehabilitation (DGNR), Berlin, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "The poster presents BeST-App, a mobile application enabling self-administered mirror therapy after stroke. The app guides patients through structured exercise modules with multimedia instructions and progress tracking designed for home use. Preliminary feedback from therapists and patients indicates good usability and potential to support continuity of care between clinical and home settings."
   },
   {
    "id": "2017-10-01-C43",
@@ -1835,7 +2007,8 @@
    "ti": "Comparing standard assessment of cognitive and motor abilities with the performance measures of mobile-health apps",
    "a": "Yadav, M., Küster, L., Trahms, C. & Voigt-Antons, J.-N.",
    "v": "Poster presented at the 9th Scientific Meeting of the International Society for Research on Internet Interventions (ISRII 2017), Berlin, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "We compare traditional clinical tests of cognitive and motor function with task-derived performance indicators captured by mHealth applications. Correlation analyses suggest app-based metrics can approximate selected constructs while offering higher sampling frequency and ecological validity. The work outlines opportunities and limitations for integrating app telemetry into routine assessment."
   },
   {
    "id": "2017-07-01-OC9",
@@ -1845,7 +2018,8 @@
    "ti": "Tablet-based intervention for Nursing Home Residents with Dementia: A cluster RCT",
    "a": "Nordheim, J., O’Sullivan, J., Gellert, P., Arndt, S., Kuhlmey, A. & Antons, J.-N.",
    "v": "Paper presented at the 21st World Congress of Gerontology and Geriatrics. International Association of Gerontological Societies (IAGG 2017), San Francisco, USA",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "We present the protocol of a cluster-randomized controlled trial evaluating a tablet-based psychosocial intervention for nursing home residents with dementia. Primary outcomes target quality of life and behavioral symptoms; secondary outcomes include staff burden and feasibility metrics. The study addresses implementation at ward level and explores moderators of intervention effectiveness."
   },
   {
    "id": "2017-07-01-OC8",
@@ -1855,7 +2029,8 @@
    "ti": "Information and Communications Technology in Dementia Care: Acceptance among Professional Caregivers",
    "a": "O'Sullivan, J., Nordheim, J., Jordan, L., Hesse, B., Möller, S. & Antons, J.-N.",
    "v": "Paper presented at the 21st World Congress of Gerontology and Geriatrics. International Association of Gerontological Societies (IAGG 2017), San Francisco, USA",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "This contribution examines attitudes of professional caregivers toward ICT solutions in dementia care. Survey and interview data capture perceived usefulness, ease of use, barriers to adoption, and organizational prerequisites. Results inform implementation strategies and highlight the need for training, workflow integration, and clear privacy safeguards."
   },
   {
    "id": "2017-07-01-C42",
@@ -1866,7 +2041,8 @@
    "a": "Trahms, C., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Poster presented at the International Conference on Human-Computer Interaction (HCII), Vancouver, Canada",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1007/978-3-319-58753-0_72"
+   "d": "https://doi.org/10.1007/978-3-319-58753-0_72",
+   "ab": "This poster examines whether low-level touch features collected during regular app use can predict subjective user experience. By extracting temporal and spatial characteristics from taps and gestures, regression models explained variance in perceived usability and satisfaction without explicit questionnaires. Findings motivate passive UX sensing pipelines for large-scale field studies."
   },
   {
    "id": "2017-05-01-C41",
@@ -1877,7 +2053,8 @@
    "a": "De Moor, K. Arndt, S., Ammar, D., Voigt-Antons, J.-N., Perkis, A. & Heegaard, P.",
    "v": "Poster presented at the 9th International Conference on Quality of Multimedia Experience (QoMEX 2017), Erfurt, Germany",
    "tp": "qoe",
-   "d": "https://doi.org/10.1109/QoMEX.2017.7965665"
+   "d": "https://doi.org/10.1109/QoMEX.2017.7965665",
+   "ab": "We present a multi-faceted framework for assessing WebRTC Quality of Experience by combining subjective ratings with objective indicators from network, media, and interaction layers. Case studies show that integrating conversational metrics and perceptual video measures improves diagnostic power beyond traditional QoS parameters. The work argues for cross-layer instrumentation in real-time communications testing."
   },
   {
    "id": "2017-01-01-J8",
@@ -1888,7 +2065,8 @@
    "a": "Uhrig, S., Arndt, S., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Quality and User Experience, 2(1), 1-10",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1007/s41233-017-0011-8"
+   "d": "https://doi.org/10.1007/s41233-017-0011-8",
+   "ab": "The article explores how independent dimensions of speech quality can be differentiated using electroencephalography (EEG). The results demonstrate that EEG can identify distinct perceptual references for various quality dimensions, supporting its potential as a reliable tool for assessing user experience in speech communication."
   },
   {
    "id": "2017-01-01-J7",
@@ -1899,7 +2077,8 @@
    "a": "Radun, J., Nuutinen, M., Antons, J.-N. & Arndt, S.",
    "v": "IEEE Journal of Selected Topics in Signal Processing, 11, 37–47",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/JSTSP.2016.2607696"
+   "d": "https://doi.org/10.1109/JSTSP.2016.2607696",
+   "ab": "This research investigates whether eye-tracking data can be used to predict subjective detection of video quality degradations. The study finds that gaze behavior, including fixation duration and saccade patterns, correlates with the detection of quality changes, offering a promising method for objective quality assessment in audiovisual research."
   },
   {
    "id": "2017-01-01-J6",
@@ -1911,7 +2090,8 @@
    "v": "Journal of Selected Topics in Signal Processing, 11, 6-21",
    "tp": "psychophysiology",
    "d": "https://doi.org/10.1109/JSTSP.2016.2609843",
-   "n": "Most-cited work"
+   "n": "Most-cited work",
+   "ab": "This survey provides a comprehensive overview of psychophysiological methods applied to Quality of Experience (QoE) research. It reviews measures such as EEG, eye-tracking, and physiological arousal indicators, discussing their advantages, limitations, and applicability in multimedia quality assessment."
   },
   {
    "id": "2016-11-01-OC7",
@@ -1921,7 +2101,8 @@
    "ti": "Eine Tablet-gestützte psychosoziale Intervention zur Erhaltung der Lebensqualität von Pflegeheimbewohnern mit Demenz",
    "a": "O’Sullivan, J., Antons, J.-N., Jordan, L.-M., Nordheim, J., Möller, S. & Kuhlmey, A.",
    "v": "Erste Ergebnisse des Forschungsprojekts PflegeTab als Poster. Poster presented at the Deutsche Gesellschaft für Psychiatrie und Psychotherapie, Psychosomatik und Nervenheilkunde Kongress 2016 (DGPPN 2016), Berlin, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "Das Poster beschreibt Zielsetzung, Inhalte und Evaluationsplan einer tabletgestützten psychosozialen Intervention in Pflegeheimen. Es werden Module zur Aktivierung, Kommunikation und Angehörigeneinbindung vorgestellt sowie erste Rückmeldungen von Pflegekräften zur Umsetzbarkeit zusammengefasst. Der Ansatz zielt auf niedrigschwellige, alltagsnahe Maßnahmen zur Lebensqualitätsförderung."
   },
   {
    "id": "2016-09-01-OC6",
@@ -1931,7 +2112,8 @@
    "ti": "Akzeptanz neuer Technologien im Arbeitsalltag von Pflegeheimmitarbeitern",
    "a": "O’Sullivan, J., Jordan, L.-M., Antons, J.-N., Gellert, P. & Nordheim, J.",
    "v": "Poster presented at the Gesundheit – bio.psycho.sozial 2.0 – Jahrestagung der Deutschen Gesellschaft für Medizinische Soziologie (DGMS) und der Deutschen Gesellschaft für Medizinische Psychologie (DGMP), Berlin, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "Untersucht werden Akzeptanzfaktoren für digitale Lösungen im Pflegeheimalltag aus Sicht der Mitarbeitenden. Anhand einer Befragung werden Nutzenwahrnehmung, Bedienbarkeit, Belastung und organisationaler Support analysiert. Die Ergebnisse benennen zentrale Hürden und unterstützen die zielgerichtete Einführung technologiegestützter Prozesse in Pflegeeinrichtungen."
   },
   {
    "id": "2016-09-01-OC5",
@@ -1942,7 +2124,8 @@
    "a": "Núñez Castellar, E. P., Antons, J.-N., Marinazzo, D. & Van Looy, J.",
    "v": "Paper presented at the 18th World Congress of the International Organization of Psychophysiology (IOP 2016), Habana, Cuba",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1016/j.ijpsycho.2016.07.244"
+   "d": "https://doi.org/10.1016/j.ijpsycho.2016.07.244",
+   "ab": "We analyze EEG recordings from gameplay to explore directed functional connectivity between orienting and executive attentional networks during self-reported flow. Using Granger causality, we compare connectivity patterns across low-, medium-, and high-engagement conditions. Findings support a reconfiguration toward more efficient information transfer under flow, offering neural evidence for attentional tuning in optimal experience."
   },
   {
    "id": "2016-08-01-C40",
@@ -1953,7 +2136,8 @@
    "a": "Arndt, S. & Antons, J.-N.",
    "v": "Paper presented at the 5th International Workshop on Perceptual Quality of Systems (PQS 2016), Berlin, Germany",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.21437/PQS.2016-2"
+   "d": "https://doi.org/10.21437/PQS.2016-2",
+   "ab": "We propose a gaze-adaptive streaming approach that exploits real-time eye-tracking to prioritize foveated regions. Prototype evaluations show bandwidth savings while preserving perceived quality by allocating higher fidelity near gaze and reducing quality in peripheral areas. The results demonstrate the feasibility of integrating eye-tracking into QoE-aware streaming pipelines."
   },
   {
    "id": "2016-08-01-C39",
@@ -1964,7 +2148,8 @@
    "a": "Kraus, L., Antons, J.-N., Kaiser, F. & Möller, S.",
    "v": "Paper presented at the 5th International Workshop on Perceptual Quality of Systems (PQS 2016), Berlin, Germany",
    "tp": "qoe",
-   "d": "https://doi.org/10.21437/PQS.2016-12"
+   "d": "https://doi.org/10.21437/PQS.2016-12",
+   "ab": "This survey reviews UX aspects of user authentication, covering memorability, effort, error tolerance, perceived security, and context of use across passwords, biometrics, and multi-factor methods. We synthesize empirical findings and highlight trade-offs between security and convenience. The paper outlines a research agenda for UX-centered authentication design and evaluation."
   },
   {
    "id": "2016-06-01-C38",
@@ -1974,7 +2159,8 @@
    "ti": "Measuring flow through attentional engagement during game play: validation of a novel technique",
    "a": "Núñez Castellar, E. P., Antons, J.-N., Marinazzo, D. & Van Looy, J.",
    "v": "Paper presented at the International Communication Association Conference (ICA 2016), Fukuoka, Japan",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "We introduce a method to index flow during gameplay by combining behavioral markers with attention-related measures. Across controlled difficulty manipulations, the proposed indices tracked transitions into and out of flow states and correlated with self-reports. The approach offers a practical, temporally sensitive tool for evaluating game experiences."
   },
   {
    "id": "2016-04-01-C37",
@@ -1984,7 +2170,8 @@
    "ti": "PflegeTab: Enhancing Quality of Life Using a Psychosocial Internet-based Intervention for Residential Dementia Care",
    "a": "Antons, J.-N., O’Sullivan, J., Arndt, S., Gellert, P., Nordheim, J., Möller, S. & Kuhlmey, A.",
    "v": "Poster presented at the 8th Scientific Meeting of the International Society for Research on Internet Interventions (ISRII 2016), Seattle, USA",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "PflegeTab is a tablet-supported psychosocial intervention co-designed with care staff to stimulate meaningful activities and communication for residents with dementia. The poster reports on feasibility, acceptance, and early indications of improved mood and engagement in nursing home settings. Lessons learned inform deployment and training strategies for technology-enabled dementia care."
   },
   {
    "id": "2016-02-06-J5",
@@ -1995,7 +2182,8 @@
    "a": "Arndt, S., Antons, J.-N., Schleicher, R., & Möller, S.",
    "v": "Signal Processing: Image Communication, 42, 120-129",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1016/j.image.2016.01.011"
+   "d": "https://doi.org/10.1016/j.image.2016.01.011",
+   "ab": "The paper examines how exposure to low-quality audiovisual stimuli affects sleepiness, using EEG measurements to identify neural correlates. Results indicate that poor media quality increases drowsiness, suggesting important implications for user safety and media consumption contexts."
   },
   {
    "id": "2016-02-01-C36",
@@ -2006,7 +2194,8 @@
    "a": "Arndt, S., Brunnström, K., Cheng, E., Engelke, U., Möller, S. & Antons, J.-N.",
    "v": "Poster presented at the International Symposium on Human Vision and Electronic Imaging (HVEI 2016), San Francisco, USA",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.2352/ISSN.2470-1173.2016.16.HVEI-125"
+   "d": "https://doi.org/10.2352/ISSN.2470-1173.2016.16.HVEI-125",
+   "ab": "We survey physiological methods—EEG, EDA, heart rate, respiration, eye movements—for assessing multimedia Quality of Experience. The review synthesizes study designs, signal processing pipelines, and validity considerations, and identifies scenarios where physiology complements or augments self-report. Recommendations are provided for multimodal QoE experiments and future standardization efforts."
   },
   {
    "id": "2016-01-01-S7",
@@ -2017,7 +2206,8 @@
    "a": "Antons, J.-N., Arndt, S. & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 307 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T13-SG12-C-0307/en"
+   "d": "https://www.itu.int/md/T13-SG12-C-0307/en",
+   "ab": "The document proposes a structure for a recommendation on integrating physiological measurements (e.g., EEG, EDA, heart rate) into speech quality assessment. It delineates use cases, experimental paradigms, candidate indicators, and data handling practices to complement subjective ratings with objective correlates of listener effort and affect."
   },
   {
    "id": "2015-11-01-OC4",
@@ -2028,7 +2218,8 @@
    "a": "Möller, S. & Antons, J.-N.",
    "v": "Paper presented at the Future and Emerging Trends in Language Technology (FETLT 2015), Seville, Spain",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1007/978-3-319-33500-1_1"
+   "d": "https://doi.org/10.1007/978-3-319-33500-1_1",
+   "ab": "This contribution outlines a research agenda for next-generation human–computer interaction that leverages implicit inputs from body sensors alongside adaptive and persuasive interface concepts. We map key use cases in language technologies, discuss sensing and inference pipelines (from physiological data to intent), and highlight design and ethics challenges around transparency, privacy, and user agency."
   },
   {
    "id": "2015-06-01-OC3",
@@ -2038,7 +2229,8 @@
    "ti": "Investigating the Neural Correlates of the Subjective Flow Experience During Game Play: an EEG Study",
    "a": "Núñez Castellar, E. P., Antons, J.-N. & Van Looy, J.",
    "v": "Poster presented at the annual congress of the Organization for Human Brain Mapping (OHBM 2015), Honolulu, USA",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "We report EEG evidence linking self-reported flow during gameplay to changes in oscillatory activity and event-related potentials. Participants played under manipulated challenge–skill balance; spectral and ERP markers were compared across conditions. Results suggest enhanced attentional engagement and more efficient processing during high-flow episodes, supporting neurocognitive accounts of optimal experience."
   },
   {
    "id": "2015-05-01-S6",
@@ -2049,7 +2241,8 @@
    "a": "Möller, S., Antons, J.-N. & Arndt, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 - C 272 - E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T13-SG12-C-0272/en"
+   "d": "https://www.itu.int/md/T13-SG12-C-0272/en",
+   "ab": "This proposal motivates the development of a recommendation defining how physiological signals can augment traditional subjective speech quality tests. It reviews evidence linking physiology to perceived quality and outlines a roadmap covering instrumentation, protocols, and validation against established listening test outcomes."
   },
   {
    "id": "2015-05-01-S5",
@@ -2060,7 +2253,8 @@
    "a": "Möller, S., Antons, J.-N., Beyer, J., Egger, S., Núñez Castellar, E. P., Skorin-Kapov, L. & Suznjevic, M.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 - C 270 - E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T13-SG12-C-0270/en"
+   "d": "https://www.itu.int/md/T13-SG12-C-0270/en",
+   "ab": "The contribution provides technical and methodological comments on the draft recommendation P.GAME for gaming QoE assessment. It addresses stimulus design, session control, rating scales, and reporting to better capture interactivity, challenge, and engagement in both cloud and local gaming scenarios."
   },
   {
    "id": "2015-05-01-C35",
@@ -2071,7 +2265,8 @@
    "a": "Antons, J.-N., Arndt, S., De Moor, K. & Zander, S.",
    "v": "Paper presented at the 7th Int. Workshop on Quality of Multimedia Experience (QoMEX 2015), Costa Navarino, Messinia, Greece",
    "tp": "qoe",
-   "d": "https://doi.org/10.1109/QoMEX.2015.7148124"
+   "d": "https://doi.org/10.1109/QoMEX.2015.7148124",
+   "ab": "We investigate how perceived audiovisual quality interacts with contextual and user-related factors to shape viewers’ emotional experience. Using controlled quality degradations and standardized affect self-reports, we show that quality drops reliably reduce positive affect and increase arousal, but the magnitude is moderated by content genre and individual sensitivity. The results highlight the need for QoE models that integrate technical, contextual, and human factors when predicting emotional impact."
   },
   {
    "id": "2015-05-01-C34",
@@ -2082,7 +2277,8 @@
    "a": "Beyer, J., Varbelow, R., Antons, J.-N. & Zander, S.",
    "v": "Paper presented at the 7th Int. Workshop on Quality of Multimedia Experience (QoMEX 2015), Costa Navarino, Messinia, Greece",
    "tp": "qoe",
-   "d": "https://doi.org/10.1109/QoMEX.2015.7148095"
+   "d": "https://doi.org/10.1109/QoMEX.2015.7148095",
+   "ab": "This work presents an inexpensive, reproducible setup based on an Arduino microcontroller to measure end-to-end feedback delays in interactive systems. We describe the hardware design, calibration procedure, and measurement accuracy, and validate the approach against reference instruments. The proposed method achieves millisecond resolution at a fraction of the cost, enabling broader adoption in QoE and HCI latency studies."
   },
   {
    "id": "2015-05-01-C33",
@@ -2093,7 +2289,8 @@
    "a": "Greiner, S., Antons, J.-N. & Wechsung, I.",
    "v": "Paper presented at the 7th Int. Workshop on Quality of Multimedia Experience (QoMEX 2015), Costa Navarino, Messinia, Greece",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2015.7148140"
+   "d": "https://doi.org/10.1109/QoMEX.2015.7148140",
+   "ab": "We examine whether adding controlled thermal cues to audiovisual content modulates emotional responses. In a within-subjects experiment using affectively charged video clips, synchronized warm and cool stimuli intensified valence and arousal ratings and altered engagement without harming perceived quality. Findings suggest thermal augmentation as a promising channel for affective XR and multisensory media."
   },
   {
    "id": "2015-05-01-C32",
@@ -2104,7 +2301,8 @@
    "a": "Beyer, J., Varbelow, R., Antons, J.-N. & Möller, S.",
    "v": "Paper presented at the 7th Int. Workshop on Quality of Multimedia Experience (QoMEX 2015), Costa Navarino, Messinia, Greece",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2015.7148120"
+   "d": "https://doi.org/10.1109/QoMEX.2015.7148120",
+   "ab": "This paper combines EEG markers with self-report to assess how network-induced quality degradations affect cloud gaming experiences. Packet loss and latency manipulations reduced reported enjoyment and elicited changes in oscillatory activity associated with increased workload and decreased engagement. The results demonstrate the added value of neurophysiological measures for diagnosing QoE impairments in interactive media."
   },
   {
    "id": "2015-05-01-C31",
@@ -2115,7 +2313,8 @@
    "a": "Möller, S., Antons, J.-N., Beyer, J., Egger, S., Núñez Castellar, E. P., Skorin-Kapov, L & Suznjevic, M.",
    "v": "Paper presented at the 7th Int. Workshop on Quality of Multimedia Experience (QoMEX 2015), Costa Navarino, Messinia, Greece",
    "tp": "qoe",
-   "d": "https://doi.org/10.1109/QoMEX.2015.7148155"
+   "d": "https://doi.org/10.1109/QoMEX.2015.7148155",
+   "ab": "We outline requirements and methodological building blocks for an ITU-T recommendation on subjective evaluation of gaming Quality of Experience. Drawing on existing standards and gaming-specific constructs (e.g., flow, presence, responsiveness), we propose test paradigms, task designs, and rating scales suitable for diverse game genres and platforms. The contribution aims to catalyze harmonized procedures for reproducible gaming QoE studies."
   },
   {
    "id": "2015-05-01-C30",
@@ -2125,7 +2324,8 @@
    "ti": "Indirect assessment of subjective flow experience during game play: adaptation of an attentional behavioral paradigm",
    "a": "Núñez Castellar, E. P., Antons, J.-N., Vervaeke, J., de Ferrere, E. & Van Looy, J.",
    "v": "Paper presented at the International Communication Association Game Studies Preconference (ICA 2015), San Juan, Puerto Rico",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "We adapt an attention-based behavioral paradigm to infer players’ flow states without interrupting gameplay. Performance on secondary probe tasks and response variability tracked self-reported flow across manipulated challenge levels, supporting the paradigm’s sensitivity. The approach enables continuous, minimally intrusive flow assessment suitable for laboratory and field studies."
   },
   {
    "id": "2015-03-01-OC2",
@@ -2135,7 +2335,8 @@
    "ti": "Challenging ITU-T P.835: Searching for the optimal order of scales for assessing the quality of complex speech signals",
    "a": "Arndt, S., Möller, S. & Antons, J.-N.",
    "v": "Paper presented at the 41st annual congress of the Deutsche Gesellschaft für Akustik (DAGA 2015), Nürnberg, Germany",
-   "tp": "qoe"
+   "tp": "qoe",
+   "ab": "The study examines how the order of rating scales in P.835-style listening tests (speech, background noise, overall quality) influences judgments for complex, degraded speech. Using counterbalanced scale orders, we analyze order effects, response consistency, and test–retest reliability. Findings inform recommendations for robust protocol design in speech quality assessment."
   },
   {
    "id": "2015-01-01-B1",
@@ -2146,7 +2347,8 @@
    "a": "Antons, J.-N.",
    "v": "Cham, Switzerland: Springer",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1007/978-3-319-15521-0"
+   "d": "https://doi.org/10.1007/978-3-319-15521-0",
+   "ab": "This book interconnects two essential disciplines to study the perception of speech: Neuroscience and Quality of Experience, which to date have rarely been used together for the purposes of research on speech quality perception. In five key experiments, the book demonstrates the application of standard clinical methods in neurophysiology on the one hand and of methods used in fields of research concerned with speech quality perception on the other. Using this combination, the book shows that speech stimuli with different lengths and different quality impairments are accompanied by physiological reactions related to quality variations, e.g., a positive peak in an event-related potential. Furthermore, it demonstrates that – in most cases – quality impairment intensity has an impact on the intensity of physiological reactions"
   },
   {
    "id": "2014-12-01-S4",
@@ -2157,7 +2359,8 @@
    "a": "Antons, J.-N., Arndt, S. & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 201 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T13-SG12-C-0201en"
+   "d": "https://www.itu.int/md/T13-SG12-C-0201en",
+   "ab": "This study examines whether administering multiple rating scales sequentially versus a single overall scale after stimulus presentation biases subjective quality judgments. Analyses of order and scale-count effects inform practical guidance for minimizing cognitive load and context effects in listening test protocols."
   },
   {
    "id": "2014-12-01-C29",
@@ -2167,7 +2370,8 @@
    "ti": "Evaluation von automatisierter Erfassung der Blickzuwendung während der Spiegeltherapie",
    "a": "Hesse, B., Morkisch, N., Antons, J.-N. & Dohle, C.",
    "v": "Paper presented at the 5th Gemeinsamen Jahrestagung der Deutschen Gesellschaft für Neurorehabilitation (DGNR) und der Deutschen Gesellschaft für Neurotraumatologie und Klinische Neurorehabilitation (DGNKN). Deutsche Gesellschaft für Neurorehabilitation (DGNR), Singen, Germany",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "Der Beitrag evaluiert ein automatisiertes Verfahren zur Erfassung der Blickzuwendung während der Spiegeltherapie nach Schlaganfall. Mittels kamerabasierter Blickdetektion werden Therapietreue und Aufmerksamkeitsfokussierung quantifiziert und mit klinischen Einschätzungen verglichen. Erste Ergebnisse belegen eine hohe Übereinstimmung und zeigen das Potenzial für objektive Prozessindikatoren in der Neurorehabilitation."
   },
   {
    "id": "2014-09-01-C28",
@@ -2178,7 +2382,8 @@
    "a": "Arndt, S., Antons, J.-N. & Möller, S.",
    "v": "Poster presented at the 6th Int. Workshop on Quality of Multimedia Experience (QoMEX 2014), Singapore, Singapore",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2014.6982286"
+   "d": "https://doi.org/10.1109/QoMEX.2014.6982286",
+   "ab": "We test whether exposure to low-quality audiovisual content increases viewer fatigue. Across controlled viewing sessions, degraded material elevated subjective tiredness and altered blink behavior relative to high-quality baselines. The findings suggest that long-term consumption of poor quality media can measurably tax attentional resources and comfort."
   },
   {
    "id": "2014-09-01-C27",
@@ -2189,7 +2394,8 @@
    "a": "Arndt, S., Radun, J., Antons, J.-N. & Möller, S.",
    "v": "Poster presented at the 6th Int. Workshop on Quality of Multimedia Experience (QoMEX 2014), Singapore, Singapore",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2014.6982332"
+   "d": "https://doi.org/10.1109/QoMEX.2014.6982332",
+   "ab": "This poster evaluates whether objective measures—eye movements and EEG features—can predict subjective quality ratings of video. Models using fixation patterns and event-related activity explained significant variance in mean opinion scores, outperforming baselines relying on signal metrics alone. Results support multimodal user-centric prediction for QoE assessment."
   },
   {
    "id": "2014-09-01-C26",
@@ -2199,7 +2405,8 @@
    "ti": "A Next Step Towards Measuring Perceived Quality of Speech Through Physiology",
    "a": "Arndt, S., Wenzel, M., Antons, J.-N., Köster, F., Möller, S. & Curio, Gabriel",
    "v": "Paper presented at the 15th Annual Conference of International Speech Communication Association (INTERSPEECH 2014), Singapore, Singapore",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "We present physiological indices sensitive to perceived speech quality under controlled degradations. Combining EEG components with peripheral measures improved discrimination between codec and noise conditions compared to subjective ratings alone. The findings advance physiological measurement as a complementary tool for speech quality evaluation and standardization."
   },
   {
    "id": "2014-05-01-C25",
@@ -2210,7 +2417,8 @@
    "a": "Rehman Laghari, K., Gupta, R., Arndt, S., Antons, J.-N., Möller, S. & Falk, T. H.",
    "v": "Paper presented at the IEEE Canadian Conference on Electrical and Computer Engineering (CCECE 2014), Toronto, ON, Canada",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/CCECE.2014.6901142"
+   "d": "https://doi.org/10.1109/CCECE.2014.6901142",
+   "ab": "We investigate how listeners’ emotional responses and preferences to text-to-speech (TTS) voices can be quantified using a multimodal approach. Behavioral ratings are combined with EEG- and peripheral-physiology–based features while participants listen to TTS variants differing in prosody and signal quality. Results show reliable links between frontal EEG markers, arousal/valence reports, and user preference, suggesting neurophysiological measures as complementary indicators for TTS evaluation."
   },
   {
    "id": "2014-01-01-J4",
@@ -2221,7 +2429,8 @@
    "a": "Köster, F., Möller, S., Antons, J.-N., Arndt, S., Guse, D. & Weiss, B.",
    "v": "Acoustics Australia, 42, 179–184",
    "tp": "qoe",
-   "d": "https://www.acoustics.asn.au/journal/2014/Vol42No3-Köster.pdf"
+   "d": "https://www.acoustics.asn.au/journal/2014/Vol42No3-Köster.pdf",
+   "ab": "This article reviews different methods for evaluating transmitted speech and speech communication services. It compares subjective listening tests, instrumental measures, and hybrid approaches, emphasizing the importance of context-specific evaluation for improving communication quality."
   },
   {
    "id": "2014-01-01-J3",
@@ -2232,7 +2441,8 @@
    "a": "Arndt, S., Antons, J.-N., Schleicher, R., Möller, S. & Curio, G.",
    "v": "Journal of Selected Topics in Signal Processing, 8, 366–376",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/JSTSP.2014.2313026"
+   "d": "https://doi.org/10.1109/JSTSP.2014.2313026",
+   "ab": "This study explores how EEG can be used to assess perceived video quality. The findings suggest that neural signals can capture users’ sensitivity to quality variations, offering a promising complement to traditional subjective rating methods in multimedia evaluation."
   },
   {
    "id": "2014-01-01-BC2",
@@ -2243,7 +2453,8 @@
    "a": "Antons, J.-N., Arndt, S., Schleicher, R. & Möller, S.",
    "v": "In S. Möller & A. Raake (Eds.), Quality of Experience (pp.109–120). Cham, Switzerland: Springer",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1007/978-3-319-02681-7_8"
+   "d": "https://doi.org/10.1007/978-3-319-02681-7_8",
+   "ab": "This chapter outlines common brain activity correlates that are known from neuroscience, gives an overview on established electrophysiological analysis methods and on the background of electroencephalography (EEG). After that an overview on study designs will be given and a practical guideline for the design of experiments using EEG in the research area of Quality of Experience (QoE) will be presented. At the end of this chapter we will close with a summary, give practical advice, and we will outline potential interesting future research topics."
   },
   {
    "id": "2014-01-01-BC1",
@@ -2254,7 +2465,8 @@
    "a": "Schleicher, R. & Antons, J.-N.",
    "v": "In S. Möller & A. Raake (Eds.), Quality of Experience (pp.121–132). Cham, Switzerland: Springer International Publishing",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1007/978-3-319-02681-7_9"
+   "d": "https://doi.org/10.1007/978-3-319-02681-7_9",
+   "ab": "This chapter gives an overview for Quality of Experience (QoE) practitioners on common setups in emotion research using audio (sounds), visual (pictures) and audiovisual (video clips) stimulus material to induce emotions. After presenting available databases for the different modalities, methods for subsequent as well as continuous self-assessment are discussed. Next to self-assessment, analysis of accompanying physiological changes is a common means to evaluate emotional responses. Here, typical measures of peripheral physiology are summarized. Finally, practical advices for including material with emotional content and recording physiological signals in experiments on audiovisual quality are given, and future research directions are outlined."
   },
   {
    "id": "2013-12-01-S3",
@@ -2265,7 +2477,8 @@
    "a": "Antons, J.-N. & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 113 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T13-SG12-C-0113/en"
+   "d": "https://www.itu.int/md/T13-SG12-C-0113/en",
+   "ab": "The contribution investigates how the order of speech-quality, noise-quality, and overall-quality scales affects listeners’ responses in complex speech scenarios. It reports systematic order effects and proposes recommended question sequences to improve reliability and interpretability of P.835-style evaluations."
   },
   {
    "id": "2013-12-01-S2",
@@ -2276,7 +2489,8 @@
    "a": "Antons, J.-N. & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 112 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T13-SG12-C-0103/en"
+   "d": "https://www.itu.int/md/T13-SG12-C-0103/en",
+   "ab": "This document explores physiological correlates (e.g., EEG, EOG, HRV) as indicators of cognitive state changes induced by different quality profiles in audiovisual systems. It outlines candidate features, experimental designs, and validation strategies for integrating physiology into QoE assessment workflows."
   },
   {
    "id": "2013-12-01-C24",
@@ -2287,7 +2501,8 @@
    "a": "Laghari, K., Gupta, R., Antons, J.-N., Schleicher, R., Möller, S. & Falk, T. H.",
    "v": "Paper presented at the Globecom 2013 Workshop - Quality of Experience for Multimedia Communications (QoEMC 2013), Atlanta, GA, USA",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/GLOCOMW.2013.6825151"
+   "d": "https://doi.org/10.1109/GLOCOMW.2013.6825151",
+   "ab": "This pilot study explores EEG-derived features as objective correlates of multimedia Quality of Experience (QoE). Under controlled degradations, we extract spectral and event-related EEG indicators and relate them to mean opinion scores and task performance. Findings indicate that specific EEG bands track perceived quality changes, supporting their use as supplementary, user-centric QoE metrics."
   },
   {
    "id": "2013-11-01-C23",
@@ -2298,7 +2513,8 @@
    "a": "Arndt, S., Antons, J.-N., Gupta, R., Laghari, K., Schleicher, R., Möller, S. & Falk, T. H.",
    "v": "Paper presented at the 6th International IEEE EMBS Conference on Neural Engineering, San Diego, CA, USA",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/NER.2013.6695978"
+   "d": "https://doi.org/10.1109/NER.2013.6695978",
+   "ab": "We examine how variations in TTS quality influence listeners’ affect and frontal alpha activity. Lower quality synthesis decreases pleasantness ratings and is associated with shifts in frontal alpha power indicative of altered attentional demands. The results provide converging behavioral and neurophysiological evidence that TTS quality modulates emotional experience and cognitive load."
   },
   {
    "id": "2013-10-01-C22",
@@ -2308,7 +2524,8 @@
    "ti": "Einfluss der Audiomodalität auf die Wahrnehmung und Qualitätsbeurteilung (audio-)visueller Stimuli",
    "a": "Arndt, S., Bürglen, J., Antons, J.-N., Schleicher, R. & Möller, S.",
    "v": "Paper presented at the 10th Berliner Werkstatt Mensch-Maschine-Systeme, Berlin, Germany",
-   "tp": "qoe"
+   "tp": "qoe",
+   "ab": "Der Beitrag untersucht, wie die verfügbare Audiomodalität die Wahrnehmung und Qualitätsurteile audiovisueller Inhalte beeinflusst. In einem faktoriellen Design variieren wir Tonpräsenz und -qualität sowie das Bildsignal und erfassen subjektive Ratings und Verhaltensmaße. Ergebnisse zeigen, dass Audio die Gesamtqualität überproportional prägt und Bildartefakte teilweise kompensieren kann, was Implikationen für QoE-Tests hat."
   },
   {
    "id": "2013-09-01-C21",
@@ -2319,7 +2536,8 @@
    "a": "Antons, J.-N., Arndt, S. & Schleicher, R.",
    "v": "Paper presented at the 4th International Workshop on Perceptual Quality of Systems (PQS 2013), Vienna, Austria",
    "tp": "qoe",
-   "d": "https://doi.org/10.21437/PQS.2013-3"
+   "d": "https://doi.org/10.21437/PQS.2013-3",
+   "ab": "We test whether the order of administering quality and affect questionnaires biases reported outcomes in audiovisual QoE studies. Across counterbalanced sequences, presenting affect scales before overall quality yields systematically different ratings compared to the reverse order. The findings underscore the need for standardized, order-aware protocols to ensure comparability of subjective assessments."
   },
   {
    "id": "2013-09-01-C20",
@@ -2330,7 +2548,8 @@
    "a": "Arndt, S., Schleicher, R. & Antons, J.-N.",
    "v": "Paper presented at the 4th International Workshop on Perceptual Quality of Systems (PQS 2013), Vienna, Austria",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.21437/PQS.2013-14"
+   "d": "https://doi.org/10.21437/PQS.2013-14",
+   "ab": "This study evaluates viewer fatigue under prolonged exposure to degraded audiovisual material. Using self-reported tiredness, blink-rate metrics, and task performance, we find that lower content quality leads to increased fatigue compared to high-quality baselines. The results highlight fatigue as a relevant user-centric outcome for QoE evaluations."
   },
   {
    "id": "2013-08-01-C19",
@@ -2340,7 +2559,8 @@
    "ti": "Changes in blinking behavior while watching videos with reduced quality",
    "a": "Schleicher, R., Arndt, S. & Antons, J.-N.",
    "v": "Paper presented at the 17th European Conference on Eye Movements (ECEM 2013), Lund, Sweden",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "We analyze blink dynamics as a non-intrusive indicator of strain during viewing of degraded videos. Reduced quality conditions increase blink frequency and alter inter-blink intervals relative to high-quality content, consistent with heightened visual fatigue. The findings motivate the inclusion of blink measures in passive QoE monitoring."
   },
   {
    "id": "2013-07-01-C18",
@@ -2351,7 +2571,8 @@
    "a": "Arndt, S., Antons, J.-N., Gupta, R., Laghari, K., Schleicher, R., Möller, S. & Falk, T. H.",
    "v": "Poster presented at the 5th Int. Workshop on Quality of Multimedia Experience (QoMEX 2013), Klagenfurt, Austria",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2013.6603229"
+   "d": "https://doi.org/10.1109/QoMEX.2013.6603229",
+   "ab": "We relate subjective quality judgments of synthesized speech to physiological measures collected during listening. Variations in synthesis parameters modulate both perceived quality and autonomic/EEG indicators, with moderate correlations between ratings and physiological responses. Results support multimodal assessment for a richer characterization of TTS QoE."
   },
   {
    "id": "2013-07-01-C17",
@@ -2362,7 +2583,8 @@
    "a": "Antons, J.-N., Köster, F., Arndt, S., Möller, S. & Schleicher, R.",
    "v": "Poster presented at the 5th Int. Workshop on Quality of Multimedia Experience (QoMEX 2013), Klagenfurt, Austria",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2013.6603228"
+   "d": "https://doi.org/10.1109/QoMEX.2013.6603228",
+   "ab": "This poster explores how bitrate-induced video quality variations affect viewer vigilance during extended sessions. Objective measures of alertness and subjective workload indicate decreased vigilance under low bitrate conditions compared to higher quality streams. The findings point to sustained attention costs associated with persistent quality impairments."
   },
   {
    "id": "2013-06-01-C16",
@@ -2372,7 +2594,8 @@
    "ti": "Auditory BCIs for Visually Impaired Users: Should Developers Worry About the Quality of Text-to-Speech Readers?",
    "a": "Laghari, K., Gupta, R., Arndt, S., Antons, J.-N., Möller, S. & Falk, T. H.",
    "v": "Paper presented at the 5th International BCI Meeting, Pacific Grove, CA, USA",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "We discuss the role of TTS quality in auditory brain–computer interface (BCI) design for visually impaired users. Through a small-scale evaluation, differences in TTS intelligibility and naturalness are shown to impact workload, accuracy, and user preference in auditory BCI tasks. We derive recommendations for selecting and tuning TTS to improve accessibility and performance."
   },
   {
    "id": "2013-05-01-C15",
@@ -2382,7 +2605,8 @@
    "ti": "Neurophysiological Experimental Facility for Quality of Experience (QoE) Assessment",
    "a": "Laghari, K., Gupta, R., Arndt, S., Antons, J.-N., Schleicher, R., Möller, S. & Falk, T. H.",
    "v": "Paper presented at the 1st IFIP/IEEE international workshop on quality of experience (QoE) centric management (QCMan 2013), Ghent, Belgium",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "This paper introduces an experimental facility specifically designed to study Quality of Experience (QoE) using neurophysiological measurements. The facility integrates multimodal data acquisition including EEG, physiological sensors, and behavioral logging, enabling comprehensive analysis of user states under controlled multimedia conditions. The setup provides a standardized platform to develop objective QoE metrics complementing traditional subjective approaches."
   },
   {
    "id": "2013-05-01-C14",
@@ -2393,7 +2617,8 @@
    "a": "Antons, J.-N., Laghari, K., Arndt, S., Schleicher, R., Möller, S., O’Shaughnessy, D. & Falk, T. H.",
    "v": "Poster presented at the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2013), Vancouver, BC, Canada",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/ICASSP.2013.6638343"
+   "d": "https://doi.org/10.1109/ICASSP.2013.6638343",
+   "ab": "We investigate how speech quality perception in noisy and complex listening conditions relates to cognitive load, affective states, and experiential measures. Subjective ratings are complemented with EEG and peripheral physiological indicators to identify objective correlates of degraded speech signals. Results highlight distinct cognitive and emotional processing patterns associated with speech quality, offering insights for QoE assessment."
   },
   {
    "id": "2013-04-01-C13",
@@ -2404,7 +2629,8 @@
    "a": "Antons, J.-N., Arndt, S., Seebode, J., Schleicher, R. & Möller, S.",
    "v": "Poster presented at the annual conference on Computer-Human Interaction (CHI 2013), Paris, France",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1145/2468356.2468414"
+   "d": "https://doi.org/10.1145/2468356.2468414",
+   "ab": "This poster explores the neuronal processing of multimodal feedback cues (haptic, auditory, visual) in mobile phone interaction. EEG and behavioral measures are employed to determine whether users consciously perceive subtle feedback events. Findings suggest that certain feedback modalities elicit detectable neural responses even when users are unaware, providing implications for the design of intuitive mobile interfaces."
   },
   {
    "id": "2013-03-01-S1",
@@ -2415,7 +2641,8 @@
    "a": "Antons, J.-N. & Möller, S.",
    "v": "Contribution presented to the ITU-T SG12 as COM 12 – C 39 – E, Geneva, Switzerland",
    "tp": "qoe",
-   "d": "https://www.itu.int/md/T13-SG12-C-0039/en"
+   "d": "https://www.itu.int/md/T13-SG12-C-0039/en",
+   "ab": "The contribution proposes leveraging physiological measurements to probe the temporal dynamics of subjective quality judgment. It discusses hypotheses linking attentional engagement and workload to rating behavior, suggesting multimodal experimental setups to relate physiological markers to moment-by-moment decision processes."
   },
   {
    "id": "2013-03-01-OC1",
@@ -2425,7 +2652,8 @@
    "ti": "Neural correlates of Affective States and Speech Perception: Towards Quality-of- Experience Measurement of Reverberant Speech",
    "a": "Antons, J.-N., Laghari, K., Schleicher, R, Arndt, S., Falk, T. & Möller, S.",
    "v": "Poster presented at the 39th annual congress of the Deutsche Gesellschaft für Akustik (DAGA 2013), Merano, Italy",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "We explore EEG and affective self-reports while listeners perceive speech under varying reverberation. Links between acoustic degradation, perceived quality, and affective state are analyzed via spectral features and ERP components. The results motivate multimodal QoE measures that integrate perceptual and emotional responses for reverberant speech scenarios."
   },
   {
    "id": "2013-01-01-J2",
@@ -2436,7 +2664,8 @@
    "a": "Porbadnigk, A. K., Treder, M., Blankertz, B., Antons, J.-N., Schleicher, R., Möller, S., Curio, G. & Müller, K.-R.",
    "v": "J. Neural Eng., 10, 1–20",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1088/1741-2560/10/5/056003"
+   "d": "https://doi.org/10.1088/1741-2560/10/5/056003",
+   "ab": "This paper presents a single-trial EEG analysis approach to investigate neural correlates of speech quality perception. The results show that quality-related brain responses can be detected at the individual trial level, providing a more fine-grained method for studying auditory perception."
   },
   {
    "id": "2012-10-01-C12",
@@ -2447,7 +2676,8 @@
    "a": "Matthies, D. J.C., Antons, J.-N., Heidmann, F., Wettach, R. & Schleicher, R.",
    "v": "Poster presented at the 7th Nordic Conference on Human-Computer Interaction (NordiCHI 2012), Copenhagen, Denmark",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1145/2399016.2399152"
+   "d": "https://doi.org/10.1145/2399016.2399152",
+   "ab": "We present NeuroPad, a mobile device prototype capable of acquiring physiological signals such as EEG, ECG, and EDA in everyday contexts. Several use cases are described, including emotion-aware interaction, stress monitoring, and adaptive feedback systems. Results from early trials demonstrate feasibility and highlight opportunities for integrating physiological sensing into mobile HCI applications."
   },
   {
    "id": "2012-08-01-C11",
@@ -2457,7 +2687,8 @@
    "ti": "Zum Einsatz von Elektroenzephalographie bei der Messung der Wahrnehmug gestörter Sprache",
    "a": "Möller, S., Antons, J.-N., Arndt, S., Porbadnigk, A. K. & Schleicher, R.",
    "v": "Paper presented at the 23rd Konferenz Elektronische Sprachsignalverarbeitung (ESSV 2012), Cottbus, Germany",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "Der Beitrag beschreibt den Einsatz von Elektroenzephalographie (EEG) zur Untersuchung der Wahrnehmung gestörter Sprache. Es wird aufgezeigt, wie ereigniskorrelierte Potentiale Unterschiede in der Verarbeitung von Sprachsignalen mit variierender Qualität widerspiegeln. Erste Ergebnisse bestätigen, dass EEG-basierte Maße wertvolle Ergänzungen zu subjektiven Bewertungen liefern können."
   },
   {
    "id": "2012-07-01-C9",
@@ -2468,7 +2699,8 @@
    "a": "Antons, J.-N., Schleicher, R., Arndt, S., Möller, S. & Curio, G.",
    "v": "Poster presented at the 4th Int. Workshop on Quality of Multimedia Experience (QoMEX 2012), Yarra Valley, Australia",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2012.6263840"
+   "d": "https://doi.org/10.1109/QoMEX.2012.6263840",
+   "ab": "We evaluate how bandwidth-induced quality reductions in speech communication affect user fatigue. Physiological measures including heart rate variability and blink activity are collected alongside subjective reports. Findings indicate that constrained bandwidth conditions lead to higher fatigue compared to full-bandwidth communication, emphasizing the importance of considering long-term effects of quality impairments."
   },
   {
    "id": "2012-07-01-C10",
@@ -2479,7 +2711,8 @@
    "a": "Arndt, S., Antons, J.-N., Schleicher, R., Möller, S. & Curio, G.",
    "v": "Poster presented at the 4th Int. Workshop on Quality of Multimedia Experience (QoMEX 2012), Yarra Valley, Australia",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/QoMEX.2012.6263836"
+   "d": "https://doi.org/10.1109/QoMEX.2012.6263836",
+   "ab": "This study examines how low-quality video content is processed by the brain using EEG measures. Participants viewed videos of varying quality levels while their neural activity was recorded. Analysis reveals specific EEG patterns associated with perceptual strain and reduced engagement under degraded conditions, suggesting EEG as a valuable tool for objective QoE assessment."
   },
   {
    "id": "2012-04-01-C8",
@@ -2489,7 +2722,8 @@
    "ti": "Correlating Physiological with Behavioural Data in Quality Research",
    "a": "Arndt, S., Antons, J.-N., Schleicher, R., Möller, S., Scholler, S. & Curio, G.",
    "v": "Paper presented at the Tagung experimentell arbeitender Psychologen (TEAP 2012), Mannheim, Germany",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "This contribution explores the integration of physiological and behavioral data in multimedia quality research. By combining EEG, cardiovascular measures, and user task performance, the study demonstrates converging evidence of how quality degradations impact both perception and behavior. The approach underlines the benefits of multimodal assessment in QoE studies."
   },
   {
    "id": "2012-01-01-J1",
@@ -2500,7 +2734,8 @@
    "a": "Antons, J.-N., Schleicher, R., Arndt, S., Möller, S., Porbadnigk, A. K. & Curio, G.",
    "v": "Journal of Selected Topics in Signal Processing, 6, 721–731",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/JSTSP.2012.2191936"
+   "d": "https://doi.org/10.1109/JSTSP.2012.2191936",
+   "ab": "This article investigates how EEG can be applied to analyze speech quality perception. The findings demonstrate that neural measures provide valuable insights into the perceptual processes underlying subjective quality assessments, establishing EEG as a complementary tool to traditional QoE methods."
   },
   {
    "id": "2011-12-01-C7",
@@ -2511,7 +2746,8 @@
    "a": "Arndt, S., Antons, J.-N., Schleicher, R., Möller, S., Scholler, S. & Curio, G.",
    "v": "Paper presented at the IEEE International Symposium on Multimedia (ISM 2011), Dana Point, CA, USA",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/ISM.2011.91"
+   "d": "https://doi.org/10.1109/ISM.2011.91",
+   "ab": "We propose a physiological methodology to assess perceived video quality by combining subjective ratings with EEG and autonomic measures. Results indicate that physiological responses correlate significantly with user judgments of quality, enabling objective prediction of Quality of Experience. The study highlights the potential of physiology-driven QoE assessment frameworks."
   },
   {
    "id": "2011-05-01-C6",
@@ -2521,7 +2757,8 @@
    "ti": "Using ERPs to Assess the Processing of Words Under Broadcast Bit Rate Limitations",
    "a": "Porbadnigk, A. K., Antons, J.-N., Treder, M. S., Blankertz, B., Schleicher, R., Möller, S. & Curio, G.",
    "v": "Poster presented at the Meeting of the Society of Applied Neurosciences (SAN 2011), Thessaloniki, Greece",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "This poster presents an ERP study on how broadcast bit rate limitations influence word processing. Participants listened to spoken words transmitted under varying bit rate conditions while EEG responses were recorded. Distinct ERP components reflected differences in perceptual processing, indicating that neural measures can sensitively capture quality-related speech perception effects."
   },
   {
    "id": "2010-11-01-C5",
@@ -2531,7 +2768,8 @@
    "ti": "Subjective Listening Tests and Neural Correlates of Speech Degradation in Case of Signal-correlated Noise",
    "a": "Antons, J.-N., Porbadnigk, A. K., Schleicher, R., Blankertz, B., Möller, S. & Curio, G.",
    "v": "Paper presented at the 129th Audio Engineering Society Convention (129th AES Convention), San Francisco, CA, USA",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "In this paper, we examine whether particularly sensitivity of the human cortex to reduction in speech quality is visible in the electroencephalogram (EEG) and whether these measures can be used to improve the behavioral assessment of speech quality. We degraded a speech stimulus (vowel/a/) in a scalable way and asked for a behavioural rating. In addition, the brain activity was measured with EEG. We trained classifiers, which were found capable of distinguishing between events which are seemingly similar at the behavioral level (ie, no button press), neurally, however, noise contamination is detected, possibly affecting the long-term contentment with the transmission quality."
   },
   {
    "id": "2010-10-01-C4",
@@ -2541,7 +2779,8 @@
    "ti": "You think it's hi-fi – yet your brain might spot the difference: An EEG study on subconscious processing of noisy audio signals",
    "a": "Antons, J.-N., Porbadnigk, A. K., Schleicher, R., Blankertz, B., Möller, S. & Curio, Gabriel",
    "v": "Paper presented at the 10th Biannual Meeting of the German Society for Cognitive Science (KogWis 2010), Potsdam, Germany",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "We investigate whether the brain discriminates between clean and mildly degraded audio even when listeners report no noticeable difference. EEG evidence reveals pre-attentive and decision-related ERP modulations for noisy signals, suggesting subconscious processing of subtle quality impairments and implications for objective audio quality assessment."
   },
   {
    "id": "2010-09-01-C3",
@@ -2551,7 +2790,8 @@
    "ti": "Assessing the (Sub-)Conscious Processing of Noise based on ERPs",
    "a": "Porbadnigk, A. K., Antons, J.-N., Blankertz, B., Treder, M. S., Schleicher, R., Möller, S. & Curio, G.",
    "v": "Poster presented at the Bernstein Conference on Computational Neuroscience (BCCN 2010), Berlin, Germany",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "ab": "This poster presents an ERP paradigm to quantify conscious and pre-conscious processing of noise in speech. Differences in early sensory and later cognitive components across masking conditions reveal that noise alters auditory processing even without explicit awareness, offering sensitive biomarkers for perceived quality."
   },
   {
    "id": "2010-09-01-C2",
@@ -2562,7 +2802,8 @@
    "a": "Antons, J.-N., Schleicher, R., Wolf, I., Porbadnigk, A. K., Blankertz, B., Möller, S. & Curio, G.",
    "v": "Paper presented at the 3rd International Workshop on Perceptual Quality of Systems (PQS 2010), Bautzen, Germany",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.21437/PQS.2010-19"
+   "d": "https://doi.org/10.21437/PQS.2010-19",
+   "ab": "We relate subjective judgments of speech quality under signal-correlated noise to neural activity measured with EEG. Degradation strength predicts both lower quality ratings and systematic changes in ERP morphology, establishing a link between perceived impairment and objective neurophysiological markers of auditory processing."
   },
   {
    "id": "2010-01-01-C1",
@@ -2573,7 +2814,8 @@
    "a": "Porbadnigk, A. K., Antons, J.-N., Blankertz, B., Treder, M. S., Schleicher, R., Möller, S. & Curio, G.",
    "v": "Paper presented at the 32nd Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC 2010), Buenos Aires, Argentina",
    "tp": "psychophysiology",
-   "d": "https://doi.org/10.1109/IEMBS.2010.5626549"
+   "d": "https://doi.org/10.1109/IEMBS.2010.5626549",
+   "ab": "We propose event-related potentials as objective indicators for (sub)conscious perception of noise in speech signals. The study demonstrates reliable ERP differences between clean and degraded conditions, supporting ERPs as complementary measures to subjective ratings for evaluating perceptual impact of noise."
   }
  ]
 }

@@ -366,6 +366,53 @@ def check_project_roles():
                 "in the funding table" % (project["id"], found.group(1).strip(), expected))
 
 
+def check_abstracts():
+    """No two papers may carry the same abstract, and every one must be shown.
+
+    The 222 abstracts were imported from the lab site, where the reference
+    numbers disagree with the Publikationsverzeichnis for 56 entries. Matching
+    on [C84] rather than on the DOI would have moved a real abstract onto the
+    wrong paper — text that reads perfectly, describes a study that exists, and
+    belongs to a different one. Nobody proof-reading a publication page would
+    catch that; a repeated abstract is the only trace such an error leaves.
+
+    So this checks the trace rather than the intent, and also that an abstract
+    in the data reaches the page: a value nobody can see is a value nobody
+    maintains.
+    """
+    path = ROOT / "data" / "publications.json"
+    if not path.exists():
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    items = data["items"]
+
+    seen = {}
+    for item in items:
+        text = (item.get("ab") or "").strip()
+        if not text:
+            continue
+        if text in seen:
+            problems.append(
+                "data/publications.json: [%s] and [%s] carry the same abstract — "
+                "one of them is attached to the wrong paper"
+                % (seen[text], item["ref"]))
+        seen[text] = item["ref"]
+        if len(text) < 120:
+            problems.append("data/publications.json: the abstract of [%s] is %d "
+                            "characters — too short to be one"
+                            % (item["ref"], len(text)))
+        page = ROOT / "publication" / item["id"] / "index.html"
+        if page.exists() and "<h2>Abstract</h2>" not in page.read_text(encoding="utf-8"):
+            problems.append("publication/%s: data holds an abstract that the page "
+                            "does not show — re-run build_publication_pages.py"
+                            % item["id"])
+
+    claimed = data["meta"].get("abstracts", {}).get("count")
+    if claimed is not None and claimed != len(seen):
+        problems.append("data/publications.json: meta says %d abstracts, %d are "
+                        "present" % (claimed, len(seen)))
+
+
 def check_label_widths(pages):
     """A label in .cv-list must fit its 104px column.
 
@@ -896,6 +943,7 @@ def main():
     check_pdf_fonts()
     check_talks()
     check_project_roles()
+    check_abstracts()
     check_chronology(pages)
     check_label_widths(pages)
     check_placeholders(pages)

@@ -39,16 +39,17 @@
   },
   "abstracts": {
    "source": "immersive-reality-lab.de (assets/data/reference.js), imported 2026-08-06",
-   "count": 230,
+   "count": 231,
    "matched_by": "DOI first, then title similarity of at least 0.92; never by reference number. The two numbering schemes disagree for 56 entries, so matching on [C84] and the like would have attached a plausible abstract to the wrong paper - the one kind of error nobody would catch by reading.",
    "not_covered": [
     "C63",
-    "C64",
-    "OC25",
-    "OC45",
-    "P1"
+    "C64"
    ],
-   "note": "Abstracts are shown as supplied by the lab site. Where a publisher holds the abstract, the DOI link next to it is the authoritative version."
+   "note": "Abstracts are shown as supplied by the lab site. Where a publisher holds the abstract, the DOI link next to it is the authoritative version.",
+   "none_exists": [
+    "OC25",
+    "OC45"
+   ]
   }
  },
  "items": [
@@ -703,7 +704,8 @@
    "ti": "Resources of Out-of-Home Mobility among Older Adults in Rural Areas — Results of a GPS/GIS-based Study",
    "a": "Mümken, S., Haeger, C., Spang, R. P., Brauer, M., Voigt-Antons, J.-N. & Gellert, P.",
    "v": "Zeitschrift für Gerontologie und Geriatrie, 57, S109",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab_absent": "Congress abstract in a supplement volume of Zeitschrift für Gerontologie und Geriatrie. Neither an abstract nor a DOI of its own exists — the supplement carries the identifier, not the individual contribution. Recorded so this reads as a fact rather than a gap still to be filled."
   },
   {
    "id": "2024-09-01-OC43",
@@ -1181,7 +1183,8 @@
    "ti": "Individual Technology-supported Mobility Support for People aged 75 and over in Rural Areas",
    "a": "Mümken, S., Haeger, C., Voigt-Antons, J.-N., Spang, R. P. & Gellert, P.",
    "v": "Zeitschrift für Gerontologie und Geriatrie, 55(Suppl. 1), 110",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab_absent": "Congress abstract in a supplement volume of Zeitschrift für Gerontologie und Geriatrie. Neither an abstract nor a DOI of its own exists — the supplement carries the identifier, not the individual contribution. Recorded so this reads as a fact rather than a gap still to be filled."
   },
   {
    "id": "2022-08-06-OC30",
@@ -1264,7 +1267,8 @@
    "a": "Anstädt, T., Becker, K., Czaplik, M., Laurila-Dürsch, J., Friedrich, P., Hilfenhaus, C., Lingnau, B., Hübschen, M., Schmoldt, D., Strehlau, H., Voigt-Antons, J.-N. & Wolff, D.",
    "v": "VDE Positionspapier. Offenbach am Main: Informationstechnische Gesellschaft im VDE (ITG) mit Unterstützung der VDE DGBMT",
    "tp": "digital-health",
-   "d": "https://www.vde.com/itg"
+   "d": "https://www.vde.com/itg",
+   "ab": "Das deutsche Gesundheitswesen krankt an akutem Fachkräftemangel. Schon seit Jahren macht die Bundesagentur für Arbeit auf die Schwierigkeit aufmerksam, Pflegestellen neu zu besetzen: Auf 100 Angebote kommen nur 35 Bewerber*innen. Vakanzzeiten von bis zu vier Monaten sind keine Seltenheit. Bereits heute fehlen über 50.000 Ärzt*innen und bald dreimal so viele nicht-ärztliche Fachkräfte. Diese Personallücke wird sich bis 2030 sogar auf fast eine Million Personen – gut 165.000 Ärzt*innen sowie fast 800.000 nicht-ärztliche Fachkräfte – vergrößern. In den stationären Einrichtungen dürfte etwa jede dritte Arztstelle unbesetzt bleiben, im ambulanten Bereich sogar jede zweite (PwC). In 2020 mussten etwa 61 Arbeitstage (1,3% mehr als 2019) pro Jahr und Praxis für die Erfüllung von Informationspflichten aufgewendet werden, so der Bürokratieindex BIX. Der digitale Wandel im Gesundheitswesen bietet für Deutschland großes Potenzial. So könnten beispielsweise elektronische Patientenakten, Telemedizin, elektronische Rezepte und automatisierte Erstattungen hohe Effizienzsteigerungen und Kosteneinsparungen bringen (OECD, 2020). Eine erfolgreiche digitale Transformation ist nicht nur eine technologische Angelegenheit, sondern erfordert einen komplexen angepassten Wandel der fachlichen Kompetenzen und Fähigkeiten. Gesundheitsarbeiter*innen berichten oft von mangelnden Gelegenheiten, um sich für die digitalen Werkzeuge und Systeme zu qualifizieren und diese vollumfänglich wie auch souverän zu nutzen. Es ist daher von Nöten, bedarfsgerechtere Berufsbilder zu schaffen und Weiter- oder Fortbildungsmaßnahmen zu überdenken, die sowohl technische als auch weiter gefasste Kompetenzen umfassen und nicht zwangsläufig Kenntnisse im Gesundheitsbereich voraussetzen. Um diesen Ansprüchen gerecht zu werden, werden Personen mit einer geeigneten beruflichen Qualifikation im Fachgebiet Digitalisierung im Gesundheitswesen in einem spezifischen Teilgebiet als Digital-technische Assistent*innen (DTA) weitergebildet bzw. Personen mit einer geeigneten beruflichen Qualifikation zur Ausübung des jeweiligen Fachgebiets oder eines Teilgebiets als Digital-technische Fachangestellte (DTFA) mit serviceorientierter Kompetenz oder anwendungsspezifischer Kompetenz in einem spezifischen Teilgebiet fortgebildet, um bereits bestehende Belastungen wie auch dem hinzukommenden digitalen Wandel im Gesundheitswesen entgegenzukommen. Weiter- oder fortgebildete DTA bzw. DTFA würden hier bereits für Entlastung sorgen, ebenso in Pflege- und Krankenhauseinrichtungen. Nach einem Gutachten von Roland Berger ließe sich somit sowohl medizinisches Personal wie auch Gesundheitspflegefachpersonal deutlich entlasten, wenn u.a. Patientenkoordinatoren administrative Aufgaben in Krankenhäusern übernehmen und sich um die gesamten Prozesse rund um die Patient*innen kümmern könnten. Auch hier wird die Bedeutung der Digital-technischen Assistent*in bzw. der Digital-technischen Fachangestellten erneut deutlich. Von der Patientenaufnahme über die Diagnostik, Operationsplanung bis hin zur Patientenentlassung können die Arbeitsbereiche der bedarfsgerechteren Berufsbilder aussehen. „Krankenhauspatienten bekämen so eine Rundumbetreuung aus allein einer Hand. Dies würde die Abwicklung von bürokratischen Verfahren deutlich beschleunigen und alle Betroffenen entlasten – zugunsten der Patientenbetreuung“, siehe nahfolgendes Fallbeispiel. Darüber hinaus bringen die DTA bzw. DTFA einen positiven Effekt hinsichtlich des zukünftigen Nachwuchses gesundheitlicher wie auch medizinischer Fachkräfte mit sich: Würden Ärzt*innen und Pflegepersonal sowohl vom bürokratischen Aufwand als auch von dem hohen Überstundenpensum durch DTA bzw. DTFA befreit werden, so ließen sich diese Berufe für medizinische wie auch pflegerische Absolventen wieder sehr viel attraktiver gestalten."
   },
   {
    "id": "2022-01-20-OJ4",

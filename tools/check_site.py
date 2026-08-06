@@ -430,10 +430,26 @@ def check_abstracts():
                             "does not show — re-run build_publication_pages.py"
                             % item["id"])
 
-    claimed = data["meta"].get("abstracts", {}).get("count")
+    # "ab_absent" records that no abstract exists — a congress contribution in a
+    # supplement volume, say. That is a finding, not a gap, and it must not be
+    # confused with one: an entry holding both would mean somebody filled in a
+    # blank that had already been investigated and closed.
+    for item in items:
+        if item.get("ab") and item.get("ab_absent"):
+            problems.append("data/publications.json: [%s] carries an abstract and "
+                            "a note saying none exists" % item["ref"])
+
+    meta = data["meta"].get("abstracts", {})
+    claimed = meta.get("count")
     if claimed is not None and claimed != len(seen):
         problems.append("data/publications.json: meta says %d abstracts, %d are "
                         "present" % (claimed, len(seen)))
+    for key, want in (("not_covered", {i["ref"] for i in items
+                                       if not i.get("ab") and not i.get("ab_absent")}),
+                      ("none_exists", {i["ref"] for i in items if i.get("ab_absent")})):
+        if key in meta and set(meta[key]) != want:
+            problems.append("data/publications.json: meta.abstracts.%s lists %s, "
+                            "the data says %s" % (key, sorted(meta[key]), sorted(want)))
 
 
 def check_label_widths(pages):

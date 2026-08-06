@@ -64,9 +64,8 @@
   {
    "date": "2026-04-11",
    "outlet": "Der Patriot",
-   "title": "Barrierefrei durch die City",
-   "subject": "ARiadne — AR navigation with SWcode",
-   "confirm": "headline read from a multi-column scan; check it against the paper"
+   "title": "Zukunft zum Mitgehen – AR-Projekt soll Navigation in der City neu denken",
+   "subject": "ARiadne — AR navigation with SWcode"
   },
   {
    "date": "2025-08-31",
@@ -93,7 +92,7 @@
    "title": "Das bessere Google Maps: Professor will die „Navigation revolutionieren“",
    "url": "https://www.wa.de/hamm/",
    "subject": "ARiadne",
-   "confirm": "exact article URL, the PDF only shows the section"
+   "confirm": "exact article URL still missing; the link points at the wa.de/hamm section, not at the article"
   },
   {
    "date": "2023-12",

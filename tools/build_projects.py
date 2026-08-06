@@ -25,6 +25,7 @@ import datetime
 import html
 import json
 import pathlib
+import re
 import sys
 from collections import OrderedDict
 
@@ -106,6 +107,39 @@ def lab_link(project):
     return (' <a class="lab-link" href="%s" title="Fuller description at the '
             'Immersive Reality Lab">&#8599;</a>'
             % (LAB % html.escape(project.get("lab_id") or project["id"])))
+
+
+
+def role_label(project, meta):
+    """The role exactly as the funding table states it."""
+    if project.get("role") in meta["roles"]:
+        return meta["roles"][project["role"]].split(" — ")[0]
+    return project.get("role_label", "")
+
+
+def sync_detail_roles(text, data):
+    """Make the hand-written detail blocks agree with the table above them.
+
+    Every one of them read "Role: Project Lead", typed once and copied down the
+    page, while the table derived the real role from the data: subproject lead,
+    consortium coordinator, sole applicant. Ten of twelve disagreed, and the
+    disagreement ran the dangerous way — "Project Lead" over a subproject reads
+    as leading the whole thing.
+
+    The German page was mostly right, because whoever wrote the translations
+    read the data — but not entirely: ITT and XRT-HuFuSa share a funder, so
+    they shared one English sentence and therefore one translation, and the two
+    have different roles. One of them was wrong in both languages. Deriving the
+    role removes the possibility rather than the instance.
+    """
+    meta = data["meta"]
+    for project in data["projects"] + data.get("without_own_volume", []):
+        pattern = re.compile(
+            r'(id="%s".{0,4000}?<strong>Role:</strong>)\s*[^<·]+?(\s*·)'
+            % re.escape(project["id"]), re.S)
+        text = pattern.sub(lambda m: "%s %s%s" % (m.group(1), role_label(project, meta),
+                                                  m.group(2)), text, count=1)
+    return text
 
 
 def build(data):
@@ -291,6 +325,7 @@ def main():
     text = PAGE.read_text(encoding="utf-8")
     text = replace_block(text, BEGIN_ONGOING, END_ONGOING, build_ongoing(data), PAGE)
     text = replace_block(text, BEGIN, END, build(data), PAGE)
+    text = sync_detail_roles(text, data)
     PAGE.write_text(text, encoding="utf-8")
 
     home = HOME.read_text(encoding="utf-8")

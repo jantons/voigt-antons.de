@@ -332,6 +332,40 @@ def check_chronology(pages):
                     % (page.relative_to(ROOT), ", ".join(str(y) for y in years)))
 
 
+def check_project_roles():
+    """A project's detail block must state the same role as the table above it.
+
+    Every detail block on /projects/ read "Role: Project Lead" — typed once and
+    copied down the page — while the table derived the real role from the data.
+    Ten of twelve disagreed, and always in the flattering direction: "Project
+    Lead" over a subproject reads as leading the whole consortium.
+
+    Both halves are on the same page, a screen apart. Anyone comparing them
+    finds it, which is why it had to be a check and not a correction.
+    """
+    path = ROOT / "data" / "projects.json"
+    page = ROOT / "projects" / "index.html"
+    if not (path.exists() and page.exists()):
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    text = page.read_text(encoding="utf-8")
+    roles = data["meta"]["roles"]
+
+    for project in data["projects"] + data.get("without_own_volume", []):
+        found = re.search(
+            r'id="%s".{0,4000}?<strong>Role:</strong>\s*([^<·]+?)\s*·'
+            % re.escape(project["id"]), text, re.S)
+        if not found:
+            continue
+        expected = (roles[project["role"]].split(" — ")[0]
+                    if project.get("role") in roles
+                    else project.get("role_label", ""))
+        if found.group(1).strip() != expected:
+            problems.append(
+                "projects/index.html: %s says role %r in its detail block but %r "
+                "in the funding table" % (project["id"], found.group(1).strip(), expected))
+
+
 def check_label_widths(pages):
     """A label in .cv-list must fit its 104px column.
 
@@ -861,6 +895,7 @@ def main():
     check_structured_data(pages)
     check_pdf_fonts()
     check_talks()
+    check_project_roles()
     check_chronology(pages)
     check_label_widths(pages)
     check_placeholders(pages)

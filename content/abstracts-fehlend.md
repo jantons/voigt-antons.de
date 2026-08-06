@@ -1,6 +1,6 @@
 # Publikationen ohne Abstract
 
-Stand 2026-08-06. 231 der 235 Eintraege haben ein Abstract.
+Stand 2026-08-06. 232 der 235 Eintraege haben ein Abstract.
 
 ## Noch offen
 
@@ -10,17 +10,6 @@ Stand 2026-08-06. 231 der 235 Eintraege haben ein Abstract.
 - Autoren:  Haug, M., Camps, P., Umland, T. & Voigt-Antons, J.-N.
 - Venue:    12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland
 - DOI:      keine
-
-Abstract:
-
-
-
-### [C64] Influence of Hand Tracking as a Way of Interaction in Virtual Reality on User Experience
-
-- Jahr:     2020
-- Autoren:  Voigt-Antons, J.-N., Kojić, T., Ali, D. & Möller, S.
-- Venue:    12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland
-- DOI:      https://doi.org/10.48550/arXiv.2004.12642
 
 Abstract:
 

@@ -39,11 +39,10 @@
   },
   "abstracts": {
    "source": "immersive-reality-lab.de (assets/data/reference.js), imported 2026-08-06",
-   "count": 231,
+   "count": 232,
    "matched_by": "DOI first, then title similarity of at least 0.92; never by reference number. The two numbering schemes disagree for 56 entries, so matching on [C84] and the like would have attached a plausible abstract to the wrong paper - the one kind of error nobody would catch by reading.",
    "not_covered": [
-    "C63",
-    "C64"
+    "C63"
    ],
    "note": "Abstracts are shown as supplied by the lab site. Where a publisher holds the abstract, the DOI link next to it is the authoritative version.",
    "none_exists": [
@@ -1627,7 +1626,9 @@
    "a": "Voigt-Antons, J.-N., Kojić, T., Ali, D. & Möller, S.",
    "v": "12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2004.12642"
+   "d": "https://doi.org/10.1109/QoMEX48832.2020.9123085",
+   "n": "Preprint at arXiv:2004.12642; this entry cites the published version.",
+   "ab": "With the rising interest in Virtual Reality and the fast development and improvement of available devices, new features of interactions are becoming available. One of them that is becoming very popular is hand tracking, as the idea to replace controllers for interactions in virtual worlds. This experiment aims to compare different interaction types in VR using either controllers or hand tracking. Participants had to play two simple VR games with various types of tasks in those games — grabbing objects or typing numbers. While playing, they were using interactions with different visualizations of hands and controllers. The focus of this study was to investigate user experience of varying interactions (controller vs. hand tracking) for those two simple tasks. Results show that different interaction types statistically significantly influence reported emotions with Self-Assessment Manikin (SAM), where for hand tracking participants were feeling higher valence, but lower arousal and dominance. Additionally, task type of grabbing was reported to be more realistic, and participants experienced a higher presence. Surprisingly, participants rated the interaction type with controllers where both where hands and controllers were visualized as statistically most preferred. Finally, hand tracking for both tasks was rated with the System Usability Scale (SUS) scale, and hand tracking for the task typing was rated as statistically significantly more usable. These results can drive further research and, in the long term, contribute to help selecting the most matching interaction modality for a task."
   },
   {
    "id": "2020-05-26-flow-music-learning",

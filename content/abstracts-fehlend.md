@@ -1,7 +1,7 @@
 # Publikationen ohne Abstract
 
 Stand 2026-08-06. Auf voigt-antons.de und auf immersive-reality-lab.de
-fehlt bei diesen Eintraegen das Abstract; die uebrigen 223 haben eines.
+fehlt bei diesen Eintraegen das Abstract; die uebrigen 224 haben eines.
 
 ## [C105] The Three-Body Problem of Collaboration: Effects of Asymmetric Physical Co-Presence in Augmented Reality
 

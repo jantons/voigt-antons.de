@@ -14,7 +14,7 @@ Languages: English (this site), German (under https://voigt-antons.de/de/)
 
 ## Current figures
 
-- 234 publications, 2,995 citations, h-index 29 (Google Scholar)
+- 235 publications, 2,995 citations, h-index 29 (Google Scholar)
 - 22 funded projects, approximately €4.609 million in third-party
   funding since 2015, 6 of them currently running
 - Co-developer of ITU-T Recommendation P.812 on subjective test methods for

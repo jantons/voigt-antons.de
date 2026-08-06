@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-08-03",
-  "total_claimed": 234,
+  "total_claimed": 235,
   "note": "Complete publication record, imported from the official Publikationsverzeichnis (2026-08-03-List_of_publications_Voigt-Antons_full_new.docx). Entries marked [XX] there are submitted-only and intentionally excluded. Field keys: id, ref, y, t, ti, a, v, tp, d, n.",
   "types": {
    "journal": "Peer-reviewed journal article",
@@ -39,7 +39,7 @@
   },
   "abstracts": {
    "source": "immersive-reality-lab.de (assets/data/reference.js), imported 2026-08-06",
-   "count": 223,
+   "count": 224,
    "matched_by": "DOI first, then title similarity of at least 0.92; never by reference number. The two numbering schemes disagree for 56 entries, so matching on [C84] and the like would have attached a plausible abstract to the wrong paper - the one kind of error nobody would catch by reading.",
    "not_covered": [
     "C105",
@@ -58,6 +58,18 @@
   }
  },
  "items": [
+  {
+   "id": "2026-07-07-arcade-metahuman-avatars",
+   "ref": "OC59",
+   "y": 2026,
+   "t": "conference",
+   "ti": "Redeveloping ARCADE: User Experience with Personalized Conversational MetaHuman Avatars at Human Scale in Immersive Environments",
+   "a": "Ashrafi, N., Spang, R. P., Vona, F., Henning, J., Möller, S. & Voigt-Antons, J.-N.",
+   "v": "International Conference on Human-Computer Interaction (HCII 2026), pp. 502–513, Springer",
+   "tp": "xr",
+   "d": "https://doi.org/10.1007/978-3-032-29586-6_32",
+   "ab": "Inspired by the original ARCADE project, this work presents a framework for deploying life-sized, highly realistic conversational avatars in physical environments. The approach combines 3D facial scanning, mesh refinement, and Unreal Engine 5.5 MetaHuman technology to create personalized digital twins, paired with the Convai platform for natural language understanding and open-ended dialogue. A custom hardware setup with a ceiling-mounted projector and a suspended plexiglass back-projection screen creates the illusion of a physically present digital human. Engineering and design challenges such as projection geometry, audio capture, avatar personality profiling, and cross-platform integration are addressed, with the goal of enhancing perceived social presence and engagement for events, education, institutional communication, and healthcare scenarios."
+  },
   {
    "id": "2026-06-15-ar-marketing-review",
    "ref": "OC58",

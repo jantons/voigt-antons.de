@@ -844,8 +844,9 @@
    "a": "Vona, F., Hinzmann, S. L., Stern, M., Ćeranić, M., Grieshammer, D. K. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 16th International Conference on Quality of Multimedia Experience (QoMEX 2024), Karlshamn, Sweden",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2404.09174",
-   "ab": "We study how spatial misalignment and temporal delay between shared virtual objects affect collaborative presence and team performance in AR. Increasing offsets degraded coordination quality, trust, and usability ratings. We discuss tolerance bounds for alignment and latency and propose calibration and synchronization strategies for co-located AR."
+   "d": "https://doi.org/10.1109/QoMEX61742.2024.10598298",
+   "ab": "We study how spatial misalignment and temporal delay between shared virtual objects affect collaborative presence and team performance in AR. Increasing offsets degraded coordination quality, trust, and usability ratings. We discuss tolerance bounds for alignment and latency and propose calibration and synchronization strategies for co-located AR.",
+   "n": "Preprint at arXiv:2404.09174; this entry cites the published version."
   },
   {
    "id": "2024-04-25-C76",

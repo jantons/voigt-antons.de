@@ -366,6 +366,33 @@ def check_project_roles():
                 "in the funding table" % (project["id"], found.group(1).strip(), expected))
 
 
+def check_unique_dois():
+    """No DOI may name two publications.
+
+    A DOI supplied for one paper turned out to belong to another, and it was
+    supplied for both at once. Nothing about the result would have looked
+    wrong: a real DOI, a real paper, the right authors, the wrong work. The
+    reader clicks through and lands somewhere else, and no amount of
+    proof-reading the page catches it.
+
+    Two entries sharing a DOI is the only trace that error leaves in the data.
+    """
+    path = ROOT / "data" / "publications.json"
+    if not path.exists():
+        return
+    seen = {}
+    for item in json.loads(path.read_text(encoding="utf-8"))["items"]:
+        found = re.search(r"10\.\d{4,9}/\S+", (item.get("d") or "").lower())
+        if not found:
+            continue
+        doi = found.group(0)
+        if doi in seen:
+            problems.append("data/publications.json: [%s] and [%s] carry the same "
+                            "DOI %s — one of them points at the other's paper"
+                            % (seen[doi], item["ref"], doi))
+        seen[doi] = item["ref"]
+
+
 def check_author_lists():
     """An author list joins its last two names with one "&", never two.
 
@@ -982,6 +1009,7 @@ def main():
     check_pdf_fonts()
     check_talks()
     check_project_roles()
+    check_unique_dois()
     check_author_lists()
     check_abstracts()
     check_chronology(pages)

@@ -39,7 +39,7 @@
   },
   "abstracts": {
    "source": "immersive-reality-lab.de (assets/data/reference.js), imported 2026-08-06",
-   "count": 222,
+   "count": 223,
    "matched_by": "DOI first, then title similarity of at least 0.92; never by reference number. The two numbering schemes disagree for 56 entries, so matching on [C84] and the like would have attached a plausible abstract to the wrong paper - the one kind of error nobody would catch by reading.",
    "not_covered": [
     "C105",
@@ -50,7 +50,6 @@
     "OC25",
     "OC45",
     "OC52",
-    "OC58",
     "OJ6",
     "P1",
     "P2"
@@ -67,7 +66,9 @@
    "ti": "From Interaction to Purchase: A Review on How Augmented Reality Impacts User Experience in Marketing",
    "a": "Henning, J., Vona, F., Pütter, J. & Voigt-Antons, J.-N.",
    "v": "International Conference on Human-Computer Interaction (HCII 2026), pp. 309–328, Springer",
-   "tp": "xr"
+   "tp": "xr",
+   "d": "https://doi.org/10.1007/978-3-032-31424-6_18",
+   "ab": "Augmented Reality is increasingly used in marketing to create immersive, interactive brand experiences. While its effects on purchase intention, brand perception, and customer engagement are well studied, the underlying user experience mechanisms remain fragmented. Following PRISMA guidelines, this systematic literature review synthesizes AR marketing research from an HCI perspective, analyzing peer-reviewed studies from 2020 to 2025 across devices, task types, visual content, and evaluation methods. The review identifies research gaps, highlights the absence of standardized UX metrics, and derives design-oriented insights as a foundation for evidence-based guidelines and consistent evaluation frameworks in AR-driven marketing."
   },
   {
    "id": "2026-06-01-C103",

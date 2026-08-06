@@ -1,8 +1,7 @@
 # Publikationen ohne Abstract
 
-Stand 2026-08-06. Auf voigt-antons.de fehlt bei diesen Eintraegen das
-Abstract, auf immersive-reality-lab.de ebenfalls. Alle uebrigen 222
-Eintraege haben eines.
+Stand 2026-08-06. Auf voigt-antons.de und auf immersive-reality-lab.de
+fehlt bei diesen Eintraegen das Abstract; die uebrigen 223 haben eines.
 
 ## [C105] The Three-Body Problem of Collaboration: Effects of Asymmetric Physical Co-Presence in Augmented Reality
 
@@ -35,18 +34,6 @@ Abstract:
 - Autoren:  Hallmann, M. C., Peperkorn, N. L., Vona, F., Shiban, Y. & Voigt-Antons, J.-N.
 - Venue:    JMIR XR Spatial Comput
 - DOI:      https://doi.org/10.2196/81537
-
-Abstract:
-
-
-
-## [OC58] From Interaction to Purchase: A Review on How Augmented Reality Impacts User Experience in Marketing
-
-- Jahr:     2026
-- Typ:      conference
-- Autoren:  Henning, J., Vona, F., Pütter, J. & Voigt-Antons, J.-N.
-- Venue:    International Conference on Human-Computer Interaction (HCII 2026), pp. 309–328, Springer
-- DOI:      keine
 
 Abstract:
 

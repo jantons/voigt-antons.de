@@ -39,11 +39,9 @@
   },
   "abstracts": {
    "source": "immersive-reality-lab.de (assets/data/reference.js), imported 2026-08-06",
-   "count": 232,
+   "count": 233,
    "matched_by": "DOI first, then title similarity of at least 0.92; never by reference number. The two numbering schemes disagree for 56 entries, so matching on [C84] and the like would have attached a plausible abstract to the wrong paper - the one kind of error nobody would catch by reading.",
-   "not_covered": [
-    "C63"
-   ],
+   "not_covered": [],
    "note": "Abstracts are shown as supplied by the lab site. Where a publisher holds the abstract, the DOI link next to it is the authoritative version.",
    "none_exists": [
     "OC25",
@@ -1638,7 +1636,9 @@
    "ti": "Assessing Differences in Flow State Induced by an Adaptive Music Learning Software",
    "a": "Haug, M., Camps, P., Umland, T. & Voigt-Antons, J.-N.",
    "v": "12th International Conference on Quality of Multimedia Experience (QoMEX 2020), Athlone, Ireland",
-   "tp": "psychophysiology"
+   "tp": "psychophysiology",
+   "d": "https://doi.org/10.1109/QoMEX48832.2020.9123132",
+   "ab": "Technology can facilitate self-learning for academic and leisure activities such as music learning. In general, learning to play an unknown musical song at sight on the electric piano or any other instrument can be quite a chore. In a traditional self-learning setting, the musician only gets feedback in terms of what errors they can hear themselves by comparing what they have played with the score. Research has shown that reaching a flow state creates a more enjoyable experience during activities. This work explores whether principles from flow theory and game design can be applied to make the beginner's musical experience adapted to their need and create higher flow. We created and evaluated a tool oriented around these considerations in a study with 21 participants. We found that provided feedback and difficulty scaling can help to achieve flow and that the effects get more pronounced the more experience with music participants have. In further research, we want to examine the influence of our approach to learning sheet music."
   },
   {
    "id": "2020-05-01-C61",

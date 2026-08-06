@@ -17,7 +17,8 @@
   ],
   "funding_lines": 10,
   "funding_lines_note": "Number of distinct funding programmes, maintained by hand — it cannot be derived from the funder column, since several projects share one line.",
-  "ongoing_note": "'Ongoing' is derived from the end date, never stored — a project counts as running while (to, to_month) >= (current year, current month). to_month is optional and defaults to 12; give it whenever a project ends mid-year, otherwise the site keeps showing it as active until January. That way the website cannot claim a finished project is still running."
+  "ongoing_note": "'Ongoing' is derived from the end date, never stored — a project counts as running while (to, to_month) >= (current year, current month). to_month is optional and defaults to 12; give it whenever a project ends mid-year, otherwise the site keeps showing it as active until January. That way the website cannot claim a finished project is still running.",
+  "lab_pages": "Eighteen of these have a fuller description on the lab site. The URL is built from the project id, because the two sites agree on it; lab_id records the handful where they do not, and \"lab\": true marks the ones where they do. Six projects have no lab page — small industry contracts and the post-doctoral fellowship — and simply carry no link. Writing a second description here instead would guarantee the two drift apart, which is the failure this repository keeps finding."
  },
  "projects": [
   {
@@ -31,7 +32,8 @@
    "volume": 619,
    "partners": "DTHG Service, HSHL",
    "blurb": "Immersive training for theatre technology and vocational education.",
-   "funder_short": "EFRE NRW"
+   "funder_short": "EFRE NRW",
+   "lab": true
   },
   {
    "id": "xrt-hufusa",
@@ -44,7 +46,8 @@
    "volume": 289,
    "partners": "HSHL, FH Südwestfalen, WE are XR, Deutsche Windtechnik, PTS Labs",
    "blurb": "XR training and digital twins for critical industries, five partners.",
-   "funder_short": "EFRE NRW"
+   "funder_short": "EFRE NRW",
+   "lab_id": "xrt"
   },
   {
    "id": "silent-bed-monitor",
@@ -56,7 +59,8 @@
    "role": "subproject",
    "volume": 218,
    "partners": "5micron",
-   "blurb": "Contact-free health monitoring in care, using sensor systems and machine learning."
+   "blurb": "Contact-free health monitoring in care, using sensor systems and machine learning.",
+   "lab_id": "sbm"
   },
   {
    "id": "xrwise",
@@ -69,7 +73,8 @@
    "volume": 130,
    "partners": "HAW Hamburg",
    "blurb": "Business models and pioneering solutions for XR event creation.",
-   "funder_short": "BMWE"
+   "funder_short": "BMWE",
+   "lab": true
   },
   {
    "id": "ariadne",
@@ -82,7 +87,8 @@
    "role": "subproject",
    "volume": 208,
    "partners": "SWCode",
-   "blurb": "AR navigation with multimodal UI and personalized routing."
+   "blurb": "AR navigation with multimodal UI and personalized routing.",
+   "lab": true
   },
   {
    "id": "fastjets",
@@ -95,7 +101,8 @@
    "volume": 44,
    "partners": "Adams Simulation and Training",
    "blurb": "Emergency-procedure training in XR under realistic stress, with physiological measurement.",
-   "funder_short": "German Air Force"
+   "funder_short": "German Air Force",
+   "lab": true
   },
   {
    "id": "virtual-institute",
@@ -107,7 +114,8 @@
    "role": "subproject",
    "volume": 290,
    "partners": "South Westphalia UAS, Economic Development Agency Soest District",
-   "blurb": "Regional VR/AR knowledge transfer and innovation across South Westphalia."
+   "blurb": "Regional VR/AR knowledge transfer and innovation across South Westphalia.",
+   "lab_id": "virtualinst"
   },
   {
    "id": "didymos-xr",
@@ -120,7 +128,8 @@
    "volume": 303,
    "partners": "Joanneum Research, CERTH, AUB, Univ. Patras, Ficosa, TU Berlin, FIWARE, idealworks, Capgemini, i2CAT, Trilateral Research, Neàpolis, DigitalTwin Technology",
    "blurb": "Dynamic and responsible digital twins for extended reality, 13 European partners.",
-   "funder_short": "Horizon Europe"
+   "funder_short": "Horizon Europe",
+   "lab_id": "didymos"
   },
   {
    "id": "digiontrack",
@@ -134,7 +143,8 @@
    "partners": "5micron, OSTAKON, Deutsche Eisenbahn Service",
    "blurb": "Predictive maintenance for rail infrastructure, sensors and machine learning.",
    "funder_short": "mFUND / BMDV",
-   "spelling": "DigiOnTrack, confirmed against the grant documents. Der Patriot printed „Digi-on-track“ in 2023 and „Digi on Track“ in 2025; both are the newspaper's, not the project's."
+   "spelling": "DigiOnTrack, confirmed against the grant documents. Der Patriot printed „Digi-on-track“ in 2023 and „Digi on Track“ in 2025; both are the newspaper's, not the project's.",
+   "lab": true
   },
   {
    "id": "body-interaction-lab",
@@ -158,7 +168,8 @@
    "volume": 206,
    "partners": "Charité Berlin, HM Munich, TU Berlin, HSHL, Dexter Health, Acalta, ZAR Berlin, Seehof Berlin",
    "blurb": "Multimodal assistants for digital collection of patient-reported outcomes.",
-   "funder_short": "BMBF / KIAS"
+   "funder_short": "BMBF / KIAS",
+   "lab_id": "miaprom"
   },
   {
    "id": "art",
@@ -169,7 +180,8 @@
    "funder": "EIT Digital",
    "role": "subproject",
    "volume": 299,
-   "partners": "Politecnico di Milano, TIM, FifthIngenium"
+   "partners": "Politecnico di Milano, TIM, FifthIngenium",
+   "lab": true
   },
   {
    "id": "bgf-pflege",
@@ -180,7 +192,8 @@
    "funder": "Charité / AOK Nordost",
    "role": "co",
    "volume": 39,
-   "partners": "Charité Berlin, Johanniter-Stift Berlin-Johannisthal"
+   "partners": "Charité Berlin, Johanniter-Stift Berlin-Johannisthal",
+   "lab_id": "bgf"
   },
   {
    "id": "mobil-havelland",
@@ -191,7 +204,8 @@
    "funder": "Charité / BMBF",
    "role": "co",
    "volume": 61,
-   "partners": "Charité Berlin, Havelland Kliniken"
+   "partners": "Charité Berlin, Havelland Kliniken",
+   "lab_id": "mih"
   },
   {
    "id": "huawei-workload",
@@ -224,7 +238,8 @@
    "funder": "Innovationsfonds (G-BA)",
    "role": "subproject",
    "volume": 501,
-   "partners": "Charité Berlin"
+   "partners": "Charité Berlin",
+   "lab": true
   },
   {
    "id": "voiceadapt",
@@ -235,7 +250,8 @@
    "funder": "JPI More Years, Better Lives (EU / BMBF)",
    "role": "coordinator",
    "volume": 256,
-   "partners": "University of Toronto, University of Alberta, NuroGames, AIT"
+   "partners": "University of Toronto, University of Alberta, NuroGames, AIT",
+   "lab": true
   },
   {
    "id": "gesobau",
@@ -279,7 +295,8 @@
    "funder": "GKV-Spitzenverband",
    "role": "subproject",
    "volume": 304,
-   "partners": "Charité Berlin, DOMICIL Seniorenpflegeheim Am Schlosspark"
+   "partners": "Charité Berlin, DOMICIL Seniorenpflegeheim Am Schlosspark",
+   "lab": true
   }
  ],
  "without_own_volume": [
@@ -292,7 +309,8 @@
    "role_label": "Project contributor",
    "partners": "UFSC Brazil, Saitama University, Suranaree University of Technology, KIIT, Wirtschaftsförderung Lippstadt, Stadt Hamm",
    "short": "INFUSE",
-   "blurb": "International, inclusive learning and future skills across four continents."
+   "blurb": "International, inclusive learning and future skills across four continents.",
+   "lab": true
   },
   {
    "id": "bernstein",
@@ -303,7 +321,8 @@
    "role_label": "Project lead",
    "partners": "Charité Berlin, Physikalisch-Technische Bundesanstalt",
    "short": "Bernstein Focus",
-   "blurb": "Neurotechnologies for intuitive and efficient human–machine interaction."
+   "blurb": "Neurotechnologies for intuitive and efficient human–machine interaction.",
+   "lab_id": "bfn"
   }
  ]
 }

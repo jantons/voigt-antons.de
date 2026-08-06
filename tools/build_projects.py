@@ -87,6 +87,27 @@ def totals(projects, meta):
     return by
 
 
+LAB = "https://immersive-reality-lab.de/pages/projects.html?id=%s"
+
+
+def lab_link(project):
+    """Link to the fuller description on the lab site, where there is one.
+
+    The description itself is not copied over. Two versions of the same
+    paragraph on two sites the same person maintains is precisely how the lab
+    page came to advertise €4.275 million against the €4.609 million derived
+    here — one of them was updated and the other was not. A link cannot drift.
+
+    The URL is built from the project id, because both sites use the same one;
+    lab_id names the few that differ.
+    """
+    if not (project.get("lab") or project.get("lab_id")):
+        return ""
+    return (' <a class="lab-link" href="%s" title="Fuller description at the '
+            'Immersive Reality Lab">&#8599;</a>'
+            % (LAB % html.escape(project.get("lab_id") or project["id"])))
+
+
 def build(data):
     e = html.escape
     projects = sorted(data["projects"], key=lambda p: (-p["from"], -p["to"], p["name"]))
@@ -110,7 +131,8 @@ def build(data):
         '\n          <tr><td class="yr">%s</td><td>%s</td><td>%s</td><td>%s</td>'
         '<td class="amt">%s</td></tr>'
         % (period(p),
-           ('<a href="#%s">%s</a>' % (e(p["id"]), e(p["name"]))) if p["id"] in ANCHORS else e(p["name"]),
+           (('<a href="#%s">%s</a>' % (e(p["id"]), e(p["name"])))
+            if p["id"] in ANCHORS else e(p["name"])) + lab_link(p),
            e(p["funder"]), e(meta["roles"][p["role"]].split(" — ")[0]), money(p["volume"]))
         for p in projects
     )

@@ -855,8 +855,9 @@
    "a": "Cocchia, L., Vergari, M., Kojic, T., Vona, F., Möller, S., Garzotto, F. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 16th International Conference on Quality of Multimedia Experience (QoMEX 2024), Karlshamn, Sweden",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2404.16479",
-   "ab": "We investigate how contextual factors shape the experience of an AR game by manipulating the social environment (alone, with friends, around bystanders) and the primary interaction focus (task-oriented vs. socially oriented play). Using standardized UX, presence, and social acceptability scales with observational notes, we show that co-present others and socially focused interactions can increase enjoyment and engagement but may reduce perceived appropriateness in public settings. We derive design guidelines for balancing playability with bystander comfort."
+   "d": "https://doi.org/10.1109/QoMEX61742.2024.10598279",
+   "ab": "We investigate how contextual factors shape the experience of an AR game by manipulating the social environment (alone, with friends, around bystanders) and the primary interaction focus (task-oriented vs. socially oriented play). Using standardized UX, presence, and social acceptability scales with observational notes, we show that co-present others and socially focused interactions can increase enjoyment and engagement but may reduce perceived appropriateness in public settings. We derive design guidelines for balancing playability with bystander comfort.",
+   "n": "Preprint at arXiv:2404.16479; this entry cites the published version."
   },
   {
    "id": "2024-04-15-C73",

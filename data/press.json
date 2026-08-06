@@ -90,34 +90,29 @@
    "date": "2024-10-10",
    "outlet": "wa.de",
    "title": "Das bessere Google Maps: Professor will die „Navigation revolutionieren“",
-   "url": "https://www.wa.de/hamm/",
-   "subject": "ARiadne",
-   "confirm": "exact article URL still missing; the link points at the wa.de/hamm section, not at the article"
+   "subject": "ARiadne"
   },
   {
-   "date": "2023-12",
+   "date": "2023-12-13",
    "outlet": "Welt am Sonntag — Sonderveröffentlichung „Südwestfalen“",
    "title": "Südwestfalen: NRWs Industrieregion Nummer 1",
    "subject": "DigiOnTrack, quoted at length and captioned „Projektleiter DigiOnTrack“",
-   "source": "A paid regional marketing supplement, which the booklet states about itself. The masthead is named in full so nobody reads it as editorial coverage by Welt am Sonntag — that difference is the whole reason to spell it out.",
-   "confirm": "exact issue date"
+   "source": "A paid regional marketing supplement, which the booklet states about itself. The masthead is named in full so nobody reads it as editorial coverage by Welt am Sonntag — that difference is the whole reason to spell it out."
   },
   {
-   "date": "2023-11-21",
+   "date": "2023-11-26",
    "date_is": "the LUNA event; the printed date is a day or two later and still to be confirmed",
    "outlet": "Der Patriot",
    "title": "Digitale Welten real erleben",
    "standfirst": "HSHL und WFL machen angewandte Informatik für LUNA sichtbar",
    "subject": "About thirty Lippstadt businesswomen (LUNA) visiting the Immersive Reality Lab; six laboratory areas and projects shown by the students and researchers who built them, organised with Sina Hinzmann and Josie Olk of the Lippstadt economic development agency",
-   "note": "The closing line names him as responsible for the Applied Computer Science area with its focus on immersive media and as supervisor of every project shown — but the article is built around the people who presented: Hallmann, Ceranic, Ogait, Ashrafi, Stern, Vona. That is the better story and the better evidence.",
-   "confirm": "publication date"
+   "note": "The closing line names him as responsible for the Applied Computer Science area with its focus on immersive media and as supervisor of every project shown — but the article is built around the people who presented: Hallmann, Ceranic, Ogait, Ashrafi, Stern, Vona. That is the better story and the better evidence."
   },
   {
    "date": "2023-10-18",
    "outlet": "Der Patriot",
-   "title": "Ina Brandes sieht bei HSHL-Besuch praxisnahe Projekte und Demo-Modell für Wissenschafts-Truck",
-   "subject": "visit of the NRW science minister",
-   "confirm": "this is the standfirst; the headline above it was not readable"
+   "title": "Wissenschaftsministerin auf Forschungsreise – Ina Brandes sieht bei HSHL-Besuch praxisnahe Projekte und Demo-Modell für Wissenschafts-Truck",
+   "subject": "visit of the NRW science minister"
   },
   {
    "date": "2023-09-29",
@@ -138,12 +133,11 @@
    "teaser": "Trailed on page one as „Finale auf dem Rathausplatz“, with the photograph of children wearing VR headsets"
   },
   {
-   "date": "2023-06",
+   "date": "2023-06-23",
    "date_is": "shortly after the HSHL release of 22 June 2023; the printed date is still open",
    "outlet": "Der Patriot",
    "title": "Mit künstlicher Intelligenz Daten schützen",
-   "subject": "Work with TU Berlin and DFKI on synthetic data, presented at QoMEX 2023 in Ghent; Navid Ashrafi received the Diversity and Societal Impact Award",
-   "confirm": "publication date"
+   "subject": "Work with TU Berlin and DFKI on synthetic data, presented at QoMEX 2023 in Ghent; Navid Ashrafi received the Diversity and Societal Impact Award"
   },
   {
    "date": "2023-04-20",

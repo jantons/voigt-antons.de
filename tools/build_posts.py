@@ -244,6 +244,50 @@ def page(post, prev_post, next_post):
     )
 
 
+
+HOME = ROOT / "index.html"
+HOME_BEGIN, HOME_END = "<!-- BEGIN home-posts -->", "<!-- END home-posts -->"
+
+MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+def home_block(posts, n=3):
+    """The three newest posts, for the start page.
+
+    This block used to be typed by hand. It stayed right only for as long as
+    nobody published anything: five posts were added and the start page still
+    advertised April, with the newest of them three months old. A list that
+    describes other files should be read out of those files.
+    """
+    e = html.escape
+    out = [HOME_BEGIN]
+    for post in posts[:n]:
+        y, m, d = post["date"].split("-")
+        out.append('      <a class="post rv" href="/posts/%s/%s/%s/">' % (y, m, post["slug"]))
+        out.append('        <time datetime="%s">%s %s %s</time>'
+                   % (post["date"], d, MONTHS[int(m) - 1], y))
+        out.append("        <div>")
+        out.append("          <h3>%s</h3>" % e(post["title"]))
+        out.append("          <p>%s</p>" % e(post.get("summary", "")))
+        out.append("        </div>")
+        out.append("      </a>")
+    out.append(HOME_END)
+    return "\n".join(out)
+
+
+def write_home(posts):
+    text = HOME.read_text(encoding="utf-8")
+    if HOME_BEGIN not in text or HOME_END not in text:
+        sys.exit("markers %s / %s not found in %s" % (HOME_BEGIN, HOME_END, HOME))
+    new = (text[:text.index(HOME_BEGIN)] + home_block(posts)
+           + text[text.index(HOME_END) + len(HOME_END):])
+    if new != text:
+        HOME.write_text(new, encoding="utf-8")
+        return True
+    return False
+
+
 def main():
     if not SRC.exists():
         sys.exit("missing %s" % SRC)
@@ -280,7 +324,11 @@ def main():
         {"posts": [{k: v for k, v in p.items() if k != "body"} for p in posts]},
         indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-    print("generated %d posts, wrote %s" % (len(posts), INDEX.relative_to(ROOT)))
+    touched = write_home(posts)
+
+    print("generated %d posts, wrote %s%s"
+          % (len(posts), INDEX.relative_to(ROOT),
+             "; start page updated" if touched else ""))
 
 
 if __name__ == "__main__":

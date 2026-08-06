@@ -1,6 +1,77 @@
 {
   "posts": [
     {
+      "title": "Lab Tours, School Visits, and a Unity Crash Course: A Summer 2026 Round-Up",
+      "date": "2026-07-18",
+      "slug": "irl-sommer-2026",
+      "summary": "Lab tours, school visits and a Unity crash course: what the summer of 2026 looked like at the Immersive Reality Lab.",
+      "tags": [
+        "lab tours",
+        "outreach",
+        "school visits",
+        "summer 2026",
+        "Unity"
+      ],
+      "url": "/posts/2026/07/irl-sommer-2026/"
+    },
+    {
+      "title": "Two Days of Immersive Media: A School Event at Stadtlabor Soest",
+      "date": "2026-07-07",
+      "slug": "stadtlabor-soest-2026",
+      "summary": "Two days of immersive media with school classes at Stadtlabor Soest.",
+      "tags": [
+        "immersive media",
+        "outreach",
+        "school event",
+        "Stadtlabor Soest",
+        "transfer"
+      ],
+      "url": "/posts/2026/07/stadtlabor-soest-2026/"
+    },
+    {
+      "title": "BMWE Innovationstag Mittelstand: Showing VR and AR Prototypes in Berlin",
+      "date": "2026-06-11",
+      "slug": "bmwe-innovationstag-2026",
+      "summary": "Showing VR and AR prototypes at the BMWE Innovationstag Mittelstand in Berlin — and what visitors asked about first.",
+      "tags": [
+        "augmented reality",
+        "BMWE",
+        "Innovationstag Mittelstand",
+        "technology transfer",
+        "virtual reality"
+      ],
+      "url": "/posts/2026/06/bmwe-innovationstag-2026/"
+    },
+    {
+      "title": "Virtual Reality in the Operating Room: A Visit to Klinikum Lippstadt",
+      "date": "2026-06-01",
+      "slug": "klinikum-lippstadt-vr",
+      "summary": "What surgeons and nursing staff at Klinikum Lippstadt made of VR in the operating room, and what that says about clinical deployment.",
+      "tags": [
+        "clinical XR",
+        "digital health",
+        "Klinikum Lippstadt",
+        "transfer",
+        "virtual reality"
+      ],
+      "url": "/posts/2026/06/klinikum-lippstadt-vr/"
+    },
+    {
+      "title": "XR Digital Twins: Why User-Centered Development Decides the Success of Immersive Systems",
+      "date": "2026-05-14",
+      "slug": "innovation-radar",
+      "summary": "Two DIDYMOS-XR innovations were picked up by the European Commission's Innovation Radar — both of them methods, not devices.",
+      "tags": [
+        "DIDYMOS-XR",
+        "digital twins",
+        "European Commission",
+        "Innovation Radar",
+        "user-centered design",
+        "extended reality"
+      ],
+      "url": "/posts/2026/05/innovation-radar/"
+    },
+    {
       "title": "When Navigation Speaks to its Environment: How AR Can Change the Way We Move Through Cities",
       "date": "2026-04-22",
       "slug": "ariadne",

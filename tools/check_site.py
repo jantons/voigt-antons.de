@@ -366,6 +366,28 @@ def check_project_roles():
                 "in the funding table" % (project["id"], found.group(1).strip(), expected))
 
 
+def check_blog_freshness():
+    """Report when the newest post has gone stale.
+
+    The start page carries a "Latest notes" section. An empty blog says
+    nothing; a blog whose newest entry is half a year old says something, and
+    not what he wants it to. This is a warning about the world rather than
+    about the code, so the threshold is generous — six months, not six weeks.
+    """
+    path = ROOT / "data" / "posts.json"
+    if not path.exists():
+        return
+    posts = json.loads(path.read_text(encoding="utf-8"))["posts"]
+    if not posts:
+        return
+    newest = max(p["date"] for p in posts)
+    import datetime
+    age = (datetime.date.today() - datetime.date(*map(int, newest.split("-")))).days
+    if age > 183:
+        problems.append("data/posts.json: the newest post is from %s, %d days ago — "
+                        "the start page advertises \"Latest notes\"" % (newest, age))
+
+
 def check_unique_dois():
     """No DOI may name two publications.
 
@@ -1009,6 +1031,7 @@ def main():
     check_pdf_fonts()
     check_talks()
     check_project_roles()
+    check_blog_freshness()
     check_unique_dois()
     check_author_lists()
     check_abstracts()

@@ -856,8 +856,9 @@
    "a": "Warsinke, M., Kojic, T., Vergari, M., Spang, R. O., Voigt-Antons, J.-N. & Möller, S.",
    "v": "Paper presented at the 16th International Conference on Quality of Multimedia Experience (QoMEX 2024), Karlshamn, Sweden",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2404.16487",
-   "ab": "We compare continuous in-VR affect ratings with retrospective post-experience reports in a fully remote VR study. Continuous ratings capture temporal dynamics but add interaction overhead; retrospective ratings reduce burden at the cost of temporal precision. Correlations and divergences are analyzed to provide guidance on selecting emotion measurement strategies for remote XR evaluations."
+   "d": "https://doi.org/10.1109/QoMEX61742.2024.10598301",
+   "ab": "We compare continuous in-VR affect ratings with retrospective post-experience reports in a fully remote VR study. Continuous ratings capture temporal dynamics but add interaction overhead; retrospective ratings reduce burden at the cost of temporal precision. Correlations and divergences are analyzed to provide guidance on selecting emotion measurement strategies for remote XR evaluations.",
+   "n": "Preprint at arXiv:2404.16487; this entry cites the published version."
   },
   {
    "id": "2024-04-25-C75",
@@ -905,8 +906,9 @@
    "a": "Kojić, T., Vergari, M., Podratz, M., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2024), Orlando, FL, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2403.09879",
-   "ab": "We evaluate how XR modality and avatar embodiment levels (e.g., low vs. high agency and realism) affect user experience during well-being activities such as guided breathing and light movement. Higher embodiment increased engagement, social presence, and adherence intentions, while overly realistic agents occasionally raised discomfort. The study outlines design trade-offs for supportive, calming XR coaching systems."
+   "d": "https://doi.org/10.1109/VRW62533.2024.00224",
+   "ab": "We evaluate how XR modality and avatar embodiment levels (e.g., low vs. high agency and realism) affect user experience during well-being activities such as guided breathing and light movement. Higher embodiment increased engagement, social presence, and adherence intentions, while overly realistic agents occasionally raised discomfort. The study outlines design trade-offs for supportive, calming XR coaching systems.",
+   "n": "Preprint at arXiv:2403.09879; this entry cites the published version."
   },
   {
    "id": "2024-03-14-C71",
@@ -917,8 +919,9 @@
    "a": "Koleva, K. G., Vergari, M., Kojić, T., Möller, S. & Voigt-Antons, J.-N.",
    "v": "Paper presented at the IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2024), Orlando, FL, USA",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2403.09883",
-   "ab": "This study manipulates an AR agent’s personality traits and conversational style (e.g., warmth, dominance, proactivity) to examine effects on social presence, trust, and perceived usefulness. Findings show that agent behaviors aligned with user preferences and task context improve UX and acceptance, while mismatched dominance or intrusiveness can harm perceived rapport. We suggest adaptive agent policies for AR interactions."
+   "d": "https://doi.org/10.1109/VRW62533.2024.00261",
+   "ab": "This study manipulates an AR agent’s personality traits and conversational style (e.g., warmth, dominance, proactivity) to examine effects on social presence, trust, and perceived usefulness. Findings show that agent behaviors aligned with user preferences and task context improve UX and acceptance, while mismatched dominance or intrusiveness can harm perceived rapport. We suggest adaptive agent policies for AR interactions.",
+   "n": "Preprint at arXiv:2403.09883; this entry cites the published version."
   },
   {
    "id": "2023-12-01-J27",
@@ -1073,8 +1076,9 @@
    "a": "Vona, F., Ceranic, M., Rybnikova, I., & Voigt-Antons, J.-N.",
    "v": "Paper presented at the International Conference on Human-Computer Interaction (HCII 2023). Copenhagen, Denmark",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2403.10312",
-   "ab": "We present the design and validation of immersive simulations for leadership training in a CAVE environment. Following a user-centered process with interviews, scenario co-creation, and iterative prototyping, we implemented branching social situations and multimodal feedback. A formative usability study (think-aloud, SUS, presence and workload ratings) indicates high acceptance, strong perceived realism, and clear design guidelines for balancing authenticity with simulator comfort."
+   "d": "https://doi.org/10.1007/978-3-031-36004-6_45",
+   "ab": "We present the design and validation of immersive simulations for leadership training in a CAVE environment. Following a user-centered process with interviews, scenario co-creation, and iterative prototyping, we implemented branching social situations and multimodal feedback. A formative usability study (think-aloud, SUS, presence and workload ratings) indicates high acceptance, strong perceived realism, and clear design guidelines for balancing authenticity with simulator comfort.",
+   "n": "Preprint at arXiv:2403.10312; this entry cites the published version."
   },
   {
    "id": "2023-05-04-J26",
@@ -1109,8 +1113,9 @@
    "a": "Voigt-Antons, J.-N., Sun, Z., Vergari, M., Ashrafi, N., Vona, F., & Kojić, T.",
    "v": "Paper presented at the annual congress of the Deutsche Gesellschaft für Akustik (DAGA 2023), Hamburg, Germany",
    "tp": "xr",
-   "d": "https://doi.org/10.48550/arXiv.2404.16473",
-   "ab": "We evaluate spatialized audio cues for AR-supported outdoor navigation compared to non-spatial audio and visual-only guidance. Field trials assess route efficiency, situational awareness, workload, and perceived safety. Spatial audio improves turn compliance and reduces visual dependency without increasing distraction, supporting hybrid cue designs for hands-free navigation in real environments."
+   "d": "https://pub.dega-akustik.de/DAGA_2023/data/articles/000424.pdf",
+   "ab": "We evaluate spatialized audio cues for AR-supported outdoor navigation compared to non-spatial audio and visual-only guidance. Field trials assess route efficiency, situational awareness, workload, and perceived safety. Spatial audio improves turn compliance and reduces visual dependency without increasing distraction, supporting hybrid cue designs for hands-free navigation in real environments.",
+   "n": "Preprint at arXiv:2404.16473; this entry cites the published version."
   },
   {
    "id": "2023-01-05-J24",

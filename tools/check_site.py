@@ -366,6 +366,29 @@ def check_project_roles():
                 "in the funding table" % (project["id"], found.group(1).strip(), expected))
 
 
+def check_author_lists():
+    """An author list joins its last two names with one "&", never two.
+
+    Two entries read "Vergari, M. & Voigt-Antons, J.-N. & Möller, S." — a
+    shape no bibliography uses, and one that reads as though the list had been
+    assembled from two pieces. split_authors() happens to survive it, so the
+    generated BibTeX and the schema.org markup were right and only the line a
+    human reads was wrong. That is the kind of error that lives for years.
+    """
+    path = ROOT / "data" / "publications.json"
+    if not path.exists():
+        return
+    for item in json.loads(path.read_text(encoding="utf-8"))["items"]:
+        authors = item.get("a", "")
+        if authors.count(" & ") > 1:
+            problems.append(
+                "data/publications.json: [%s] joins authors with %d ampersands — "
+                "%r" % (item["ref"], authors.count(" & "), authors[-60:]))
+        if authors.strip().endswith(("&", ",")):
+            problems.append("data/publications.json: [%s] author list ends with "
+                            "a separator: %r" % (item["ref"], authors[-30:]))
+
+
 def check_abstracts():
     """No two papers may carry the same abstract, and every one must be shown.
 
@@ -943,6 +966,7 @@ def main():
     check_pdf_fonts()
     check_talks()
     check_project_roles()
+    check_author_lists()
     check_abstracts()
     check_chronology(pages)
     check_label_widths(pages)

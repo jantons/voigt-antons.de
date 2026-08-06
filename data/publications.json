@@ -39,14 +39,13 @@
   },
   "abstracts": {
    "source": "immersive-reality-lab.de (assets/data/reference.js), imported 2026-08-06",
-   "count": 228,
+   "count": 229,
    "matched_by": "DOI first, then title similarity of at least 0.92; never by reference number. The two numbering schemes disagree for 56 entries, so matching on [C84] and the like would have attached a plausible abstract to the wrong paper - the one kind of error nobody would catch by reading.",
    "not_covered": [
     "C63",
     "C64",
     "OC25",
     "OC45",
-    "OC52",
     "OJ6",
     "P1"
    ],
@@ -402,9 +401,11 @@
    "y": 2025,
    "t": "conference",
    "ti": "Designing Adaptive Virtual Health Assistants Using Cognitive and Emotional State Predictions",
-   "a": "Ashrafi, N., Schorlemmer, J., Vona, F., Kojić, T., Hillmann, S., Braytee, A., Wang, Y.-K., Kocaballi, A. B., Moreira, C. & Möller, S. & Voigt-Antons, J.-N.",
+   "a": "Ashrafi, N., Schorlemmer, J., Vona, F., Kojić, T., Hillmann, S., Braytee, A., Wang, Y.-K., Kocaballi, A. B., Moreira, C., Möller, S. & Voigt-Antons, J.-N.",
    "v": "International Conference on Human-Computer Interaction (HCII 2025), pp. 243–253, Springer",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "d": "https://doi.org/10.1007/978-3-032-12764-8_22",
+   "ab": "Adapting users' emotional states to virtual health assistance systems can enhance interaction quality and overall user experience. Virtual characters or avatars, can improve the usability of healthcare applications by making more engaging and personalized re- and interactions. Their appearance, visual characteristics, and voice influence how users perceive both the avatar and the system as a whole. By incorporating facial expressions, gestures, and verbal communication, avatars can take on human-like roles, such as providing counseling, to improve user satisfaction. This study presents the development of photorealistic virtual assistants using Unreal Engine's Metahuman Creator. These avatars adapt their speech and facial expressions based on the user's emotional states. The system synchronizes Metahuman avatars with an AI-powered chatbot, enabling the display of emotions such as happiness, excitement, boredom, and sadness. The avatars displayed on a monitor in landscape mode respond with appropriate expressions and voice tones to create a more natural and engaging conversation. To evaluate the system, we conducted a user study with 21 participants, measuring usability, social presence, emotional response, and trust. Our results in the ATI and UEQ questionnaires indicate that emotion-adaptive avatars significantly enhance experience quality and emotional engagement compared to standard virtual assistants. Future work will focus on automated facial expression detection in real-time and assessing the impact of the system on user engagement, well-being, and adherence to health recommendations."
   },
   {
    "id": "2025-06-01-OC50",
@@ -721,7 +722,7 @@
    "y": 2024,
    "t": "conference",
    "ti": "VR Cloud Gaming UX: Exploring the Impact of Network Quality on Emotion, Presence, Game Experience and Cybersickness",
-   "a": "Warsinke, M., Kojic, T., Vergari, M. & Voigt-Antons, J.-N. & Möller, S.",
+   "a": "Warsinke, M., Kojic, T., Vergari, M., Voigt-Antons, J.-N. & Möller, S.",
    "v": "Paper presented at the 23rd IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2024), Greater Seattle Area, USA",
    "tp": "qoe",
    "d": "https://doi.org/10.1109/ISMAR-Adjunct64951.2024.00166",

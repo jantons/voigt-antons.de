@@ -1,19 +1,7 @@
 # Publikationen ohne Abstract
 
 Stand 2026-08-06. Auf voigt-antons.de und auf immersive-reality-lab.de
-fehlt bei diesen Eintraegen das Abstract; die uebrigen 228 haben eines.
-
-## [OC52] Designing Adaptive Virtual Health Assistants Using Cognitive and Emotional State Predictions
-
-- Jahr:     2025
-- Typ:      conference
-- Autoren:  Ashrafi, N., Schorlemmer, J., Vona, F., Kojić, T., Hillmann, S., Braytee, A., Wang, Y.-K., Kocaballi, A. B., Moreira, C. & Möller, S. & Voigt-Antons, J.-N.
-- Venue:    International Conference on Human-Computer Interaction (HCII 2025), pp. 243–253, Springer
-- DOI:      keine
-
-Abstract:
-
-
+fehlt bei diesen Eintraegen das Abstract; die uebrigen 229 haben eines.
 
 ## [OJ6] Der Einsatz von vielversprechenden Technologien in der klinisch-psychologischen Diagnostik: Fokus auf KI und XR
 

@@ -1,19 +1,7 @@
 # Publikationen ohne Abstract
 
 Stand 2026-08-06. Auf voigt-antons.de und auf immersive-reality-lab.de
-fehlt bei diesen Eintraegen das Abstract; die uebrigen 227 haben eines.
-
-## [P2] Vernetzte und intelligente Medizintechnik als Treiber eines modernen Gesundheitssystems
-
-- Jahr:     2026
-- Typ:      position
-- Autoren:  Anstädt, T., Becker, K., Calmer, B., Czaplik, M., Friedrich, P., Hübschen, M., Kumbroch, A., Meyer, M., Ruwwe-Glösenkamp, K., Schmoldt, D., Voigt-Antons, J.-N., Weber, P. & Wolff, D.
-- Venue:    VDE Positionspapier. Offenbach am Main: VDE Verband der Elektrotechnik Elektronik Informationstechnik e.V. (VDE DGBMT)
-- DOI:      https://www.vde.com/dgbmt
-
-Abstract:
-
-
+fehlt bei diesen Eintraegen das Abstract; die uebrigen 228 haben eines.
 
 ## [OC52] Designing Adaptive Virtual Health Assistants Using Cognitive and Emotional State Predictions
 

@@ -39,7 +39,7 @@
   },
   "abstracts": {
    "source": "immersive-reality-lab.de (assets/data/reference.js), imported 2026-08-06",
-   "count": 227,
+   "count": 228,
    "matched_by": "DOI first, then title similarity of at least 0.92; never by reference number. The two numbering schemes disagree for 56 entries, so matching on [C84] and the like would have attached a plausible abstract to the wrong paper - the one kind of error nobody would catch by reading.",
    "not_covered": [
     "C63",
@@ -48,8 +48,7 @@
     "OC45",
     "OC52",
     "OJ6",
-    "P1",
-    "P2"
+    "P1"
    ],
    "note": "Abstracts are shown as supplied by the lab site. Where a publisher holds the abstract, the DOI link next to it is the authoritative version."
   }
@@ -121,7 +120,8 @@
    "a": "Anstädt, T., Becker, K., Calmer, B., Czaplik, M., Friedrich, P., Hübschen, M., Kumbroch, A., Meyer, M., Ruwwe-Glösenkamp, K., Schmoldt, D., Voigt-Antons, J.-N., Weber, P. & Wolff, D.",
    "v": "VDE Positionspapier. Offenbach am Main: VDE Verband der Elektrotechnik Elektronik Informationstechnik e.V. (VDE DGBMT)",
    "tp": "digital-health",
-   "d": "https://www.vde.com/dgbmt"
+   "d": "https://www.vde.com/dgbmt",
+   "ab": "Die Digitalisierung des Gesundheitswesens steht an einem Wendepunkt. Während administrative Prozesse zunehmend digitalisiert werden, bleibt das Potenzial vernetzter Medizintechnik in der klinischen Versorgung weitgehend ungenutzt. Dabei verfügen moderne Medizingeräte über die Fähigkeit, kontinuierlich hochwertige Vital-, Bild- und Sensordaten zu erfassen, lokal vorzuverarbeiten und zunehmend auch KI-gestützt zu interpretieren. Diese Daten bilden die Grundlage für eine präzisere, schnellere und sicherere Patientenversorgung – vorausgesetzt, sie können interoperabel, sicher und kontextbezogen genutzt werden. Zwei zentrale Anwendungsszenarien verdeutlichen das Potenzial: Erstens ermöglicht die kontinuierliche Überwachung von Vitalparametern eine frühzeitige Erkennung kritischer Zustände wie Sepsis, kardiale Dekompensation oder Ateminsuffizienz. KI gestützte Analysen identifizieren Muster und Abweichungen vom individuellen Patientenbaseline und priorisieren Alarme, wodurch Reaktionszeiten verkürzt und Komplikationen reduziert werden. Zweitens eröffnen adaptive Therapie- und Rehabilitationssysteme neue Möglichkeiten der personalisierten Versorgung. Neuroprothesen, Functional Electrical Stimulation (FES) Systeme oder Closed Loop Stimulationsverfahren passen Therapieparameter in Echtzeit an physiologische Veränderungen an und verbessern so Funktionalität, Therapieeffizienz und Patientenzufriedenheit. Trotz dieser Potenziale ist die Einführung vernetzter Medizintechnik in Krankenhäusern bislang fragmentiert. Technische Heterogenität, fehlende Interoperabilität, organisatorische Trennlinien zwischen Medizintechnik und IT, Fachkräftemangel sowie unklare Verantwortlichkeiten erschweren Integration und Betrieb. Hinzu kommen regulatorische Anforderungen, Haftungsfragen und fehlende klinische Evidenz für KI basierte Anwendungen. Die Folge sind Insellösungen, lange Integrationszeiten und eine geringe Skalierung erfolgreicher Pilotprojekte. Um Medizintechnik als Treiber der Digitalisierung zu etablieren, müssen Hersteller, Krankenhäuser und Politik gemeinsam handeln. Hersteller sollten offene, standardkonforme Schnittstellen (z. B. [HL7-FHIR], [SDC], [DIN EN ISO/IEEE 11073]), semantische Interoperabilität und robuste Security Lifecycle Prozesse bereitstellen. Krankenhäuser benötigen klare Digitalisierungsstrategien, Governance Strukturen, modulare Integrationsarchitekturen und gezielte Qualifizierungsmaßnahmen. Gemeinsame Pilotprojekte, standardisierte Testumgebungen und vertragliche Klarheit zu Updates, Security und Haftung sind entscheidend für eine erfolgreiche Skalierung. Die Politik spielt eine zentrale Rolle, indem sie interoperabilitätsorientierte Rahmenbedingungen schafft, Investitionen in digitale Infrastruktur fördert und regulatorische Klarheit für KI basierte Medizinprodukte sicherstellt. Förderprogramme sollten stärker auf Interoperabilität, Standardisierung und nachhaltige Betriebsmodelle ausgerichtet werden. Gleichzeitig müssen Qualifizierungsprogramme für Medizintechnik, IT, Pflege und klinisches Personal ausgebaut werden, um die digitale Transformation im Versorgungsalltag zu verankern. Ein besonderer Fokus liegt auf der elektronischen Patientenakte (ePA). Für das Ziel „ePA für alle“ müssen Krankenhäuser in Netz- und Serverinfrastruktur, FHIR Schnittstellen, Geräteadapter, Integrationsprojekte, Datenschutz und Schulungen investieren. Realistische Amortisationszeiträume liegen bei 6–36 Monaten, abhängig von IT Reifegrad, Prozessoptimierung und Abrechnungsgewinnen. Pilotprojekte mit klaren KPIs – etwa zur Reduktion redundanter Diagnostik oder zur Beschleunigung der Entlassprozesse – können die ROI-Zeit deutlich verkürzen. Medizintechnikhersteller sind technisch grundsätzlich in der Lage, hochwertige Daten bereitzustellen. Die größten Lücken liegen jedoch in der Anwendung von einheitlichen standardisierten Schnittstellen, semantischer Konsistenz, Security Lifecycle Management und klinischer Validierung. Hersteller, die diese Lücken systematisch schließen, schaffen nicht nur Mehrwert für Kliniken, sondern reduzieren Integrationsaufwand, Supportkosten und Haftungsrisiken – und erhöhen damit die Marktakzeptanz ihrer Produkte."
   },
   {
    "id": "2026-04-01-C99",

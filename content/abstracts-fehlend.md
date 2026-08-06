@@ -1,43 +1,7 @@
 # Publikationen ohne Abstract
 
 Stand 2026-08-06. Auf voigt-antons.de und auf immersive-reality-lab.de
-fehlt bei diesen Eintraegen das Abstract; die uebrigen 224 haben eines.
-
-## [C105] The Three-Body Problem of Collaboration: Effects of Asymmetric Physical Co-Presence in Augmented Reality
-
-- Jahr:     2026
-- Typ:      conference
-- Autoren:  Vona, F., Stern, M., Moreira, C., Vergari, M., Jorge, J., & Voigt-Antons, J.-N.
-- Venue:    Paper presented at the 25th IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2026), Bari, Italy
-- DOI:      keine
-
-Abstract:
-
-
-
-## [J37] Out-of-home mobility enhancement by a physiotherapist-led motivational counseling intervention among rural community-dwelling older adults 75+: The MOBILE RCT
-
-- Jahr:     2026
-- Typ:      journal
-- Autoren:  Haeger, C., Mümken, S. A., Spang, R. P., Brauer, M., O’Sullivan, J. L., Lech, S., Xue, Q.-L., Stockburger, M., Keller, J., Voigt-Antons, J.-N. & Gellert, P.
-- Venue:    BMC Geriatrics, 26, 481
-- DOI:      https://doi.org/10.1186/s12877-026-07244-w
-
-Abstract:
-
-
-
-## [J39] User Experience and Therapist Effectiveness of Different Virtual Character Types in Virtual Reality Exposure Therapy: A Mixed-Methods Study
-
-- Jahr:     2026
-- Typ:      journal
-- Autoren:  Hallmann, M. C., Peperkorn, N. L., Vona, F., Shiban, Y. & Voigt-Antons, J.-N.
-- Venue:    JMIR XR Spatial Comput
-- DOI:      https://doi.org/10.2196/81537
-
-Abstract:
-
-
+fehlt bei diesen Eintraegen das Abstract; die uebrigen 227 haben eines.
 
 ## [P2] Vernetzte und intelligente Medizintechnik als Treiber eines modernen Gesundheitssystems
 

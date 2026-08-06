@@ -39,14 +39,11 @@
   },
   "abstracts": {
    "source": "immersive-reality-lab.de (assets/data/reference.js), imported 2026-08-06",
-   "count": 224,
+   "count": 227,
    "matched_by": "DOI first, then title similarity of at least 0.92; never by reference number. The two numbering schemes disagree for 56 entries, so matching on [C84] and the like would have attached a plausible abstract to the wrong paper - the one kind of error nobody would catch by reading.",
    "not_covered": [
-    "C105",
     "C63",
     "C64",
-    "J37",
-    "J39",
     "OC25",
     "OC45",
     "OC52",
@@ -90,7 +87,8 @@
    "ti": "The Three-Body Problem of Collaboration: Effects of Asymmetric Physical Co-Presence in Augmented Reality",
    "a": "Vona, F., Stern, M., Moreira, C., Vergari, M., Jorge, J., & Voigt-Antons, J.-N.",
    "v": "Paper presented at the 25th IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2026), Bari, Italy",
-   "tp": "xr"
+   "tp": "xr",
+   "ab": "Augmented Reality (AR) enables hybrid collaboration, where some participants share a physical space while others join remotely. However, it remains unclear how the presence of even a single remote participant reshapes the collaborative dynamics of hybrid AR groups. We present a controlled user study examining how spatial configuration influences collaboration in shared AR environments. Thirty-six participants worked in triads to solve a cooperative puzzle task across five configurations, ranging from fully co-located to fully remote, using Meta Quest head-mounted displays. We measured task performance, user experience, social presence, and communication behavior. Task performance remained stable across conditions, indicating that AR can support collaborative task execution even when participants are physically distributed. In contrast, spatial configuration significantly affected the collaborative experience: fully remote collaboration increased workload and reduced pragmatic usability, while perceived co-presence was highest when all collaborators were co-located. Notably, the presence of a single remote participant significantly reduced co-presence to levels indistinguishable from fully distributed collaboration. This reveals a structural asymmetry in hybrid AR collaboration: even a single remote participant substantially lowers perceived co-presence across the group."
   },
   {
    "id": "2026-06-01-C102",
@@ -215,7 +213,8 @@
    "a": "Haeger, C., Mümken, S. A., Spang, R. P., Brauer, M., O’Sullivan, J. L., Lech, S., Xue, Q.-L., Stockburger, M., Keller, J., Voigt-Antons, J.-N. & Gellert, P.",
    "v": "BMC Geriatrics, 26, 481",
    "tp": "digital-health",
-   "d": "https://doi.org/10.1186/s12877-026-07244-w"
+   "d": "https://doi.org/10.1186/s12877-026-07244-w",
+   "ab": "Background: Out-of-home mobility is crucial for maintaining autonomy and participation in older adults and plays a key role in preventing cognitive decline, social isolation, and frailty. However, there is a notable scarcity of interventional research aimed at promoting out-of-home mobility, particularly in rural areas where environmental barriers to mobility are pronounced and older adults are at risk of limited mobility. This study aimed to evaluate the effectiveness of a physiotherapist-led motivational counselling intervention designed to enhance out-of-home mobility in older adults living in rural communities. Methods: A randomized controlled trial was conducted among community-dwelling older adults aged 75 and above, residing in a rural region of Germany. Participants in the intervention group received motivational counselling focusing on goal setting, social network activation, and the use of regional resources, while the control group received an informational leaflet. The primary outcome, out-of-home mobility (time out of home), was assessed using GPS tracking over seven consecutive days at T0 (baseline), and at T1 and T2 (4 and 12-week follow-ups). Secondary outcomes included GPS-derived convex hull, self-reported life-space mobility, physical activity, depressive symptoms, health status, as well as frailty. Mixed-effects models were employed and effect sizes were estimated using Cohen's d. Results: A total of 212 participants (mean age 81.54 ± 4.0 years) were included, with 108 participants in the intervention group. Both groups showed an increase in out-of-home mobility over time. However, no significant intervention effects were observed at T1 and T2 for either the primary or secondary outcomes (all p > .05). Subgroup analyses revealed significant interaction effects for women, pre-frail/frail individuals, participants aged 81 and older, and those residing in the most rural municipalities (≤ 15,000 inhabitants) for physical activity, health status and life-space mobility. Conclusions: Both, the intervention and control groups exhibited an increase in out-of-home mobility. However, no differential intervention effect was observed, possibly reflecting the already active baseline characteristics of the sample. Subgroup analyses identified significant interaction effects among particular subgroups, pointing towards a greater necessity for targeted interventions in future investigations. Further research is warranted to explore how to effectively improve mobility in older rural populations. Trial registration: The trial was prospectively registered at the DRKS registry on 5 May 2021 (Deutsches Register Klinischer Studien) with the study identity number DRKS00025230. Ethical approval was given by the Ethics Committee of Charité – Universitätsmedizin Berlin (EA1/052/20)."
   },
   {
    "id": "2026-01-01-J38",
@@ -227,7 +226,8 @@
    "v": "JMIR XR Spatial Comput",
    "tp": "digital-health",
    "d": "https://doi.org/10.2196/81537",
-   "n": "In press"
+   "n": "In press",
+   "ab": "Background: Virtual reality exposure therapy (VRET) has emerged as an effective treatment for individuals with specific phobias, particularly for those unable to access traditional exposure therapy. However, for VRET to be fully integrated into clinical practice or the commercial market, several aspects of VRET applications still need further exploration. One such aspect is the impact of embodied conversational agents (ECAs) as virtual therapists on patient experience and treatment effectiveness. Objective: This study aims to investigate how the realism level and species of a virtual therapist influence user experience and perceived therapist effectiveness in a VRET intervention for dog phobia. Methods: We conducted a mixed-methods study where participants interacted with four different virtual character types representing virtual therapists during simulated VRET interventions for dog phobia. The four virtual character types included a realistic adult woman, a stylized adult woman, a stylized cat, and a stylized robot. We collected (1) quantitative data through standardized questionnaires assessing user experience, presence, cybersickness, and perceived therapist effectiveness, and (2) qualitative data via an open-ended preference question at the end of the study. Results: A total of 40 participants completed the experiment. The realistic human scored significantly lower in hedonic quality than the stylized human (z = 2.53, p = .011, padj = .015), the robot (z = 2.726, p = .006, padj = .012), and the cat (z = 3.772, p < .001, padj = .004). Additionally, the cat scored higher in hedonic quality than the stylized human (z = 2.528, p = .015, padj = .015). While no significant differences were found among the virtual character types regarding trust or willingness to share information, the therapeutic relationship skills of the robot were rated significantly lower than those of the stylized human (z = -2.315, p = .021, padj = .021). However, when asked to indicate a preferred virtual therapist, 30% of participants chose the robot, 27.5% the stylized human, 25% the cat, and 17.5% the realistic human, making the latter the least favored preferred option. Conclusions: The realistic human was the least suitable virtual therapist, likely due to the Uncanny Valley effect, which suggests a preference for stylized over realistic human characters when working with low-budget models. The cat's higher hedonic quality, and the robot's popularity highlight the importance of tailoring virtual therapist designs to clinical contexts and patient demographics. These findings underscore the need for further research into optimizing virtual therapist design for VRET interventions."
   },
   {
    "id": "2026-01-01-J37",

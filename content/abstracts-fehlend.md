@@ -1,19 +1,7 @@
 # Publikationen ohne Abstract
 
 Stand 2026-08-06. Auf voigt-antons.de und auf immersive-reality-lab.de
-fehlt bei diesen Eintraegen das Abstract; die uebrigen 229 haben eines.
-
-## [OJ6] Der Einsatz von vielversprechenden Technologien in der klinisch-psychologischen Diagnostik: Fokus auf KI und XR
-
-- Jahr:     2025
-- Typ:      journal
-- Autoren:  Kuhlencord, M., Ohse, J., Fox, J., Peperkorn, N., Rätsch, M., Voigt-Antons, J.-N. & Shiban, Y.
-- Venue:    Psychologie in Österreich, (4 & 5), 278-285
-- DOI:      keine
-
-Abstract:
-
-
+fehlt bei diesen Eintraegen das Abstract; die uebrigen 230 haben eines.
 
 ## [OC45] Resources of Out-of-Home Mobility among Older Adults in Rural Areas — Results of a GPS/GIS-based Study
 

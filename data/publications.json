@@ -39,14 +39,13 @@
   },
   "abstracts": {
    "source": "immersive-reality-lab.de (assets/data/reference.js), imported 2026-08-06",
-   "count": 229,
+   "count": 230,
    "matched_by": "DOI first, then title similarity of at least 0.92; never by reference number. The two numbering schemes disagree for 56 entries, so matching on [C84] and the like would have attached a plausible abstract to the wrong paper - the one kind of error nobody would catch by reading.",
    "not_covered": [
     "C63",
     "C64",
     "OC25",
     "OC45",
-    "OJ6",
     "P1"
    ],
    "note": "Abstracts are shown as supplied by the lab site. Where a publisher holds the abstract, the DOI link next to it is the authoritative version."
@@ -572,7 +571,8 @@
    "ti": "Der Einsatz von vielversprechenden Technologien in der klinisch-psychologischen Diagnostik: Fokus auf KI und XR",
    "a": "Kuhlencord, M., Ohse, J., Fox, J., Peperkorn, N., Rätsch, M., Voigt-Antons, J.-N. & Shiban, Y.",
    "v": "Psychologie in Österreich, (4 & 5), 278-285",
-   "tp": "digital-health"
+   "tp": "digital-health",
+   "ab": "Jüngste Fortschritte in der Künstlichen Intelligenz (KI) und der Erweiterten Realität (englisch „extended reality“ [XR]) bieten Potenziale, die Diagnostik und Behandlung in der Psychotherapie zu verbessern. KI-gesteuerte Technologien ermöglichen die präzise Analyse großer Datensätze zur Erkennung von Mustern und zur genauen Vorhersage und bietet z. B. im Kontext der Diagnose von Depressionen vielversprechende Einsatzmöglichkeiten. Extended-Reality-(XR)-Technologien wie Virtual Reality (VR) und Augmented Reality (AR) bieten immersive und interaktive Umgebungen, die sowohl in therapeutischen Interventionen als auch in der Diagnostik genutzt werden können. Dieser Überblick hebt das Potenzial von KI und XR in der klinischen Psychologie hervor und beschreibt ihre Vorteile, darunter eine erhöhte Diagnosegenauigkeit und Standardisierung, frühzeitige Erkennung und verbesserte Effizienz. Es werden auch die Einschränkungen und Herausforderungen ihres Einsatzes in der klinisch-psychologischen Praxis behandelt. Darüber hinaus werden ethische Überlegungen und regulatorische Rahmenbedingungen diskutiert, wobei der Fokus auf den neuesten EU-Vorschriften zur KI und deren Auswirkungen auf die klinische Praxis liegt. Zukünftige Trends und Entwicklungen werden ebenfalls beleuchtet."
   },
   {
    "id": "2025-01-01-J31",

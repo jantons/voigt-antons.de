@@ -161,5 +161,22 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # v5, not v4. The runner deprecated Node 20 and now forces those actions
+      # onto Node 24; the run log names this one specifically:
+      #
+      #   "The following actions target Node.js 20 but are being forced to run
+      #    on Node.js 24: actions/deploy-pages@v4"
+      #
+      # The symptom was a deployment that got created and then never left
+      # "deployment_queued": the action's own polling loop stopped seeing the
+      # status change, and gave up after its ten-minute timeout. The build
+      # itself was fine every time — artifact uploaded, check_site.py green —
+      # so the site simply kept serving the previous version while four
+      # commits' worth of changes sat undeployed.
+      #
+      # The single substantive entry in the v5 changelog is "Update Node.js
+      # version to 24.x". upload-pages-artifact stays at v4 on purpose: the
+      # warning does not name it, so it already runs on a supported Node, and
+      # its v5 moves to a newer artifact format — one variable at a time.
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

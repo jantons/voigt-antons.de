@@ -117,6 +117,53 @@ def role_label(project, meta):
     return project.get("role_label", "")
 
 
+
+DETAIL_BEGIN, DETAIL_END = "<!-- BEGIN project-details -->", "<!-- END project-details -->"
+
+
+def detail_blocks(data):
+    """One block per project, all of them, out of the data.
+
+    Twelve of the twenty-four had a hand-written block and twelve had none —
+    which is not a decision anyone made, it is what happens when a list is
+    typed. The short ones now read shorter than the older hand-written ones;
+    that is the honest shape of what is known about a 2016 contract study
+    versus a running EU project, and it is visible rather than hidden behind
+    an absent block.
+    """
+    e = html.escape
+    meta = data["meta"]
+    out = [DETAIL_BEGIN]
+    projects = sorted(data["projects"] + data.get("without_own_volume", []),
+                      key=lambda p: (-int(p["from"]), p["id"]))
+    for p in projects:
+        years = ("%s–%s" % (p["from"], p["to"])) if p["from"] != p["to"] else str(p["from"])
+        tags = "".join('<span class="tag">%s</span>' % e(t) for t in p.get("tags", []))
+        out.append('    <article class="line rv" id="%s">' % e(p["id"]))
+        out.append('      <div class="line-label"><span class="lnum">%s</span><h3>%s</h3>'
+                   '<div class="tags">%s</div></div>' % (years, e(p["short"]), tags))
+        out.append('      <div class="line-body">')
+        out.append('        <p><strong>Role:</strong> %s · <strong>Funding:</strong> %s</p>'
+                   % (e(role_label(p, meta)), e(p["funder"])))
+        # The description is a list of paragraphs and may carry inline markup:
+        # <strong> inside a sentence is part of the sentence. It is curated data
+        # in this repository, not input, so it passes through unescaped — and it
+        # has to, because data/i18n.json is keyed by the rendered string and an
+        # escaped apostrophe would read as a different, untranslated one.
+        for para in p["desc"]:
+            out.append("        <p>%s</p>" % para)
+        if p.get("links"):
+            out.append("        <h4>Links</h4>")
+            out.append("        <ul>%s</ul>" % "".join(
+                '<li><a href="%s">%s</a></li>' % (e(l["url"]), e(l["label"]))
+                for l in p["links"]))
+        out.append("      </div>")
+        out.append("    </article>")
+        out.append("")
+    out.append(DETAIL_END)
+    return "\n".join(out)
+
+
 def sync_detail_roles(text, data):
     """Make the hand-written detail blocks agree with the table above them.
 
@@ -325,7 +372,11 @@ def main():
     text = PAGE.read_text(encoding="utf-8")
     text = replace_block(text, BEGIN_ONGOING, END_ONGOING, build_ongoing(data), PAGE)
     text = replace_block(text, BEGIN, END, build(data), PAGE)
-    text = sync_detail_roles(text, data)
+    text = replace_block(text, DETAIL_BEGIN, DETAIL_END, detail_blocks(data), PAGE)
+    # Nothing left for sync_detail_roles to repair: the blocks are derived
+    # now, so the role in each of them comes from the same field as the
+    # table. The check in check_site.py stays, because it verifies the
+    # rendered page rather than trusting this function.
     PAGE.write_text(text, encoding="utf-8")
 
     home = HOME.read_text(encoding="utf-8")

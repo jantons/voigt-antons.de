@@ -18,7 +18,8 @@
   "funding_lines": 10,
   "funding_lines_note": "Number of distinct funding programmes, maintained by hand — it cannot be derived from the funder column, since several projects share one line.",
   "ongoing_note": "'Ongoing' is derived from the end date, never stored — a project counts as running while (to, to_month) >= (current year, current month). to_month is optional and defaults to 12; give it whenever a project ends mid-year, otherwise the site keeps showing it as active until January. That way the website cannot claim a finished project is still running.",
-  "lab_pages": "Eighteen of these have a fuller description on the lab site. The URL is built from the project id, because the two sites agree on it; lab_id records the handful where they do not, and \"lab\": true marks the ones where they do. Six projects have no lab page — small industry contracts and the post-doctoral fellowship — and simply carry no link. Writing a second description here instead would guarantee the two drift apart, which is the failure this repository keeps finding."
+  "lab_pages": "Eighteen of these have a fuller description on the lab site. The URL is built from the project id, because the two sites agree on it; lab_id records the handful where they do not, and \"lab\": true marks the ones where they do. Six projects have no lab page — small industry contracts and the post-doctoral fellowship — and simply carry no link. Writing a second description here instead would guarantee the two drift apart, which is the failure this repository keeps finding.",
+  "detail_blocks": "Every project has a detail block, generated from tags/desc/links here. They used to be hand-written HTML for twelve of the twenty-four, which is why the other twelve had none."
  },
  "projects": [
   {
@@ -33,7 +34,15 @@
    "partners": "DTHG Service, HSHL",
    "blurb": "Immersive training for theatre technology and vocational education.",
    "funder_short": "EFRE NRW",
-   "lab": true
+   "lab": true,
+   "tags": [
+    "immersive training",
+    "theatre technology",
+    "vocational education"
+   ],
+   "desc": [
+    "Immersive training for theatre technology — a domain where apprentices must learn high-risk rigging and stage-machinery procedures that are expensive and dangerous to practise physically."
+   ]
   },
   {
    "id": "xrt-hufusa",
@@ -47,7 +56,15 @@
    "partners": "HSHL, FH Südwestfalen, WE are XR, Deutsche Windtechnik, PTS Labs",
    "blurb": "XR training and digital twins for critical industries, five partners.",
    "funder_short": "EFRE NRW",
-   "lab_id": "xrt"
+   "lab_id": "xrt",
+   "tags": [
+    "XR training",
+    "digital twins",
+    "critical industries"
+   ],
+   "desc": [
+    "XR training and digital twins for critical industries, including wind-turbine maintenance — with five industry and academic partners."
+   ]
   },
   {
    "id": "silent-bed-monitor",
@@ -60,7 +77,15 @@
    "volume": 218,
    "partners": "5micron",
    "blurb": "Contact-free health monitoring in care, using sensor systems and machine learning.",
-   "lab_id": "sbm"
+   "lab_id": "sbm",
+   "tags": [
+    "home health monitoring",
+    "sensor systems",
+    "machine learning"
+   ],
+   "desc": [
+    "Contact-free monitoring of vital signs and movement in home care settings, designed so that it neither stigmatises nor burdens the person being monitored."
+   ]
   },
   {
    "id": "xrwise",
@@ -74,7 +99,21 @@
    "partners": "HAW Hamburg",
    "blurb": "Business models and pioneering solutions for XR event creation.",
    "funder_short": "BMWE",
-   "lab": true
+   "lab": true,
+   "tags": [
+    "XR",
+    "business models",
+    "event creation"
+   ],
+   "desc": [
+    "Tooling and business models that let non-specialists create XR events — lowering the entry barrier for cultural institutions and SMEs."
+   ],
+   "links": [
+    {
+     "url": "https://xrevent-creator.de",
+     "label": "xrevent-creator.de ↗"
+    }
+   ]
   },
   {
    "id": "ariadne",
@@ -88,7 +127,21 @@
    "volume": 208,
    "partners": "SWCode",
    "blurb": "AR navigation with multimodal UI and personalized routing.",
-   "lab": true
+   "lab": true,
+   "tags": [
+    "AR navigation",
+    "multimodal UI",
+    "personalized routing"
+   ],
+   "desc": [
+    "Augmented reality navigation that adapts its cues — visual, spatial-audio or haptic — to the user and the situation, evaluated in outdoor field studies."
+   ],
+   "links": [
+    {
+     "url": "https://www.hshl.de/forschung-unternehmen/forschungsprojekte/forschungsprojekte-im-themenfeld-mensch-maschine-interaktion/ariadne/",
+     "label": "HSHL project page ↗"
+    }
+   ]
   },
   {
    "id": "fastjets",
@@ -102,7 +155,21 @@
    "partners": "Adams Simulation and Training",
    "blurb": "Emergency-procedure training in XR under realistic stress, with physiological measurement.",
    "funder_short": "German Air Force",
-   "lab": true
+   "lab": true,
+   "tags": [
+    "XR training",
+    "psychophysiology",
+    "aviation safety"
+   ],
+   "desc": [
+    "Emergency-procedure training in XR under realistic stress, with physiological measurement of workload and adaptive resilience — a safety-critical test case for these methods."
+   ],
+   "links": [
+    {
+     "url": "https://www.youtube.com/watch?v=PmYzJgXgXuU",
+     "label": "Study video ↗"
+    }
+   ]
   },
   {
    "id": "virtual-institute",
@@ -115,7 +182,21 @@
    "volume": 290,
    "partners": "South Westphalia UAS, Economic Development Agency Soest District",
    "blurb": "Regional VR/AR knowledge transfer and innovation across South Westphalia.",
-   "lab_id": "virtualinst"
+   "lab_id": "virtualinst",
+   "tags": [
+    "VR/AR",
+    "knowledge transfer",
+    "regional innovation"
+   ],
+   "desc": [
+    "Regional transfer programme bringing VR/AR capability to companies and public institutions across South Westphalia, with a Virtual Institute as the organisational vehicle."
+   ],
+   "links": [
+    {
+     "url": "https://digitalise-swf.de",
+     "label": "digitalise-swf.de ↗"
+    }
+   ]
   },
   {
    "id": "didymos-xr",
@@ -129,7 +210,22 @@
    "partners": "Joanneum Research, CERTH, AUB, Univ. Patras, Ficosa, TU Berlin, FIWARE, idealworks, Capgemini, i2CAT, Trilateral Research, Neàpolis, DigitalTwin Technology",
    "blurb": "Dynamic and responsible digital twins for extended reality, 13 European partners.",
    "funder_short": "Horizon Europe",
-   "lab_id": "didymos"
+   "lab_id": "didymos",
+   "tags": [
+    "digital twins",
+    "XR",
+    "AI",
+    "ethics-by-design"
+   ],
+   "desc": [
+    "Dynamic and responsible digital twins for extended reality: building twins that stay synchronised with the physical world and are evaluated for user experience, not only for geometric fidelity. Two innovations from this project were recognised as <strong>Key Innovator</strong> entries on the European Commission's Innovation Radar in 2024."
+   ],
+   "links": [
+    {
+     "url": "https://didymos-xr.eu/",
+     "label": "didymos-xr.eu ↗"
+    }
+   ]
   },
   {
    "id": "digiontrack",
@@ -144,7 +240,21 @@
    "blurb": "Predictive maintenance for rail infrastructure, sensors and machine learning.",
    "funder_short": "mFUND / BMDV",
    "spelling": "DigiOnTrack, confirmed against the grant documents. Der Patriot printed „Digi-on-track“ in 2023 and „Digi on Track“ in 2025; both are the newspaper's, not the project's.",
-   "lab": true
+   "lab": true,
+   "tags": [
+    "predictive maintenance",
+    "rail monitoring",
+    "machine learning"
+   ],
+   "desc": [
+    "Predictive maintenance for rail infrastructure, combining sensor-based condition monitoring with user-centred design of the labelling and decision-support interfaces that operators use."
+   ],
+   "links": [
+    {
+     "url": "https://www.hshl.de/forschung-unternehmen/forschungsprojekte/forschungsprojekte-im-themenfeld-mensch-maschine-interaktion/digiontrack/",
+     "label": "HSHL project page ↗"
+    }
+   ]
   },
   {
    "id": "body-interaction-lab",
@@ -155,7 +265,15 @@
    "funder": "HSHL",
    "role": "sole",
    "volume": 246,
-   "partners": ""
+   "partners": "",
+   "tags": [
+    "laboratory",
+    "infrastructure"
+   ],
+   "desc": [
+    "Equipment funding for the Body Interaction Lab at Hamm-Lippstadt University of Applied Sciences."
+   ],
+   "desc_source": "project title and funder only; no fuller description exists"
   },
   {
    "id": "mia-prom",
@@ -169,7 +287,22 @@
    "partners": "Charité Berlin, HM Munich, TU Berlin, HSHL, Dexter Health, Acalta, ZAR Berlin, Seehof Berlin",
    "blurb": "Multimodal assistants for digital collection of patient-reported outcomes.",
    "funder_short": "BMBF / KIAS",
-   "lab_id": "miaprom"
+   "lab_id": "miaprom",
+   "tags": [
+    "digital health",
+    "PROM",
+    "virtual assistant",
+    "accessibility"
+   ],
+   "desc": [
+    "Multimodal, interactive assistance for the digital collection of patient-reported outcome measures — comparing embodied avatars, robots and voice assistants in rehabilitation settings, with cross-randomised controlled trials at Charité Berlin and partner clinics."
+   ],
+   "links": [
+    {
+     "url": "https://mia-prom.de",
+     "label": "mia-prom.de ↗"
+    }
+   ]
   },
   {
    "id": "art",
@@ -181,7 +314,16 @@
    "role": "subproject",
    "volume": 299,
    "partners": "Politecnico di Milano, TIM, FifthIngenium",
-   "lab": true
+   "lab": true,
+   "tags": [
+    "AR tourism",
+    "cultural heritage",
+    "5G streaming"
+   ],
+   "desc": [
+    "Augmented and virtual reality for cultural tourism after COVID-19 — smarter and more sustainable access to attractions, delivered through AR, VR and cloud applications for travel and event operators."
+   ],
+   "desc_source": "condensed from the project description on immersive-reality-lab.de"
   },
   {
    "id": "bgf-pflege",
@@ -193,7 +335,16 @@
    "role": "co",
    "volume": 39,
    "partners": "Charité Berlin, Johanniter-Stift Berlin-Johannisthal",
-   "lab_id": "bgf"
+   "lab_id": "bgf",
+   "tags": [
+    "workplace health",
+    "residential care",
+    "assessment tools"
+   ],
+   "desc": [
+    "An assessment tool for residents and a self-evaluation tool for staff in residential long-term care, identifying resources and burdens from the perspective of the people concerned."
+   ],
+   "desc_source": "condensed from the project description on immersive-reality-lab.de"
   },
   {
    "id": "mobil-havelland",
@@ -205,7 +356,16 @@
    "role": "co",
    "volume": 61,
    "partners": "Charité Berlin, Havelland Kliniken",
-   "lab_id": "mih"
+   "lab_id": "mih",
+   "tags": [
+    "mobility",
+    "rural health",
+    "randomised trial"
+   ],
+   "desc": [
+    "A junior research group on mobility and participation of very old people in rural areas, testing a tablet-supported health intervention in a randomised trial with GPS-measured mobility as the endpoint."
+   ],
+   "desc_source": "condensed from the project description on immersive-reality-lab.de"
   },
   {
    "id": "huawei-workload",
@@ -216,7 +376,15 @@
    "funder": "Huawei",
    "role": "sole",
    "volume": 194,
-   "partners": ""
+   "partners": "",
+   "tags": [
+    "workload",
+    "physiological measurement"
+   ],
+   "desc": [
+    "Contract research for Huawei on physiological measurement methods for assessing workload."
+   ],
+   "desc_source": "project title and funder only; no fuller description exists"
   },
   {
    "id": "health-score",
@@ -227,7 +395,15 @@
    "funder": "e-Therapists GmbH",
    "role": "sole",
    "volume": 20,
-   "partners": ""
+   "partners": "",
+   "tags": [
+    "digital health",
+    "behaviour"
+   ],
+   "desc": [
+    "Contract research for e-Therapists GmbH on the behavioural implications of a health score."
+   ],
+   "desc_source": "project title and funder only; no fuller description exists"
   },
   {
    "id": "demtab",
@@ -239,7 +415,16 @@
    "role": "subproject",
    "volume": 501,
    "partners": "Charité Berlin",
-   "lab": true
+   "lab": true,
+   "tags": [
+    "dementia care",
+    "tablet intervention",
+    "clinical guidelines"
+   ],
+   "desc": [
+    "A tablet-based intervention for outpatient dementia care, supporting guideline-based treatment planning for general practitioners and disease management for patients and their relatives."
+   ],
+   "desc_source": "condensed from the project description on immersive-reality-lab.de"
   },
   {
    "id": "voiceadapt",
@@ -251,7 +436,16 @@
    "role": "coordinator",
    "volume": 256,
    "partners": "University of Toronto, University of Alberta, NuroGames, AIT",
-   "lab": true
+   "lab": true,
+   "tags": [
+    "aphasia",
+    "adaptive software",
+    "speech training"
+   ],
+   "desc": [
+    "Adaptive speech training for older people with aphasia: software that detects impaired language ability and personalises interface and interaction logic accordingly, validated in a control-group study."
+   ],
+   "desc_source": "condensed from the project description on immersive-reality-lab.de"
   },
   {
    "id": "gesobau",
@@ -262,7 +456,15 @@
    "funder": "GESOBAU AG",
    "role": "sole",
    "volume": 9,
-   "partners": ""
+   "partners": "",
+   "tags": [
+    "concept development",
+    "workshops"
+   ],
+   "desc": [
+    "Contract research for GESOBAU AG: workshops for concept development."
+   ],
+   "desc_source": "project title and funder only; no fuller description exists"
   },
   {
    "id": "augletics",
@@ -273,7 +475,15 @@
    "funder": "Augletics GmbH",
    "role": "sole",
    "volume": 3,
-   "partners": ""
+   "partners": "",
+   "tags": [
+    "motivation",
+    "exercise equipment"
+   ],
+   "desc": [
+    "Contract research for Augletics GmbH on the motivation of rowing-machine users."
+   ],
+   "desc_source": "project title and funder only; no fuller description exists"
   },
   {
    "id": "postdoc-fellowship",
@@ -284,7 +494,15 @@
    "funder": "TU Berlin",
    "role": "sole",
    "volume": 74,
-   "partners": ""
+   "partners": "",
+   "tags": [
+    "fellowship",
+    "psychophysiology"
+   ],
+   "desc": [
+    "Post-doctoral fellowship at Technische Universität Berlin."
+   ],
+   "desc_source": "project title and funder only; no fuller description exists"
   },
   {
    "id": "pflegetab",
@@ -296,7 +514,16 @@
    "role": "subproject",
    "volume": 304,
    "partners": "Charité Berlin, DOMICIL Seniorenpflegeheim Am Schlosspark",
-   "lab": true
+   "lab": true,
+   "tags": [
+    "dementia care",
+    "tablet intervention",
+    "activation"
+   ],
+   "desc": [
+    "A transferable model for technology-supported care and activation in residential dementia care, developed and scientifically evaluated in use."
+   ],
+   "desc_source": "condensed from the project description on immersive-reality-lab.de"
   }
  ],
  "without_own_volume": [
@@ -310,7 +537,15 @@
    "partners": "UFSC Brazil, Saitama University, Suranaree University of Technology, KIIT, Wirtschaftsförderung Lippstadt, Stadt Hamm",
    "short": "INFUSE",
    "blurb": "International, inclusive learning and future skills across four continents.",
-   "lab": true
+   "lab": true,
+   "tags": [
+    "international education",
+    "inclusive learning",
+    "future skills"
+   ],
+   "desc": [
+    "International teaching and exchange network spanning Brazil, Japan, Thailand and India, with regional partners in Hamm and Lippstadt."
+   ]
   },
   {
    "id": "bernstein",
@@ -322,7 +557,17 @@
    "partners": "Charité Berlin, Physikalisch-Technische Bundesanstalt",
    "short": "Bernstein Focus",
    "blurb": "Neurotechnologies for intuitive and efficient human–machine interaction.",
-   "lab_id": "bfn"
+   "lab_id": "bfn",
+   "tags": [
+    "neurotechnology",
+    "brain reading",
+    "biosignals",
+    "usability"
+   ],
+   "desc": [
+    "Neurotechnologies for improving intuitive and efficient human–machine interaction. The Bernstein Focus: Neurotechnology Berlin brought together a multidisciplinary faculty to apply insights from basic neuroscience directly to real-world applications, with a focus on non-invasive „brain reading\" techniques.",
+    "Within it, project A3 <em>„Neuro-Usability\": Neurotechnologies for Human-Machine Interaction</em> used biosignal sensors to measure and model aspects of usability — efficiency, satisfaction and joy of use. This is where my psychophysiological measurement approach originates."
+   ]
   }
  ]
 }

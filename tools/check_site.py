@@ -366,6 +366,29 @@ def check_project_roles():
                 "in the funding table" % (project["id"], found.group(1).strip(), expected))
 
 
+def check_every_project_has_a_block():
+    """No project may be listed in the table and then absent below it.
+
+    Twelve of twenty-four had a detail block and twelve had none — not a
+    decision, just what happens when blocks are typed one at a time. The
+    funding table names every project, so a missing block reads as an omission
+    about the project rather than about the page.
+    """
+    path = ROOT / "data" / "projects.json"
+    page = ROOT / "projects" / "index.html"
+    if not (path.exists() and page.exists()):
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    text = page.read_text(encoding="utf-8")
+    for project in data["projects"] + data.get("without_own_volume", []):
+        if not project.get("desc"):
+            problems.append("data/projects.json: %s has no description"
+                            % project["id"])
+        if 'id="%s"' % project["id"] not in text:
+            problems.append("projects/index.html: no detail block for %s — run "
+                            "tools/build_projects.py" % project["id"])
+
+
 def check_blog_freshness():
     """Report when the newest post has gone stale.
 
@@ -1031,6 +1054,7 @@ def main():
     check_pdf_fonts()
     check_talks()
     check_project_roles()
+    check_every_project_has_a_block()
     check_blog_freshness()
     check_unique_dois()
     check_author_lists()

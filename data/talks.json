@@ -29,23 +29,6 @@
    "missing": []
   },
   {
-   "id": "2026-05-16-belfast-horizon-scanning",
-   "date": "2026-05-16",
-   "kind": "invited",
-   "audience": "policy — UK government analysts and policy staff",
-   "title": "Introduction and selected research topics",
-   "title_en": null,
-   "event": "Metaverse Horizon Scanning workshop",
-   "city": "Belfast",
-   "country": "UK",
-   "partner": "Queen's University Belfast",
-   "note": "Follow-on to the 2023 DCMS/UKRI report he co-authored. Recorded here as a talk; the authorship itself is the stronger claim and sits under Standardization & transfer on /cv/.",
-   "missing": [],
-   "commissioner": "UKRI, under the Science and Analysis R&D Programme of the UK Department for Culture, Media & Sport (DCMS)",
-   "role": "external expertise",
-   "report": "2023-07-21-OC36"
-  },
-  {
    "id": "2025-11-19-smart-systems",
    "date": "2025-11-19",
    "kind": "invited",
@@ -105,6 +88,23 @@
    "country": "DE",
    "note": "NExT e.V. is a network of German public authorities; the Chatbot community of practice is made up of public administration staff. Another audience outside computer science — this one inside government.",
    "missing": []
+  },
+  {
+   "id": "2023-05-16-belfast-horizon-scanning",
+   "date": "2023-05-16",
+   "kind": "invited",
+   "audience": "policy — UK government analysts and policy staff",
+   "title": "Introduction and selected research topics",
+   "title_en": null,
+   "event": "Metaverse Horizon Scanning workshop",
+   "city": "Belfast",
+   "country": "UK",
+   "partner": "Queen's University Belfast",
+   "note": "Part of the work that produced the DCMS/UKRI report published on 21 July 2023, not a follow-up to it — the workshop came two months earlier. The entry said the opposite while the date was wrong, which is how one wrong field quietly rewrites a story.",
+   "missing": [],
+   "commissioner": "UKRI, under the Science and Analysis R&D Programme of the UK Department for Culture, Media & Sport (DCMS)",
+   "role": "external expertise",
+   "report": "2023-07-21-OC36"
   },
   {
    "id": "2023-04-19-digitalise-swf-kickoff",

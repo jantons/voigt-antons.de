@@ -14,6 +14,21 @@
  },
  "talks": [
   {
+   "id": "2026-09-15-westfaelischer-zukunftsdialog",
+   "date": "2026-09-15",
+   "kind": "invited",
+   "format": "short interview on stage, moderated by Dr. Marie-Theres Thiell",
+   "audience": "regional politics and business",
+   "title": "DIDYMOS-XR: Dynamische digitale Zwillinge in Extended Reality — realisiert am Smart Village Etteln",
+   "title_en": "DIDYMOS-XR: dynamic digital twins in extended reality, built at the smart village of Etteln",
+   "event": "Westfälischer Zukunftsdialog, Westfalen e.V. mit der Hochschule Hamm-Lippstadt",
+   "city": "Hamm",
+   "country": "DE",
+   "project": "didymos-xr",
+   "note": "Invited by Westfalen e.V., hosted at his own university — so not a purely external invitation, and the entry says so. The audience is what makes it worth listing: two mayors, a member of the Bundestag and the Gaia-X managing director, with the Westfälische Agenda 2030 as the occasion. One of two research projects chosen for the programme.",
+   "missing": []
+  },
+  {
    "id": "2026-05-16-belfast-horizon-scanning",
    "date": "2026-05-16",
    "kind": "invited",

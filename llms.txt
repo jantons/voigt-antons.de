@@ -56,4 +56,4 @@ Languages: English (this site), German (under https://voigt-antons.de/de/)
   page is authoritative and this file is stale — please report it.
 - The legal notice at https://voigt-antons.de/impressum/ is excluded in robots.txt.
 
-Last generated: 2026-08-07
+Last generated: 2026-08-08

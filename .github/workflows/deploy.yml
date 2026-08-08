@@ -110,8 +110,15 @@ jobs:
           python3 tools/build_redirects.py
           python3 tools/build_sitemap.py
 
+      # Never publish generated output that failed its own integrity checks.
+      # Pull requests are validation-only; the post-merge push regenerates and
+      # commits the same files on the default branch.
+      - name: Check links, anchors and structured data
+        run: python3 tools/check_site.py
+
       - name: Commit generated pages
         id: commit
+        if: github.event_name != 'pull_request'
         # Commits are made with GITHUB_TOKEN, which by design does not trigger
         # another workflow run — so this cannot loop.
         run: |
@@ -141,9 +148,6 @@ jobs:
           from the freshly generated files, but the repository now lags behind. Check \
           Settings -> Actions -> General -> Workflow permissions (needs read and write)."
           fi
-
-      - name: Check links, anchors and structured data
-        run: python3 tools/check_site.py
 
       - uses: actions/configure-pages@v5
         if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && github.event_name != 'pull_request'

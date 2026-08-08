@@ -1,7 +1,8 @@
 # voigt-antons.de — persönliche Website
 
-Statische Website ohne Build-Kette, ohne Framework, ohne Abhängigkeiten. Direkt auf GitHub Pages
-lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Detailseiten.
+Statische Website ohne Framework und ohne Laufzeitabhängigkeiten im Browser. Die Python-Skripte
+im Repository erzeugen abgeleitete Seiten und Dokumente; GitHub Actions veröffentlicht das
+Ergebnis direkt auf GitHub Pages.
 
 ---
 
@@ -13,14 +14,14 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── 404.html                    Fehlerseite (GitHub Pages nutzt sie automatisch)
 ├── .nojekyll                   verhindert Jekyll-Verarbeitung
 ├── robots.txt
-├── sitemap.xml                 generiert, 253 URLs
+├── sitemap.xml                 generiert aus Seiten- und Publikationsquellen
 │
 ├── assets/
 │   ├── style.css               gemeinsames Stylesheet (Light-first + Dark-Toggle)
 │   └── main.js                 Theme-Toggle, Mobile-Nav, Scroll-Reveal
 │
 ├── data/
-│   ├── publications.json       234 Einträge — Quelle für alles Publikationsbezogene
+│   ├── publications.json       235 Einträge — Quelle für alles Publikationsbezogene
 │   ├── projects.json           22 Drittmittelvorhaben — Quelle für Seite UND Bewerbung
 │   ├── i18n.json               deutsche Übersetzungen, Schlüssel = englischer Satz
 │   ├── posts.json              generiert aus content/posts/
@@ -36,10 +37,10 @@ lauffähig. Ein einziges optionales Python-Skript generiert die Publikations-Det
 ├── blog/index.html             Übersicht mit Tag-Filter
 ├── tags/index.html             Weiterleitung alter /tags/#slug-Links
 ├── impressum/index.html        Impressum + Datenschutz (vollständig)
-├── de/                         deutsche Fassung der fünf Kernseiten (generiert)
+├── de/                         deutsche Fassungen der übersetzten Seiten (generiert)
 │
-├── publication/<id>/index.html 234 generierte Detailseiten mit BibTeX
-├── posts/JJJJ/MM/<slug>/       5 generierte Beitragsseiten
+├── publication/<id>/index.html generierte Detailseiten mit BibTeX
+├── posts/JJJJ/MM/<slug>/       generierte Beitragsseiten
 └── tools/
     ├── build_publication_pages.py
     ├── build_posts.py
@@ -115,8 +116,9 @@ ein einmaliges Asset, das committet wird.
 
 ### Zweisprachigkeit
 
-Fünf Kernseiten gibt es auf Deutsch: `/de/`, `/de/research/`, `/de/projects/`, `/de/cv/`,
-`/de/teaching/`. Publikationsliste, die 234 Detailseiten und der Blog bleiben englisch —
+Folgende Seiten gibt es auf Deutsch: `/de/`, `/de/research/`, `/de/research/statement/`,
+`/de/projects/`, `/de/cv/`, `/de/teaching/` und `/de/press/`. Publikationsliste, die
+Detailseiten und der Blog bleiben englisch —
 Titel, Venues und Abstracts sind es ohnehin, und eine übersetzte Literaturangabe wäre
 unbrauchbar zum Zitieren.
 
@@ -155,12 +157,12 @@ stattdessen steht oben ein kurzer englischer Hinweis.
 
 `tools/check_site.py` prüft: jede Kernseite hat ihr deutsches Gegenstück, `lang="de"`, korrekte
 Canonical, wechselseitige hreflang-Paare auf **beiden** Seiten, Umschalter vorhanden, keine leere
-Übersetzung, die drei englischen Seiten haben einen Rückweg nach `/de/` — und die Kennzahlen auch
-in deutscher Schreibweise („2.987 Zitationen", „h-Index").
+Übersetzung, die englischsprachigen Seiten haben einen Rückweg nach `/de/` — und die Kennzahlen
+auch in deutscher Schreibweise („2.987 Zitationen", „h-Index").
 
-Neue Seite zweisprachig machen: Pfad in `PAGES` in `tools/build_i18n.py` und in `TRANSLATED` in
-`tools/build_sitemap.py` eintragen, Skript laufen lassen, die gemeldeten Sätze in
-`data/i18n.json` ergänzen.
+Neue Seite zweisprachig machen: Pfad in `PAGES` in `tools/build_i18n.py` eintragen, Skript laufen
+lassen und die gemeldeten Sätze in `data/i18n.json` ergänzen. Sitemap und Prüfskript lesen diese
+Liste direkt, damit keine zweite Pfadliste veralten kann.
 
 ### Schriften kommen von dieser Domain, nicht von Google
 
@@ -215,7 +217,7 @@ Unter `/downloads/` liegen drei Dokumente in je zwei Sprachen:
 | Datei | Inhalt | Quelle |
 |---|---|---|
 | `cv.pdf` · `cv-de.pdf` | Lebenslauf, 5 Seiten | `cv/index.html` + JSON |
-| `publications.pdf` · `-de` | alle 234 Publikationen nach Kategorien, 13 Seiten | `data/publications.json` |
+| `publications.pdf` · `-de` | alle 235 Publikationen nach Kategorien, 13 Seiten | `data/publications.json` |
 | `funding.pdf` · `-de` | alle 22 Vorhaben mit Partnern und Rollensummen, 2 Seiten | `data/projects.json` |
 | `statement.pdf` · `-de` | Forschungs- und Lehrkonzept, 3 Seiten | `data/statement.json` |
 
@@ -362,7 +364,7 @@ stand sie in derselben 64 px breiten Spalte wie die Jahreszahl, mit `white-space
 Ihr einziger echter Zweck ist der Abgleich — jemand hält deine Bewerbungsunterlage mit `[C58]`
 in der Hand und sucht dieselbe Arbeit auf der Seite. Das leistet die Volltextsuche, die `ref`
 seit jeher mitdurchsucht; im Suchfeld steht `C58` jetzt als Beispiel. Auf der **Detailseite**
-bleibt die Nummer als Badge sichtbar, auf allen 234.
+bleibt die Nummer als Badge sichtbar, auf allen 235.
 
 Praxisbeweis: Beim Nachtragen von `[J36]` sind drei Nummern verrutscht — geändert wurden vier
 `ref`-Werte, sonst nichts. Keine URL, keine Weiterleitung, kein toter Link.
@@ -384,13 +386,13 @@ die Detailseiten überhaupt, statt nur eine Liste.
 
 ### Datenstand
 
-`data/publications.json` enthält **234 Einträge, 2010–2026** — importiert aus
-`2026-08-03-List_of_publications_Voigt-Antons_full_new.docx`.
+`data/publications.json` enthält **235 Einträge, 2010–2026** — abgeglichen mit
+`2026-08-07-List_of_publications_Voigt-Antons_full_new.docx`.
 
-Aufteilung: 163 Konferenzbeiträge · 45 Journalartikel · 17 Standardisierungsbeiträge ·
+Aufteilung: 164 Konferenzbeiträge · 45 Journalartikel · 17 Standardisierungsbeiträge ·
 5 Buchkapitel · 2 Bücher · 2 VDE-Positionspapiere.
 
-Themen: 65 Psychophysiology · 63 XR · 62 Digital Health · 42 QoE.
+Themen: 65 Psychophysiology · 64 XR · 64 Digital Health · 42 QoE.
 
 Bibliometrie (Google Scholar, 2. August 2026): 2.987 Zitationen · h-Index 29 · i10-Index 83.
 Die Zahlen stehen auf Startseite, Publikationsseite und im CV sowie unter `meta.bibliometrics`
@@ -402,8 +404,8 @@ lange „226 publications" stand, während die Liste längst 234 Einträge hatte
 stehen an vier Stellen von Hand und veralten unbemerkt. Zeilen mit „Scopus" bleiben ausgenommen,
 die zitieren bewusst eine andere Datenbank.
 
-Nummernstand: `B1–B2`, `BC1–BC5`, `C1–C105`, `J1–J39`, `OC1–OC58`, `OJ1–OJ6`, `P1–P2`, `S1–S17` —
-alle 234 Einträge nummeriert, alle Reihen lückenlos, keine Doppelvergabe.
+Nummernstand: `B1–B2`, `BC1–BC5`, `C1–C105`, `J1–J39`, `OC1–OC59`, `OJ1–OJ6`, `P1–P2`, `S1–S17` —
+alle 235 Einträge nummeriert, alle Reihen lückenlos, keine Doppelvergabe.
 `tools/check_site.py` prüft das bei jedem Lauf.
 
 Beim Import aufgefallen:

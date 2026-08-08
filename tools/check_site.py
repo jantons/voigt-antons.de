@@ -22,6 +22,7 @@ import os
 import pathlib
 import re
 import sys
+import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKIP_DIRS = {".git", ".github", ".idea", ".devcontainer", "node_modules", ".claude"}
@@ -671,13 +672,11 @@ def check_i18n():
     for key in empty[:5]:
         problems.append("data/i18n.json: empty translation for %r" % key[:60])
 
-    # Kept in step with PAGES in tools/build_i18n.py — the statement page was
-    # generated but unchecked until it was added here, and a check that lags the
-    # generator is worth little.
-    pairs = [("index.html", "/"), ("research/index.html", "/research/"),
-             ("projects/index.html", "/projects/"), ("cv/index.html", "/cv/"),
-             ("teaching/index.html", "/teaching/"),
-             ("research/statement/index.html", "/research/statement/")]
+    # Import the generator's source of truth. Keeping a second handwritten list
+    # here already let /de/press/ escape every i18n check once.
+    from build_i18n import ENGLISH_ONLY, PAGES
+
+    pairs = list(PAGES.items())
     built = 0
     for page, path in pairs:
         german = ROOT / "de" / page
@@ -715,7 +714,7 @@ def check_i18n():
     # Pages that exist in English only still need a way back to the German
     # section — a visitor who followed "Publikationen" from /de/ would otherwise
     # be stranded in English with no marked route back.
-    for page in ("publications/index.html", "blog/index.html", "404.html"):
+    for page in ENGLISH_ONLY:
         text = (ROOT / page).read_text(encoding="utf-8")
         if 'class="icon-btn lang-switch"' not in text:
             problems.append("%s: no way back to the German section — run "
@@ -723,6 +722,47 @@ def check_i18n():
         elif 'href="/de/"' not in text:
             problems.append("%s: the language switch does not point at /de/" % page)
     return built
+
+
+def check_sitemap(items):
+    """The sitemap lists canonical pages, never redirect stubs.
+
+    Redirects share /publication/ with real entries, so scanning directories
+    included seven noindex pages. The German press and statement pages were
+    missing for the opposite reason: the sitemap kept its own stale i18n list.
+    """
+    path = ROOT / "sitemap.xml"
+    try:
+        tree = ET.parse(path)
+    except (ET.ParseError, OSError) as err:
+        problems.append("sitemap.xml: %s" % err)
+        return
+
+    namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    locations = tree.findall("sm:url/sm:loc", namespace)
+    urls = [node.text.strip() for node in locations if node.text and node.text.strip()]
+    if len(urls) != len(locations):
+        problems.append("sitemap.xml: empty <loc> element")
+    duplicates = sorted(url for url in set(urls) if urls.count(url) > 1)
+    for url in duplicates:
+        problems.append("sitemap.xml: duplicate URL %s" % url)
+
+    from build_i18n import PAGES
+    expected_i18n = {
+        "https://voigt-antons.de%s" % url
+        for path_url in PAGES.values()
+        for url in (path_url, "/de" + path_url)
+    }
+    for url in sorted(expected_i18n - set(urls)):
+        problems.append("sitemap.xml: missing translated page %s" % url)
+
+    base = "https://voigt-antons.de/publication/"
+    expected_publications = {base + item["id"] for item in items}
+    actual_publications = {url for url in urls if url.startswith(base)}
+    for url in sorted(expected_publications - actual_publications):
+        problems.append("sitemap.xml: missing publication %s" % url)
+    for url in sorted(actual_publications - expected_publications):
+        problems.append("sitemap.xml: non-canonical publication %s" % url)
 
 
 def check_headline_numbers(items, meta):
@@ -1064,6 +1104,7 @@ def main():
     check_placeholders(pages)
     check_cv_pdf()
     german = check_i18n()
+    check_sitemap(items)
     check_fonts(pages)
     projects = check_projects()
 

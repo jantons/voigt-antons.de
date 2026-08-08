@@ -12,19 +12,23 @@ import datetime
 import json
 import pathlib
 
+from build_i18n import PAGES as I18N_PAGES
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = "https://voigt-antons.de"
 
 # Pages that should not appear in search results.
 EXCLUDE = {"/impressum/", "/tags/", "/404.html"}
 
-STATIC = ["/", "/research/", "/projects/", "/publications/", "/cv/", "/teaching/",
-          "/blog/", "/downloads/", "/research/statement/"]
+STATIC = list(dict.fromkeys([
+    "/", "/research/", "/projects/", "/publications/", "/cv/", "/teaching/",
+    "/blog/", "/downloads/",
+] + list(I18N_PAGES.values())))
 
 # The German versions are separate URLs and belong in the sitemap. Each entry
 # carries xhtml:link alternates, because a sitemap that lists /de/ without
 # declaring the pairing invites search engines to read the two as duplicates.
-TRANSLATED = ["/", "/research/", "/projects/", "/cv/", "/teaching/"]
+TRANSLATED = list(I18N_PAGES.values())
 
 
 def priority(url):
@@ -49,13 +53,13 @@ def main():
     posts = json.loads((ROOT / "data" / "posts.json").read_text(encoding="utf-8"))["posts"]
     urls += [p["url"] for p in posts]
 
-    pub_dir = ROOT / "publication"
-    if pub_dir.exists():
-        urls += sorted(
-            "/publication/%s" % d.name
-            for d in pub_dir.iterdir()
-            if d.is_dir() and (d / "index.html").exists()
-        )
+    publications = json.loads(
+        (ROOT / "data" / "publications.json").read_text(encoding="utf-8"))["items"]
+    urls += sorted(
+        "/publication/%s" % item["id"]
+        for item in publications
+        if (ROOT / "publication" / item["id"] / "index.html").exists()
+    )
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
